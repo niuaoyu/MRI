@@ -1,6 +1,6 @@
 # 背景
 1. 扩散模型在 2D 图像生成取得突破（Stable Diffusion，DALL·E，Imagen），但在3D 形状生成领域适配困难，不是diffusion的原因，是3D数据比2D复杂；
-2. 3D 数据表示（voxel体素、PC点云、mesh网格、neural field神经场）中，神经场是连续、高保真、可表达复杂拓扑、不依赖固定网络的优选表示，最适合 generative diffusion 的 3D 表示。但现有神经场表示（全局隐向量、规则 / 不规则隐式网格）存在细节不足、冗余高、不适配 Transformer 的问题；
+2. 3D 数据表示（voxel体素、PC点云、mesh网格、neural field神经场）中，神经场是连续、高保真、可表达复杂拓扑、不依赖固定网络，最适合 generative diffusion 的 3D 表示。但现有神经场表示（全局隐向量、规则 / 不规则隐式网格）存在细节不足、冗余高、不适配 Transformer 的问题；
 3. 现有 3D 生成模型多基于 GAN、自回归，基于神经场的 latent diffusion 研究尚浅。
 
 # 研究目的
