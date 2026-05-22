@@ -20,7 +20,8 @@
 
 
 # 方法
-「VAE + Transformer + Neural Field + Diffusion」
+模块：「VAE + Transformer + Neural Field + Diffusion」 
+
 pipeline：shape autoencoder + Latent Diffusion
 
 
