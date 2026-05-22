@@ -22,7 +22,7 @@
 # 方法
 模块：「VAE + Transformer + Neural Field + Diffusion」 
 
-pipeline：shape autoencoder + Latent Diffusion
+pipeline：形状自编码shape autoencoder + Latent Diffusion
 
 
 
