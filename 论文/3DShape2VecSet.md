@@ -19,6 +19,12 @@
 3. 多条件统一生成范式：用交叉注意力注入类别、文本、图像、点云条件，支持多任务生成。
 
 
+# 方法
+「VAE + Transformer + Neural Field + Diffusion」
+pipeline：shape autoencoder +
+
+
+
 
 
 # 解释
