@@ -25,7 +25,9 @@
 pipeline：形状自编码shape autoencoder + Latent Diffusion
 1. 形状自编码包括三个核心组件：形状编码器（Shape Encoding）、KL正则化块（KL Regularization Block）和形状解码器（Shape Decoding）
 
-
+FCμ和FCσ
+​
+ 
 
 
 
