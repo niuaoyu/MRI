@@ -4,7 +4,7 @@
 3. 现有 3D 生成模型多基于 GAN、自回归，基于神经场的 latent diffusion 研究尚浅。
 
 # 研究目的
-设计适配扩散模型的 3D 神经场表示，实现高质量、多条件的 3D 形状生成与重建。找到一种“既能表达复杂3D结构，又适合Transformer和Diffusion”的latent representation。
+设计适配扩散模型的 3D 神经场表示，实现高质量、多条件的 3D 形状生成与重建。找到一种“既能表达复杂3D结构，又适合Transformer和Diffusion”的latent representation。构建一个能够将任意三维形状（表面模型或点云）编码为适合生成扩散模型处理的统一表示，并基于此实现从无条件生成到多种条件生成的完整应用体系。
 
 核心思想：**不再显式存储空间坐标，只保留latent set，让网络自己学习空间关系**
 
