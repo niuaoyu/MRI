@@ -25,7 +25,8 @@
 pipeline：形状自编码shape autoencoder + Latent Diffusion
 1. 形状自编码包括三个核心组件：形状编码器（Shape Encoding）、KL正则化块（KL Regularization Block）和形状解码器（Shape Decoding）
 	1. 编码过程可表示为：Encpoints(X)=CrossAttn(PosEmb(X0),PosEmb(X))，其中X0=FPS(X)是通过最远点采样（FPS）获得的下采样点集
-	2. KL正则化块使用两个线性投影层FCμ和FCσ
+	2. KL正则化块使用两个线性投影层FCμ和FCσ分别预测latent的均值和方差，然后通过重参数化采样获得压缩后的latent
+	3. 形状解码器采用自注意力块序列对latent集合进行处理，最终通过交叉注意力插值和全连接层预测occupancy。
 2. 
 
 
