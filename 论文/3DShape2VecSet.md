@@ -36,7 +36,7 @@ pipeline：形状自编码shape autoencoder + Latent Diffusion
 2. 
 
 
-​
+​![[Pasted image 20260522190001.png]]
  
 
 
