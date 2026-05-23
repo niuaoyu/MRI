@@ -36,7 +36,7 @@ pipeline：形状自编码shape autoencoder + Latent Diffusion
 2. 
 
 
-​
+​EDM Preconditioning 通过 c_skip 和 c_out 自适应地“路由”了任务——在简单时绕开网络，在困难时标准化任务，让神经网络 F_θ 永远只学习一个标准尺度、数值范围稳定的预测任务**，从而极大地稳定了训练，提升了最终效果。
  
 
 
