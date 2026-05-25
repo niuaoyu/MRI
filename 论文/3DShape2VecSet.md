@@ -47,4 +47,6 @@ pipeline：形状自编码shape autoencoder + Latent Diffusion
 
 
 # 困惑
-1. 为什么VAE自编码器过程dang'z
+1. 为什么VAE自编码器过程当中要有KL这个模块？
+	1. KL把从
+2. 
