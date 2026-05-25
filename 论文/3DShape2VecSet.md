@@ -48,5 +48,5 @@ pipeline：形状自编码shape autoencoder + Latent Diffusion
 ![[Pasted image 20260525093445.png]]
 # 困惑
 1. 为什么VAE自编码器过程当中要有KL这个模块？
-	1. KL把从encoder得到的512*51
+	1. KL把从encoder得到的512 * 512数据的分布强行拉到标准正态分布，这一步有两个目的，
 2. 
