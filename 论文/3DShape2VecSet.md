@@ -44,4 +44,7 @@ pipeline：形状自编码shape autoencoder + Latent Diffusion
 # 解释
 1. 首次用“Transformer latent set + attention interpolation”替代传统几何网格与空间插值，使 neural field 真正成为适合 diffusion generative modeling 的统一3D表示。
 2. 把任意3D形状（比如椅子、汽车）用一组数字向量（latent set）来表示，然后通过注意力机制在查询点位置进行插值，最终预测该点是否在物体内部。扩散模型不是直接生成点云，也不是直接生成体素网格，而是先学一个更适合扩散模型处理的三维形状表示
-3. 
+
+
+# 困惑
+1. 为什么VAE自编码器过程dang'z
