@@ -84,10 +84,16 @@ pipeline：形状自编码shape autoencoder + Latent Diffusion
 	1. 
 2. 三个子模块AdaLayerNorm + Self-Attention，AdaLayerNorm + Cross-Attention（条件注入）、AdaLayerNorm + FeedForward构成了现代扩散 Transformer（Diffusion Transformer, 简称 DiT）最核心的去噪引擎
 	1. 
-3. 第一阶段模型训练的目标：loss = loss_vol (基于 logits) + 0.1* loss_near + 1e-3* loss_kl
+	2. 
+	3. FeedForward前馈网络：在深度学习中，注意力机制（Self/Cross）本质上只做了一件事：**Token Mixing（空间/词表间的信息交换）** 。它只负责决定“点 A 应该分给点 B 多少注意力权重”，但它**缺乏对单个 Token 内部特征进行深层非线性映射和加工的能力**。 **FeedForward 解决了“单个Token内部特征表达能力不足”的问题。** 它通过一个两层的全连接 MLP（通常会将通道数放大 4 倍再缩小回原样），在**保持 Token 之间互相隔离**的状态下，独立对每个向量的 32 维/512 维特征进行深度的非线性重组。
+    
+- **做完导致了什么后果（好处）？**
+    
+    极大地增强了整个 Transformer 网络的参数容量和非线性拟合上限，使得模型能够记忆和雕刻出 3D 神经场极其复杂的局部细节（如薄壁、小孔洞）。
+1. 第一阶段模型训练的目标：loss = loss_vol (基于 logits) + 0.1* loss_near + 1e-3* loss_kl
 	1. 前俩重建损失，KL损失是压缩成标准正态的损失。前俩损失从最后一部分流到最开始，而KL损失只管KL内部也就是两个线性映射部分。
 	2. **近表面损失权重为 0.1？** 近表面区域占据值在短距离内从 1 跳变到 0，梯度剧烈如果不降权，近表面损失会主导训练，让网络忽略大块体积区域的准确性权重 0.1 平衡"整体形状准确"和"表面细节精确"
-4. 
+2. 
 
 
 
