@@ -52,8 +52,9 @@ pipeline：形状自编码shape autoencoder + Latent Diffusion
 1. 3D 数据表示（voxel体素、PC点云、mesh网格、neural field神经场）,为什么选择了神经场？
 	1. 体素训练受分辨率大小的影响，mesh网格不可导，无法用mesh面片关系加噪去噪，点云可以（有人做过PVD方法）但直接在连续坐标加高斯噪声，在去噪时很难保证网络连续会出现很多孤立噪点，而神经场无限维度，拓扑自由分别解决体素分辨率问题，mesh不可导问题。
 	2. 但神经场也有自己的问题，本身是**连续函数无法加噪**，论文让VAE自编码器对函数压缩成潜在向量集合 $[M, C_0]$（512 个 32 维向量），符合扩散模型喜欢的数据格式，扩散模型最喜欢的标准数据格式是**一个固定大小（Fixed-size）、高度结构化、数值连续的稠密张量（Tensor）**。 比如 2D 图像的 $[C, H, W]$ 矩阵，本论文中提炼出来的潜在向量集合 $[M, C_0]$（512 个 32 维向量）。在这类张量上，每一个格子加高斯噪声在数学上都是独立同分布（i.i.d.）的，网络算均方误差（MSE Loss）时也极为高效。
-2. 扩散模型的进化：原本20年的DDPM去噪是U-Net（CNN），后续核心去噪都变成transformer，因U-Net适合格子，但遇到没结构，没规律的数据CNN不行。这就是后续DiT（）的流行
+2. 扩散模型的进化：原本20年的DDPM去噪是U-Net（CNN），后续核心去噪都变成transformer，因U-Net适合格子，但遇到没结构，没规律的数据CNN不行。这就是后续DiT的流行
 	1. DiT（Diffusion Transformer） 是 扩散模型（Diffusion Model） 中用 Transformer 替换传统 U-Net 骨干网络的一种架构。DiT = Latent Diffusion + Transformer 骨干，用纯 Attention 机制替代了 U-Net 的卷积结构，让扩散模型变得更 scalable 和强大。
+	2. ![[Pasted image 20260526154307.png]]
 
 
 ## VAE自编码器部分
