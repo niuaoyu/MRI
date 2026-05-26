@@ -82,10 +82,12 @@ pipeline：形状自编码shape autoencoder + Latent Diffusion
 ## 扩散模型部分
 1. 一团带着物理噪声、整体方差被 EDM 强行缩放回 1 的潜在集合 $y \in \mathbb{R}^{512 \times 32}$ 走入去噪网络，这个计算过程是什么？也就是EDM Preconditioning，如何具体实现加噪后再把噪声分布变成标准正态分布？
 	1. 
-2. 第一阶段模型训练的目标：loss = loss_vol (基于 logits) + 0.1* loss_near + 1e-3* loss_kl
+2. 三个子模块AdaLayerNorm + Self-Attention，AdaLayerNorm + Cross-Attention（条件注入）、AdaLayerNorm + FeedForward构成了现代扩散 Transformer（Diffusion Transformer, 简称 DiT）最核心的去噪引擎
+	1. 
+3. 第一阶段模型训练的目标：loss = loss_vol (基于 logits) + 0.1* loss_near + 1e-3* loss_kl
 	1. 前俩重建损失，KL损失是压缩成标准正态的损失。前俩损失从最后一部分流到最开始，而KL损失只管KL内部也就是两个线性映射部分。
 	2. **近表面损失权重为 0.1？** 近表面区域占据值在短距离内从 1 跳变到 0，梯度剧烈如果不降权，近表面损失会主导训练，让网络忽略大块体积区域的准确性权重 0.1 平衡"整体形状准确"和"表面细节精确"
-3. 
+4. 
 
 
 
