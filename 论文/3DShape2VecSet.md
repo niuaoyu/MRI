@@ -83,7 +83,7 @@ pipeline：形状自编码shape autoencoder + Latent Diffusion
 1. 一团带着物理噪声、整体方差被 EDM 强行缩放回 1 的潜在集合 $y \in \mathbb{R}^{512 \times 32}$ 走入去噪网络，这个计算过程是什么？也就是EDM Preconditioning，如何具体实现加噪后再把噪声分布变成标准正态分布？
 	1. 
 2. 三个子模块AdaLayerNorm + Self-Attention，AdaLayerNorm + Cross-Attention（条件注入）、AdaLayerNorm + FeedForward构成了现代扩散 Transformer（Diffusion Transformer, 简称 DiT）最核心的去噪引擎
-	1. AdaLayerNorm：深层CNN会忘记当噪声极大时（$\sigma \to \infty$）：AdaLayerNorm 预测出来的 $\gamma(\sigma)$ 会变得非常特殊，它会强行把输入特征里那些微小的局部起伏全部抹杀（缩放到接近0），只放大那些代表宏观轮廓的长波信号 。它在命令整个网络层：“别管细节，全力画大轮廓！”  当噪声极小时（$\sigma \to 0$）：AdaLayerNorm 转换了指令，把宏观增益调低，把代表高频微小变化的神经元全部激活。它在命令网络层：“轮廓已经好了，全力去雕刻薄壁和小孔洞！”
+	1. AdaLayerNorm：CNN到深层会忘记噪声强度，当噪声极大时（$\sigma \to \infty$）：AdaLayerNorm 预测出来的 $\gamma(\sigma)$ 会变得非常特殊，它会强行把输入特征里那些微小的局部起伏全部抹杀（缩放到接近0），只放大那些代表宏观轮廓的长波信号 。它在命令整个网络层：“别管细节，全力画大轮廓！”  当噪声极小时（$\sigma \to 0$）：AdaLayerNorm 转换了指令，把宏观增益调低，把代表高频微小变化的神经元全部激活。它在命令网络层：“轮廓已经好了，全力去雕刻薄壁和小孔洞！”
 	2. 
 	3. FeedForward前馈网络：在深度学习中，注意力机制（Self/Cross）本质上只做了一件事：**Token Mixing（空间/词表间的信息交换）** 。它只负责决定“点 A 应该分给点 B 多少注意力权重”，但它**缺乏对单个 Token 内部特征进行深层非线性映射和加工的能力**。 **FeedForward 解决了“单个Token内部特征表达能力不足”的问题。** 它通过一个两层的全连接 MLP（通常会将通道数放大 4 倍再缩小回原样），在**保持 Token 之间互相隔离**的状态下，独立对每个向量的 32 维/512 维特征进行深度的非线性重组。
     
