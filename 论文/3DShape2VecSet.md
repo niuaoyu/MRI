@@ -69,7 +69,7 @@ pipeline：形状自编码shape autoencoder + Latent Diffusion
 4. 一团带着物理噪声、整体方差被 EDM 强行缩放回 1 的潜在集合 $y \in \mathbb{R}^{512 \times 32}$ 走入去噪网络，这个计算过程是什么？
 	1. 
 5. 第一阶段模型训练的目标：loss = loss_vol (基于 logits) + 0.1* loss_near + 1e-3* loss_kl
-	1. 前俩重建损失，KL损失是压缩成标准正态的损失。
+	1. 前俩重建损失，KL损失是压缩成标准正态的损失。前俩损失从最后一部分流到最开始，而KL损失只管KL内部也就是两个线性映射部分。
 6. 
 
 
