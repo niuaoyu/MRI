@@ -55,7 +55,8 @@ pipeline：形状自编码shape autoencoder + Latent Diffusion
 2. 扩散模型的进化：原本20年的DDPM去噪是U-Net（CNN），后续核心去噪都变成transformer，因U-Net适合格子，但遇到没结构，没规律的数据CNN不行。这就是后续DiT的流行，好处是，transformer自注意力机制对顺序不敏感，与集合set这种数据天然适配，其次交叉注意力机制可以让条件注入非常的丝滑，把条件当KV，3D乱码当Q，高效实现多模态控制，最后强大的扩展性，CNN有瓶颈，但transformer只要显卡够，数据量大，能力无限。
 	1. DiT（Diffusion Transformer） 是 扩散模型（Diffusion Model） 中用 Transformer 替换传统 U-Net 骨干网络的一种架构。DiT = Latent Diffusion + Transformer 骨干，用纯 Attention 机制替代了 U-Net 的卷积结构，让扩散模型变得更 scalable 和强大。
 	2. ![[Pasted image 20260526154307.png]]
-
+3. occupancy占位跟SDF区别是什么?为什么这篇论文用的是occupancy而不是SDF?
+4. 
 
 ## VAE自编码器部分
 1.  为什么要把潜空间压缩成适合transformer处理的格式？
