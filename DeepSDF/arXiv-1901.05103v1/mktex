@@ -1,0 +1,94 @@
+#!/usr/bin/env python
+
+import os, re, time, argparse
+import subprocess as sub
+
+def pdfCompile(haveBib,main):
+  print 'compiling {}'.format(main)
+  if sub.call(['pdflatex',main]) > 0:
+    return
+  if haveBib:
+    if sub.call(['bibtex',re.sub('tex','aux',main)]) > 0:
+      return
+    sub.call(['pdflatex',main])
+  sub.call(['pdflatex',main])
+
+parser = argparse.ArgumentParser(description = 'make tex file')
+parser.add_argument('-c','--continuous', action='store_true',                   
+    help='keeps cheching of files have changed and recompiles if so')
+parser.add_argument('-r','--recompile', action='store_true',                   
+    help='recompile from scratch')
+parser.add_argument('-i','--input', help='file name of specific file'\
+    +' to compile. If not specified all main fails will be compiled')
+args = parser.parse_args()                                                      
+
+texFiles = []
+#for subdir, dirs, files in os.walk('./'):
+for f in os.listdir('./'):
+  if os.path.splitext(f)[1] in ['.tex','.bib']:
+    print f
+    texFiles.append(f)
+
+print ' ------- making ----------'
+mainTexs = ['main.tex','writeup.tex','poster.tex']
+
+mains = []
+haveBib = False
+if not args.input is None:
+  print 'using input {} as as main tex file for compilation'.format(args.input)
+  mains = [args.input]
+  # try finding a bib file
+  for f in texFiles:
+    if os.path.splitext(f)[1] == '.bib' and os.path.split(f)[0] == '':
+      haveBib = True
+      print 'found bibtex file {}'.format(f)
+else:
+  print 'no input main given => finding it in the current folder'
+  # try finding the main by common names I give them
+  for f in texFiles:
+    print os.path.splitext(f), os.path.split(f)
+    if os.path.split(f)[1] in mainTexs and os.path.split(f)[0] == '':
+      mains = [f]
+      print 'found main tex file {}'.format(f)
+    elif os.path.splitext(f)[1] == '.bib' and os.path.split(f)[0] == '':
+      haveBib = True
+      print 'found bibtex file {}'.format(f)
+  # now try finding the main by looking for a \begin{document} in the files
+  if len(mains) == 0:
+    print 'looking for mains using \\begin\{document\}'
+    for f in texFiles:
+      print 'searching in {}'.format(f)
+      for line in open(f):
+        #print line[:-1]
+        if not re.search('begin{document}',line) is None:
+          mains.append(f)
+          print ' found \begin{document}'+' in {} -> adding as main file'.format(f)
+          break
+
+if mains[0] is None or len(mains) == 0 :
+  print "no main found {}".format(mainTexs)
+else:
+  if args.continuous:
+    lastT = [time.time() for f in texFiles]
+    while 42:
+      hasModification = False
+      for j,f in enumerate(texFiles):
+        modtime = os.stat(f).st_mtime
+        #print '{} vs {}'.format(modtime,lastT[j])
+        if modtime > lastT[j]:
+          lastT[j] = modtime
+          hasModification = True
+          print '{} modified'.format(f)
+      if hasModification:
+        for main in mains:
+          pdfCompile(haveBib,main)
+      print 'sleeping'
+      time.sleep(2)
+  elif args.recompile:
+    for main in mains:
+      sub.call(['rm',re.sub('tex','aux',main)])
+      pdfCompile(haveBib,main)
+  else:
+    for main in mains:
+      print 'compile {}'.format(main)
+      pdfCompile(haveBib,main)

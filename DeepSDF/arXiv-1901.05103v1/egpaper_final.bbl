@@ -1,0 +1,334 @@
+\begin{thebibliography}{10}\itemsep=-1pt
+
+\bibitem{achlioptas2018learning}
+P.~Achlioptas, O.~Diamanti, I.~Mitliagkas, and L.~Guibas.
+\newblock Learning representations and generative models for 3d point clouds.
+\newblock 2018.
+
+\bibitem{bagautdinov2018modeling}
+T.~Bagautdinov, C.~Wu, J.~Saragih, P.~Fua, and Y.~Sheikh.
+\newblock Modeling facial geometry using compositional vaes.
+\newblock 1:1.
+
+\bibitem{baque2018geodesic}
+P.~Baqu{\'e}, E.~Remelli, F.~Fleuret, and P.~Fua.
+\newblock Geodesic convolutional shape optimization.
+\newblock {\em arXiv preprint arXiv:1802.04016}, 2018.
+
+\bibitem{bengio2013representation}
+Y.~Bengio, A.~Courville, and P.~Vincent.
+\newblock Representation learning: A review and new perspectives.
+\newblock {\em TPAMI}, 35(8):1798--1828, 2013.
+
+\bibitem{bertsekas1985distributed}
+D.~P. Bertsekas.
+\newblock A distributed asynchronous relaxation algorithm for the assignment
+  problem.
+\newblock In {\em Decision and Control, 1985 24th IEEE Conference on}, pages
+  1703--1704. IEEE, 1985.
+
+\bibitem{bloesch2018codeslam}
+M.~Bloesch, J.~Czarnowski, R.~Clark, S.~Leutenegger, and A.~J. Davison.
+\newblock Codeslam-learning a compact, optimisable representation for dense
+  visual slam.
+\newblock {\em arXiv preprint arXiv:1804.00874}, 2018.
+
+\bibitem{bojanowski18a}
+P.~Bojanowski, A.~Joulin, D.~Lopez-Pas, and A.~Szlam.
+\newblock Optimizing the latent space of generative networks.
+\newblock In J.~Dy and A.~Krause, editors, {\em Proceedings of the 35th
+  International Conference on Machine Learning}, volume~80 of {\em Proceedings
+  of Machine Learning Research}, pages 600--609. PMLR, 10--15 Jul 2018.
+
+\bibitem{bouakkaz2012combined}
+M.~Bouakkaz and M.-F. Harkat.
+\newblock Combined input training and radial basis function neural networks
+  based nonlinear principal components analysis model applied for process
+  monitoring.
+\newblock In {\em IJCCI}, pages 483--492, 2012.
+
+\bibitem{bruna2013spectral}
+J.~Bruna, W.~Zaremba, A.~Szlam, and Y.~LeCun.
+\newblock Spectral networks and locally connected networks on graphs.
+\newblock {\em arXiv preprint arXiv:1312.6203}, 2013.
+
+\bibitem{canelhas2016eigenshapes}
+D.~R. Canelhas, E.~Schaffernicht, T.~Stoyanov, A.~J. Lilienthal, and A.~J.
+  Davison.
+\newblock An eigenshapes approach to compressed signed distance fields and
+  their utility in robot mapping.
+\newblock {\em arXiv preprint arXiv:1609.02462}, 2016.
+
+\bibitem{carr2001reconstruction}
+J.~C. Carr, R.~K. Beatson, J.~B. Cherrie, T.~J. Mitchell, W.~R. Fright, B.~C.
+  McCallum, and T.~R. Evans.
+\newblock Reconstruction and representation of 3d objects with radial basis
+  functions.
+\newblock In {\em SIGGRAPH}, pages 67--76. ACM, 2001.
+
+\bibitem{chang2015shapenet}
+A.~X. Chang, T.~Funkhouser, L.~Guibas, P.~Hanrahan, Q.~Huang, Z.~Li,
+  S.~Savarese, M.~Savva, S.~Song, H.~Su, et~al.
+\newblock Shapenet: An information-rich 3d model repository.
+\newblock {\em arXiv preprint arXiv:1512.03012}, 2015.
+
+\bibitem{chen2016infogan}
+X.~Chen, Y.~Duan, R.~Houthooft, J.~Schulman, I.~Sutskever, and P.~Abbeel.
+\newblock Infogan: Interpretable representation learning by information
+  maximizing generative adversarial nets.
+\newblock In {\em NIPS}, pages 2172--2180, 2016.
+
+\bibitem{choy20163d}
+C.~B. Choy, D.~Xu, J.~Gwak, K.~Chen, and S.~Savarese.
+\newblock 3d-r2n2: A unified approach for single and multi-view 3d object
+  reconstruction.
+\newblock In {\em ECCV}, pages 628--644. Springer, 2016.
+
+\bibitem{curless1996volumetric}
+B.~Curless and M.~Levoy.
+\newblock A volumetric method for building complex models from range images.
+\newblock In {\em SIGGRAPH}, pages 303--312. ACM, 1996.
+
+\bibitem{dai2017shape}
+A.~Dai, C.~Ruizhongtai~Qi, and M.~Niessner.
+\newblock Shape completion using 3d-encoder-predictor cnns and shape synthesis.
+\newblock In {\em CVPR}, pages 5868--5877, 2017.
+
+\bibitem{defferrard2016convolutional}
+M.~Defferrard, X.~Bresson, and P.~Vandergheynst.
+\newblock Convolutional neural networks on graphs with fast localized spectral
+  filtering.
+\newblock In {\em NIPS}, pages 3844--3852, 2016.
+
+\bibitem{pyemd}
+G.~Doran.
+\newblock {PyEMD}: Earth mover's distance for {Python}, 2014--.
+\newblock [Online; accessed <today>].
+
+\bibitem{fan2017point}
+H.~Fan, H.~Su, and L.~J. Guibas.
+\newblock A point set generation network for 3d object reconstruction from a
+  single image.
+
+\bibitem{fan2018matrix}
+J.~Fan and J.~Cheng.
+\newblock Matrix completion by deep matrix factorization.
+\newblock {\em Neural Networks}, 98:34--41, 2018.
+
+\bibitem{goodfellow2014generative}
+I.~Goodfellow, J.~Pouget-Abadie, M.~Mirza, B.~Xu, D.~Warde-Farley, S.~Ozair,
+  A.~Courville, and Y.~Bengio.
+\newblock Generative adversarial nets.
+\newblock In {\em NIPS}, pages 2672--2680, 2014.
+
+\bibitem{groueix2018atlasnet}
+T.~Groueix, M.~Fisher, V.~G. Kim, B.~C. Russell, and M.~Aubry.
+\newblock Atlasnet: A papier-m$\backslash$\^{} ach$\backslash$'e approach to
+  learning 3d surface generation.
+\newblock {\em arXiv preprint arXiv:1802.05384}, 2018.
+
+\bibitem{hamu2018multi}
+H.~B. Hamu, H.~Maron, I.~Kezurer, G.~Avineri, and Y.~Lipman.
+\newblock Multi-chart generative surface modeling.
+\newblock {\em arXiv preprint arXiv:1806.02143}, 2018.
+
+\bibitem{han2017high}
+X.~Han, Z.~Li, H.~Huang, E.~Kalogerakis, and Y.~Yu.
+\newblock High-resolution shape completion using deep neural networks for
+  global structure and local geometry inference.
+
+\bibitem{handa2014benchmark}
+A.~Handa, T.~Whelan, J.~McDonald, and A.~J. Davison.
+\newblock A benchmark for rgb-d visual odometry, 3d reconstruction and slam.
+\newblock In {\em Robotics and automation (ICRA), 2014 IEEE international
+  conference on}, pages 1524--1531. IEEE, 2014.
+
+\bibitem{hane2017hierarchical}
+C.~H{\"a}ne, S.~Tulsiani, and J.~Malik.
+\newblock Hierarchical surface prediction for 3d object reconstruction.
+\newblock In {\em 3D Vision (3DV), 2017 International Conference on}, pages
+  412--420. IEEE, 2017.
+
+\bibitem{hornik1989multilayer}
+K.~Hornik, M.~Stinchcombe, and H.~White.
+\newblock Multilayer feedforward networks are universal approximators.
+\newblock {\em Neural networks}, 2(5):359--366, 1989.
+
+\bibitem{ioffe2015batch}
+S.~Ioffe and C.~Szegedy.
+\newblock Batch normalization: Accelerating deep network training by reducing
+  internal covariate shift.
+\newblock {\em arXiv preprint arXiv:1502.03167}, 2015.
+
+\bibitem{isola2017image}
+P.~Isola, J.-Y. Zhu, T.~Zhou, and A.~A. Efros.
+\newblock Image-to-image translation with conditional adversarial networks.
+\newblock {\em arXiv preprint}, 2017.
+
+\bibitem{Distance_Field_Compression}
+M.~W. Jones.
+\newblock Distance field compression.
+\newblock {\em Journal of WSCG}, 12(2):199--204, 2004.
+
+\bibitem{karras2017progressive}
+T.~Karras, T.~Aila, S.~Laine, and J.~Lehtinen.
+\newblock Progressive growing of gans for improved quality, stability, and
+  variation.
+\newblock {\em arXiv preprint arXiv:1710.10196}, 2017.
+
+\bibitem{kazhdan2013screened}
+M.~Kazhdan and H.~Hoppe.
+\newblock Screened poisson surface reconstruction.
+\newblock {\em ACM TOG}, 32(3):29, 2013.
+
+\bibitem{kingma2014adam}
+D.~P. Kingma and J.~Ba.
+\newblock Adam: A method for stochastic optimization.
+\newblock {\em arXiv preprint arXiv:1412.6980}, 2014.
+
+\bibitem{litany2017deformable}
+O.~Litany, A.~Bronstein, M.~Bronstein, and A.~Makadia.
+\newblock Deformable shape completion with graph convolutional autoencoders.
+\newblock {\em CVPR}, 2017.
+
+\bibitem{lorensen1987marching}
+W.~E. Lorensen and H.~E. Cline.
+\newblock Marching cubes: A high resolution 3d surface construction algorithm.
+\newblock In {\em SIGGRAPH}, volume~21, pages 163--169. ACM, 1987.
+
+\bibitem{maron2017convolutional}
+H.~Maron, M.~Galun, N.~Aigerman, M.~Trope, N.~Dym, E.~Yumer, V.~G. Kim, and
+  Y.~Lipman.
+\newblock Convolutional neural networks on surfaces via seamless toric covers.
+\newblock 2017.
+
+\bibitem{newcombe2011kinectfusion}
+R.~A. Newcombe, S.~Izadi, O.~Hilliges, D.~Molyneaux, D.~Kim, A.~J. Davison,
+  P.~Kohi, J.~Shotton, S.~Hodges, and A.~Fitzgibbon.
+\newblock Kinectfusion: Real-time dense surface mapping and tracking.
+\newblock In {\em ISMAR}, pages 127--136. IEEE, 2011.
+
+\bibitem{qi2017pointnet}
+C.~R. Qi, H.~Su, K.~Mo, and L.~J. Guibas.
+\newblock Pointnet: Deep learning on point sets for 3d classification and
+  segmentation.
+\newblock In {\em CVPR}, pages 652--660, 2017.
+
+\bibitem{qi2017pointnet++}
+C.~R. Qi, L.~Yi, H.~Su, and L.~J. Guibas.
+\newblock Pointnet++: Deep hierarchical feature learning on point sets in a
+  metric space.
+\newblock In {\em NIPS}, pages 5099--5108, 2017.
+
+\bibitem{qunxiong2006dimensionality}
+Z.~Qunxiong and L.~Chengfei.
+\newblock Dimensionality reduction with input training neural network and its
+  application in chemical process modelling.
+\newblock {\em Chinese Journal of Chemical Engineering}, 14(5):597--603, 2006.
+
+\bibitem{radford2015unsupervised}
+A.~Radford, L.~Metz, and S.~Chintala.
+\newblock Unsupervised representation learning with deep convolutional
+  generative adversarial networks.
+\newblock {\em arXiv preprint arXiv:1511.06434}, 2015.
+
+\bibitem{reddy1998input}
+V.~Reddy and M.~Mavrovouniotis.
+\newblock An input-training neural network approach for gross error detection
+  and sensor replacement.
+\newblock {\em Chemical Engineering Research and Design}, 76(4):478--489, 1998.
+
+\bibitem{riegler2017octnet}
+G.~Riegler, A.~O. Ulusoy, and A.~Geiger.
+\newblock Octnet: Learning deep 3d representations at high resolutions.
+\newblock In {\em CVPR}, pages 6620--6629. IEEE, 2017.
+
+\bibitem{rock2015completing}
+J.~Rock, T.~Gupta, J.~Thorsen, J.~Gwak, D.~Shin, and D.~Hoiem.
+\newblock Completing 3d object shape from one depth image.
+\newblock In {\em CVPR}, pages 2484--2493, 2015.
+
+\bibitem{rubner1998metric}
+Y.~Rubner, C.~Tomasi, and L.~J. Guibas.
+\newblock A metric for distributions with applications to image databases.
+\newblock In {\em Computer Vision, 1998. Sixth International Conference on},
+  pages 59--66. IEEE, 1998.
+
+\bibitem{salimans2016weight}
+T.~Salimans and D.~P. Kingma.
+\newblock Weight normalization: A simple reparameterization to accelerate
+  training of deep neural networks.
+\newblock In {\em NIPS}, pages 901--909, 2016.
+
+\bibitem{seitz2006comparison}
+S.~M. Seitz, B.~Curless, J.~Diebel, D.~Scharstein, and R.~Szeliski.
+\newblock A comparison and evaluation of multi-view stereo reconstruction
+  algorithms.
+\newblock pages 519--528. IEEE, 2006.
+
+\bibitem{sinha2016deep}
+A.~Sinha, J.~Bai, and K.~Ramani.
+\newblock Deep learning 3d shape surfaces using geometry images.
+\newblock In {\em ECCV}, pages 223--240. Springer, 2016.
+
+\bibitem{stutz2018learning}
+D.~Stutz and A.~Geiger.
+\newblock Learning 3d shape completion from laser scan data with weak
+  supervision.
+\newblock In {\em CVPR}, pages 1955--1964, 2018.
+
+\bibitem{tan1995reducing}
+S.~Tan and M.~L. Mayrovouniotis.
+\newblock Reducing data dimensionality through optimizing neural network
+  inputs.
+\newblock {\em AIChE Journal}, 41(6):1471--1480, 1995.
+
+\bibitem{tarini2004polycube}
+M.~Tarini, K.~Hormann, P.~Cignoni, and C.~Montani.
+\newblock Polycube-maps.
+\newblock In {\em ACM TOG}, volume~23, pages 853--860. ACM, 2004.
+
+\bibitem{ogn2017}
+M.~Tatarchenko, A.~Dosovitskiy, and T.~Brox.
+\newblock Octree generating networks: Efficient convolutional architectures for
+  high-resolution 3d outputs.
+\newblock In {\em ICCV}, 2017.
+
+\bibitem{verma2018feastnet}
+N.~Verma, E.~Boyer, and J.~Verbeek.
+\newblock Feastnet: Feature-steered graph convolutions for 3d shape analysis.
+
+\bibitem{wu2016learning}
+J.~Wu, C.~Zhang, T.~Xue, B.~Freeman, and J.~Tenenbaum.
+\newblock Learning a probabilistic latent space of object shapes via 3d
+  generative-adversarial modeling.
+\newblock In {\em NIPS}, pages 82--90, 2016.
+
+\bibitem{wu2018learning}
+J.~Wu, C.~Zhang, X.~Zhang, Z.~Zhang, W.~T. Freeman, and J.~B. Tenenbaum.
+\newblock Learning shape priors for single-view 3d completion and
+  reconstruction.
+\newblock {\em arXiv preprint arXiv:1809.05068}, 2018.
+
+\bibitem{wu20153d}
+Z.~Wu, S.~Song, A.~Khosla, F.~Yu, L.~Zhang, X.~Tang, and J.~Xiao.
+\newblock 3d shapenets: A deep representation for volumetric shapes.
+\newblock In {\em CVPR}, pages 1912--1920, 2015.
+
+\bibitem{yang2017foldingnet}
+Y.~Yang, C.~Feng, Y.~Shen, and D.~Tian.
+\newblock Foldingnet: Interpretable unsupervised learning on 3d point clouds.
+\newblock {\em arXiv preprint arXiv:1712.07262}, 2017.
+
+\bibitem{yuan2018pcn}
+W.~Yuan, T.~Khot, D.~Held, C.~Mertz, and M.~Hebert.
+\newblock Pcn: Point completion network.
+\newblock In {\em 3DV}, 2018.
+
+\bibitem{zeng20173dmatch}
+A.~Zeng, S.~Song, M.~Nie{\ss}ner, M.~Fisher, J.~Xiao, and T.~Funkhouser.
+\newblock 3dmatch: Learning local geometric descriptors from rgb-d
+  reconstructions.
+\newblock In {\em CVPR}, pages 199--208. IEEE, 2017.
+
+\end{thebibliography}

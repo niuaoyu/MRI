@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\footnotesize
+\begin{tabular}{|l|c|c|c|c||c|c|}
+\hline
+ & \multicolumn{4}{c||}{\footnotesize \textit{lower is better}} & \multicolumn{2}{c|}{\footnotesize \textit{higher is better}} \\
+Method                  & CD, &  CD,        &    &     Mesh & Mesh & Cos \\
+ \textbackslash Metric & med. & mean & EMD & acc. & comp. &  sim.\\
+\hhline{|=|=|=|=|=||=|=|} \hline
+\multicolumn{7}{|l|}{chair} \\ \hline
+3D-EPN   & 2.25 & 2.83  & 0.084 & 0.059 & 0.209 & 0.752\\
+DeepSDF  & \bf{1.28} & \bf{2.11}   & \bf{0.071} & \bf{0.049} & \bf{0.500} & \bf{0.766} \\ \hline
+\multicolumn{7}{|l|}{plane} \\ \hline
+3D-EPN   & 1.63  & 2.19 & 0.063 & 0.040 & 0.165 & 0.710\\
+DeepSDF & \bf{0.37} & \bf{1.16} & \bf{0.049} & \bf{0.032} & \bf{0.722} & \bf{0.823} \\ \hline
+\multicolumn{7}{|l|}{sofa} \\ \hline
+3D-EPN   & 2.03  & 2.18 & 0.071 & 0.049 & 0.254 & 0.742\\
+DeepSDF & \bf{0.82} & \bf{1.59} & \bf{0.059} & \bf{0.041} & \bf{0.541} & \bf{0.810} \\ \hline
+\end{tabular}
+\caption{Comparison for shape completion (C) from partial range scans of unknown shapes from ShapeNet.}
+%(CD = Chamfer Distance, EMD = Earth Movers Distance.) For more detail, refer to the supplementary material.)}
+\label{tab:5}
+\end{table}

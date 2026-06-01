@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\footnotesize
+ \begin{tabular}{|l|c|c|c|c|}
+ \hline
+                                                  &   CD,    & CD,      & EMD,  & EMD, \\
+  Method \textbackslash metric &   mean & median &  mean & median\\
+% \multicolumn{1}{cl|}{Method \& metric} & chair & plane & table & sofa & lamp & avg & inference\\
+ \hhline{|=|=|=|=|=|}
+ OGN            & 0.167  & 0.127 & \bf{0.043} & \bf{0.042} \\
+ AtlasNet-Sph.  &  0.210 & 0.185 & 0.046 & 0.045  \\
+ AtlasNet-25    & 0.157 & 0.140 & 0.060 & 0.060   \\
+ DeepSDF        & \bf{0.084} & \bf{0.058} & \bf{0.043} & \bf{0.042}  \\
+ \hline
+   \end{tabular}
+   \caption{Comparison for representing known shapes (K) for cars trained on ShapeNet. CD = Chamfer Distance ($30,000$ points) multiplied by $10^3$, EMD = Earth Mover's Distance ($500$ points).} %Some voxel/octree methods are occupancy-based, while \cite{dai2017shape} is a discrete voxel grid of SDF values.}
+   \label{tab:2}
+\end{table}
