@@ -29,7 +29,6 @@ $$\mathcal{D}_{CD}(S_{rec}, S_{gt}) = \frac{1}{|S_{rec}|} \sum_{x \in S_{rec}} \
 
 
 
-
 # paper
 
 
