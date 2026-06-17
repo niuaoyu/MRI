@@ -155,10 +155,13 @@ $$\text{SRE}(\mathcal{O}_i, \mathcal{O}_j) = \mathcal{D}_{CD} \left( T_{i \to j}
 但医学真实下游任务是：**患者 A 心脏 → 配准到患者 B 心脏**（跨个体图谱配准、SSM 统计形状建模、组学分析）。就算模板空间的 μ 很低，也不代表拿形变场直接做跨患者配准能对齐。
 
 SRE 就是**模拟真实临床配准流程**，用最终对齐后的表面误差，间接评判对应关系的实用价值，是落地应用层面的验证指标。
-
+先把病人 i 拉去公共模板对齐解剖，再从模板映射到病人 j 的几何空间，最终得到**i 扭曲后落在 j 坐标系下的网格** $T_{i\to j}(\mathcal O_i)$。
 
 
 ## Self-Intersection Ratio (网格自相交面比例)
+
+
+
 
 
 ## Mesh Watertightness Criterion (网格水密性验证)
