@@ -84,7 +84,7 @@ $$\text{NC}(S_{rec}, S_{gt}) = \frac{1}{|S_{rec}|} \sum_{p \in S_{rec}} \left| \
 该指标的值域被严格限制在 $[0, 1]$ 之间，**值越接近 1 说明重建表面越平滑，空间朝向越逼真**。在双心室重建中，准确的法线恢复至关重要，因为后续的心肌壁应变分析（Strain Analysis）以及生物力学仿真（Biomechanical Simulation）高度依赖于平滑且解剖学合理的法线方向。
 
 
-
+##  Volume Intersection over Union (Volume IoU, 体素交并比)
 
 
 
