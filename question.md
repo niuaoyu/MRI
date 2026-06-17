@@ -86,6 +86,17 @@ $$\text{NC}(S_{rec}, S_{gt}) = \frac{1}{|S_{rec}|} \sum_{p \in S_{rec}} \left| \
 
 ##  Volume Intersection over Union (Volume IoU, 体素交并比)
 
+前面介绍的倒角距离（CD）、豪斯多夫距离（HD95）以及法线一致性（NC）都是基于“边界表面（Surface Mesh）”的几何度量。然而，表面对齐得好，并不完全等同于其内部所占据的三维实体空间完美重合。Volume IoU 则是从**三维实体空间（Volumetric Domain）**的角度来全面审视重建质量的指标。
+
+在几何处理中，该指标首先将三维封闭的水密网格（Watertight Mesh）进行体素化（Voxelization），即转换成空间中离散的三维二进制占用网格网格（Occupancy Grid，1代表属于心脏组织，0代表背景）。然后，计算重建心室实体与真实心室实体之间的**交集（Intersection）大小除以并集（Union）大小**。
+
+在数学上，给定重建实体的体素占用集合 $V_{rec}$ 和真值实体的体素占用集合 $V_{gt}$，Volume IoU 的公式定义为：
+
+$$\text{IoU}(V_{rec}, V_{gt}) = \frac{| V_{rec} \cap V_{gt} |}{| V_{rec} \cup V_{gt} |}$$
+
+其中，$\cap$ 表示两者的空间交集（重叠部分），$\cup$ 表示两者的空间并集（总覆盖部分），$|\cdot| $ 表示体内非零体素的总总数（基数）。
+
+该指标的值域在 $[0, 1]$ 之间，**值越接近 1 说明空间占用重叠率越高，整体三维轮廓解剖契合度越好**。在心脏亚结构重建中，Volume IoU 是一把极其犀利的尺子。如果算法在左心室壁（Myocardium）的厚度恢复上存在系统性偏差，或者右心室腔（RV）发生了整体错位，Volume IoU 分数会表现出非常敏锐的下跌，这能有效防止算法在局部细节上“作弊”。
 
 
 
