@@ -51,6 +51,14 @@ $$\mathcal{D}_{EMD}(S_{rec}, S_{gt}) = \min_{\phi: S_{rec} \to S_{gt}} \frac{1}{
 全局动态规划，衡量最小的移动距离，更能看细节，但计算量大。
 
 
+## Hausdorff Distance / HD95 (豪斯多夫距离)
+
+
+
+
+
+
+
 
 
 
