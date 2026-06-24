@@ -23,8 +23,9 @@
 
 需要：评价各个方法，模型，在统一的四个输入的数据集里的重建表现
 
-考察：两个任务，稀释MRI->3D mesh，稀释MRI->3D mesh + 
+考察两个任务：稀释MRI->3D mesh，稀释MRI->3D mesh + dense correspondence
 
+卖点：大部分重建hu'lue
 
 
 
