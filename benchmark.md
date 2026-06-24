@@ -28,8 +28,9 @@
 卖点：大部分重建忽略dense correspondence，导致SSM、统计分析、  群体研究无法进行，本文同时评估几何质量geometry和对应关系correspondence
 
 4DM：输入有MRI+GT:mesh
-ACDC：输入有MRI+GT:segmentation
-
+ACDC：输入有MRI+GT:segmentation（无mesh，需用Marching Cubes通过seg得到mesh）
+M&Ms2：输入有MRI+GT:segmentation（无mesh，需用Marching Cubes通过seg得到mesh）
+UK：
 
 
 
