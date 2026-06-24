@@ -30,7 +30,7 @@
 4DM：输入有MRI+GT:mesh
 ACDC：输入有MRI+GT:segmentation（无mesh，需用Marching Cubes通过seg得到mesh）
 M&Ms2：输入有MRI+GT:segmentation（无mesh，需用Marching Cubes通过seg得到mesh）
-UK：
+UK：输入只有HR seg+LR seg （无mesh，需用Marching Cubes通过seg得到mesh）
 
 
 
