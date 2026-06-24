@@ -30,8 +30,10 @@
 4DM：输入有MRI+GT:mesh
 ACDC：输入有MRI+GT:segmentation（无mesh，需用Marching Cubes通过seg得到mesh）
 M&Ms2：输入有MRI+GT:segmentation（无mesh，需用Marching Cubes通过seg得到mesh）
-UK：输入只有HR seg+LR seg （无mesh，需用Marching Cubes通过seg得到mesh）
+UK：输入只有HR seg+LR seg （无mesh，需用Marching Cubes通过seg得到mesh）HR Mesh = GT，LR Mesh = Sparse Input
+统一输入：sparse MRI +Dense Mesh？？？不同数据集做不同的事情
 
+统一坐标系：不同数据集，spacing不同、方向不同、尺寸不同、坐标不同。例如ACDC1.25×1.25×10mm，4DM1×1×1mm，不能直接比较。
 
 
 
