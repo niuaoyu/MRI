@@ -59,7 +59,7 @@ Step3 Normalization：统一Heart Center=Origin，得到Canonical Space
 # 数据集
 
 [ACDC Challenge](https://www.creatis.insa-lyon.fr/Challenge/acdc/index.html)、
-
+ACDC数据集，150个案例，分五类，一类30个，是4D序列，但只有两个帧标签（舒张末期ED和收缩末期ES)
 
 
 
