@@ -38,7 +38,7 @@ Step1 Resampling：统一，1mm isotropic，或者128×128×128
 Step2 Orientation：统一，RAS，或者LPS
 Step3 Normalization：统一Heart Center=Origin，得到Canonical Space
 
-
+选择baseline+选择指标+泛化（UK训练的模型，在）
 
 
 
