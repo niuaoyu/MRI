@@ -34,6 +34,20 @@ UK：输入只有HR seg+LR seg （无mesh，需用Marching Cubes通过seg得到m
 统一输入：sparse MRI +Dense Mesh？？？不同数据集做不同的事情
 
 统一坐标系：不同数据集，spacing不同、方向不同、尺寸不同、坐标不同。例如ACDC1.25×1.25×10mm，4DM1×1×1mm，不能直接比较。
+Step1 Resampling：统一，1mm isotropic，或者128×128×128
+Step2 Orientation：统一，RAS，或者LPS
+Step3 Normalization：统一Heart Center=Origin，得到Canonical Space
+
+
+
+
+
+
+
+
+
+
+
 
 
 
