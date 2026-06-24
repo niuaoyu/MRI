@@ -48,8 +48,9 @@ Step3 Normalization：统一Heart Center=Origin，得到Canonical Space
 
 
 
-# 细节
-1.A dataset of 1331 healthy adults was collected. High-spatial resolution 3D balanced steady-state free precession cine sequences were used that assessed the left and right ventricles in their entirety in a single breath-hold (60 sections, reconstructed voxel size 1.2 x 1.2 x 2 mm, 20 cardiac phases, typical breath-hold 20s). Conventional single slice multi-breath-hold images were also acquired in the same geometry (10 sections, reconstructed voxel size 1.8 x 1.8 x 8 mm). Imaging was performed on a 1.5-T Philips Achieva system (Best, the Netherlands). UK数据集每个人是HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz，LR_ES.nii.gz，只有这些，没有MRI，只有分割标签，没有数据，如何训练模型？
+# 细节问题
+1. A dataset of 1331 healthy adults was collected. High-spatial resolution 3D balanced steady-state free precession cine sequences were used that assessed the left and right ventricles in their entirety in a single breath-hold (60 sections, reconstructed voxel size 1.2 x 1.2 x 2 mm, 20 cardiac phases, typical breath-hold 20s). Conventional single slice multi-breath-hold images were also acquired in the same geometry (10 sections, reconstructed voxel size 1.8 x 1.8 x 8 mm). Imaging was performed on a 1.5-T Philips Achieva system (Best, the Netherlands). UK数据集每个人是HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz，LR_ES.nii.gz，只有这些，没有MRI，只有分割标签，没有数据，如何训练模型？
+2. 
 
 
 
