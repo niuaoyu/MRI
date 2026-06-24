@@ -63,7 +63,7 @@ ACDC数据集，150个案例，分五类，一类30个，是4D序列，但只有
 
 
 [M&Ms-2 Challenge](https://www.ub.edu/mnms-2/)
-
+M&Ms2-4d，长短轴分别25帧，分割的标签也对应。
 
 
 
