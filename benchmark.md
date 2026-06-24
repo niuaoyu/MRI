@@ -25,7 +25,12 @@
 
 考察两个任务：稀释MRI->3D mesh，稀释MRI->3D mesh + dense correspondence
 
-卖点：大部分重建hu'lue
+卖点：大部分重建忽略dense correspondence，导致SSM、统计分析、  群体研究无法进行，本文同时评估几何质量geometry和对应关系correspondence
+
+4DM：输入有MRI+GT:mesh
+ACDC：输入有MRI+GT:segmentation
+
+
 
 
 
