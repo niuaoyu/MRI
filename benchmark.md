@@ -78,7 +78,10 @@ M&Ms2-4d，360个案例，一个心脏的长短轴分别25帧，分割的标签�
 https://data.mendeley.com/datasets/pw87p286yx/1
 UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz，LR_ES.nii.gz，没有MRI，只有分割标签，没有数据，是双心室的，
 
-
+UK = 提供大规模形状先验
+M&Ms2 = 提供训练深度模型的数据（会用UK的先验心脏模型做约束）
+4DM = 高质量Mesh测试集
+ACDC = 泛化测试集
 
 # 方法
 
@@ -125,7 +128,7 @@ DIF：→ Mesh_D
 
 然后和GT（mesh）比较：Chamfer、Hausdorff、ASSD
 
-
+第二张表，比较  Dense Correspondence
 
 
 
