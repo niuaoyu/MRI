@@ -78,28 +78,34 @@ M&Ms2-4d，360个案例，一个心脏的长短轴分别25帧，分割的标签�
 https://data.mendeley.com/datasets/pw87p286yx/1
 UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz，LR_ES.nii.gz，没有MRI，只有分割标签，没有数据，是双心室的，
 
-UK = 提供大规模形状先验
+UK = 提供大规模形状先验（UK不是为了重建，UK是为了学习心脏形状空间，1331做PCA得到均值形状，）
 M&Ms2 = 提供训练深度模型的数据（会用UK的先验心脏模型做约束）
 4DM = 高质量Mesh测试集
 ACDC = 泛化测试集
 
+
+
 # 方法
 
-第一类：传统重建（根本没有训练，属于Surface Reconstruction）
+## 第一类：传统重建（根本没有训练，属于Surface Reconstruction）
 
 输入：Point Cloud（4DM本来就用来测试的）
 输出：Mesh （与gt mesh做对比计算损失）
 例如：DG、BPA、PSR、RIMLS
 
-第二类：Shape Prior
+## 第二类：Shape Prior
 
 训练：UK(训练得到先验)+M&Ms2（训练用的数据集）->Train->Model
 测试：4DM Point Cloud->Model->Mesh->Metric
+
 输入：Sparse Point Cloud
 输出：Complete Shape
 例如：DeepSDF、IGR、DIF、MR-Net、NDF、HNDF、SHDF
 
-第三类：Dense Correspondence
+## 第三类：Dense Correspondence
+
+训练：UK(训练得到先验)  +  M&Ms2（训练用的数据集）  ->  Train  ->  Model
+测试：4DM Point Cloud  ->  Model  ->  **Mesh+Correspondence**  ->  Metric
 
 输入：Shape A、Shape B
 输出：Vertex Correspondence
