@@ -108,6 +108,8 @@ UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz�
 
 # 任务
 
+不同方法在这四个数据集的表现
+
 
 
 
