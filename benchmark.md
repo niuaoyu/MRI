@@ -111,7 +111,19 @@ UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz�
 不同方法在这四个数据集的表现
 
 
+Benchmark真正比较什么？
 
+不是比较：谁训练得好
+而是比较：面对同样输入，谁重建得最好
+
+例如：
+统一输入：Patient001 Sparse Point Cloud
+PSR：→ Mesh_A
+DeepSDF：→ Mesh_B
+HNDF：→ Mesh_C
+DIF：→ Mesh_D
+
+然后和GT（mesh）比较：Chamfer、Hausdorff、ASSD
 
 
 
