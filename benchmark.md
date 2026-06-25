@@ -53,7 +53,7 @@ Step3 Normalization：统一Heart Center=Origin，得到Canonical Space
 2. Dense Correspondence是时间对应？还是病人间对应？
 
 
-
+做配准最大的问题是没有gt，如果用UK做SSM（心脏先验），就变成谁更像SSM而不是谁更像真实心脏，
 
 
 
