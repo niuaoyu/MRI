@@ -93,52 +93,17 @@ UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz�
 
 输入：Sparse Point Cloud
 输出：Complete Shape
-例如：
+例如：DeepSDF、IGR、DIF、MR-Net、NDF、HNDF、SHDF
 
-DeepSDF
-IGR
-DIF
-MR-Net
-NDF
-HNDF
-SHDF
 第三类：Dense Correspondence
 
-输入：
+输入：Shape A、Shape B
+输出：Vertex Correspondence
+例如：DIF、CoFie、3DShape2VecSet
 
-Shape A
-Shape B
+注意：DeepSDF根本不会输出Correspondence，而DIF天生输出Correspondence。
 
-输出：
-
-Vertex Correspondence
-
-例如：
-
-DIF
-CoFie
-3DShape2VecSet
-
-注意：
-
-DeepSDF
-
-根本不会输出Correspondence。
-
-而：
-
-DIF
-
-天生输出Correspondence。
-
-所以：
-
-你现在最大的错误是：
-
-重建指标
-对应指标
-混在一起
-
+所以指标不是一种，而是两种，重建指标 和 对应指标
 
 
 
