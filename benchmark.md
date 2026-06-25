@@ -55,7 +55,7 @@ Step3 Normalization：统一Heart Center=Origin，得到Canonical Space
 
 # 标题
 
-配准是同一病人的不同帧的点对应。
+配准是同一病人的不同帧的点对应，4D Dense Correspondence。
 
 
 # 数据集
