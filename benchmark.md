@@ -78,7 +78,7 @@ M&Ms2-4d，360个案例，一个心脏的长短轴分别25帧，分割的标签�
 https://data.mendeley.com/datasets/pw87p286yx/1
 UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz，LR_ES.nii.gz，没有MRI，只有分割标签，没有数据，是双心室的，
 
-UK = 提供大规模形状先验（UK不是为了重建，UK是为了学习心脏形状空间，1331做PCA得到均值形状，）
+UK = 提供大规模形状先验（UK不是为了重建，UK是为了学习心脏形状空间，1331做PCA得到均值形状，限制重建结果）
 M&Ms2 = 提供训练深度模型的数据（会用UK的先验心脏模型做约束）
 4DM = 高质量Mesh测试集
 ACDC = 泛化测试集
@@ -123,11 +123,9 @@ ACDC = 泛化测试集
 
 
 Input：Sparse Cardiac Point Cloud
-
 Output：Dense Surface Mesh (optional Dense Correspondence)
 
 所有方法统一遵守这个接口，即：
-
 Point Cloud
     ↓
 Reconstruction Method
