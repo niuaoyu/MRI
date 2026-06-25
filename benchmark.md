@@ -73,7 +73,7 @@ M&Ms2-4d，360个案例，一个心脏的长短轴分别25帧，分割的标签�
 25个病人，只有左心室的25帧，有CMR+mesh+points数据。
 
 https://data.mendeley.com/datasets/pw87p286yx/1
-UK，1331个病例，
+UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz，LR_ES.nii.gz，没有MRI，只有分割标签，没有数据，是双心室的，
 
 
 
