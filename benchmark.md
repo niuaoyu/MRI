@@ -57,6 +57,10 @@ Step3 Normalization：统一Heart Center=Origin，得到Canonical Space
 
 配准是同一病人的不同帧的点对应，4D Dense Correspondence。
 
+Benchmark for Cardiac Sparse-to-Dense Surface Reconstruction and Dense Correspondence
+
+核心贡献根本不是Mesh，而是Sparse Clinical Data->Dense Cardiac Surface->Dense Correspondence
+
 
 # 数据集
 
@@ -74,6 +78,66 @@ M&Ms2-4d，360个案例，一个心脏的长短轴分别25帧，分割的标签�
 https://data.mendeley.com/datasets/pw87p286yx/1
 UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz，LR_ES.nii.gz，没有MRI，只有分割标签，没有数据，是双心室的，
 
+
+
+# 方法
+
+第一类：传统重建（根本没有训练，属于Surface Reconstruction）
+
+输入：Point Cloud
+输出：Mesh
+例如：DG、BPA、PSR、RIMLS
+
+
+第二类：Shape Prior
+
+输入：Sparse Point Cloud
+输出：Complete Shape
+例如：
+
+DeepSDF
+IGR
+DIF
+MR-Net
+NDF
+HNDF
+SHDF
+第三类：Dense Correspondence
+
+输入：
+
+Shape A
+Shape B
+
+输出：
+
+Vertex Correspondence
+
+例如：
+
+DIF
+CoFie
+3DShape2VecSet
+
+注意：
+
+DeepSDF
+
+根本不会输出Correspondence。
+
+而：
+
+DIF
+
+天生输出Correspondence。
+
+所以：
+
+你现在最大的错误是：
+
+重建指标
+对应指标
+混在一起
 
 
 
