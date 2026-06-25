@@ -114,6 +114,21 @@ ACDC = 泛化测试集
 不同方法在这四个数据集的表现
 
 
+Input：Sparse Cardiac Point Cloud
+
+Output：Dense Surface Mesh (optional Dense Correspondence)
+
+所有方法统一遵守这个接口，即：
+
+Point Cloud
+    ↓
+Reconstruction Method
+    ↓
+Dense Mesh
+    ↓
+Evaluation
+
+
 Benchmark真正比较什么？
 
 不是比较：谁训练得好
