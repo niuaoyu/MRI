@@ -53,7 +53,9 @@ Step3 Normalization：统一Heart Center=Origin，得到Canonical Space
 2. 
 
 
+# 标题
 
+配准是同一病人的不同帧的点对应。
 
 
 # 数据集
