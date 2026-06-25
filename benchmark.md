@@ -88,7 +88,6 @@ UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz�
 输出：Mesh
 例如：DG、BPA、PSR、RIMLS
 
-
 第二类：Shape Prior
 
 输入：Sparse Point Cloud
@@ -105,6 +104,9 @@ UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz�
 
 所以指标不是一种，而是两种，重建指标 和 对应指标
 
+
+# 问老师
+1. 普通重建常见，那么为什么还要加上重建的任务？直接写配准不行吗？
 
 
 # 意义 introduction
