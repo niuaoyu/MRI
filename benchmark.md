@@ -87,12 +87,14 @@ ACDC = 泛化测试集
 
 第一类：传统重建（根本没有训练，属于Surface Reconstruction）
 
-输入：Point Cloud
-输出：Mesh
+输入：Point Cloud（4DM本来就用来测试的）
+输出：Mesh （与gt mesh做对比计算损失）
 例如：DG、BPA、PSR、RIMLS
 
 第二类：Shape Prior
 
+训练：UK(训练得到先验)+M&Ms2（训练用的数据集）->Train->Model
+测试：4DM Point Cloud->Model->Mesh->Metric
 输入：Sparse Point Cloud
 输出：Complete Shape
 例如：DeepSDF、IGR、DIF、MR-Net、NDF、HNDF、SHDF
