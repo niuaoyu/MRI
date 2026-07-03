@@ -49,7 +49,7 @@ Step3 Normalization：统一Heart Center=Origin，得到Canonical Space
 
 
 # 细节问题
-1. Benchmark最终任务是什么？仅重建？还是重建+Dense Correspondence？3D的常见，3D+配准（没有gt），4D重建，
+1. Benchmark最终任务是什么？仅重建？还是重建+Dense Correspondence？就做3D的重建和配准，对于配准没有gt，用当前的一些方法比如SHDF来解决
 2. Dense Correspondence是时间对应？还是病人间对应？
 
 
