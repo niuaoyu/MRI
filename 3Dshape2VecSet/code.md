@@ -1,6 +1,8 @@
 
 **过去：**
-scp /home/nay/github/3DShape2VecSet/ zhaoxiuyang@172.16.227.8:/home/zhaoxiuyang/nay
+cd /home/nay/github/3DShape2VecSet/
+
+scp /home/nay/github/3DShape2VecSet/main_ae.py /home/nay/github/3DShape2VecSet/engine_ae.py zhaoxiuyang@172.16.227.8:/home/zhaoxiuyang/nay
 
 scp /home/nay/github/3DShape2VecSet/  rookie@202.194.67.162:/home/rookie/nay
 
@@ -8,6 +10,14 @@ scp /home/nay/github/3DShape2VecSet/  rookie@202.194.67.162:/home/rookie/nay
 scp /home/rookie/nay/output/ae/ nay@202.194.67.156:/home/nay/github/3DShape2VecSet/ 
 
 scp /home/zhaoxiuyang/nay/output/ae/ nay@202.194.67.156:/home/nay/github/3DShape2VecSet/ 
+
+
+
+zhaoxiuyang@master8:~/nay$ ps -up 1968453 1968822
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+zhaoxiu+ 1968453  0.0  0.1 47816724 471420 pts/8 Sl+  7月07   0:46 python hold_gpu_mem.py
+zhaoxiu+ 1968822  0.0  0.1 47816744 470576 pts/6 Sl   7月07   0:47 python hold_gpu_mem.py --gpu 1 --gb 23
+
 
 
 
