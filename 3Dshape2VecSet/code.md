@@ -1,12 +1,13 @@
 
-
+**过去：**
 scp /home/nay/github/3DShape2VecSet/ zhaoxiuyang@172.16.227.8:/home/zhaoxiuyang/nay
 
+scp /home/nay/github/3DShape2VecSet/  rookie@202.194.67.162:/home/rookie/nay
 
+**回来：**
+scp /home/rookie/nay/output/ae/ nay@202.194.67.156:/home/nay/github/3DShape2VecSet/ 
 
-
-
-
+scp /home/zhaoxiuyang/nay/output/ae/ nay@202.194.67.156:/home/nay/github/3DShape2VecSet/ 
 
 
 
