@@ -8,6 +8,8 @@ scp /home/nay/github/3DShape2VecSet/main_ae.py /home/nay/github/3DShape2VecSet/e
 **zhaoxiuyang@172.16.227.3**
 scp /home/nay/github/3DShape2VecSet/main_ae.py /home/nay/github/3DShape2VecSet/engine_ae.py zhaoxiuyang@172.16.227.3:/home/zhaoxiuyang/nay
 
+scp /home/nay/github/3DShape2VecSet/main_ae.py zhaoxiuyang@172.16.227.3:/home/zhaoxiuyang/nay
+
 **rookie@202.194.67.162**
 scp /home/nay/github/3DShape2VecSet/  rookie@202.194.67.162:/home/rookie/nay
 
