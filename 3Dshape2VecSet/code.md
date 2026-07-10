@@ -1,3 +1,15 @@
+
+
+scp /home/nay/github/3DShape2VecSet/ zhaoxiuyang@172.16.227.8:/home/zhaoxiuyang/nay
+
+
+
+
+
+
+
+
+
 # question
 
 ![[Pasted image 20260528172222.png]]
