@@ -235,3 +235,895 @@ DIF：→ Mesh_D
 
 
 
+# Cardiac Substructure 3D Reconstruction Benchmark（当前设计梳理）
+
+> 更新时间：2026-07
+>
+> 当前目标：建立一个统一的 Cardiac Substructure 3D Reconstruction Benchmark，
+> 系统评测传统几何重建、隐式表示、模板变形、生成式方法在**稀疏临床输入**下的三维重建能力，并统一评价 Dense Correspondence。
+
+
+# 一、为什么要做这个 Benchmark？
+
+## 背景
+
+数字心脏（Digital Heart）越来越重要，是：
+
+- 手术规划（Surgical Planning）
+- 血流模拟（CFD）
+- 生物力学分析（Biomechanics）
+- 电生理模拟（Electrophysiology）
+- 群体统计分析（Population Analysis）
+- 数字孪生（Digital Twin）
+
+的重要基础。
+
+然而，目前临床MR存在天然限制：
+
+- Slice间距大（Slice spacing）
+- Z方向分辨率低
+- 数据稀疏
+- 很难直接恢复连续三维曲面
+
+因此：
+
+> Cardiac 3D Reconstruction 是一个典型的 Ill-posed Problem。
+
+---
+
+## 目前已有方法
+
+目前已经出现很多方法：
+
+### Learning-free
+
+- DG
+- BPA
+- PSR
+- RIMLS
+
+特点：
+
+- 输入点云
+- 输出Mesh
+- 不需要训练
+
+---
+
+### Shape Representation
+
+例如：
+
+- AtlasNet
+- DeepSDF
+- IGR
+- SHDF
+
+特点：
+
+学习Shape Distribution。
+
+---
+
+### Template / Deformation
+
+例如：
+
+- DIF-Net
+- DIT
+- MR-Net
+- MeshDiffusion
+- NDF
+- HNDF
+- 3DShape2VecSet
+- CoFie
+- TetraDiffusion
+
+特点：
+
+学习：
+
+Template
+
+↓
+
+Deformation Field
+
+↓
+
+Target Shape
+
+其中部分模型天然具有 Dense Correspondence。
+
+---
+
+## 目前存在的问题
+
+目前领域没有统一Benchmark：
+
+不同论文：
+
+- 数据集不同
+- 输入不同
+- Mesh定义不同
+- Shape Prior不同
+- Correspondence定义不同
+- 指标不同
+
+导致：
+
+无法公平比较各种方法。
+
+另外：
+
+很多工作关注：
+
+> Reconstruction
+
+却忽略：
+
+> Dense Correspondence
+
+而Dense Correspondence对于：
+
+- Registration
+- Motion Analysis
+- Statistical Shape Model
+- Population Analysis
+
+都是必须的。
+
+---
+
+# Benchmark目标
+
+建立统一：
+
+- Dataset
+- Input
+- Mesh Representation
+- Evaluation
+- Dense Correspondence Pipeline
+
+公平比较不同类别方法。
+
+---
+
+# 二、Benchmark最终任务
+
+目前暂定两个Task。
+
+---
+
+# Task1
+
+## Sparse Cardiac Reconstruction
+
+输入：
+
+Sparse Clinical Observation
+
+例如：
+
+- SAX
+- 2CH
+- 3CH
+- 4CH
+
+输出：
+
+Dense Mesh
+
+评价：
+
+- Chamfer Distance
+- Hausdorff Distance
+- ASSD
+- Surface Normal Error（待定）
+
+---
+
+# Task2
+
+## Dense Correspondence Evaluation
+
+注意：
+
+不是模型直接输出Correspondence。
+
+统一流程：
+
+Prediction Mesh
+
+↓
+
+Template Registration
+
+↓
+
+Dense Correspondence
+
+↓
+
+Evaluation
+
+这样：
+
+所有方法都能参加。
+
+包括：
+
+PSR
+
+DeepSDF
+
+DIF
+
+HNDF
+
+全部统一。
+
+---
+
+# 三、数据集设计
+
+目前使用三个数据集。
+
+---
+
+## 1. UK Digital Heart
+
+数量：
+
+1331
+
+数据：
+
+- HR_ED
+- HR_ES
+- LR_ED
+- LR_ES
+
+只有Segmentation。
+
+Mesh：
+
+Marching Cubes生成。
+
+作用：
+
+- Shape Prior
+- Shape Distribution
+- Reconstruction训练
+- Seen Shape测试
+
+特点：
+
+- 数据最多
+- 高分辨率
+- 正常人
+
+---
+
+## 2. M&Ms-2
+
+数量：
+
+258（处理后）
+
+特点：
+
+- SAX + LAX
+- 多中心
+- 多厂家
+- 多疾病
+
+目前：
+
+SSM已经拟合。
+
+具有：
+
+Dense Correspondence。
+
+作用：
+
+- Reconstruction训练
+- Dense Correspondence测试
+- Multi-label测试
+
+---
+
+## 3. ACDC
+
+数量：
+
+150
+
+特点：
+
+- SAX
+- ED ES人工标注
+
+作用：
+
+OOD（Out-of-distribution）
+
+Generalization Test。
+
+训练：
+
+不用。
+
+只测试。
+
+---
+
+# 数据集职责
+
+UK
+
+↓
+
+Shape Distribution
+
+↓
+
+Training
+
+↓
+
+Seen Shape Test
+
+----------------------
+
+M&Ms2
+
+↓
+
+Dense Correspondence
+
+↓
+
+Registration Evaluation
+
+----------------------
+
+ACDC
+
+↓
+
+OOD Test
+
+↓
+
+Generalization
+
+---
+
+# 四、输入协议
+
+统一模拟真实临床。
+
+---
+
+## A
+
+Dense Input
+
+输入：
+
+Dense Point Cloud
+
+主要评价：
+
+Upper Bound。
+
+---
+
+## B
+
+Clinical Sparse
+
+模拟：
+
+- SAX
+- 2CH
+- 3CH
+- 4CH
+
+真实临床采样。
+
+---
+
+## C
+
+Ultra Sparse
+
+进一步降低：
+
+Slice数量：
+
+例如：
+
+- 2 slices
+- 4 slices
+- 6 slices
+
+用于：
+
+极端稀疏测试。
+
+---
+
+# 五、实验设计
+
+## Experiment1
+
+Seen Shape Reconstruction
+
+训练：
+
+UK Train
+
+测试：
+
+UK Test
+
+比较：
+
+Dense
+
+Sparse
+
+Ultra Sparse
+
+---
+
+## Experiment2
+
+Unseen Shape Reconstruction
+
+训练：
+
+UK
+
+测试：
+
+M&Ms2
+
+评价：
+
+Shape Reconstruction。
+
+---
+
+## Experiment3
+
+Generalization
+
+训练：
+
+UK
+
+测试：
+
+ACDC
+
+评价：
+
+Mesh与Contour契合程度。
+
+---
+
+# 六、Dense Correspondence
+
+当前设计：
+
+所有模型：
+
+Prediction Mesh
+
+↓
+
+统一Template Registration
+
+↓
+
+Dense Correspondence
+
+↓
+
+Evaluation
+
+而不是：
+
+各模型输出自己的Correspondence。
+
+原因：
+
+很多模型：
+
+例如：
+
+PSR
+
+DeepSDF
+
+AtlasNet
+
+没有Correspondence输出。
+
+统一Registration以后：
+
+所有方法公平。
+
+---
+
+# Correspondence评价
+
+目前两个任务。
+
+---
+
+## Task1
+
+Registration Shape Quality
+
+评价：
+
+Registration后：
+
+Mesh误差。
+
+例如：
+
+- CD
+- HD
+
+---
+
+## Task2
+
+Label Transfer
+
+Template：
+
+LV
+
+RV
+
+Label
+
+↓
+
+Transfer
+
+↓
+
+Prediction Mesh
+
+↓
+
+Compare GT
+
+评价：
+
+- Dice
+- IoU
+
+主要用于：
+
+Multi-label Reconstruction。
+
+---
+
+# 七、方法分类
+
+---
+
+## Category1
+
+Learning-free
+
+- DG
+- BPA
+- PSR
+- RIMLS
+
+特点：
+
+Point
+
+↓
+
+Mesh
+
+---
+
+## Category2
+
+Shape Representation
+
+例如：
+
+- AtlasNet
+- DeepSDF
+- IGR
+- SHDF
+
+特点：
+
+学习Shape Distribution。
+
+---
+
+## Category3
+
+Template / Flow
+
+例如：
+
+- DIF
+- DIT
+- MR-Net
+- MeshDiffusion
+- NDF
+- HNDF
+- 3DShape2VecSet
+- CoFie
+- TetraDiffusion
+
+特点：
+
+Template
+
+↓
+
+Deformation
+
+↓
+
+Shape
+
+部分模型：
+
+天然具有Correspondence。
+
+---
+
+# 八、Benchmark主要研究问题
+
+Q1
+
+各种Shape Representation：
+
+谁重建最好？
+
+---
+
+Q2
+
+随着输入越来越稀疏：
+
+哪些模型最鲁棒？
+
+Dense
+
+↓
+
+Sparse
+
+↓
+
+Ultra Sparse
+
+---
+
+Q3
+
+Template
+
+Deformation
+
+Shape Prior
+
+是否提升重建？
+
+例如：
+
+DeepSDF
+
+vs
+
+HNDF
+
+vs
+
+DIF
+
+---
+
+Q4
+
+生成式方法：
+
+Diffusion
+
+是否改善稀疏输入？
+
+---
+
+Q5
+
+Dense Correspondence：
+
+Template Deformation
+
+是否改善：
+
+Registration
+
+Label Transfer
+
+---
+
+# 九、当前仍未完全确定的问题
+
+## Question1
+
+多标签重建
+
+还是：
+
+整体双心室重建？
+
+目前：
+
+整体重建更简单。
+
+但：
+
+Multi-label更符合临床。
+
+---
+
+## Question2
+
+ED和ES
+
+是否分开训练？
+
+目前：
+
+建议：
+
+分别实验：
+
+- ED
+- ES
+- ED+ES
+
+比较：
+
+Motion Gap。
+
+---
+
+## Question3
+
+Dense Correspondence
+
+Ground Truth
+
+目前来源：
+
+Template Registration（Pseudo GT）
+
+需要进一步确认：
+
+是否完全采用SSM生成Correspondence。
+
+---
+
+## Question4
+
+Efficiency
+
+是否统计：
+
+- Inference Time
+- Training Time
+- Params
+- FLOPs
+
+建议：
+
+Benchmark应该统计。
+
+---
+
+## Question5
+
+ACDC
+
+没有GT Mesh。
+
+评价：
+
+使用：
+
+Mesh
+
+↓
+
+Slice
+
+↓
+
+Contour
+
+或
+
+Dice。
+
+最终指标需要确定。
+
+---
+
+# 十、当前最大的创新点
+
+不是：
+
+"收集几个数据集"
+
+而是：
+
+建立统一：
+
+- Dataset Protocol
+- Input Protocol
+- Mesh Representation
+- Registration Pipeline
+- Dense Correspondence Evaluation
+- Generalization Evaluation
+
+实现：
+
+传统方法
+
+↓
+
+隐式表示
+
+↓
+
+模板变形
+
+↓
+
+生成式方法
+
+在同一平台上的公平比较。
+
+---
+
+# 十一、目前最大的风险
+
+目前Benchmark最大的风险不是模型，而是：
+
+Dense Correspondence GT。
+
+需要最终明确：
+
+Template Registration得到的Correspondence：
+
+到底作为：
+
+Pseudo Ground Truth
+
+还是：
+
+Evaluation Protocol。
+
+这是后续和导师需要重点讨论的问题。
