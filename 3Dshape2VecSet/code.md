@@ -14,7 +14,7 @@ scp /home/nay/github/3DShape2VecSet/main_ae.py zhaoxiuyang@172.16.227.3:/home/zh
 scp /home/nay/github/3DShape2VecSet/  rookie@202.194.67.162:/home/rookie/nay
 
 **回来：**
-scp /home/rookie/nay/output/ae/route2_2gpu_3090/log.txt nay@202.194.67.156:/home/nay/github/3DShape2VecSet/output/test
+scp /home/rookie/nay/output/ae/baseline_wd005_kl1e3/log.txt nay@202.194.67.156:/home/nay/github/3DShape2VecSet/output/test/baseline_wd005_kl1e3_4090/
 
 scp /home/zhaoxiuyang/nay/output/ae/route2_2gpu_3090/log.txt nay@202.194.67.156:/home/nay/github/3DShape2VecSet/output/test
 
