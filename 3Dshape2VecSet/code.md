@@ -14,9 +14,9 @@ scp /home/nay/github/3DShape2VecSet/main_ae.py zhaoxiuyang@172.16.227.3:/home/zh
 scp /home/nay/github/3DShape2VecSet/  rookie@202.194.67.162:/home/rookie/nay
 
 **回来：**
-scp /home/rookie/nay/output/ae/ nay@202.194.67.156:/home/nay/github/3DShape2VecSet/ 
+scp /home/rookie/nay/output/ae/route2_2gpu_3090/log.txt nay@202.194.67.156:/home/nay/github/3DShape2VecSet/output/test
 
-scp /home/zhaoxiuyang/nay/output/ae/ nay@202.194.67.156:/home/nay/github/3DShape2VecSet/ 
+scp /home/zhaoxiuyang/nay/output/ae/route2_2gpu_3090/log.txt nay@202.194.67.156:/home/nay/github/3DShape2VecSet/output/test
 
 
 
