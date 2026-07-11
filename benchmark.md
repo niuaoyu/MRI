@@ -259,7 +259,7 @@ DIF：→ Mesh_D
 的重要基础。
 
 然而，目前临床MR存在天然限制：
-
+bao'po
 - Slice间距大（Slice spacing）
 - Z方向分辨率低
 - 数据稀疏
