@@ -6,7 +6,7 @@ datasets|num|cmr|gt mesh|phase|input|features
 
 方法分类:
 1. 直接隐式重建：DeepSDF 、 IGR 、 HSDF？ 、 MR-Net
-2. **隐式模板变形**：DIF 、DIF-Net、DIT、NDM（微分同胚）、HNDF（triplane+微分同胚）
+2. **隐式模板变形**：DIF 、DIF-Net、DIT、NDF（微分同胚）、HNDF（triplane+微分同胚）
 3. 显式模板变形：AtlasNet
 4. 混合表示重建：CoFie（直接/混合局部隐式）、MeshDiffusion / TetraDiffusion / 3DShape2VecSet（混合表示 / 生成式）
 
