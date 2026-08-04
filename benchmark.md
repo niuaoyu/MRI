@@ -766,224 +766,27 @@ Compare GT
 
 Multi-label Reconstruction。
 
----
-
-# 七、方法分类
-
----
-
-## Category1
-
-Learning-free
-
-- DG
-- BPA
-- PSR
-- RIMLS
-
-特点：
-
-Point
-
-↓
-
-Mesh
-
----
-
-## Category2
-
-Shape Representation
-
-例如：
-
-- AtlasNet
-- DeepSDF
-- IGR
-- SHDF
-
-特点：
-
-学习Shape Distribution。
-
----
-
-## Category3
-
-Template / Flow
-
-例如：
-
-- DIF
-- DIT
-- MR-Net
-- MeshDiffusion
-- NDF
-- HNDF
-- 3DShape2VecSet
-- CoFie
-- TetraDiffusion
-
-特点：
-
-Template
-
-↓
-
-Deformation
-
-↓
-
-Shape
-
-部分模型：
-
-天然具有Correspondence。
-
----
 
 # 八、Benchmark主要研究问题
 
 Q1：各种Shape Representation，谁重建最好？
 
----
-
 Q2：随着输入越来越稀疏（Dense、Sparse、Ultra Sparse），哪些模型最鲁棒？
-
 
 Q3：Template Deformation（Shape Prior）是否提升重建？例如：DeepSDF vs HNDF vs DIF
 
----
-
-Q4
 
 
-Q5
+ED和ES一起训练
 
-Dense Correspondence：
 
-Template Deformation
+Dense Correspondence 的Ground Truth 目前还没有
 
-是否改善：
 
-Registration
 
-Label Transfer
+当前最大的创新点不是："收集几个数据集"
 
----
-
-# 九、当前仍未完全确定的问题
-
-## Question1
-
-多标签重建
-
-还是：
-
-整体双心室重建？
-
-目前：
-
-整体重建更简单。
-
-但：
-
-Multi-label更符合临床。
-
----
-
-## Question2
-
-ED和ES
-
-是否分开训练？
-
-目前：
-
-建议：
-
-分别实验：
-
-- ED
-- ES
-- ED+ES
-
-比较：
-
-Motion Gap。
-
----
-
-## Question3
-
-Dense Correspondence
-
-Ground Truth
-
-目前来源：
-
-Template Registration（Pseudo GT）
-
-需要进一步确认：
-
-是否完全采用SSM生成Correspondence。
-
----
-
-## Question4
-
-Efficiency
-
-是否统计：
-
-- Inference Time
-- Training Time
-- Params
-- FLOPs
-
-建议：
-
-Benchmark应该统计。
-
----
-
-## Question5
-
-ACDC
-
-没有GT Mesh。
-
-评价：
-
-使用：
-
-Mesh
-
-↓
-
-Slice
-
-↓
-
-Contour
-
-或
-
-Dice。
-
-最终指标需要确定。
-
----
-
-# 十、当前最大的创新点
-
-不是：
-
-"收集几个数据集"
-
-而是：
-
-建立统一：
+而是建立统一：
 
 - Dataset Protocol
 - Input Protocol
@@ -992,42 +795,4 @@ Dice。
 - Dense Correspondence Evaluation
 - Generalization Evaluation
 
-实现：
-
-传统方法
-
-↓
-
-隐式表示
-
-↓
-
-模板变形
-
-↓
-
-生成式方法
-
-在同一平台上的公平比较。
-
----
-
-# 十一、目前最大的风险
-
-目前Benchmark最大的风险不是模型，而是：
-
-Dense Correspondence GT。
-
-需要最终明确：
-
-Template Registration得到的Correspondence：
-
-到底作为：
-
-Pseudo Ground Truth
-
-还是：
-
-Evaluation Protocol。
-
-这是后续和导师需要重点讨论的问题。
+实现：传统方法，显示、隐式表示，模板变形，在同一平台上的公平比较
