@@ -56,6 +56,9 @@ DeepSDF根本不会输出Correspondence，而DIF天生输出Correspondence
 
 
 重建指标 和 Dense Correspondence Evaluation对应指标的统一流程是什么？
+Q1：各种Shape Representation，谁重建最好？
+Q2：随着输入越来越稀疏（Dense、Sparse、Ultra Sparse），哪些模型最鲁棒？
+Q3：Template Deformation（Shape Prior）是否提升重建？例如：DeepSDF vs HNDF vs DIF
 
 
 # 意义 introduction
@@ -110,13 +113,13 @@ DeepSDF根本不会输出Correspondence，而DIF天生输出Correspondence
 
 ## 🚀 三、 总结：你的这篇 Benchmark 扮演了什么角色？
 
-理清了上述背景和问题，你论文的**贡献（Contributions）**就顺理成章地诞生了。你正在写的这篇 Benchmark，扮演的是一个**打破行业僵局的“标准制定者”**：
+正在写的这篇 Benchmark，扮演的是一个**打破行业僵局的“标准制定者”**：
 
-1. **构建了统一的数据生态**：学长做的工作，本质上是把 UK Digital Heart（静态高分辨）、M&Ms-2（带时序对应 4D）、4DM、ACDC 等多源异构的临床原始数据，全部清洗、摆正、规范拓扑，构建了**全球首个兼顾三维重建与高精度稠密点对应的标准化心脏亚结构基准数据集**。
+1. **构建了统一的数据生态**：学长做的工作，本质上是把 UK Digital Heart（静态高分辨）、M&Ms-2（带时序对应 4D）、4DM、ACDC 等多源异构的临床原始数据，全部清洗、摆正、规范拓扑，构建了**全球首个兼顾三维重建与高精度稠密点对应的标准化心脏亚结构基准数据集**
     
-2. **制定了多维度的裁判规则**：本论文不偏科，不仅考核算法的“皮相”（几何表面精度 CD, EMD, HD95），还考核算法的“骨骼”（密集对应质量 Uncertainty, LD, SRE）、“血液物理流形”（自相交率、水密性）以及“临床灵魂”（体积误差、射血分数 EF 误差）。
+2. **制定了多维度的裁判规则**：本论文不偏科，不仅考核算法的“皮相”（几何表面精度 CD, EMD, HD95），还考核算法的“骨骼”（密集对应质量 Uncertainty, LD, SRE）、“血液物理流形”（自相交率、水密性）以及“临床灵魂”（体积误差、射血分数 EF 误差）
     
-3. **照亮了未来的研究路线**：通过对 15 种前沿算法在上述多源场景下的盲测大比拼，系统性地指出了不同流派（全局潜码 vs 局部三平面，隐式表示 vs 显式形变）在面对医学稀疏图像时的极限与代价，为下一代临床数字心脏重建算法指明了改进方向。
+3. **照亮了未来的研究路线**：通过对 15 种前沿算法在上述多源场景下的盲测大比拼，系统性地指出了不同流派（全局潜码 vs 局部三平面，隐式表示 vs 显式形变）在面对医学稀疏图像时的极限与代价，为下一代临床数字心脏重建算法指明了改进方向
     
 
 ### 📝 动笔建议：
@@ -190,15 +193,6 @@ UK = 提供大规模形状先验（UK不是为了重建，UK是为了学习心�
 M&Ms2 = 提供训练深度模型的数据（会用UK的先验心脏模型做约束）
 4DM = 高质量Mesh测试集
 ACDC = 泛化测试集
-
-
-# 八、Benchmark主要研究问题
-
-Q1：各种Shape Representation，谁重建最好？
-
-Q2：随着输入越来越稀疏（Dense、Sparse、Ultra Sparse），哪些模型最鲁棒？
-
-Q3：Template Deformation（Shape Prior）是否提升重建？例如：DeepSDF vs HNDF vs DIF
 
 
 
