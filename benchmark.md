@@ -10,7 +10,7 @@
 
 
 重建的评价指标是有的
-配准的方法还没有，评价指标暂时不考虑
+配准的方法还没有，配准的评价指标暂时不考虑
 
 三维重建寻常，但如何加上点的对应关系不寻常，重建出来的 3D模型上，**每一个顶点都必须拥有解剖学意义上的“身份证”**。无论心脏怎么跳动，或者换了哪个病人，第 $i$ 个顶点在解剖上必须永远代表同一个位置（例如左心室心尖顶端）
 
@@ -41,9 +41,6 @@ DeepSDF根本不会输出Correspondence，而DIF天生输出Correspondence
 
 ED和ES一起训练
 
-
-Dense Correspondence 的Ground Truth 目前还没有
-
 重建指标 和 Dense Correspondence Evaluation对应指标的统一流程是什么？
 Q1：各种Shape Representation，谁重建最好？
 Q2：随着输入越来越稀疏（Dense、Sparse、Ultra Sparse），哪些模型最鲁棒？
@@ -54,6 +51,66 @@ Q3：Template Deformation（Shape Prior）是否提升重建？例如：DeepSDF 
 4.谁生成的网格全是流形错误？ 哪些方法虽然 CD 好看，但自相交率（Self-Intersection）高达 15%？
 
 
+
+现在有：四个处理后的数据集
+
+|数据集|来源|模态|帧数/Subject|Subject数|核心资产|用途|
+|---|---|---|---|---|---|---|
+|**4DM**|4D Myocardium|Cine MR + GT Mesh|25帧|25 (000~024)|GT水密mesh|测试 (重建+对应)|
+|**ACDC**|ACDC Challenge 2017|Cine MR + GT Seg|30帧 (仅ED/ES有标签)|100+|GT多类分割|测试 (分割+重建)|
+|**M&Ms-2**|M&Ms-2 Challenge|Cine MR (LA+SA)|25帧|2+|双视图MR|测试 (多厂商泛化)|
+|**UKDH**|UK Digital Heart|HR/LR MR Seg|2帧 (ED+ES)|1014+|HR+LR分割对|SSM构建 / 测试|
+
+需要：评价各个方法，模型，在统一的四个输入的数据集里的重建表现
+
+考察两个任务：稀释MRI->3D mesh，稀释MRI->3D mesh + dense correspondence
+
+卖点：大部分重建忽略dense correspondence，导致SSM、统计分析、  群体研究无法进行，本文同时评估几何质量geometry和对应关系correspondence
+
+4DM：输入有MRI+GT:mesh
+ACDC：输入有MRI+GT:segmentation（无mesh，需用Marching Cubes通过seg得到mesh）
+M&Ms2：输入有MRI+GT:segmentation（无mesh，需用Marching Cubes通过seg得到mesh）
+UK：输入只有HR seg（283 * 283 * 99，体素间距1.25 * 1.25 * 2）+LR seg （288 * 288 * 12，体素间距1.23 * 1.23 * 10）（无mesh，需用Marching Cubes通过seg得到mesh）HR Mesh = GT，LR Mesh = Sparse Input
+统一输入：sparse MRI +Dense Mesh？？？不同数据集做不同的事情
+
+统一坐标系：不同数据集，spacing不同、方向不同、尺寸不同、坐标不同。例如ACDC1.25×1.25×10mm，4DM1×1×1mm，不能直接比较。
+Step1 Resampling：统一，1mm isotropic，或者128×128×128
+Step2 Orientation：统一，RAS，或者LPS
+Step3 Normalization：统一Heart Center=Origin，得到Canonical Space
+
+选择baseline+选择指标评价+泛化（UK训练的模型，在ACDC数据集测试，反之亦然）
+
+
+
+# 数据集
+
+所有的数据集都具有点对应关系
+
+[ACDC Challenge](https://www.creatis.insa-lyon.fr/Challenge/acdc/index.html)、
+ACDC数据集，150个案例，分五类，一类30个，是4D序列，但只有两个帧标签（舒张末期ED和收缩末期ES，ED ES人工标注)，只有短轴sax
+
+
+[M&Ms-2 Challenge](https://www.ub.edu/mnms-2/)
+M&Ms2-4d，360个案例，多中心、多厂家、多疾病，处理后还剩258个，心脏的长短轴（SAX + LAX）分别25帧，分割的标签也对应（长轴跟短轴，每一时刻的帧都对齐了），也对应把所有的标签数据处理成点云数据了。
+
+4DM
+25个病人，只有左心室的25帧，有CMR+mesh+points数据。
+
+https://data.mendeley.com/datasets/pw87p286yx/1
+UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz，LR_ES.nii.gz，没有MRI，只有分割标签Segmentation，没有数据，是双心室的，数据最多，高分辨，正常人
+
+UK = 提供大规模形状先验（UK不是为了重建，UK是为了学习心脏形状空间，1331做PCA得到均值形状，限制重建结果）
+M&Ms2 = 提供训练深度模型的数据（会用UK的先验心脏模型做约束）
+4DM = 高质量Mesh测试集
+ACDC = 泛化测试集
+
+当前最大的创新点不是收集几个数据集，而是建立统一：
+- Dataset Protocol
+- Input Protocol
+- Mesh Representation
+- Registration Pipeline
+- Dense Correspondence Evaluation
+实现：传统方法，显示、隐式表示，模板变形，在同一平台上的公平比较
 
 # 意义 introduction
 
@@ -135,68 +192,4 @@ Q3：Template Deformation（Shape Prior）是否提升重建？例如：DeepSDF 
 
 
 
-现在有：四个处理后的数据集
 
-|数据集|来源|模态|帧数/Subject|Subject数|核心资产|用途|
-|---|---|---|---|---|---|---|
-|**4DM**|4D Myocardium|Cine MR + GT Mesh|25帧|25 (000~024)|GT水密mesh|测试 (重建+对应)|
-|**ACDC**|ACDC Challenge 2017|Cine MR + GT Seg|30帧 (仅ED/ES有标签)|100+|GT多类分割|测试 (分割+重建)|
-|**M&Ms-2**|M&Ms-2 Challenge|Cine MR (LA+SA)|25帧|2+|双视图MR|测试 (多厂商泛化)|
-|**UKDH**|UK Digital Heart|HR/LR MR Seg|2帧 (ED+ES)|1014+|HR+LR分割对|SSM构建 / 测试|
-
-需要：评价各个方法，模型，在统一的四个输入的数据集里的重建表现
-
-考察两个任务：稀释MRI->3D mesh，稀释MRI->3D mesh + dense correspondence
-
-卖点：大部分重建忽略dense correspondence，导致SSM、统计分析、  群体研究无法进行，本文同时评估几何质量geometry和对应关系correspondence
-
-4DM：输入有MRI+GT:mesh
-ACDC：输入有MRI+GT:segmentation（无mesh，需用Marching Cubes通过seg得到mesh）
-M&Ms2：输入有MRI+GT:segmentation（无mesh，需用Marching Cubes通过seg得到mesh）
-UK：输入只有HR seg（283 * 283 * 99，体素间距1.25 * 1.25 * 2）+LR seg （288 * 288 * 12，体素间距1.23 * 1.23 * 10）（无mesh，需用Marching Cubes通过seg得到mesh）HR Mesh = GT，LR Mesh = Sparse Input
-统一输入：sparse MRI +Dense Mesh？？？不同数据集做不同的事情
-
-统一坐标系：不同数据集，spacing不同、方向不同、尺寸不同、坐标不同。例如ACDC1.25×1.25×10mm，4DM1×1×1mm，不能直接比较。
-Step1 Resampling：统一，1mm isotropic，或者128×128×128
-Step2 Orientation：统一，RAS，或者LPS
-Step3 Normalization：统一Heart Center=Origin，得到Canonical Space
-
-选择baseline+选择指标评价+泛化（UK训练的模型，在ACDC数据集测试，反之亦然）
-
-
-
-# 数据集
-
-所有的数据集都具有点对应关系
-
-[ACDC Challenge](https://www.creatis.insa-lyon.fr/Challenge/acdc/index.html)、
-ACDC数据集，150个案例，分五类，一类30个，是4D序列，但只有两个帧标签（舒张末期ED和收缩末期ES，ED ES人工标注)，只有短轴sax
-
-
-[M&Ms-2 Challenge](https://www.ub.edu/mnms-2/)
-M&Ms2-4d，360个案例，多中心、多厂家、多疾病，处理后还剩258个，心脏的长短轴（SAX + LAX）分别25帧，分割的标签也对应（长轴跟短轴，每一时刻的帧都对齐了），也对应把所有的标签数据处理成点云数据了。
-
-
-4DM
-25个病人，只有左心室的25帧，有CMR+mesh+points数据。
-
-https://data.mendeley.com/datasets/pw87p286yx/1
-UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz，LR_ES.nii.gz，没有MRI，只有分割标签Segmentation，没有数据，是双心室的，数据最多，高分辨，正常人
-
-UK = 提供大规模形状先验（UK不是为了重建，UK是为了学习心脏形状空间，1331做PCA得到均值形状，限制重建结果）
-M&Ms2 = 提供训练深度模型的数据（会用UK的先验心脏模型做约束）
-4DM = 高质量Mesh测试集
-ACDC = 泛化测试集
-
-
-
-
-
-
-当前最大的创新点不是收集几个数据集，而是建立统一：
-- Dataset Protocol
-- Input Protocol
-- Mesh Representation
-- Registration Pipeline
-- Dense Correspondence Evaluation
-实现：传统方法，显示、隐式表示，模板变形，在同一平台上的公平比较
