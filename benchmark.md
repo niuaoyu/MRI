@@ -259,101 +259,27 @@ Step3 Normalization：统一Heart Center=Origin，得到Canonical Space
 
 # 数据集
 
+所有的数据集都具有点对应关系
+
 [ACDC Challenge](https://www.creatis.insa-lyon.fr/Challenge/acdc/index.html)、
-ACDC数据集，150个案例，分五类，一类30个，是4D序列，但只有两个帧标签（舒张末期ED和收缩末期ES)，学长把两帧标签处理成点云数据了。
+ACDC数据集，150个案例，分五类，一类30个，是4D序列，但只有两个帧标签（舒张末期ED和收缩末期ES，ED ES人工标注)，只有短轴sax
 
 
 [M&Ms-2 Challenge](https://www.ub.edu/mnms-2/)
-M&Ms2-4d，360个案例，一个心脏的长短轴分别25帧，分割的标签也对应（长轴跟短轴，每一时刻的帧都对齐了），也对应把所有的标签数据处理成点云数据了。
+M&Ms2-4d，360个案例，多中心、多厂家、多疾病，处理后还剩258，个心脏的长短轴（SAX + LAX）分别25帧，分割的标签也对应（长轴跟短轴，每一时刻的帧都对齐了），也对应把所有的标签数据处理成点云数据了。
 
 
 4DM
 25个病人，只有左心室的25帧，有CMR+mesh+points数据。
 
 https://data.mendeley.com/datasets/pw87p286yx/1
-UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz，LR_ES.nii.gz，没有MRI，只有分割标签Segmentation，没有数据，是双心室的，
+UK，1331个病例，每个人只有HR_ED.nii.gz，HR_ES.nii.gz，LR_ED.nii.gz，LR_ES.nii.gz，没有MRI，只有分割标签Segmentation，没有数据，是双心室的，数据最多，高分辨，正常人
 
 UK = 提供大规模形状先验（UK不是为了重建，UK是为了学习心脏形状空间，1331做PCA得到均值形状，限制重建结果）
 M&Ms2 = 提供训练深度模型的数据（会用UK的先验心脏模型做约束）
 4DM = 高质量Mesh测试集
 ACDC = 泛化测试集
 
-
-
-。
-
-Mesh：
-
-Marching Cubes生成。
-
-作用：
-
-- Shape Prior
-- Shape Distribution
-- Reconstruction训练
-- Seen Shape测试
-
-特点：
-
-- 数据最多
-- 高分辨率
-- 正常人
-
----
-
-## 2. M&Ms-2
-
-数量：
-
-258（处理后）
-
-特点：
-
-- SAX + LAX
-- 多中心
-- 多厂家
-- 多疾病
-
-目前：
-
-SSM已经拟合。
-
-具有：
-
-Dense Correspondence。
-
-作用：
-
-- Reconstruction训练
-- Dense Correspondence测试
-- Multi-label测试
-
----
-
-## 3. ACDC
-
-数量：
-
-150
-
-特点：
-
-- SAX
-- ED ES人工标注
-
-作用：
-
-OOD（Out-of-distribution）
-
-Generalization Test。
-
-训练：
-
-不用。
-
-只测试。
-
----
 
 # 数据集职责
 
