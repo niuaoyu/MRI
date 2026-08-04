@@ -67,37 +67,6 @@
 
 
 
-# 任务
-
-不同方法在这四个数据集的表现
-
-
-Input：Sparse Cardiac Point Cloud
-Output：Dense Surface Mesh (optional Dense Correspondence)
-
-所有方法统一遵守这个接口，即：
-Point Cloud
-    ↓
-Reconstruction Method
-    ↓
-Dense Mesh
-    ↓
-Evaluation
-
-
-Benchmark比较：面对同样输入，谁重建得最好
-
-例如
-统一输入：Patient001 Sparse Point Cloud
-PSR：→ Mesh_A
-DeepSDF：→ Mesh_B
-HNDF：→ Mesh_C
-DIF：→ Mesh_D
-
-然后和GT（mesh）比较：Chamfer、Hausdorff、ASSD
-
-第二张表，比较  Dense Correspondence
-
 
 
 
@@ -172,43 +141,8 @@ DIF：→ Mesh_D
 
 
 
-# Cardiac Substructure 3D Reconstruction Benchmark（当前设计梳理）
 
-> 更新时间：2026-07
->
-> 当前目标：建立一个统一的 Cardiac Substructure 3D Reconstruction Benchmark，
-> 系统评测传统几何重建、隐式表示、模板变形、生成式方法在**稀疏临床输入**下的三维重建能力，并统一评价 Dense Correspondence。
-
-
-# 一、为什么要做这个 Benchmark？
-
-## 背景
-
-数字心脏（Digital Heart）越来越重要，是：
-
-- 手术规划（Surgical Planning）
-- 血流模拟（CFD）
-- 生物力学分析（Biomechanics）
-- 电生理模拟（Electrophysiology）
-- 群体统计分析（Population Analysis）
-- 数字孪生（Digital Twin）
-
-的重要基础。
-
-然而，目前临床MR存在天然限制：
-baopo
-- Slice间距大（Slice spacing）
-- Z方向分辨率低
-- 数据稀疏
-- 很难直接恢复连续三维曲面
-
-因此：
-
-> Cardiac 3D Reconstruction 是一个典型的 Ill-posed Problem。
-
-
-
-
+当前目标：建立一个统一的 Cardiac Substructure 3D Reconstruction Benchmark，系统评测传统几何重建、隐式表示、模板变形、生成式方法在**稀疏临床输入**下的三维重建能力，并统一评价 Dense Correspondence。
 
 
 目前已经出现很多方法：
@@ -222,6 +156,8 @@ Shape Representation：AtlasNet、DeepSDF、IGR、SHDF
 Template / Deformation：DIF-Net、DIT、MR-Net、MeshDiffusion、NDF、HNDF、3DShape2VecSet、CoFie、TetraDiffusion
 特点：模型model学习变形场deformation field，变形场deformation field指导模板template变形成目标形状target shape
 其中部分模型天然具有 Dense Correspondence。
+
+
 
 
 Dense Correspondence Evaluation统一流程是什么？
@@ -266,7 +202,7 @@ ACDC数据集，150个案例，分五类，一类30个，是4D序列，但只有
 
 
 [M&Ms-2 Challenge](https://www.ub.edu/mnms-2/)
-M&Ms2-4d，360个案例，多中心、多厂家、多疾病，处理后还剩258，个心脏的长短轴（SAX + LAX）分别25帧，分割的标签也对应（长轴跟短轴，每一时刻的帧都对齐了），也对应把所有的标签数据处理成点云数据了。
+M&Ms2-4d，360个案例，多中心、多厂家、多疾病，处理后还剩258个，心脏的长短轴（SAX + LAX）分别25帧，分割的标签也对应（长轴跟短轴，每一时刻的帧都对齐了），也对应把所有的标签数据处理成点云数据了。
 
 
 4DM
@@ -281,206 +217,7 @@ M&Ms2 = 提供训练深度模型的数据（会用UK的先验心脏模型做约�
 ACDC = 泛化测试集
 
 
-# 数据集职责
 
-UK
-
-↓
-
-Shape Distribution
-
-↓
-
-Training
-
-↓
-
-Seen Shape Test
-
-----------------------
-
-M&Ms2
-
-↓
-
-Dense Correspondence
-
-↓
-
-Registration Evaluation
-
-----------------------
-
-ACDC
-
-↓
-
-OOD Test
-
-↓
-
-Generalization
-
----
-
-# 四、输入协议
-
-统一模拟真实临床。
-
----
-
-## A
-
-Dense Input
-
-输入：
-
-Dense Point Cloud
-
-主要评价：
-
-Upper Bound。
-
----
-
-## B
-
-Clinical Sparse
-
-模拟：
-
-- SAX
-- 2CH
-- 3CH
-- 4CH
-
-真实临床采样。
-
----
-
-## C
-
-Ultra Sparse
-
-进一步降低：
-
-Slice数量：
-
-例如：
-
-- 2 slices
-- 4 slices
-- 6 slices
-
-用于：
-
-极端稀疏测试。
-
----
-
-# 五、实验设计
-
-## Experiment1
-
-Seen Shape Reconstruction
-
-训练：
-
-UK Train
-
-测试：
-
-UK Test
-
-比较：
-
-Dense
-
-Sparse
-
-Ultra Sparse
-
----
-
-## Experiment2
-
-Unseen Shape Reconstruction
-
-训练：
-
-UK
-
-测试：
-
-M&Ms2
-
-评价：
-
-Shape Reconstruction。
-
----
-
-## Experiment3
-
-Generalization
-
-训练：
-
-UK
-
-测试：
-
-ACDC
-
-评价：
-
-Mesh与Contour契合程度。
-
----
-
-# 六、Dense Correspondence
-
-当前设计：
-
-所有模型：
-
-Prediction Mesh
-
-↓
-
-统一Template Registration
-
-↓
-
-Dense Correspondence
-
-↓
-
-Evaluation
-
-而不是：
-
-各模型输出自己的Correspondence。
-
-原因：
-
-很多模型：
-
-例如：
-
-PSR
-
-DeepSDF
-
-AtlasNet
-
-没有Correspondence输出。
-
-统一Registration以后：
-
-所有方法公平。
-
----
 
 # Correspondence评价
 
