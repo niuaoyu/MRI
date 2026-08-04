@@ -15,21 +15,6 @@
 三维重建寻常，但如何加上点的对应关系不寻常，重建出来的 3D模型上，**每一个顶点都必须拥有解剖学意义上的“身份证”**。无论心脏怎么跳动，或者换了哪个病人，第 $i$ 个顶点在解剖上必须永远代表同一个位置（例如左心室心尖顶端）
 
 
-步骤：
-
-1. 最终数据大表（也就是各种方法在 4 个数据集、11 个指标上的得分）打印出来 
-	1. 搞懂，各个指标都是
-	2. 
-	3. 什么含义？在当前这些环境能不能跑出来？
-	4. 接着用shdf在一个数据集上的所有指标如何跑出来？
-	5. 然后，所有的就很简单了，数据表就出来了，就可对比。
-	   1.谁是全场总冠军？ 哪种方法在几乎所有几何指标（CD/EMD）上都压倒性获胜？
-	   2.谁在点对应（Uncertainty/SRE）上最强？ 是不是形变场流派（NDF/SHDF）虽然几何精度不是最高，但点对应和配准误差低得惊人？
-	   3.谁在极度稀疏的情况下摆烂了？ 当采样点数从 500K 降到 100K 时，哪个方法的 CD 飙升得最厉害？
-	   4.谁生成的网格全是流形错误？ 哪些方法虽然 CD 好看，但自相交率（Self-Intersection）高达 15%？
-2. 
-
-
 需要写一个benchmark，_“数字心脏很重要 $\to$ 但临床影像太稀疏导致重建很难，且大家都忽视了建立点对应 $\to$ 现有的算法各有利弊且缺乏统一考场 $\to$ 所以，我们建了这个全指标、多源数据的权威考场（Benchmark）。”
 
 
@@ -54,11 +39,20 @@ DeepSDF根本不会输出Correspondence，而DIF天生输出Correspondence
 
 
 
+ED和ES一起训练
+
+
+Dense Correspondence 的Ground Truth 目前还没有
 
 重建指标 和 Dense Correspondence Evaluation对应指标的统一流程是什么？
 Q1：各种Shape Representation，谁重建最好？
 Q2：随着输入越来越稀疏（Dense、Sparse、Ultra Sparse），哪些模型最鲁棒？
 Q3：Template Deformation（Shape Prior）是否提升重建？例如：DeepSDF vs HNDF vs DIF
+1.谁是全场总冠军？ 哪种方法在几乎所有几何指标（CD/EMD）上都压倒性获胜？
+2.谁在点对应（Uncertainty/SRE）上最强？ 是不是形变场流派（NDF/SHDF）虽然几何精度不是最高，但点对应和配准误差低得惊人？
+3.谁在极度稀疏的情况下摆烂了？ 当采样点数从 500K 降到 100K 时，哪个方法的 CD 飙升得最厉害？
+4.谁生成的网格全是流形错误？ 哪些方法虽然 CD 好看，但自相交率（Self-Intersection）高达 15%？
+
 
 
 # 意义 introduction
@@ -126,7 +120,6 @@ Q3：Template Deformation（Shape Prior）是否提升重建？例如：DeepSDF 
 
 现在，请闭上眼睛把这个故事在脑子里过一遍：_“数字心脏很重要 $\to$ 但临床影像太稀疏导致重建很难，且大家都忽视了建立点对应 $\to$ 现有的算法各有利弊且缺乏统一考场 $\to$ 所以，我们建了这个全指标、多源数据的权威考场（Benchmark）。”_
 
-有了这个清晰的讲故事逻辑，你可以直接打开 Overleaf 的 `I. INTRODUCTION` 章节。先别管具体的英文语法，试着把这个逻辑链条分成 3-4 个大段落，用你自己的话先把每一段的“核心大意（Bullet Points）”在草稿纸上列出来。这是跨出“思路恐慌”最扎实的一步！
 
 
 
@@ -142,7 +135,8 @@ Q3：Template Deformation（Shape Prior）是否提升重建？例如：DeepSDF 
 
 
 
-现在有：四个处理后的数据集，
+现在有：四个处理后的数据集
+
 |数据集|来源|模态|帧数/Subject|Subject数|核心资产|用途|
 |---|---|---|---|---|---|---|
 |**4DM**|4D Myocardium|Cine MR + GT Mesh|25帧|25 (000~024)|GT水密mesh|测试 (重建+对应)|
@@ -196,22 +190,13 @@ ACDC = 泛化测试集
 
 
 
-ED和ES一起训练
-
-
-Dense Correspondence 的Ground Truth 目前还没有
 
 
 
-当前最大的创新点不是："收集几个数据集"
-
-而是建立统一：
-
+当前最大的创新点不是收集几个数据集，而是建立统一：
 - Dataset Protocol
 - Input Protocol
 - Mesh Representation
 - Registration Pipeline
 - Dense Correspondence Evaluation
-- Generalization Evaluation
-
 实现：传统方法，显示、隐式表示，模板变形，在同一平台上的公平比较
