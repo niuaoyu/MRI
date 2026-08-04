@@ -1,5 +1,8 @@
 
-1.benchmark: **静态单帧重建**（点云→网格）
+1. benchmark: **静态单帧重建**（点云→网格）?
+2. "dense correspondence"（稠密对应关系）具体指什么——是同一物种/类别不同个体间的对应（inter-subject），还是同一个体不同时间帧间的对应（intra-subject/4D motion）？
+3. 输入是否总是带解剖标签的点云，还是也要支持无标签点云？
+4. 
 
 
 
