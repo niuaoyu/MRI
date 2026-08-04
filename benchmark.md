@@ -9,7 +9,8 @@
 
 
 
-
+重建的评价指标是有的
+配准的方法还没有，评价指标暂时不考虑
 
 
 
@@ -83,7 +84,6 @@ ACDC = 泛化测试集
 
 
 
-# 方法
 
 ## 第一类：传统重建（根本没有训练，属于Surface Reconstruction）
 
@@ -133,12 +133,9 @@ Dense Mesh
 Evaluation
 
 
-Benchmark真正比较什么？
+Benchmark比较：面对同样输入，谁重建得最好
 
-不是比较：谁训练得好
-而是比较：面对同样输入，谁重建得最好
-
-例如：
+例如
 统一输入：Patient001 Sparse Point Cloud
 PSR：→ Mesh_A
 DeepSDF：→ Mesh_B
@@ -150,10 +147,6 @@ DIF：→ Mesh_D
 第二张表，比较  Dense Correspondence
 
 
-
-# 问老师
-1. 普通重建常见，那么为什么还要加上重建的任务？直接写配准不行吗？
-2. 3D配准和重建，那配准的gt怎么来？
 
 
 # 意义 introduction
@@ -270,22 +263,13 @@ baopo
 传统方法：DG、BPA、PSR、RIMLS
 特点： 输入点云、输出Mesh、不需要训练
 
----
-
 Shape Representation：AtlasNet、DeepSDF、IGR、SHDF
-
 特点：学习Shape Distribution
 
----
-
 Template / Deformation：DIF-Net、DIT、MR-Net、MeshDiffusion、NDF、HNDF、3DShape2VecSet、CoFie、TetraDiffusion
-
 特点：模型model学习变形场deformation field，变形场deformation field指导模板template变形成目标形状target shape
-
-
 其中部分模型天然具有 Dense Correspondence。
 
----
 
 ## 目前存在的问题
 
