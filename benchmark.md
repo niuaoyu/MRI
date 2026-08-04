@@ -280,19 +280,8 @@ Shape Representation：AtlasNet、DeepSDF、IGR、SHDF
 
 Template / Deformation：DIF-Net、DIT、MR-Net、MeshDiffusion、NDF、HNDF、3DShape2VecSet、CoFie、TetraDiffusion
 
-特点：
+特点：模型model学习变形场deformation field，变形场deformation field指导模板template变形成目标形状target shape
 
-学习：
-
-Template
-
-↓
-
-Deformation Field
-
-↓
-
-Target Shape
 
 其中部分模型天然具有 Dense Correspondence。
 
@@ -855,65 +844,19 @@ Shape
 
 # 八、Benchmark主要研究问题
 
-Q1
-
-各种Shape Representation：
-
-谁重建最好？
+Q1：各种Shape Representation，谁重建最好？
 
 ---
 
-Q2
+Q2：随着输入越来越稀疏（Dense、Sparse、Ultra Sparse），哪些模型最鲁棒？
 
-随着输入越来越稀疏：
 
-哪些模型最鲁棒？
-
-Dense
-
-↓
-
-Sparse
-
-↓
-
-Ultra Sparse
-
----
-
-Q3
-
-Template
-
-Deformation
-
-Shape Prior
-
-是否提升重建？
-
-例如：
-
-DeepSDF
-
-vs
-
-HNDF
-
-vs
-
-DIF
+Q3：Template Deformation（Shape Prior）是否提升重建？例如：DeepSDF vs HNDF vs DIF
 
 ---
 
 Q4
 
-生成式方法：
-
-Diffusion
-
-是否改善稀疏输入？
-
----
 
 Q5
 
