@@ -12,7 +12,7 @@
 重建的评价指标是有的
 配准的方法还没有，评价指标暂时不考虑
 
-
+三维重建寻常，但如何加上点的对应关系不寻常，重建出来的 3D模型上，**每一个顶点都必须拥有解剖学意义上的“身份证”**。无论心脏怎么跳动，或者换了哪个病人，第 $i$ 个顶点在解剖上必须永远代表同一个位置（例如左心室心尖顶端）
 
 
 步骤：
@@ -35,13 +35,22 @@
 
 
 
+当前目标：建立一个统一的 Cardiac Substructure 3D Reconstruction Benchmark，系统评测传统几何重建、隐式表示、模板变形、生成式方法在**稀疏临床输入**下的三维重建能力，并统一评价 Dense Correspondence。
 
 
-## 第一类：传统重建（根本没有训练，属于Surface Reconstruction）
+目前已经出现很多方法：
 
-输入：Point Cloud（4DM本来就用来测试的）
-输出：Mesh （与gt mesh做对比计算损失）
-例如：DG、BPA、PSR、RIMLS
+传统方法（表面重建Surface Reconstruction）：DG、BPA、PSR、RIMLS
+特点： 输入点云、输出Mesh、不需要训练
+
+形状表示Shape Representation：AtlasNet、DeepSDF、IGR、SHDF
+特点：学习Shape Distribution
+
+Template / Deformation：DIF-Net、DIT、MR-Net、MeshDiffusion、NDF、HNDF、3DShape2VecSet、CoFie、TetraDiffusion
+特点：模型model学习变形场deformation field，变形场deformation field指导模板template变形成目标形状target shape
+其中部分模型天然具有 Dense Correspondence。
+
+
 
 ## 第二类：Shape Prior
 
@@ -111,7 +120,7 @@
 - **模板/形变场流派（如 DIF-Net, NDF 等）**：虽然这类方法试图通过“拉伸黄金模板”来建立对应关系，但在面对高度复杂的双心室亚结构（左心室壁、右心室腔、多心室交界面的高曲率区域）时，形变场极易发生剧烈扭曲，导致网格产生大量的**自相交面（Self-Intersection）物理错误**，或丢失乳头肌等关键几何细节。
     
 
-### 3. 基准生态的“军阀割据”与空白（Absence of High-Quality Benchmark）
+### 3. 基准生态的空白（Absence of High-Quality Benchmark）
 
 这是你写这篇 Benchmark 论文最直白、最正义的出发点：
 
@@ -142,20 +151,7 @@
 
 
 
-当前目标：建立一个统一的 Cardiac Substructure 3D Reconstruction Benchmark，系统评测传统几何重建、隐式表示、模板变形、生成式方法在**稀疏临床输入**下的三维重建能力，并统一评价 Dense Correspondence。
 
-
-目前已经出现很多方法：
-
-传统方法：DG、BPA、PSR、RIMLS
-特点： 输入点云、输出Mesh、不需要训练
-
-Shape Representation：AtlasNet、DeepSDF、IGR、SHDF
-特点：学习Shape Distribution
-
-Template / Deformation：DIF-Net、DIT、MR-Net、MeshDiffusion、NDF、HNDF、3DShape2VecSet、CoFie、TetraDiffusion
-特点：模型model学习变形场deformation field，变形场deformation field指导模板template变形成目标形状target shape
-其中部分模型天然具有 Dense Correspondence。
 
 
 
