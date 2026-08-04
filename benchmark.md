@@ -43,40 +43,19 @@
 传统方法（表面重建Surface Reconstruction）：DG、BPA、PSR、RIMLS
 特点： 输入点云、输出Mesh、不需要训练
 
-形状表示Shape Representation：AtlasNet、DeepSDF、IGR、SHDF
+形状表示Shape Representation：AtlasNet、DeepSDF、IGR、SHDF、DIF、MR-Net、NDF、HNDF
 特点：学习Shape Distribution
 
-Template / Deformation：DIF-Net、DIT、MR-Net、MeshDiffusion、NDF、HNDF、3DShape2VecSet、CoFie、TetraDiffusion
+模版变形Template / Deformation（点对应Dense Correspondence）：DIF-Net、DIT、MR-Net、MeshDiffusion、NDF、HNDF、3DShape2VecSet、CoFie、TetraDiffusion
 特点：模型model学习变形场deformation field，变形场deformation field指导模板template变形成目标形状target shape
 其中部分模型天然具有 Dense Correspondence。
 
-
-
-## 第二类：Shape Prior
-
-训练：UK(训练得到先验)+M&Ms2（训练用的数据集）->Train->Model
-测试：4DM Point Cloud->Model->Mesh->Metric
-
-输入：Sparse Point Cloud
-输出：Complete Shape
-例如：DeepSDF、IGR、DIF、MR-Net、NDF、HNDF、SHDF
-
-## 第三类：Dense Correspondence
-
-训练：UK(训练得到先验)  +  M&Ms2（训练用的数据集）  ->  Train  ->  Model
-测试：4DM Point Cloud  ->  Model  ->  **Mesh+Correspondence**  ->  Metric
-
-输入：Shape A、Shape B
-输出：Vertex Correspondence
-例如：DIF、CoFie、3DShape2VecSet
-
-注意：DeepSDF根本不会输出Correspondence，而DIF天生输出Correspondence。
-
-所以指标不是一种，而是两种，重建指标 和 对应指标
+DeepSDF根本不会输出Correspondence，而DIF天生输出Correspondence
 
 
 
 
+重建指标 和 Dense Correspondence Evaluation对应指标的统一流程是什么？
 
 
 # 意义 introduction
@@ -156,7 +135,7 @@ Template / Deformation：DIF-Net、DIT、MR-Net、MeshDiffusion、NDF、HNDF、3
 
 
 
-Dense Correspondence Evaluation统一流程是什么？
+
 
 
 
@@ -211,65 +190,6 @@ UK = 提供大规模形状先验（UK不是为了重建，UK是为了学习心�
 M&Ms2 = 提供训练深度模型的数据（会用UK的先验心脏模型做约束）
 4DM = 高质量Mesh测试集
 ACDC = 泛化测试集
-
-
-
-
-# Correspondence评价
-
-目前两个任务。
-
----
-
-## Task1
-
-Registration Shape Quality
-
-评价：
-
-Registration后：
-
-Mesh误差。
-
-例如：
-
-- CD
-- HD
-
----
-
-## Task2
-
-Label Transfer
-
-Template：
-
-LV
-
-RV
-
-Label
-
-↓
-
-Transfer
-
-↓
-
-Prediction Mesh
-
-↓
-
-Compare GT
-
-评价：
-
-- Dice
-- IoU
-
-主要用于：
-
-Multi-label Reconstruction。
 
 
 # 八、Benchmark主要研究问题
