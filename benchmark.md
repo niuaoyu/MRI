@@ -60,32 +60,6 @@ Step3 Normalization：统一Heart Center=Origin，得到Canonical Space
 
 
 
-
-
-
-
-
-
-# 细节问题
-1. Benchmark最终任务是什么？仅重建？还是重建+Dense Correspondence？就做3D的重建和配准，对于配准没有gt，用当前的一些方法比如SHDF来解决
-2. Dense Correspondence是时间对应？还是病人间对应？
-
-
-
-做不同病人的配准最大的问题是没有gt，如果用UK做SSM（心脏先验），就变成谁更像SSM而不是谁更像真实心脏，一定会被问GT谁定义的？
-
-
-
-
-# 标题
-
-配准是同一病人的不同帧的点对应，4D Dense Correspondence。
-
-Benchmark for Cardiac Sparse-to-Dense Surface Reconstruction and Dense Correspondence
-
-核心贡献根本不是Mesh，而是Sparse Clinical Data->Dense Cardiac Surface->Dense Correspondence
-
-
 # 数据集
 
 [ACDC Challenge](https://www.creatis.insa-lyon.fr/Challenge/acdc/index.html)、
@@ -293,49 +267,18 @@ baopo
 
 目前已经出现很多方法：
 
-### Learning-free
-
-- DG
-- BPA
-- PSR
-- RIMLS
-
-特点：
-
-- 输入点云
-- 输出Mesh
-- 不需要训练
+传统方法：DG、BPA、PSR、RIMLS
+特点： 输入点云、输出Mesh、不需要训练
 
 ---
 
-### Shape Representation
+Shape Representation：AtlasNet、DeepSDF、IGR、SHDF
 
-例如：
-
-- AtlasNet
-- DeepSDF
-- IGR
-- SHDF
-
-特点：
-
-学习Shape Distribution。
+特点：学习Shape Distribution
 
 ---
 
-### Template / Deformation
-
-例如：
-
-- DIF-Net
-- DIT
-- MR-Net
-- MeshDiffusion
-- NDF
-- HNDF
-- 3DShape2VecSet
-- CoFie
-- TetraDiffusion
+Template / Deformation：DIF-Net、DIT、MR-Net、MeshDiffusion、NDF、HNDF、3DShape2VecSet、CoFie、TetraDiffusion
 
 特点：
 
