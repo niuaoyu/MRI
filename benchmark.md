@@ -80,7 +80,9 @@ DeepSDF([openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Co
 IGR（[Implicit Geometric Regularization for Learning Shapes](https://arxiv.org/pdf/2002.10099)）、
 SHDF、
 DIF-Net（[Deformed Implicit Field: Modeling 3D Shapes With Learned Dense Correspondence](https://openaccess.thecvf.com/content/CVPR2021/papers/Deng_Deformed_Implicit_Field_Modeling_3D_Shapes_With_Learned_Dense_Correspondence_CVPR_2021_paper.pdf)），
-DIT([2011.14565](https://arxiv.org/pdf/2011.14565))、MR-Net、MeshDiffusion、NDF、HNDF([Hybrid Neural Diffeomorphic Flow for Shape Representation and Generation via Triplane](https://openaccess.thecvf.com/content/WACV2024/papers/Han_Hybrid_Neural_Diffeomorphic_Flow_for_Shape_Representation_and_Generation_via_WACV_2024_paper.pdf))、3DShape2VecSet([arxiv.org/pdf/2301.11445](https://arxiv.org/pdf/2301.11445))、CoFie([2406.03417](https://arxiv.org/pdf/2406.03417))、TetraDiffusion([arxiv.org/pdf/2211.13220](https://arxiv.org/pdf/2211.13220))
+DIT([2011.14565](https://arxiv.org/pdf/2011.14565))、MR-Net、MeshDiffusion、NDF、HNDF([Hybrid Neural Diffeomorphic Flow for Shape Representation and Generation via Triplane](https://openaccess.thecvf.com/content/WACV2024/papers/Han_Hybrid_Neural_Diffeomorphic_Flow_for_Shape_Representation_and_Generation_via_WACV_2024_paper.pdf))、3DShape2VecSet([arxiv.org/pdf/2301.11445](https://arxiv.org/pdf/2301.11445))、
+CoFie（[7886b89aced4d37dd25a6f32854bf3f9-Paper-Conference.pdf](https://papers.neurips.cc/paper_files/paper/2024/file/7886b89aced4d37dd25a6f32854bf3f9-Paper-Conference.pdf)）、
+TetraDiffusion（[ecva.net/papers/eccv_2024/papers_ECCV/papers/07010.pdf](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07010.pdf)）
 
 
 ED和ES一起训练
