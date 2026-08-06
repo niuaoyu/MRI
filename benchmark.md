@@ -75,7 +75,7 @@ DeepSDF根本不会输出Correspondence，而DIF天生输出Correspondence
 
 
 
-AtlasNet（[1802.05384](https://arxiv.org/pdf/1802.05384)）、DeepSDF、IGR（[Implicit Geometric Regularization for Learning Shapes](https://arxiv.org/pdf/2002.10099)）、SHDF、DIF，DIF-Net、DIT([2011.14565](https://arxiv.org/pdf/2011.14565))、MR-Net、MeshDiffusion、NDF、HNDF、3DShape2VecSet、CoFie、TetraDiffusion
+AtlasNet（[1802.05384](https://arxiv.org/pdf/1802.05384)）、DeepSDF、IGR（[Implicit Geometric Regularization for Learning Shapes](https://arxiv.org/pdf/2002.10099)）、SHDF、DIF，DIF-Net、DIT([2011.14565](https://arxiv.org/pdf/2011.14565))、MR-Net、MeshDiffusion、NDF、HNDF([Hybrid Neural Diffeomorphic Flow for Shape Representation and Generation via Triplane](https://openaccess.thecvf.com/content/WACV2024/papers/Han_Hybrid_Neural_Diffeomorphic_Flow_for_Shape_Representation_and_Generation_via_WACV_2024_paper.pdf))、3DShape2VecSet([arxiv.org/pdf/2301.11445](https://arxiv.org/pdf/2301.11445))、CoFie([2406.03417](https://arxiv.org/pdf/2406.03417))、TetraDiffusion([arxiv.org/pdf/2211.13220](https://arxiv.org/pdf/2211.13220))
 
 
 ED和ES一起训练
