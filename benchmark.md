@@ -75,11 +75,11 @@ DeepSDF根本不会输出Correspondence，而DIF天生输出Correspondence
 
 
 
-AtlasNet（[1802.05384](https://arxiv.org/pdf/1802.05384)）、github（）
-DeepSDF([openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf](https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf))、github（）
-IGR（[Implicit Geometric Regularization for Learning Shapes](https://arxiv.org/pdf/2002.10099)）、github（）
-DIF-Net（[Deformed Implicit Field: Modeling 3D Shapes With Learned Dense Correspondence](https://openaccess.thecvf.com/content/CVPR2021/papers/Deng_Deformed_Implicit_Field_Modeling_3D_Shapes_With_Learned_Dense_Correspondence_CVPR_2021_paper.pdf)）、github（）
-DIT([2011.14565](https://arxiv.org/pdf/2011.14565))、github（）
+AtlasNet（[1802.05384](https://arxiv.org/pdf/1802.05384)）、github（[ThibaultGROUEIX/AtlasNet: This repository contains the source codes for the paper "AtlasNet: A Papier-Mâché Approach to Learning 3D Surface Generation ". The network is able to synthesize a mesh (point cloud + connectivity) from a low-resolution point cloud, or from an image.](https://github.com/ThibaultGROUEIX/AtlasNet)）
+DeepSDF([openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf](https://openaccess.thecvf.com/content_CVPR_2019/papers/Park_DeepSDF_Learning_Continuous_Signed_Distance_Functions_for_Shape_Representation_CVPR_2019_paper.pdf))、github（[facebookresearch/DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation](https://github.com/facebookresearch/DeepSDF)）
+IGR（[Implicit Geometric Regularization for Learning Shapes](https://arxiv.org/pdf/2002.10099)）、github（[amosgropp/IGR: Implicit Geometric Regularization for Learning Shapes](https://github.com/amosgropp/IGR)）
+DIF-Net（[Deformed Implicit Field: Modeling 3D Shapes With Learned Dense Correspondence](https://openaccess.thecvf.com/content/CVPR2021/papers/Deng_Deformed_Implicit_Field_Modeling_3D_Shapes_With_Learned_Dense_Correspondence_CVPR_2021_paper.pdf)）、github（[microsoft/DIF-Net: Deformed Implicit Field: Modeling 3D Shapes with Learned Dense Correspondence CVPR 2021](https://github.com/microsoft/DIF-Net)）
+DIT([2011.14565](https://arxiv.org/pdf/2011.14565))、github（[ZhengZerong/DeepImplicitTemplates: Implementation of "Deep Implicit Templates for 3D Shape Representation"](https://github.com/ZhengZerong/DeepImplicitTemplates)）
 
 MeshDiffusion（[MeshDiffusion__Score_based_Generative_3D_Mesh_Modeling.pdf](https://meshdiffusion.github.io/static/paper/MeshDiffusion__Score_based_Generative_3D_Mesh_Modeling.pdf)）、github（）
 HNDF([Hybrid Neural Diffeomorphic Flow for Shape Representation and Generation via Triplane](https://openaccess.thecvf.com/content/WACV2024/papers/Han_Hybrid_Neural_Diffeomorphic_Flow_for_Shape_Representation_and_Generation_via_WACV_2024_paper.pdf))、github（）
