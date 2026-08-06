@@ -1,4 +1,4 @@
-
+  
 datasets|num|cmr|gt mesh|phase|input|features
 1. uk-digital-heat | 1331 | sax高分辨率 | marching cubes | es, ed | 模拟2ch 3ch 4ch sax采样|分辨率高
 2. M&Ms-2 | 258 | sax+lax低分辨率 | ssm拟合 | 25(35)帧只用有人工标注的es, ed |  模拟2ch 3ch 4ch sax采样| 与ssm有密集点对应关系，数据来自多中心多疾病的受试者
