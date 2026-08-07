@@ -4,12 +4,15 @@ datasets|num|cmr|gt mesh|phase|input|features
 2. M&Ms-2 | 258 | sax+lax低分辨率 | ssm拟合 | 25(35)帧只用有人工标注的es, ed |  模拟2ch 3ch 4ch sax采样| 与ssm有密集点对应关系，数据来自多中心多疾病的受试者
 3. ACDC | 150 | sax低分辨率 | 不需要 | 30帧, 只用有人工标注的es, ed | 原始低分辨率sax采样|被广泛使用
 
-方法分类:
-1. 直接隐式重建：DeepSDF 、 IGR  、 MR-Net
+方法分类：（模版变形都有对应关系）
+1. 直接隐式重建：DeepSDF 、 IGR  
 2. **隐式模板变形**：DIF-Net、DIT、NDF（微分同胚）、HNDF（triplane+微分同胚）
-3. 显式模板变形：AtlasNet
+3. 显式模板变形：AtlasNet、 MR-Net、NDM
 4. 混合表示重建：CoFie（直接/混合局部隐式）、MeshDiffusion / TetraDiffusion / 3DShape2VecSet（混合表示 / 生成式）
 
+有些不确定的：CoFie
+
+扩散生成：MeshDiffusion / TetraDiffusion / 3DShape2VecSet
 
 | 类别     | 是否内建对应关系 | 代表方法                                   |
 | ------ | -------- | -------------------------------------- |
