@@ -188,19 +188,3 @@ SRE 就是**模拟真实临床配准流程**，用最终对齐后的表面误差
 
 
 
-
-
-
-# paper
-
-
-代码不全
-[Fighting MRI Anisotropy: Learning Multiple Cardiac Shapes From a Single Implicit Neural Representation](https://arxiv.org/pdf/2602.11436)
-
-
-
-
-
-
-unet:[[1505.04597] U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
-
