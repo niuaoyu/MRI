@@ -119,12 +119,12 @@ Q3：Template Deformation（Shape Prior）是否提升重建？例如：DeepSDF 
 
 现在有：四个处理后的数据集
 
-|数据集|来源|模态|帧数/Subject|Subject数|核心资产|用途|
-|---|---|---|---|---|---|---|
-|**4DM**|4D Myocardium|Cine MR + GT Mesh|25帧|25 (000~024)|GT水密mesh|测试 (重建+对应)|
-|**ACDC**|ACDC Challenge 2017|Cine MR + GT Seg|30帧 (仅ED/ES有标签)|100+|GT多类分割|测试 (分割+重建)|
-|**M&Ms-2**|M&Ms-2 Challenge|Cine MR (LA+SA)|25帧|2+|双视图MR|测试 (多厂商泛化)|
-|**UKDH**|UK Digital Heart|HR/LR MR Seg|2帧 (ED+ES)|1014+|HR+LR分割对|SSM构建 / 测试|
+| 数据集        | 来源                  | 模态                | 帧数/Subject      | Subject数     | 核心资产     | 用途         |
+| ---------- | ------------------- | ----------------- | --------------- | ------------ | -------- | ---------- |
+| **4DM**    | 4D Myocardium       | Cine MR + GT Mesh | 25帧             | 25 (000~024) | GT水密mesh | 测试 (重建+对应) |
+| **ACDC**   | ACDC Challenge 2017 | Cine MR + GT Seg  | 30帧 (仅ED/ES有标签) | 100+         | GT多类分割   | 测试 (分割+重建) |
+| **M&Ms-2** | M&Ms-2 Challenge    | Cine MR (LA+SA)   | 25帧             | 2+           | 双视图MR    | 测试 (多厂商泛化) |
+| **UKDH**   | UK Digital Heart    | HR/LR MR Seg      | 2帧 (ED+ES)      | 1014+        | HR+LR分割对 | SSM构建 / 测试 |
 
 需要：评价各个方法，模型，在统一的四个输入的数据集里的重建表现
 
