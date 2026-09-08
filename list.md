@@ -1,13 +1,13 @@
-Algebraic Sphere Surface Fitting
+~~Algebraic Sphere Surface Fitting~~
 
 OReX
 
-CrossSDF、IGR、DiGS
+~~CrossSDF~~、IGR、DiGS
 
 
 
 
-LC-U-Net、CardiacFlow
+~~LC-U-Net、CardiacFlow~~
 
 1.3 DMTet MeshDiffusion
 
@@ -15,8 +15,8 @@ LC-U-Net、CardiacFlow
 
 Bi-PT、
 
-2.2.2 Whole-heart SSM fitting、Cardiac surface-to-contour LDDMM、
-GHD + DVS
+~~2.2.2 Whole-heart SSM fitting、~~Cardiac surface-to-contour LDDMM、~~
+~~GHD + DVS~~
 
 
 
