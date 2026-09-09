@@ -15,7 +15,11 @@ OReX
 
 Bi-PT、
 
-~~2.2.2 Whole-heart SSM fitting、~~Cardiac surface-to-contour LDDMM、~~
+~~2.2.2 Whole-heart SSM fitting、~~
+
+Cardiac surface-to-contour LDDMM、
+
+
 ~~GHD + DVS~~
 
 
