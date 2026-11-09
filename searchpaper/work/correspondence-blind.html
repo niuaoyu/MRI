@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>几何指标看得见形状，看不见身份</title>
+</head>
+<body style="margin:0;background:#0d1117">
+<style>
+#cb-app{font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;color:#e6edf3;background:#0d1117;padding:18px;border-radius:14px;max-width:1000px;line-height:1.6;font-size:14px}
+#cb-app h2{font-size:17px;margin:0 0 4px;font-weight:600;color:#e6edf3}
+#cb-app .sub{color:#8b949e;font-size:12.5px;margin-bottom:14px}
+#cb-app .wrap{display:grid;grid-template-columns:minmax(380px,1fr) 290px;gap:16px;align-items:start}
+#cb-app canvas{width:100%;height:auto;background:#080b10;border:1px solid #21262d;border-radius:8px;display:block}
+#cb-app .panel{border:1px solid #21262d;border-radius:8px;padding:12px}
+#cb-app .ctl{margin-bottom:14px}
+#cb-app .ctl label{display:flex;justify-content:space-between;font-size:12.5px;color:#8b949e;margin-bottom:4px}
+#cb-app .ctl b{color:#e6edf3;font-variant-numeric:tabular-nums}
+#cb-app input[type=range]{width:100%;accent-color:#58a6ff;height:18px}
+#cb-app button{width:100%;padding:8px;border-radius:6px;border:1px solid #21262d;background:#161b22;color:#e6edf3;font-size:12.5px;cursor:pointer;font-family:inherit}
+#cb-app button.on{border-color:#f85149;background:#2d1517;color:#ffb4ae}
+#cb-app .metric{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px dashed #1b2027;font-variant-numeric:tabular-nums}
+#cb-app .metric:last-child{border:0}
+#cb-app .metric span{color:#8b949e;font-size:12.5px}
+#cb-app .metric b{font-size:15px}
+#cb-app .verdict{margin-top:10px;padding:9px 10px;border-radius:6px;font-size:12.5px;line-height:1.55;background:#12181f;border-left:3px solid #58a6ff;color:#c9d1d9}
+#cb-app .verdict.hot{border-left-color:#f0883e}
+#cb-app .hr{height:1px;background:#21262d;margin:12px 0}
+#cb-app .tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:99px;background:#161b22;color:#8b949e;border:1px solid #21262d;margin-right:5px}
+#cb-app .foot{color:#8b949e;font-size:12px;margin-top:14px;border-top:1px solid #21262d;padding-top:10px}
+@media(max-width:820px){#cb-app .wrap{grid-template-columns:1fr}}
+</style>
+
+<div id="cb-app">
+<h2>同一颗心脏，同样的 Dice / HD / CD —— 身份却可以是错的</h2>
+<div class="sub">左：患者 A（模板）。右：患者 B。圆点颜色 = 解剖地址（心尖→基底、环周绕一圈）。连线 = 模型声称的对应。</div>
+
+<div class="wrap">
+  <div><canvas id="cb-cv" width="960" height="800"></canvas></div>
+  <div>
+    <div class="panel">
+      <div class="ctl">
+        <label><span>① 沿表面滑移（身份错，形状不变）</span><b id="cb-vS">0.0 mm</b></label>
+        <input id="cb-sS" type="range" min="0" max="10" step="0.1" value="0">
+      </div>
+      <div class="ctl">
+        <label><span>② 形状扰动（形状错，身份不乱）</span><b id="cb-vG">0.0 mm</b></label>
+        <input id="cb-sG" type="range" min="0" max="3" step="0.1" value="0">
+      </div>
+      <button id="cb-btn">③ 打乱顶点编号（只改数组顺序）</button>
+    </div>
+
+    <div class="panel" style="margin-top:12px">
+      <div class="metric"><span>Dice</span><b id="cb-mDice">–</b></div>
+      <div class="metric"><span>HD (mm)</span><b id="cb-mHd">–</b></div>
+      <div class="metric"><span>Chamfer (mm)</span><b id="cb-mCd">–</b></div>
+      <div class="metric"><span>身份误差 (mm)</span><b id="cb-mId">–</b></div>
+      <div class="verdict" id="cb-vd">拖动 ①，看下面三个指标怎么反应。</div>
+    </div>
+
+    <div class="panel" style="margin-top:12px">
+      <div><span class="tag">已冻结</span><span style="font-size:12.5px">Dice / HD / CD 是集合指标：只看表面在哪儿，对顶点怎么编号、怎么配对完全不敏感。</span></div>
+      <div class="hr"></div>
+      <div style="font-size:12.5px;color:#8b949e">自己验一次：<br>1. 只拖 ①，三个指标一位小数都不变。<br>2. 只拖 ②，Dice 立刻掉。<br>3. 点 ③，连线炸成一团，指标还是不变。</div>
+    </div>
+
+    <div class="foot">教学简化：单层闭合轮廓 + 教学用噪声，不代表任何真实患者或任何论文实测值。唯一想说明的事：<b>形状对</b>与<b>身份对</b>是两个独立的量，而现在的成绩单只测了前者。</div>
+  </div>
+</div>
+</div>
+
+<script>
+(function(){
+  const cv=document.getElementById('cb-cv'), ctx=cv.getContext('2d');
+  const W=cv.width, H=cv.height, N=240, MMPX=0.21;
+  const cA={x:255,y:420,R:150}, cB={x:700,y:420,R:150};
+  function rad(th){ return 1 + 0.13*Math.cos(th) + 0.07*Math.cos(2*th+0.7) - 0.05*Math.sin(3*th); }
+  function noise(th){ return 0.5 + 0.5*(0.8*Math.sin(2*th+0.9)) + 0.2*Math.cos(5*th); }
+  let sMm=0, gMm=0, perm=false, permIdx=null;
+
+  function pt(c, th, rMul){
+    const r=c.R*rad(th)*(rMul||1);
+    return {x:c.x+r*Math.cos(th), y:c.y+r*Math.sin(th)};
+  }
+  function build(){
+    const A=[],B=[];
+    for(let i=0;i<N;i++){
+      const th=i/N*2*Math.PI;
+      A.push(pt(cA,th));
+      B.push(pt(cB,th, 1 + gMm/(cB.R*MMPX)*noise(th)*0.35));
+    }
+    return {A,B};
+  }
+  function maskOf(c){
+    const off=document.createElement('canvas'); off.width=W; off.height=H;
+    const o=off.getContext('2d'); o.fillStyle='#fff'; o.beginPath();
+    for(let i=0;i<=N;i++){ const th=i/N*2*Math.PI,p=pt(c,th);
+      if(i){o.lineTo(p.x,p.y);}else{o.moveTo(p.x,p.y);} }
+    o.closePath(); o.fill();
+    const d=o.getImageData(0,0,W,H).data, m=new Uint8Array(W*H);
+    for(let i=0;i<m.length;i++){ m[i]= d[i*4]>127 ? 1 : 0; }
+    return m;
+  }
+  function metrics(geo){
+    const mA=maskOf(cA), mB=maskOf(cB);
+    let inter=0,ua=0,ub=0;
+    for(let i=0;i<mA.length;i++){ if(mA[i])ua++; if(mB[i])ub++; if(mA[i]&&mB[i])inter++; }
+    let cd=0,hd=0;
+    for(let i=0;i<geo.A.length;i++){
+      const a=geo.A[i]; let best=1e9;
+      for(let j=0;j<geo.B.length;j++){ const dx=a.x-geo.B[j].x, dy=a.y-geo.B[j].y, d=dx*dx+dy*dy; if(d<best)best=d; }
+      const d=Math.sqrt(best); cd+=d; if(d>hd)hd=d;
+    }
+    return {dice:2*inter/(ua+ub), cd:cd/geo.A.length*MMPX, hd:hd*MMPX};
+  }
+  function perimMm(A){
+    let L=0;
+    for(let i=0;i<N;i++){ const a=A[i],b=A[(i+1)%N]; L+=Math.hypot(a.x-b.x,a.y-b.y); }
+    return L*MMPX;
+  }
+  function pairing(geo){
+    const out=[];
+    if(perm){ for(let i=0;i<N;i++) out.push([i,permIdx[i]]); }
+    else{
+      const shift=Math.round(sMm/perimMm(geo.A)*N);
+      for(let i=0;i<N;i++) out.push([i,(i+shift)%N]);
+    }
+    return out;
+  }
+  function hue(t){ return 'hsl('+((t*300)%360)+',88%,58%)'; }
+
+  function draw(){
+    const geo=build();
+    ctx.clearRect(0,0,W,H);
+    ctx.font='600 22px "Microsoft YaHei",sans-serif'; ctx.fillStyle='#8b949e';
+    ctx.fillText('患者 A（模板）', 60, 90);
+    ctx.fillText('患者 B', 520, 90);
+    ctx.font='15px "Microsoft YaHei",sans-serif'; ctx.fillStyle='#484f58';
+    ctx.fillText('颜色 = 解剖地址', 60, 116);
+    ctx.fillText('颜色 = 它被配对到的 A 的地址', 520, 116);
+
+    const cs=[cA,cB];
+    for(let k=0;k<2;k++){
+      const c=cs[k];
+      ctx.beginPath();
+      for(let i=0;i<=N;i++){ const th=i/N*2*Math.PI,p=pt(c,th); if(i){ctx.lineTo(p.x,p.y);}else{ctx.moveTo(p.x,p.y);} }
+      ctx.strokeStyle='#1f2733'; ctx.lineWidth=46; ctx.stroke();
+      ctx.beginPath();
+      for(let i=0;i<=N;i++){ const th=i/N*2*Math.PI,p=pt(c,th,0.62); if(i){ctx.lineTo(p.x,p.y);}else{ctx.moveTo(p.x,p.y);} }
+      ctx.closePath(); ctx.fillStyle='#080b10'; ctx.fill();
+    }
+
+    const pr=pairing(geo);
+    ctx.lineWidth=1.4;
+    for(let k=0;k<pr.length;k+=4){
+      const i=pr[k][0], j=pr[k][1];
+      ctx.strokeStyle = perm ? 'rgba(248,81,73,0.22)' : 'rgba(88,166,255,0.20)';
+      ctx.beginPath(); ctx.moveTo(geo.A[i].x,geo.A[i].y); ctx.lineTo(geo.B[j].x,geo.B[j].y); ctx.stroke();
+    }
+    for(let k=0;k<pr.length;k+=2){
+      const i=pr[k][0], j=pr[k][1];
+      ctx.fillStyle=hue(i/N);
+      ctx.beginPath(); ctx.arc(geo.A[i].x,geo.A[i].y,3.4,0,7); ctx.fill();
+      ctx.beginPath(); ctx.arc(geo.B[j].x,geo.B[j].y,3.4,0,7); ctx.fill();
+    }
+
+    const m=metrics(geo);
+    document.getElementById('cb-mDice').textContent=m.dice.toFixed(3);
+    document.getElementById('cb-mHd').textContent=m.hd.toFixed(2);
+    document.getElementById('cb-mCd').textContent=m.cd.toFixed(2);
+
+    const idErr = perm ? perimMm(geo.A)/4 : sMm;
+    const idEl=document.getElementById('cb-mId');
+    idEl.textContent=idErr.toFixed(1);
+    idEl.style.color = idErr>2 ? '#f85149' : '#3fb950';
+
+    const vd=document.getElementById('cb-vd');
+    if(perm){
+      vd.className='verdict hot';
+      vd.innerHTML='<b>连线已经完全是噪声。</b>但 Dice / HD / CD 一位没动——它们只比较两个点集，不读编号。';
+    }else if(sMm>2.5){
+      vd.className='verdict hot';
+      vd.innerHTML='<b>身份已错 '+sMm.toFixed(1)+' mm。</b>按心尖到基底约 80 mm 算，相当于沿表面走错了一个“楼层”。三个几何指标纹丝不动。';
+    }else if(gMm>0.6){
+      vd.className='verdict';
+      vd.innerHTML='形状一歪，<b>Dice 立刻掉</b>。这三个指标对形状是灵敏的——它们不是坏指标，只是<b>测的不是身份</b>。';
+    }else{
+      vd.className='verdict';
+      vd.textContent='拖动 ①，看下面三个指标怎么反应。';
+    }
+  }
+
+  function maybePerm(){
+    if(perm && !permIdx){
+      permIdx=new Array(N);
+      for(let i=0;i<N;i++) permIdx[i]=i;
+      let s=20261030;
+      for(let i=N-1;i>0;i--){ s=(s*1103515245+12345)&0x7fffffff; const j=s%(i+1); const t=permIdx[i]; permIdx[i]=permIdx[j]; permIdx[j]=t; }
+    }
+  }
+
+  const sS=document.getElementById('cb-sS'), sG=document.getElementById('cb-sG'), btn=document.getElementById('cb-btn');
+  sS.oninput=function(){ sMm=+sS.value; document.getElementById('cb-vS').textContent=sMm.toFixed(1)+' mm'; draw(); };
+  sG.oninput=function(){ gMm=+sG.value; document.getElementById('cb-vG').textContent=gMm.toFixed(1)+' mm'; draw(); };
+  btn.onclick=function(){ perm=!perm; maybePerm(); btn.className=perm?'on':'';
+    btn.textContent = perm ? '③ 已打乱 —— 再点一次恢复' : '③ 打乱顶点编号（只改数组顺序）'; draw(); };
+
+  draw();
+})();
+</script>
+
+</body>
+</html>

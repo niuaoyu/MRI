@@ -1,0 +1,119 @@
+[
+ {
+  "paperId": "2f78af37f3bebf88181fccc575c565b1f727a0ac",
+  "externalIds": {
+   "DBLP": "journals/mia/KongSCMEM24",
+   "PubMedCentral": "11372630",
+   "DOI": "10.1016/j.media.2024.103293",
+   "CorpusId": 271880095,
+   "PubMed": "39146700"
+  },
+  "title": "SDF4CHD: Generative Modeling of Cardiac Anatomies with Congenital Heart Defects",
+  "openAccessPdf": {
+   "url": "https://doi.org/10.1016/j.media.2024.103293",
+   "status": "BRONZE",
+   "license": null,
+   "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC11372630, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "2238934561",
+    "name": "Fanwei Kong"
+   },
+   {
+    "authorId": "2264501060",
+    "name": "Sascha Stocker"
+   },
+   {
+    "authorId": "2263563502",
+    "name": "Perry S. Choi"
+   },
+   {
+    "authorId": "2264012103",
+    "name": "Michael Ma"
+   },
+   {
+    "authorId": "2257707161",
+    "name": "Daniel B. Ennis"
+   },
+   {
+    "authorId": "2294093274",
+    "name": "Alison L. Marsden"
+   }
+  ],
+  "abstract": "Congenital heart disease (CHD) encompasses a spectrum of cardiovascular structural abnormalities, often requiring customized treatment plans for individual patients. Computational modeling and analysis of these unique cardiac anatomies can improve diagnosis and treatment planning and may ultimately lead to improved outcomes. Deep learning (DL) methods have demonstrated the potential to enable efficient treatment planning by automating cardiac segmentation and mesh construction for patients with normal cardiac anatomies. However, CHDs are often rare, making it challenging to acquire sufficiently large patient cohorts for training such DL models. Generative modeling of cardiac anatomies has the potential to fill this gap via the generation of virtual cohorts; however, prior approaches were largely designed for normal anatomies and cannot readily capture the significant topological variations seen in CHD patients. Therefore, we propose a type- and shape-disentangled generative approach suitable to capture the wide spectrum of cardiac anatomies observed in different CHD types and synthesize differently shaped cardiac anatomies that preserve the unique topology for specific CHD types. Our DL approach represents generic whole heart anatomies with CHD type-specific abnormalities implicitly using signed distance fields (SDF) based on CHD type diagnosis. To capture the shape-specific variations, we then learn invertible deformations to morph the learned CHD type-specific anatomies and reconstruct patient-specific shapes. After training with a dataset containing the cardiac anatomies of 67 patients spanning 6 CHD types and 14 combinations of CHD types, our method successfully captures divergent anatomical variations across different types and the meaningful intermediate CHD states across the spectrum of related CHD diagnoses. Additionally, our method demonstrates superior performance in CHD anatomy generation in terms of CHD-type correctness and shape plausibility. It also exhibits comparable generalization performance when reconstructing unseen cardiac anatomies. Moreover, our approach shows potential in augmenting image-segmentation pairs for rarer CHD types to significantly enhance cardiac segmentation accuracy for CHDs. Furthermore, it enables the generation of CHD cardiac meshes for computational simulation, facilitating a systematic examination of the impact of CHDs on cardiac functions."
+ },
+ null,
+ {
+  "paperId": "ff29b2ac3449997c3440e829857ed7f6c7f387b6",
+  "externalIds": {
+   "DBLP": "conf/miccai/YangSALF24",
+   "DOI": "10.1007/978-3-031-72378-0_25",
+   "CorpusId": 273232389
+  },
+  "title": "Generating Anatomically Accurate Heart Structures via Neural Implicit Fields",
+  "openAccessPdf": {
+   "url": "https://infoscience.epfl.ch/bitstreams/09d05fdb-9498-4585-95bf-e932974bfa50/download",
+   "status": "GREEN",
+   "license": "CCBYNCND",
+   "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1007/978-3-031-72378-0_25?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1007/978-3-031-72378-0_25, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "2302340168",
+    "name": "Jian-Cheng Yang"
+   },
+   {
+    "authorId": "2325144910",
+    "name": "E. Sedykh"
+   },
+   {
+    "authorId": "2218475459",
+    "name": "Jason Adhinarta"
+   },
+   {
+    "authorId": "2293667564",
+    "name": "Hieu Le"
+   },
+   {
+    "authorId": "2292403179",
+    "name": "Pascal Fua"
+   }
+  ],
+  "abstract": ". Implicit functions have significantly advanced shape modeling in diverse fields. Yet, their application within medical imaging often overlooks the intricate interrelations among various anatomical structures, a consideration crucial for accurately modeling complex multi-part structures like the heart. This study presents ImHeart, a latent variable model specifically designed to model complex heart structures. Lever-aging the power of learnable templates, ImHeart adeptly captures the intricate relationships between multiple heart components using a unified deformation field and introduces an implicit registration technique to manage the pose variability in medical data. Built on WHS3D dataset of 140 refined whole-heart structures, ImHeart delivers superior reconstruction accuracy and anatomical fidelity. Moreover, we demonstrate the ImHeart can significantly improve heart segmentation from multi-center MRI scans through a retraining pipeline, adeptly navigating the domain gaps inherent to such data."
+ },
+ {
+  "paperId": "338bbd48d85b6117ed931372ad5de7dfc88492da",
+  "externalIds": {
+   "DBLP": "conf/stacom-ws/KongM23",
+   "DOI": "10.1007/978-3-031-52448-6_19",
+   "CorpusId": 267749210
+  },
+  "title": "Type and Shape Disentangled Generative Modeling for Congenital Heart Defects",
+  "openAccessPdf": {
+   "url": "",
+   "status": "CLOSED",
+   "license": null,
+   "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1007/978-3-031-52448-6_19?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1007/978-3-031-52448-6_19, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "2238934561",
+    "name": "Fanwei Kong"
+   },
+   {
+    "authorId": "2284663295",
+    "name": "A. Marsden"
+   }
+  ],
+  "abstract": null
+ },
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null,
+ null
+]

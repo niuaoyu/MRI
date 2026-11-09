@@ -1,0 +1,935 @@
+{
+ "W4401437780": {
+  "id": "W4401437780",
+  "title": "SDF4CHD: Generative modeling of cardiac anatomies with congenital heart defects",
+  "year": 2024,
+  "date": "2024-08-07",
+  "doi": "https://doi.org/10.1016/j.media.2024.103293",
+  "cites": 32,
+  "venue": "Medical Image Analysis",
+  "authors": [
+   "Fanwei Kong",
+   "Sascha Stocker",
+   "Perry Seo Choi",
+   "Michael Ma"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1016/j.media.2024.103293",
+  "pdf": null
+ },
+ "W4403071569": {
+  "id": "W4403071569",
+  "title": "Spatio-Temporal Neural Distance Fields for Conditional Generative Modeling of the Heart",
+  "year": 2024,
+  "date": "2024-01-01",
+  "doi": "https://doi.org/10.1007/978-3-031-72384-1_40",
+  "cites": 8,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Kristine Aavild Sørensen",
+   "Paula López Diez",
+   "Ján Margeta",
+   "Yasmin El Youssef"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1007/978-3-031-72384-1_40",
+  "pdf": null
+ },
+ "W4403071497": {
+  "id": "W4403071497",
+  "title": "Generating Anatomically Accurate Heart Structures via Neural Implicit Fields",
+  "year": 2024,
+  "date": "2024-01-01",
+  "doi": "https://doi.org/10.1007/978-3-031-72378-0_25",
+  "cites": 5,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Jiancheng Yang",
+   "Ekaterina Sedykh",
+   "Jason Ken Adhinarta",
+   "Hieu Le"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1007/978-3-031-72378-0_25",
+  "pdf": null
+ },
+ "W4391452647": {
+  "id": "W4391452647",
+  "title": "Type and Shape Disentangled Generative Modeling for Congenital Heart Defects",
+  "year": 2024,
+  "date": "2024-01-01",
+  "doi": "https://doi.org/10.1007/978-3-031-52448-6_19",
+  "cites": 1,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Fanwei Kong",
+   "Alison  Lesley Marsden"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1007/978-3-031-52448-6_19",
+  "pdf": null
+ },
+ "W4405468760": {
+  "id": "W4405468760",
+  "title": "MorphiNet: A Graph Subdivision Network for Adaptive Bi-Ventricle Surface Reconstruction",
+  "year": 2026,
+  "date": "2026-04-14",
+  "doi": "https://doi.org/10.1109/tmi.2026.3683925",
+  "cites": 0,
+  "venue": "IEEE Transactions on Medical Imaging",
+  "authors": [
+   "Yu Deng",
+   "Yiyang Xu",
+   "Linglong Qian",
+   "Charlène Mauger"
+  ],
+  "abstract": "Cardiac Magnetic Resonance (CMR) imaging is widely used to personalize heart models for cardiac digital twin analysis because of its ability to visualize soft tissues and capture dynamic functions. However, CMR images have an anisotropic nature, characterized by large inter-slice distances and misalignments from cardiac motion. These limitations result in data loss and measurement inaccuracies, hindering the capture of detailed anatomical structures. In this work, we introduce MorphiNet, a novel network that reproduces heart anatomy learned from high-resolution Computed Tomography (CT) images, unpaired with CMR images. MorphiNet encodes the anatomical structure as gradient fields, deforming template meshes into patient-specific geometries. A multilayer graph subdivision network refines these geometries while maintaining dense point correspondence, suitable for downstream computational analysis. MorphiNet achieved the strongest overall trade-off in bi-ventricular myocardium reconstruction on CMR patients with tetralogy of Fallot, with 0.3 higher Dice score and 2.6 lower Hausdorff distance compared to the best existing template-based methods, while achieving comparable geometric accuracy to neural implicit function methods on CT data at $50\\times $ faster inference. Cross-dataset validation on the Automated Cardiac Diagnosis Challenge confirmed robust generalization, achieving a 0.7 Dice score with 30% improvement over previous template-based approaches. We validate our anatomical learning approach through the successful restoration of missing cardiac structures and demonstrate significant improvement over standard Loop subdivision. Motion tracking experiments further confirm MorphiNet's capability for cardiac function analysis, including ejection-fraction estimates that correctly identify myocardial dysfunction in tetralogy of Fallot patients. Code and checkpoints are available at https://github.com/MalikTeng/MorphiNetV2.",
+  "landing": "https://doi.org/10.1109/tmi.2026.3683925",
+  "pdf": null
+ },
+ "W4409865654": {
+  "id": "W4409865654",
+  "title": "Improved 3D Whole Heart Geometry from Sparse CMR Slices",
+  "year": 2025,
+  "date": "2025-01-01",
+  "doi": "https://doi.org/10.1007/978-3-031-87756-8_5",
+  "cites": 8,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Yiyang Xu",
+   "Hao Xu",
+   "Matthew Sinclair",
+   "Esther Puyol Anton"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1007/978-3-031-87756-8_5",
+  "pdf": null
+ },
+ "W4414602808": {
+  "id": "W4414602808",
+  "title": "Personalized 4D Whole Heart Geometry Reconstruction from Cine MRI for Cardiac Digital Twins",
+  "year": 2025,
+  "date": "2025-09-29",
+  "doi": "https://doi.org/10.1007/978-3-032-07694-6_13",
+  "cites": 0,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Xiaoyue Liu",
+   "Xicheng Sheng",
+   "Xiahai Zhuang",
+   "Vicente Grau"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1007/978-3-032-07694-6_13",
+  "pdf": null
+ },
+ "W7155184131": {
+  "id": "W7155184131",
+  "title": "VecHeart: Holistic Four-Chamber Cardiac Anatomy Modeling via Hybrid VecSets",
+  "year": 2026,
+  "date": "2026-09-24",
+  "doi": "https://doi.org/10.1007/978-3-032-38186-6_62",
+  "cites": 0,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Yihong Chen",
+   "Pascal Fua"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1007/978-3-032-38186-6_62",
+  "pdf": null
+ },
+ "W7161324349": {
+  "id": "W7161324349",
+  "title": "CineMesh4D: Personalized 4D Whole Heart Reconstruction from Sparse Cine MRI",
+  "year": 2026,
+  "date": "2026-09-24",
+  "doi": "https://doi.org/10.1007/978-3-032-38186-6_42",
+  "cites": 0,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Xiaoyue Liu",
+   "Xiaohan Yuan",
+   "Mark Y. Chan",
+   "Ching‐Hui Sia"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1007/978-3-032-38186-6_42",
+  "pdf": null
+ },
+ "W7167226951": {
+  "id": "W7167226951",
+  "title": "Personalized 4D Whole-Heart Mesh Reconstruction from Cine MRI via Multi-Scale Temporal Modeling and Differentiable Contour Rendering",
+  "year": 2026,
+  "date": "2026-07-02",
+  "doi": "https://doi.org/10.48550/arxiv.2607.01952",
+  "cites": 0,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Xiaoyue Liu",
+   "Dongcheng Cang",
+   "Xiaohan Yuan",
+   "Mark YY Chan"
+  ],
+  "abstract": "Accurate 4D whole-heart mesh reconstruction from sparse cine MRI is critical for creating cardiac digital twins, but remains challenging due to limited 2D slice coverage and the complex coupling between cardiac shape and motion. Existing methods often rely on intermediate contour fitting and typically reconstruct static, single-phase, or partial cardiac geometries, limiting their ability to capture full-chamber dynamics. We propose a novel end-to-end framework for reconstructing temporally resolved whole-heart meshes from multi-view 2D cine MRI sequences by learning an image-to-mesh mapping. The framework incorporates a differentiable contour renderer inspired by the Beer-Lambert attenuation principle, enabling anatomy-aware supervision of 3D+t mesh deformation through contour-based projection losses. To improve temporal consistency across the cardiac cycle, we further introduce a multi-scale temporal modeling module that integrates global cycle-level dynamics with local inter-frame coherence to generate smooth and physiologically plausible mesh trajectories. The proposed method achieved a whole-heart mean absolute error of 1.68 $\\pm$ 0.31 mm and a motion jitter of 0.77 $\\pm$ 0.17 $\\mathrm{mm}/\\mathrm{frame}^{3}$, outperforming existing methods with lower reconstruction error and substantially improved motion smoothness. It also improved 2D contour alignment across multiple cine MRI views and supported downstream proof-of-concept electrophysiological simulation. The code will be released publicly upon acceptance of the manuscript for publication.",
+  "landing": "https://arxiv.org/abs/2607.01952",
+  "pdf": "https://arxiv.org/pdf/2607.01952"
+ },
+ "W7214391406": {
+  "id": "W7214391406",
+  "title": "Anatomy-Aligned Surface Field Learning for Myocardial Reconstruction from Sparse Short-Axis Cine MRI",
+  "year": 2026,
+  "date": "2026-09-24",
+  "doi": "https://doi.org/10.48550/arxiv.2609.29825",
+  "cites": 0,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Xiaohan Yuan",
+   "Xuan Yang",
+   "Qingya Li",
+   "Yangang Wang"
+  ],
+  "abstract": "Patient-specific 4D myocardial reconstruction from cine MRI supports quantitative functional assessment, regional motion analysis, and simulation-based modeling. However, routinely acquired short-axis (SAX) cine MRI is sparsely sampled along the through-plane direction, making dense and anatomically consistent surface reconstruction challenging. In this study, we propose an anatomy-aligned surface learning framework that parameterizes the epicardial and endocardial surfaces on a shared circumferential-longitudinal UV domain. This formulation converts irregular 3D reconstruction into structured coordinate-field completion with explicit correspondence across subjects and cardiac phases. Sparse SAX contours are encoded as UV observation fields, coverage-aware sampling improves robustness to incomplete slice coverage, and topology- and distortion-aware learning preserves circumferential continuity and local surface quality. Experiments on three public cine MRI datasets showed that the proposed method consistently outperformed representative mesh-based and implicit reconstruction approaches, achieving overall Chamfer distances of $2.887$~mm on ACDC, $2.641$~mm on M\\&Ms, and $2.810$~mm on M\\&Ms-2. The reconstructed sequences also preserved ventricular function, with end-diastolic volume and ejection fraction errors of $3.3$~mL and $1.1 \\%$, respectively. These results demonstrate that anatomy-aligned UV learning provides an accurate, efficient, and correspondence-aware representation for sparse cine MRI reconstruction and myocardial modeling. The source code will be available at https://github.com/yuan-xiaohan/SAX2MyoSurf.",
+  "landing": "https://arxiv.org/abs/2609.29825",
+  "pdf": "https://arxiv.org/pdf/2609.29825"
+ },
+ "W7131086421": {
+  "id": "W7131086421",
+  "title": "Explicit differentiable slicing and global deformation for cardiac mesh reconstruction",
+  "year": 2026,
+  "date": "2026-02-24",
+  "doi": "https://doi.org/10.1016/j.media.2026.103999",
+  "cites": 2,
+  "venue": "Medical Image Analysis",
+  "authors": [
+   "Yihao Luo",
+   "Dario Sesia",
+   "Fanwen Wang",
+   "Yinzhe Wu"
+  ],
+  "abstract": "Three-dimensional (3D) mesh reconstruction of the cardiac anatomy from medical images is useful for shape and motion measurements and biophysics simulations. However, 3D medical images are often acquired as 2D slices that are sparsely sampled (e.g., large slice spacing) and noisy, and 3D mesh reconstruction on such data is a challenging task. Traditional voxel-based approaches utilize non-differentiable pre- and post-processing that compromises fidelity to images, while mesh-level deep learning approaches require large 3D mesh annotations that are difficult to obtain. Differentiable cross-domain supervision from 2D images to 3D meshes is therefore crucial for enabling end-to-end optimization in medical imaging. While there have been attempts to approximate the voxelization and slicing of meshes that are being optimized, there has not yet been a method for directly using 2D slices to supervise 3D mesh reconstruction in a differentiable manner. Here, we propose a novel explicit differentiable voxelization and slicing (DVS) algorithm allowing gradient backpropagation to a 3D mesh from its slices, which facilitates refined mesh optimization directly supervised by the losses defined on 2D images. Further, we propose an innovative framework for extracting patient-specific left ventricle (LV) meshes from medical images by coupling DVS with a graph harmonic deformation (GHD) mesh morphing descriptor of cardiac shape that naturally preserves mesh quality and smoothness during optimization. The proposed framework achieves state-of-the-art performance in cardiac mesh reconstruction tasks from densely sampled (CT) as well as sparsely sampled (MRI stack with few slices) images, outperforming alternatives, including Marching Cubes, statistical shape models, algorithms with vertex-based mesh morphing algorithms and alternative methods for image-supervision of mesh reconstruction. Experimental results demonstrate that our method achieves an overall Dice score of 90% during a sparse fitting on multi-datasets. The proposed method can further quantify clinically useful parameters such as ejection fraction and global myocardial strains, closely matching the ground truth and outperforming the traditional voxel-based approach in sparse images.",
+  "landing": "https://doi.org/10.1016/j.media.2026.103999",
+  "pdf": null
+ },
+ "W7220676654": {
+  "id": "W7220676654",
+  "title": "Local2Mesh: Spatially Localized Contour-to-Mesh for Left Ventricular Reconstruction from Sparse 2D Cardiac MRI",
+  "year": 2026,
+  "date": "2026-10-05",
+  "doi": "https://doi.org/10.48550/arxiv.2610.06052",
+  "cites": 0,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Haoyu Wu",
+   "Ling Lin",
+   "Pascal Lefèvre",
+   "Ruizhe Li"
+  ],
+  "abstract": "Three-dimensional (3D) left ventricular (LV) reconstruction from sparse cardiac magnetic resonance (CMR) imaging remains challenging due to inter-slice misalignment and insufficient local spatial information between slices. Global aggregation of contour features may obscure local contour-to-surface relationships. We propose Local2Mesh, a spatially localized contour-to-mesh framework that deforms a template mesh to reconstruct 3D LV geometry from sparse 2D contours without 3D mesh annotations. The framework introduces geometry-aware alignment to correct inter-slice misalignment and a plane-aware Local Router that routes contour features to template vertices using vertex-to-plane distances. Local and global contour features then jointly guide graph-based template deformation for 3D LV reconstruction. Experiments on two public datasets, M\\&Ms-2 and ACDC, demonstrate superior geometric reconstruction and functional estimation over existing methods. Zero-shot transfer from M\\&Ms-2 to ACDC demonstrates strong cross-dataset generalization. Reconstructed meshes also improve disease classification over sparse contours, supporting their utility for downstream cardiac analysis. These results demonstrate that combining geometry-aware alignment with local contour-to-vertex modeling improves LV reconstruction from sparse 2D contours and supports downstream cardiac analysis. The code is available at https://github.com/hwu918945-alt/loca2mesh.",
+  "landing": "https://arxiv.org/abs/2610.06052",
+  "pdf": "https://arxiv.org/pdf/2610.06052"
+ },
+ "W7167829670": {
+  "id": "W7167829670",
+  "title": "Bi-PT: Bidirectional Cross-Attention Point Transformers for Four-Chamber Heart Reconstruction from Sparse Cardiac MRI Data",
+  "year": 2026,
+  "date": "2026-07-08",
+  "doi": "https://doi.org/10.48550/arxiv.2607.06923",
+  "cites": 0,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "C.-L.J. Hu",
+   "Shaoming Pan",
+   "Leon Axel",
+   "Ye, Meng"
+  ],
+  "abstract": "We propose Bi-PT, a pipeline for reconstructing 3D four-chamber human heart meshes from clinical sparsely sampled cardiac magnetic resonance imaging (CMR) data. This work addresses the error-prone generation of 3D cardiac shape from a sparse point cloud (SPC) extracted from 2D long-axis and short-axis views used in routine clinical CMR protocols. Bi-PT enables accurate inference of the four-chamber heart mesh from the SPC by learning robust point features via bidirectional point cross-attention between an atlas and the SPC, together with per-point semantic labels that improve correspondence estimation. We formulate the deformation field as a Neural Ordinary Differential Equation (NODE) parameterized by a per-point affine transformation and translation to deform the atlas toward the target heart shape. By learning such a NODE, we can guarantee the deformation field to be a locally affine diffeomorphic deformation. We also integrate a semantic label loss into the Chamfer distance to encourage label-consistent correspondences and add a smoothness regularization to stabilize and improve the learning of the deformation field. Extensive experiments demonstrate that Bi-PT achieves accurate and robust performance compared to baselines.",
+  "landing": "https://arxiv.org/abs/2607.06923",
+  "pdf": "https://arxiv.org/pdf/2607.06923"
+ },
+ "W7160327394": {
+  "id": "W7160327394",
+  "title": "Cardiac Mesh Flow: One-Step Generation of 3D+t Cardiac Four-Chamber Meshes via Flow Matching",
+  "year": 2026,
+  "date": "2026-05-03",
+  "doi": "https://doi.org/10.48550/arxiv.2605.01884",
+  "cites": 0,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Qiang Ma",
+   "Qingjie Meng",
+   "Mengyun Qiao",
+   "Paul McMahan Matthews"
+  ],
+  "abstract": "Spatio-temporal (3D+t) generative modelling of cardiac shape and motion is crucial for understanding heart structure and function at population scale. Existing generative models for cardiac shape synthesis either adopt volumetric shape representations that lack anatomical correspondence across different time points and subjects, or rely on VAE-based frameworks that suffer from a trade-off between reconstruction fidelity and generative diversity. In this work, we propose Cardiac Mesh Flow, a novel generative flow model for 3D+t cardiac four-chamber mesh generation with anatomical correspondence, temporal coherence, and periodic consistency. Leveraging the flow matching technique, Cardiac Mesh Flow performs efficient one-step generation of multi-scale free-form deformation fields, which warp a template mesh to generate cardiac four-chamber meshes across a cardiac cycle. Furthermore, Cardiac Mesh Flow enables controllable generation conditioned on cardiac chamber volumes, allowing precise control of the synthetic heart. Experimental results demonstrate that Cardiac Mesh Flow achieves high fidelity and diversity on both unconditional and conditional generation, compared to state-of-the-art 3D+t cardiac mesh generation methods.",
+  "landing": "https://arxiv.org/abs/2605.01884",
+  "pdf": "https://arxiv.org/pdf/2605.01884"
+ },
+ "W7162287616": {
+  "id": "W7162287616",
+  "title": "RVDeformer: Sparse Point Cloud-Guided Right Ventricle 3-D Reconstruction in Echocardiograms",
+  "year": 2026,
+  "date": "2026-05-25",
+  "doi": "https://doi.org/10.1109/tmi.2026.3696549",
+  "cites": 0,
+  "venue": "IEEE Transactions on Medical Imaging",
+  "authors": [
+   "Zi Wang",
+   "Jun Shi",
+   "Minfan Zhao",
+   "Z G Zhu"
+  ],
+  "abstract": "3D reconstruction of the Right Ventricle (RV) from echocardiograms is crucial for accurate clinical evaluation of cardiac function. However, existing methods are hindered by the complex RV anatomy and the incomplete spatial information inherent in 2D multi-view echocardiograms. Therefore, we propose RVDeformer, a sparse point cloud-guided framework for RV 3D reconstruction. RVDeformer reformulates the reconstruction task as a mesh deformation problem, learning to deform a predefined template mesh to match the target structure under the guidance of the sparse anatomical point cloud. Specifically, this framework employs the end-to-end neural network RVDeformNet to extract the features of the point cloud and template mesh for predicting the displacement of each mesh vertex. We design a point cloud-mesh fusion module that can effectively align and fuse features from the two modalities to enhance the representation ability of the model. We conduct extensive validation on a clinical dataset of 1,278 cases and demonstrate that RVDeformer outperforms existing state-of-the-art methods, achieving a Chamfer Distance (CD) of $2.24\\pm 0.55$ mm, an F1-score of $0.74\\pm 0.10$ at the 3 mm threshold, and a Volumetric Similarity (VS) of $91.53\\pm 2.28$ %, with significant potential for clinical applications. The code is available at https://github.com/onezh95/RVDeformer.",
+  "landing": "https://doi.org/10.1109/tmi.2026.3696549",
+  "pdf": null
+ },
+ "W7196949058": {
+  "id": "W7196949058",
+  "title": "biv-me: Open-source software for generating time-varying biventricular meshes from cine cardiovascular magnetic resonance imaging with multi-cohort validation",
+  "year": 2026,
+  "date": "2026-08-06",
+  "doi": "https://doi.org/10.1016/j.media.2026.104252",
+  "cites": 0,
+  "venue": "Medical Image Analysis",
+  "authors": [
+   "Joshua R. Dillon",
+   "Charlène Mauger",
+   "Debbie Zhao",
+   "Steffen Erhard Petersen"
+  ],
+  "abstract": "The generation of geometric representations of the heart is essential for personalised approaches to cardiac assessment. Structured biventricular meshes customised to imaging data have demonstrated utility in a number of model-based applications that can provide more sensitive insights into patient health than routine cardiac indices alone. Cardiovascular magnetic resonance (CMR) imaging is a common starting point for the creation of digital twin geometries, with numerous published methods for mesh reconstruction. However, the majority of these methods are not open-source, are typically developed and validated using data from a single-centre, and lack deployability across heterogeneous scanning protocols and patient groups. We present an open-source, end-to-end pipeline (biv-me), to automatically generate time-varying biventricular meshes from cine CMR DICOM images, and perform external validation against a clinical reference software tool on 1313 CMR imaging studies across five publicly available datasets. We report excellent agreement in left and right ventricular indices and high scan-rescan reproducibility. Mesh generation was rapid, with a mean processing time of 2.5 min, and highly feasible, with 99% of meshes successfully generated to a high standard with median error of <1.5 mm. The biv-me pipeline - including code, models, and documentation - is available at https://github.com/UOA-Heart-Mechanics-Research/biv-me.",
+  "landing": "https://doi.org/10.1016/j.media.2026.104252",
+  "pdf": null
+ },
+ "W4405303959": {
+  "id": "W4405303959",
+  "title": "Slice2Mesh: 3D Surface Reconstruction From Sparse Slices of Images for the Left Ventricle",
+  "year": 2024,
+  "date": "2024-12-12",
+  "doi": "https://doi.org/10.1109/tmi.2024.3514869",
+  "cites": 4,
+  "venue": "IEEE Transactions on Medical Imaging",
+  "authors": [
+   "Jia Xiao",
+   "Wen Zheng",
+   "Wenji Wang",
+   "Qing Xia"
+  ],
+  "abstract": "Cine MRI is a widely used technique to evaluate left ventricular function and motion, as it captures temporal information. However, due to the limited spatial resolution, cine MRI only provides a few sparse scans at regular positions and orientations, which poses challenges for reconstructing dense 3D cardiac structures, which is essential for better understanding the cardiac structure and motion in a dynamic 3D manner. In this study, we propose a novel learning-based 3D cardiac surface reconstruction method, Slice2Mesh, which directly predicts accurate and high-fidelity 3D meshes from sparse slices of cine MRI images under partial supervision of sparse contour points. Slice2Mesh leverages a 2D UNet to extract image features and a graph convolutional network to predict deformations from an initial template to various 3D surfaces, which enables it to produce topology-consistent meshes that can better characterize and analyze cardiac movement. We also introduce As Rigid As Possible energy in the deformation loss to preserve the intrinsic structure of the predefined template and produce realistic left ventricular shapes. We evaluated our method on 150 clinical test samples and achieved an average chamfer distance of 3.621 mm, outperforming traditional methods by approximately 2.5 mm. We also applied our method to produce 4D surface meshes from cine MRI sequences and utilized a simple SVM model on these 4D heart meshes to identify subjects with myocardial infarction, and achieved a classification sensitivity of 91.8% on 99 test subjects, including 49 abnormal patients, which implies great potential of our method for clinical use.",
+  "landing": "https://doi.org/10.1109/tmi.2024.3514869",
+  "pdf": null
+ },
+ "W4411996531": {
+  "id": "W4411996531",
+  "title": "Joint Shape Reconstruction and Registration via a Shared Hybrid Diffeomorphic Flow",
+  "year": 2025,
+  "date": "2025-07-03",
+  "doi": "https://doi.org/10.1109/tmi.2025.3585560",
+  "cites": 1,
+  "venue": "IEEE Transactions on Medical Imaging",
+  "authors": [
+   "Hengxiang Shi",
+   "Ping Wang",
+   "Shouhui Zhang",
+   "Xiuyang Zhao"
+  ],
+  "abstract": "Deep implicit functions (DIFs) effectively represent shapes by using a neural network to map 3D spatial coordinates to scalar values that encode the shape's geometry, but it is difficult to establish correspondences between shapes directly, limiting their use in medical image registration. The recently presented deformation field-based methods achieve implicit templates learning via template field learning with DIFs and deformation field learning, establishing shape correspondence through deformation fields. Although these approaches enable joint learning of shape representation and shape correspondence, the decoupled optimization for template field and deformation field, caused by the absence of deformation annotations lead to a relatively accurate template field but an underoptimized deformation field. In this paper, we propose a novel implicit template learning framework via a shared hybrid diffeomorphic flow (SHDF), which enables shared optimization for deformation and template, contributing to better deformations and shape representation. Specifically, we formulate the signed distance function (SDF, a type of DIFs) as a one-dimensional (1D) integral, unifying dimensions to match the form used in solving ordinary differential equation (ODE) for deformation field learning. Then, SDF in 1D integral form is integrated seamlessly into the deformation field learning. Using a recurrent learning strategy, we frame shape representations and deformations as solving different initial value problems of the same ODE. We also introduce a global smoothness regularization to handle local optima due to limited outside-of-shape data. Experiments on medical datasets show that SHDF outperforms state-of-the-art methods in shape representation and registration.",
+  "landing": "https://doi.org/10.1109/tmi.2025.3585560",
+  "pdf": null
+ },
+ "W7138869125": {
+  "id": "W7138869125",
+  "title": "Volumetrically Consistent Implicit Atlas Learning via Neural Diffeomorphic Flow for Placenta MRI",
+  "year": 2026,
+  "date": "2026-03-17",
+  "doi": "https://doi.org/10.48550/arxiv.2603.16078",
+  "cites": 0,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Athena Taymourtash",
+   "S. Mazdak Abulnaga",
+   "Esra Abacı Türk",
+   "Patricia Ellen Grant"
+  ],
+  "abstract": "Establishing dense volumetric correspondences across anatomical shapes is essential for group-level analysis but remains challenging for implicit neural representations. Most existing implicit registration methods rely on supervision near the zero-level set and thus capture only surface correspondences, leaving interior deformations under-constrained. We introduce a volumetrically consistent implicit model that couples reconstruction of signed distance functions (SDFs) with neural diffeomorphic flow to learn a shared canonical template of the placenta. Volumetric regularization, including Jacobian-determinant and biharmonic penalties, suppresses local folding and promotes globally coherent deformations. In the motivating application to placenta MRI, our formulation jointly reconstructs individual placentas, aligns them to a population-derived implicit template, and enables voxel-wise intensity mapping in a unified canonical space. Experiments on in-vivo placenta MRI scans demonstrate improved geometric fidelity and volumetric alignment over surface-based implicit baseline methods, yielding anatomically interpretable and topologically consistent flattening suitable for group analysis.",
+  "landing": "http://arxiv.org/abs/2603.16078",
+  "pdf": "https://arxiv.org/pdf/2603.16078"
+ },
+ "W4403649766": {
+  "id": "W4403649766",
+  "title": "One Registration is Worth Two Segmentations",
+  "year": 2024,
+  "date": "2024-01-01",
+  "doi": "https://doi.org/10.1007/978-3-031-72390-2_62",
+  "cites": 8,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Shiqi Huang",
+   "Tingfa Xu",
+   "Ziyi Shen",
+   "Shaheer Ullah Saeed"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1007/978-3-031-72390-2_62",
+  "pdf": null
+ },
+ "W7134047657": {
+  "id": "W7134047657",
+  "title": "3D Spatiotemporal cardiac reconstruction for predicting MACE in acute myocardial infarction",
+  "year": 2026,
+  "date": "2026-03-06",
+  "doi": "https://doi.org/10.1038/s41746-026-02449-0",
+  "cites": 1,
+  "venue": "npj Digital Medicine",
+  "authors": [
+   "Qiang Gao",
+   "Jingping Wu",
+   "Yingshuang Gao",
+   "Yongyong Ren"
+  ],
+  "abstract": "Artificial intelligence has made significant strides in predicting major adverse cardiovascular events (MACE) in patients with acute myocardial infarction (AMI) following percutaneous coronary intervention. However, most existing methods rely solely on tabular variables derived from clinical data and cardiac magnetic resonance (CMR), without fully leveraging the predictive potential of the CMR imaging modality itself. Moreover, these approaches often overlook the synergistic benefits of multimodal integration between imaging and tabular data. In addition, current models primarily focus on short-term MACE risk assessment (e.g., within 6 months or 1 year), limiting their applicability for long-term prognostication. To address these limitations, we first developed ReconSeg3D, a model that reconstructs short-axis cine CMR stacks into temporally-resolved 3D bi-ventricular volumes, capturing fine-grained cardiac anatomy and dynamic motion. These bi-ventricular sequences were then integrated with 45 clinical and CMR-derived variables using spatiotemporal decomposition and cross-attention mechanisms to construct a multimodal MACE prediction model-HeartTTable. HeartTTable achieved a 5-year time-dependent AUC of 0.934 (95% CI 0.907-0.959) and a Harrell's C-index of 0.897 for predicting MACE risk, significantly outperforming models based solely on clinical and CMR-derived tabular features, and demonstrated strong capabilities in postoperative risk stratification. Our study contributes to improved long-term postoperative management for AMI patients by offering clinicians an objective, data-driven decision-support tool.",
+  "landing": "https://doi.org/10.1038/s41746-026-02449-0",
+  "pdf": "https://www.nature.com/articles/s41746-026-02449-0_reference.pdf"
+ },
+ "W7214158550": {
+  "id": "W7214158550",
+  "title": "Uncovering Interpretable Point-Wise Image Correspondences from Deep Segmentation Features",
+  "year": 2026,
+  "date": "2026-09-24",
+  "doi": "https://doi.org/10.1007/978-3-032-38186-6_35",
+  "cites": 0,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Eli Duval",
+   "Frederik Maes"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1007/978-3-032-38186-6_35",
+  "pdf": null
+ },
+ "W7147237246": {
+  "id": "W7147237246",
+  "title": "AI-enabled cardiac shape reconstruction from routine magnetic resonance imaging",
+  "year": 2026,
+  "date": "2026-03-27",
+  "doi": "https://doi.org/10.48550/arxiv.2603.27003",
+  "cites": 0,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Tanmay Mukherjee",
+   "Neil Gautam",
+   "Nikhil Kadivar",
+   "Elizabeth M. Fugate"
+  ],
+  "abstract": "Computational models of cardiac structure and function are increasingly central to the development of subject-specific cardiac digital twins, enabling improved characterization of contractile dysfunction, pathological remodeling, and electrical abnormalities. A critical prerequisite for these models is the accurate reconstruction of three-dimensional (3D) cardiac anatomy from medical imaging. Multi-planar magnetic resonance imaging, particularly when combined with artificial intelligence, offers a clinically feasible alternative to conventional reconstruction techniques. In this study, we present a neural field-based reconstruction framework that recovers 3D cardiac geometries from sparse planar contour data by learning continuous shape representations. Reconstruction performance was evaluated using complementary in-silico and in vivo datasets spanning variations in sampling density and geometric complexity. Across both datasets, reconstructed meshes closely matched reference geometries, demonstrating that the neural field approach faithfully captures cardiac planar contours. Compared with traditional local interpolation methods, the proposed framework exhibited improved geometric fidelity in anatomically challenging regions, including the left ventricular apex and basal segments, particularly under sparse sampling conditions. Collectively, these findings demonstrate that neural field-based reconstruction provides a robust and efficient pathway for multi-planar cardiac shape recovery, with particular relevance for AI-driven modeling pipelines and data-limited settings such as small-animal and time-resolved cardiac imaging.",
+  "landing": "http://arxiv.org/abs/2603.27003",
+  "pdf": "https://arxiv.org/pdf/2603.27003"
+ },
+ "W4415089519": {
+  "id": "W4415089519",
+  "title": "End-to-End 4D Heart Mesh Recovery Across Full-Stack and Sparse Cardiac MRI",
+  "year": 2025,
+  "date": "2025-09-15",
+  "doi": "https://doi.org/10.48550/arxiv.2509.12090",
+  "cites": 1,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Yihong Chen",
+   "Yang, Jiancheng",
+   "Deniz Sayin Mercadier",
+   "Hieu Van Le"
+  ],
+  "abstract": "Reconstructing cardiac motion from CMR sequences is critical for diagnosis, prognosis, and intervention. Existing methods rely on complete CMR stacks to infer full heart motion, limiting their applicability during intervention when only sparse observations are available. We present TetHeart, the first end-to-end framework for unified 4D heart mesh recovery from both offline full-stack and intra-procedural sparse-slice observations. Our method leverages deformable tetrahedra to capture shape and motion in a coherent space shared across cardiac structures. Before a procedure, it initializes detailed, patient-specific heart meshes from high-quality full stacks, which can then be updated using whatever slices can be obtained in real-time, down to a single one during the procedure. TetHeart incorporates several key innovations: (i) an attentive slice-adaptive 2D-3D feature assembly mechanism that integrates information from arbitrary numbers of slices at any position; (ii) a distillation strategy to ensure accurate reconstruction under extreme sparsity; and (iii) a weakly supervised motion learning scheme requiring annotations only at keyframes, such as the end-diastolic and end-systolic phases. Trained and validated on three large public datasets and evaluated zero-shot on additional private interventional and public datasets without retraining, TetHeart achieves state-of-the-art accuracy and strong generalization in both pre- and intra-procedural settings. Code and dataset is available at https://github.com/Scalsol/TetHeart.",
+  "landing": "https://arxiv.org/abs/2509.12090",
+  "pdf": "https://arxiv.org/pdf/2509.12090"
+ },
+ "W4417137794": {
+  "id": "W4417137794",
+  "title": "cMeta-INR: cohort-informed meta-learning-based implicit neural representation for deformable registration-driven real-time volumetric MRI estimation",
+  "year": 2025,
+  "date": "2025-12-08",
+  "doi": "https://doi.org/10.1088/1361-6560/ae29e2",
+  "cites": 1,
+  "venue": "Physics in Medicine and Biology",
+  "authors": [
+   "Xiaoxue Qian",
+   "Hua‐Chieh Shao",
+   "Jing Cai",
+   "You Zhang"
+  ],
+  "abstract": "Abstract Objective. Rapid and accurate reconstruction of high-quality three-dimensional magnetic resonance (MR) images from undersampled k -space data with variable sampling patterns remains a challenge due to limited available information and the need to preserve rich anatomical details. Deformable image registration provides a promising solution by warping a fully-sampled reference image to align with undersampled data acquired on-board (from an image-guided treatment delivery platform like MR-LINACs). In this study, we proposed a novel registration framework—cohort-informed meta-learning (cMeta)—to enhance the accuracy and efficiency of implicit neural representations (INR) for limited k -space data-driven patient-specific deformable image registration. Approach. cMeta-INR incorporated token-aware modulation and population-level deformation priors to guide an INR template-based meta-learning process. By encoding contextual information and leveraging cohort-informed priors, the resulting meta-learning framework enabled the INR to rapidly adapt to new registration cases with undersampled k -space data. Specifically, for the meta learning, a modulation module with token-awareness was introduced to modulate the INR template, and a pre-trained population-based registration network (KS-RegNet) was employed to generate coarse, reference deformation vector fields and latent embeddings for computing the deformation discrepancy loss and embedding similarity loss. During test-time adaptation, the INR, initialized from the meta-learned template, was efficiently fine-tuned to new k -space data with minimal iterations. Main results. Experiments were conducted on 14 abdominal and 11 cardiac 4D magnetic resonance imagings (MRIs) with 5–13 spokes. cMeta-INR outperformed state-of-the-art methods, achieving the best average (± s.d.) Dice similarity coefficients (0.778 ± 0.056 for abdominal and 0.894 ± 0.076 for cardiac data), and center-of-mass errors (3.04 ± 1.48 mm and 1.32 ± 1.02 mm, respectively), while enabling rapid test-time adaptation of only ∼35 s on an NVIDIA H100 GPU. Significance. The proposed cohort-informed meta-learning framework effectively enhanced the adaptation capabilities of INRs to individual patients under highly undersampled k -space scenarios, demonstrating strong potential for fast and accurate patient-specific deformable registration.",
+  "landing": "https://doi.org/10.1088/1361-6560/ae29e2",
+  "pdf": null
+ },
+ "W4414687007": {
+  "id": "W4414687007",
+  "title": "Matching Shapes Under Different Topologies: A Topology-Adaptive Deformation Guided Approach",
+  "year": 2025,
+  "date": "2025-09-08",
+  "doi": "https://doi.org/10.48550/arxiv.2509.06862",
+  "cites": 0,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Aymen Merrouche",
+   "Stefanie Wuhrer",
+   "Edmond Boyer"
+  ],
+  "abstract": "Non-rigid 3D mesh matching is a critical step in computer vision and computer graphics pipelines. We tackle matching meshes that contain topological artefacts which can break the assumption made by current approaches. While Functional Maps assume the deformation induced by the ground truth correspondences to be near-isometric, ARAP-like deformation-guided approaches assume the latter to be ARAP. Neither assumption holds in certain topological configurations of the input shapes. We are motivated by real-world scenarios such as per-frame multi-view reconstructions, often suffering from topological artefacts. To this end, we propose a topology-adaptive deformation model allowing changes in shape topology to align shape pairs under ARAP and bijective association constraints. Using this model, we jointly optimise for a template mesh with adequate topology and for its alignment with the shapes to be matched to extract correspondences. We show that, while not relying on any data-driven prior, our approach applies to highly non-isometric shapes and shapes with topological artefacts, including noisy per-frame multi-view reconstructions, even outperforming methods trained on large datasets in 3D alignment quality.",
+  "landing": "http://arxiv.org/abs/2509.06862",
+  "pdf": "https://arxiv.org/pdf/2509.06862"
+ },
+ "W4394929009": {
+  "id": "W4394929009",
+  "title": "Neural Semantic Surface Maps",
+  "year": 2024,
+  "date": "2024-04-17",
+  "doi": "https://doi.org/10.1111/cgf.15005",
+  "cites": 10,
+  "venue": "Computer Graphics Forum",
+  "authors": [
+   "Luca Morreale",
+   "Noam Aigerman",
+   "Vladimir G. Kim",
+   "Niloy J. Mitra"
+  ],
+  "abstract": "Abstract We present an automated technique for computing a map between two genus‐zero shapes, which matches semantically corresponding regions to one another. Lack of annotated data prohibits direct inference of 3D semantic priors; instead, current state‐of‐the‐art methods predominantly optimize geometric properties or require varying amounts of manual annotation. To overcome the lack of annotated training data, we distill semantic matches from pre‐trained vision models: our method renders the pair of untextured 3D shapes from multiple viewpoints; the resulting renders are then fed into an off‐the‐shelf image‐matching strategy that leverages a pre‐trained visual model to produce feature points. This yields semantic correspondences, which are projected back to the 3D shapes, producing a raw matching that is inaccurate and inconsistent across different viewpoints. These correspondences are refined and distilled into an inter‐surface map by a dedicated optimization scheme, which promotes bijectivity and continuity of the output map. We illustrate that our approach can generate semantic surface‐to‐surface maps, eliminating manual annotations or any 3D training data requirement. Furthermore, it proves effective in scenarios with high semantic complexity, where objects are non‐isometrically related, as well as in situations where they are nearly isometric.",
+  "landing": "https://doi.org/10.1111/cgf.15005",
+  "pdf": null
+ },
+ "W7151509712": {
+  "id": "W7151509712",
+  "title": "TransLAP: Non‐Isometric Shape Matching Using Transformer Based Linear Assignment Problem",
+  "year": 2026,
+  "date": "2026-01-01",
+  "doi": "https://doi.org/10.1049/ipr2.70333",
+  "cites": 0,
+  "venue": "IET Image Processing",
+  "authors": [
+   "Amirreza Amirfathiyan",
+   "Hossein Ebrahimnezhad"
+  ],
+  "abstract": "ABSTRACT Establishing correspondences between 3D shapes under challenging conditions, such as mixed pose and non‐isometric deformations, is critical for applications like shape registration in computer vision and graphics. Existing methods, including geodesic‐based, orientation‐preserving, and deep learning approaches, often falter in handling intrinsic symmetries and significant deformations, as evidenced in benchmarks like SHREC’20 and TOSCA. We introduce TransLAP, a transformer‐based linear assignment solver that directly operates on hybrid geometric features (geodesic distances + Dirichlet‐to‐Neumann eigenfunctions) to produce bijective mappings in a CPU‐efficient manner. TransLAP estimates soft assignment matrices using stacked self‐ and cross‐attention layers with assurance‐based early stopping, followed by Jonker–Volgenant optimisation and the Voting‐Based Consensus Algorithm (VBCA) refinement. Evaluated on TOSCA, SHREC’20, SMAL, and DT4D datasets, our method achieves average geodesic errors of 0.0932, 0.1094, 0.0614, and 0.0663, respectively — outperforming state‐of‐the‐art approaches (e.g., SSL, ConsistFMaps, DGFM, FM‐Net and Diffusion‐Net) by up to 60%. Qualitative results demonstrate effective matching for non‐isometric pairs (e.g., human‐gorilla, pig‐dog). Ablation studies confirm the role of each component in our proposed method, with TransLAP contributing approximately 50% and the Mapping Modifier contributing over 20%. Our method runs on a CPU with less than 3 GB of memory, making it practical for low‐resource settings.",
+  "landing": "https://doi.org/10.1049/ipr2.70333",
+  "pdf": null
+ },
+ "W4417358728": {
+  "id": "W4417358728",
+  "title": "SRE-FMaps: A Sinkhorn-Regularized Elastic Functional Map Framework for Non-Isometric 3D Shape Matching",
+  "year": 2025,
+  "date": "2025-12-16",
+  "doi": "https://doi.org/10.3390/jimaging11120452",
+  "cites": 0,
+  "venue": "Journal of Imaging",
+  "authors": [
+   "Dan Zhang",
+   "Yue Zhang",
+   "Ning Wang",
+   "Dong Zhao"
+  ],
+  "abstract": "Precise 3D shape correspondence is a fundamental prerequisite for critical applications ranging from medical anatomical modeling to visual recognition. However, non-isometric 3D shape matching remains a challenging task due to the limited sensitivity of traditional Laplace-Beltrami (LB) bases to local geometric deformations such as stretching and bending. To address these limitations, this paper proposes a Sinkhorn-Regularized Elastic Functional Map framework (SRE-FMaps) that integrates entropy-regularized optimal transport with an elastic thin-shell energy basis. First, a sparse Sinkhorn transport plan is adopted to initialize a bijective correspondence with linear computational complexity. Then, a non-orthogonal elastic basis, derived from the Hessian of thin-shell deformation energy, is introduced to enhance high-frequency feature perception. Finally, correspondence stability is quantified through a cosine-based elastic distance metric, enabling retrieval and classification. Experiments on the SHREC2015, McGill, and Face datasets demonstrate that SRE-FMaps reduces the correspondence error by a maximum of 32% and achieves an average of 92.3% classification accuracy (with a peak of 94.74% on the Face dataset). Moreover, the framework exhibits superior robustness, yielding a recall of up to 91.67% and an F1-score of 0.94, effectively handling bending, stretching, and folding deformations compared with conventional LB-based functional map pipelines. The proposed framework provides a scalable solution for non-isometric shape correspondence in medical modeling, 3D reconstruction, and visual recognition.",
+  "landing": "https://doi.org/10.3390/jimaging11120452",
+  "pdf": "https://www.mdpi.com/2313-433X/11/12/452/pdf"
+ },
+ "W7148874316": {
+  "id": "W7148874316",
+  "title": "Non-Rigid 3D Shape Correspondences: From Foundations to Open Challenges and Opportunities",
+  "year": 2026,
+  "date": "2026-04-01",
+  "doi": "https://doi.org/10.48550/arxiv.2604.01274",
+  "cites": 0,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Aleksei Zhuravlev",
+   "Lennart Bastian",
+   "Dongliang Cao",
+   "Nafie El Amrani"
+  ],
+  "abstract": "Estimating correspondences between deformed shape instances is a long-standing problem in computer graphics; numerous applications, from texture transfer to statistical modelling, rely on recovering an accurate correspondence map. Many methods have thus been proposed to tackle this challenging problem from varying perspectives, depending on the downstream application. This state-of-the-art report is geared towards researchers, practitioners, and students seeking to understand recent trends and advances in the field. We categorise developments into three paradigms: spectral methods based on functional maps, combinatorial formulations that impose discrete constraints, and deformation-based methods that directly recover a global alignment. Each school of thought offers different advantages and disadvantages, which we discuss throughout the report. Meanwhile, we highlight the latest developments in each area and suggest new potential research directions. Finally, we provide an overview of emerging challenges and opportunities in this growing field, including the recent use of vision foundation models for zero-shot correspondence and the particularly challenging task of matching partial shapes.",
+  "landing": "https://doi.org/10.48550/arxiv.2604.01274",
+  "pdf": null
+ },
+ "W4402727307": {
+  "id": "W4402727307",
+  "title": "Integrating Efficient Optimal Transport and Functional Maps for Unsupervised Shape Correspondence Learning",
+  "year": 2024,
+  "date": "2024-06-16",
+  "doi": "https://doi.org/10.1109/cvpr52733.2024.02188",
+  "cites": 9,
+  "venue": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings",
+  "authors": [
+   "Tung Le",
+   "Khai Nguyen",
+   "Shanlin Sun",
+   "Nhat Ho"
+  ],
+  "abstract": "In the realm of computer vision and graphics, accurately establishing correspondences between geometric 3D shapes is pivotal for applications like object tracking, registration, texture transfer, and statistical shape analysis. Moving beyond traditional hand-crafted and data-driven feature learning methods, we incorporate spectral methods with deep learning, focusing on functional maps (FMs) and optimal transport (OT). Traditional OT-based approaches, often reliant on entropy regularization OT in learning-based framework, face computational challenges due to their quadratic cost. Our key contribution is to employ the sliced Wasserstein distance (SWD)for OT, which is a valid fast optimal transport metric in an unsupervised shape matching framework. This unsupervised framework integrates functional map regularizers with a novel OT-based loss derived from SWD, enhancing feature alignment between shapes treated as discrete probability measures. We also introduce an adaptive refinement process utilizing entropy regularized OT, further refining feature alignments for accurate point-to-point correspondences. Our method demonstrates superior performance in non-rigid shape matching, including near-isometric and non-isometric scenarios, and excels in downstream tasks like segmentation transfer. The empirical results on diverse datasets highlight our framework's effectiveness and generalization capabilities, setting new standards in non-rigid shape matching with efficient OT metrics and an adaptive refinement module. Code is available at11https://github.com/Tungthanhlee/EOT-Correspondence.",
+  "landing": "https://doi.org/10.1109/cvpr52733.2024.02188",
+  "pdf": null
+ },
+ "W4399563522": {
+  "id": "W4399563522",
+  "title": "Revisiting Map Relations for Unsupervised Non-Rigid Shape Matching",
+  "year": 2024,
+  "date": "2024-03-18",
+  "doi": "https://doi.org/10.1109/3dv62453.2024.00128",
+  "cites": 8,
+  "venue": "International Conference on 3D Vision (3DV)",
+  "authors": [
+   "Dongliang Cao",
+   "Paul Roetzer",
+   "Florian Bernard"
+  ],
+  "abstract": "We propose a novel unsupervised learning approach for non-rigid 3D shape matching. Our approach improves upon recent state-of-the art deep functional map methods and can be applied to a broad range of different challenging scenarios. Previous deep functional map methods mainly focus on feature extraction and aim exclusively at obtaining more expressive features for functional map computation. However, the importance of the functional map computation itself is often neglected and the relationship between the functional map and point-wise map is underexplored. In this paper, we systematically investigate the coupling relationship between the functional map from the functional map solver and the point-wise map based on feature similarity. To this end, we propose a self-adaptive functional map solver to adjust the functional map regularisation for different shape matching scenarios, together with a vertex-wise contrastive loss to obtain more discriminative features. Using different challenging datasets (including non-isometry, topological noise and partiality), we demonstrate that our method substantially outperforms previous state-of-the-art methods.",
+  "landing": "https://doi.org/10.1109/3dv62453.2024.00128",
+  "pdf": null
+ },
+ "W4403878288": {
+  "id": "W4403878288",
+  "title": "Synchronous Diffusion for Unsupervised Smooth Non-rigid 3D Shape Matching",
+  "year": 2024,
+  "date": "2024-10-29",
+  "doi": "https://doi.org/10.1007/978-3-031-72652-1_16",
+  "cites": 7,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Dongliang Cao",
+   "Zorah Lähner",
+   "Florian Bernard"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1007/978-3-031-72652-1_16",
+  "pdf": null
+ },
+ "W4408519784": {
+  "id": "W4408519784",
+  "title": "Equivariant Local Reference Frames With Optimization for Robust Non-Rigid Point Cloud Correspondence",
+  "year": 2025,
+  "date": "2025-01-01",
+  "doi": "https://doi.org/10.1109/tip.2025.3550006",
+  "cites": 2,
+  "venue": "IEEE Transactions on Image Processing",
+  "authors": [
+   "Ling Wang",
+   "Runfa Chen",
+   "Fuchun Sun",
+   "Xinzhou Wang"
+  ],
+  "abstract": "Unsupervised non-rigid point cloud shape correspondence underpins a multitude of 3D vision tasks, yet itself is non-trivial given the exponential complexity stemming from inter-point degree-of-freedom, i.e., pose transformations. Based on the assumption of local rigidity, one solution for reducing complexity is to decompose the overall shape into independent local regions using Local Reference Frames (LRFs) that are equivariant to SE(3) transformations. However, the focus solely on local structure neglects global geometric contexts, resulting in less distinctive LRFs that lack crucial semantic information necessary for effective matching. Furthermore, such complexity introduces out-of-distribution geometric contexts during inference, thus complicating generalization. To this end, we introduce 1) EquiShape, a novel structure tailored to learn pair-wise LRFs with global structural cues for both spatial and semantic consistency, and 2) LRF-Refine, an optimization strategy generally applicable to LRF-based methods, aimed at addressing the generalization challenges. Specifically, for EquiShape, we employ cross-talk within separate equivariant graph neural networks (Cross-GVP) to build long-range dependencies to compensate for the lack of semantic information in local structure modeling, deducing pair-wise independent SE(3)-equivariant LRF vectors for each point. For LRF-Refine, the optimization adjusts LRFs within specific contexts and knowledge, enhancing the geometric and semantic generalizability of point features. Our overall framework surpasses the state-of-the-art methods by a large margin on three benchmarks. Codes are available at https://github.com/2019EPWL/EquiShape.",
+  "landing": "https://doi.org/10.1109/tip.2025.3550006",
+  "pdf": null
+ },
+ "W4402716356": {
+  "id": "W4402716356",
+  "title": "Partial-to-Partial Shape Matching with Geometric Consistency",
+  "year": 2024,
+  "date": "2024-06-16",
+  "doi": "https://doi.org/10.1109/cvpr52733.2024.02595",
+  "cites": 10,
+  "venue": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings",
+  "authors": [
+   "Viktoria Ehm",
+   "Maolin Gao",
+   "Paul Roetzer",
+   "Marvin Eisenberger"
+  ],
+  "abstract": "Finding correspondences between 3D shapes is an important and long-standing problem in computer vision, graphics and beyond. A prominent challenge are partial-to-partial shape matching settings, which occur when the shapes to match are only observed incompletely (e.g. from 3D scanning). Although partial-to-partial matching is a highly relevant setting in practice, it is rarely explored. Our work bridges the gap between existing (rather artificial) 3D full shape matching and partial-to-partial real-world set-tings by exploiting geometric consistency as a strong constraint. We demonstrate that it is indeed possible to solve this challenging problem in a variety of settings. For the first time, we achieve geometric consistency for partial-to-partial matching, which is realized by a novel integer non-linear program formalism building on triangle prod-uct spaces, along with a new pruning algorithm based on linear integer programming. Further, we generate a new inter-class dataset for partial-to-partial shape-matching. We show that our method outperforms current SOTA meth-ods on both an established intra-class dataset and our novel inter-class dataset. The code of this work is publicly avail-able.11https://github.com/vikiehm/gc-ppsm",
+  "landing": "https://doi.org/10.1109/cvpr52733.2024.02595",
+  "pdf": null
+ },
+ "W4402716382": {
+  "id": "W4402716382",
+  "title": "Learning SO(3)-Invariant Semantic Correspondence via Local Shape Transform",
+  "year": 2024,
+  "date": "2024-06-16",
+  "doi": "https://doi.org/10.1109/cvpr52733.2024.02168",
+  "cites": 2,
+  "venue": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings",
+  "authors": [
+   "Chunghyun Park",
+   "Seungwook Kim",
+   "Jaesik Park",
+   "Minsu Cho"
+  ],
+  "abstract": "Establishing accurate 3D correspondences between shapes stands as a pivotal challenge with profound implications for computer vision and robotics. However, existing self-supervised methods for this problem assume perfect input shape alignment, restricting their real-world applicability. In this work, we introduce a novel self-supervised Rotation-Invariant 3D correspondence learner with local Shape Transform, dubbed RIST, that learns to establish dense correspondences between shapes even under challenging intra-class variations and arbitrary orientations. Specifically, RIST learns to dynamically formulate an SO(3) -invariant local shape transform for each point, which maps the SO(3)-equivariant global shape descriptor of the input shape to a local shape descriptor. These local shape descriptors are provided as inputs to our decoder to facilitate point cloud self- and cross-reconstruction. Our proposed self-supervised training pipeline encourages semantically corresponding points from different shapes to be mapped to similar local shape descriptors, enabling RIST to establish dense point-wise correspondences. RIST demonstrates state-of-the-art performances on 3D part label transfer and semantic keypoint transfer given arbitrarily rotated point cloud pairs of the same category, outperforming existing methods by significant margins.",
+  "landing": "https://doi.org/10.1109/cvpr52733.2024.02168",
+  "pdf": null
+ },
+ "W4402753754": {
+  "id": "W4402753754",
+  "title": "TutteNet: Injective 3D Deformations by Composition of 2D Mesh Deformations",
+  "year": 2024,
+  "date": "2024-06-16",
+  "doi": "https://doi.org/10.1109/cvpr52733.2024.02020",
+  "cites": 2,
+  "venue": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings",
+  "authors": [
+   "Bo Sun",
+   "Thibault Groueix",
+   "Chen Song",
+   "Qi-xing Huang A"
+  ],
+  "abstract": "This work proposes a novel representation of injective deformations of 3D space, which overcomes existing limi-tations of injective methods, namely inaccuracy, lack of ro-bustness, and incompatibility with general learning and op-timization frameworks. Our core idea is to reduce the prob-lem to a “deep” composition of multiple 2D mesh-based piecewise-linear maps. Namely, we build differentiable lay-ers that produce mesh deformations through Tutte's embed-ding (guaranteed to be injective in 2D), and compose these layers over different planes to create complex 3D injective deformations of the 3D volume. We show our method pro-vides the ability to efficiently and accurately optimize and learn complex deformations, outperforming other injective approaches. As a main application, we produce complex and artifact-free NeRF and SDF deformations.",
+  "landing": "https://doi.org/10.1109/cvpr52733.2024.02020",
+  "pdf": null
+ },
+ "W4402951670": {
+  "id": "W4402951670",
+  "title": "3D Congealing: 3D-Aware Image Alignment in the Wild",
+  "year": 2024,
+  "date": "2024-09-29",
+  "doi": "https://doi.org/10.1007/978-3-031-73232-4_22",
+  "cites": 0,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Yunzhi Zhang",
+   "Zizhang Li",
+   "Amit Raj",
+   "Andreas Engelhardt"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1007/978-3-031-73232-4_22",
+  "pdf": null
+ },
+ "W7160140527": {
+  "id": "W7160140527",
+  "title": "CanFields: Consolidating Diffeomorphic Flows for Non-Rigid 4D Interpolation From Arbitrary-Length Sequences",
+  "year": 2025,
+  "date": "2025-10-19",
+  "doi": "https://doi.org/10.1109/iccv51701.2025.02655",
+  "cites": 1,
+  "venue": "IEEE/CVF International Conference on Computer Vision (ICCV)",
+  "authors": [
+   "Miaowei Wang",
+   "Changjian Li",
+   "Amir Vaxman"
+  ],
+  "abstract": "We introduce Canonical Consolidation Fields (CanFields). This novel method interpolates arbitrary-length sequences of independently sampled 3D point clouds into a unified, continuous, and coherent deforming shape. Unlike prior methods that oversmooth geometry or produce topological and geometric artifacts, CanFields optimizes fine-detailed geometry and deformation jointly in an unsupervised fitting with two novel bespoke modules. First, we introduce a dynamic consolidator module that adjusts the input and assigns confidence scores, balancing the optimization of the canonical shape and its motion. Second, we represent the motion as a diffeomorphic flow parameterized by a smooth velocity field. We have validated our robustness and accuracy on more than 50 diverse sequences, demonstrating its superior performance even with missing regions, noisy raw scans, and sparse data. Our project page is at: https://wangmiaowei.github.io/CanFields.github.io/.",
+  "landing": "https://doi.org/10.1109/iccv51701.2025.02655",
+  "pdf": null
+ },
+ "W4394625900": {
+  "id": "W4394625900",
+  "title": "Hybrid Neural Diffeomorphic Flow for Shape Representation and Generation via Triplane",
+  "year": 2024,
+  "date": "2024-01-03",
+  "doi": "https://doi.org/10.1109/wacv57701.2024.00753",
+  "cites": 6,
+  "venue": "IEEE Winter Conference on Applications of Computer Vision",
+  "authors": [
+   "Kun Han",
+   "Shanlin Sun",
+   "Thanh-Tung Le",
+   "Xiangyi Yan"
+  ],
+  "abstract": "Deep Implicit Functions (DIFs) have gained popularity in 3D computer vision due to their compactness and continuous representation capabilities. However, addressing dense correspondences and semantic relationships across DIF-encoded shapes remains a critical challenge, limiting their applications in texture transfer and shape analysis. Moreover, recent endeavors in 3D shape generation using DIFs often neglect correspondence and topology preservation. This paper presents HNDF (Hybrid Neural Diffeomorphic Flow), a method that implicitly learns the underlying representation and decomposes intricate dense correspondences into explicitly axis-aligned triplane features. To avoid suboptimal representations trapped in local minima, we propose hybrid supervision that captures both local and global correspondences. Unlike conventional approaches that directly generate new 3D shapes, we further explore the idea of shape generation with deformed template shape via diffeomorphic flows, where the deformation is encoded by the generated triplane features. Leveraging a pre-existing 2D diffusion model, we produce high-quality and diverse 3D diffeomorphic flows through generated triplanes features, ensuring topological consistency with the template shape. Extensive experiments on medical image organ segmentation datasets evaluate the effectiveness of HNDF in 3D shape representation and generation.",
+  "landing": "https://doi.org/10.1109/wacv57701.2024.00753",
+  "pdf": null
+ },
+ "W4404965629": {
+  "id": "W4404965629",
+  "title": "SRIF: Semantic Shape Registration Empowered by Diffusion-based Image Morphing and Flow Estimation",
+  "year": 2024,
+  "date": "2024-12-03",
+  "doi": "https://doi.org/10.1145/3680528.3687567",
+  "cites": 5,
+  "venue": "SIGGRAPH Asia Conference Papers",
+  "authors": [
+   "Mingze Sun",
+   "Chen Guo",
+   "Puhua Jiang",
+   "Shiwei Mao"
+  ],
+  "abstract": "In this paper, we propose SRIF, a novel Semantic shape Registration framework based on diffusion-based Image morphing and Flow estimation. More concretely, given a pair of extrinsically aligned shapes, we first render them from multi-views, and then utilize an image interpolation framework based on diffusion models to generate sequences of intermediate images between them. The images are later fed into a dynamic 3D Gaussian splatting framework, with which we reconstruct and post-process for intermediate point clouds respecting the image morphing processing. In the end, tailored for the above, we propose a novel registration module to estimate continuous normalizing flow, which deforms source shape consistently towards the target, with intermediate point clouds as weak guidance. Our key insight is to leverage large vision models (LVMs) to associate shapes and therefore obtain much richer semantic information on the relationship between shapes than the ad-hoc feature extraction and alignment. As a consequence, SRIF achieves high-quality dense correspondences on challenging shape pairs, but also delivers smooth, semantically meaningful interpolation in between. Empirical evidence justifies the effectiveness and superiority of our method as well as specific design choices. The code is released at https://github.com/rqhuang88/SRIF.",
+  "landing": "https://doi.org/10.1145/3680528.3687567",
+  "pdf": null
+ },
+ "W4400817548": {
+  "id": "W4400817548",
+  "title": "Spatial and Surface Correspondence Field for Interaction Transfer",
+  "year": 2024,
+  "date": "2024-07-19",
+  "doi": "https://doi.org/10.1145/3658169",
+  "cites": 4,
+  "venue": "ACM Transactions on Graphics",
+  "authors": [
+   "Zeyu Huang",
+   "Honghao Xu",
+   "Haibin Huang",
+   "Chongyang Ma"
+  ],
+  "abstract": "In this paper, we introduce a new method for the task of interaction transfer. Given an example interaction between a source object and an agent, our method can automatically infer both surface and spatial relationships for the agent and target objects within the same category, yielding more accurate and valid transfers. Specifically, our method characterizes the example interaction using a combined spatial and surface representation. We correspond the agent points and object points related to the representation to the target object space using a learned spatial and surface correspondence field, which represents objects as deformed and rotated signed distance fields. With the corresponded points, an optimization is performed under the constraints of our spatial and surface interaction representation and additional regularization. Experiments conducted on human-chair and hand-mug interaction transfer tasks show that our approach can handle larger geometry and topology variations between source and target shapes, significantly outperforming state-of-the-art methods.",
+  "landing": "https://doi.org/10.1145/3658169",
+  "pdf": null
+ },
+ "W4417125790": {
+  "id": "W4417125790",
+  "title": "Hierarchical Neural Semantic Representation for 3D Semantic Correspondence",
+  "year": 2025,
+  "date": "2025-12-08",
+  "doi": "https://doi.org/10.1145/3757377.3763921",
+  "cites": 2,
+  "venue": "SIGGRAPH Asia Conference Papers",
+  "authors": [
+   "Keyu Du",
+   "Jingyu Hu",
+   "Haipeng Li",
+   "Hao Xu"
+  ],
+  "abstract": "This paper presents a new approach to estimate accurate and robust 3D semantic correspondence with the hierarchical neural semantic representation. Our work has three key contributions. First, we design the hierarchical neural semantic representation (HNSR), which consists of a global semantic feature to capture high-level structure and multi-resolution local geometric features to preserve fine details, by carefully harnessing 3D priors from pre-trained 3D generative models. Second, we design a progressive global-to-local matching strategy, which establishes coarse semantic correspondence using the global semantic feature, then iteratively refines it with local geometric features, yielding accurate and semantically-consistent mappings. Third, our framework is training-free and broadly compatible with various pre-trained 3D generative backbones, demonstrating strong generalization across diverse shape categories. Our method also supports various applications, such as shape co-segmentation, keypoint matching, and texture transfer, and generalizes well to structurally diverse shapes, with promising results even in cross-category scenarios. Both qualitative and quantitative evaluations show that our method outperforms previous state-of-the-art techniques.",
+  "landing": "https://doi.org/10.1145/3757377.3763921",
+  "pdf": null
+ },
+ "W4400582074": {
+  "id": "W4400582074",
+  "title": "DAE-Net: Deforming Auto-Encoder for fine-grained shape co-segmentation",
+  "year": 2024,
+  "date": "2024-07-12",
+  "doi": "https://doi.org/10.1145/3641519.3657528",
+  "cites": 9,
+  "venue": "ACM SIGGRAPH Conference Papers (SIGGRAPH)",
+  "authors": [
+   "Zhiqin Chen",
+   "Qimin Chen",
+   "Hang Zhou",
+   "Hao Zhang"
+  ],
+  "abstract": "We present an unsupervised 3D shape co-segmentation method which learns a set of deformable part templates from a shape collection. To accommodate structural variations in the collection, our network composes each shape by a selected subset of template parts which are affine-transformed. To maximize the expressive power of the part templates, we introduce a per-part deformation network to enable the modeling of diverse parts with substantial geometry variations, while imposing constraints on the deformation capacity to ensure fidelity to the originally represented parts. We also propose a training scheme to effectively overcome local minima. Architecturally, our network is a branched autoencoder, with a CNN encoder taking a voxel shape as input and producing per-part transformation matrices, latent codes, and part existence scores, and the decoder outputting point occupancies to define the reconstruction loss. Our network, coined DAE-Net for Deforming Auto-Encoder, can achieve unsupervised 3D shape co-segmentation that yields fine-grained, compact, and meaningful parts that are consistent across diverse shapes. We conduct extensive experiments on the ShapeNet Part dataset, DFAUST, and an animal subset of Objaverse to show superior performance over prior methods. Code and data are available at https://github.com/czq142857/DAE-Net.",
+  "landing": "https://doi.org/10.1145/3641519.3657528",
+  "pdf": null
+ },
+ "W4397049055": {
+  "id": "W4397049055",
+  "title": "Deep Learning-Based Quasi-Conformal Surface Registration for Partial 3D Faces Applied to Facial Recognition",
+  "year": 2024,
+  "date": "2024-05-16",
+  "doi": "https://doi.org/10.48550/arxiv.2405.09880",
+  "cites": 0,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Yuchen Guo",
+   "Hanqun Cao",
+   "Lok Ming Lui"
+  ],
+  "abstract": "3D face registration is an important process in which a 3D face model is aligned and mapped to a template face. However, the task of 3D face registration becomes particularly challenging when dealing with partial face data, where only limited facial information is available. To address this challenge, this paper presents a novel deep learning-based approach that combines quasi-conformal geometry with deep neural networks for partial face registration. The proposed framework begins with a Landmark Detection Network that utilizes curvature information to detect the presence of facial features and estimate their corresponding coordinates. These facial landmark features serve as essential guidance for the registration process. To establish a dense correspondence between the partial face and the template surface, a registration network based on quasiconformal theories is employed. The registration network establishes a bijective quasiconformal surface mapping aligning corresponding partial faces based on detected landmarks and curvature values. It consists of the Coefficients Prediction Network, which outputs the optimal Beltrami coefficient representing the surface mapping. The Beltrami coefficient quantifies the local geometric distortion of the mapping. By controlling the magnitude of the Beltrami coefficient through a suitable activation function, the bijectivity and geometric distortion of the mapping can be controlled. The Beltrami coefficient is then fed into the Beltrami solver network to reconstruct the corresponding mapping. The surface registration enables the acquisition of corresponding regions and the establishment of point-wise correspondence between different partial faces, facilitating precise shape comparison through the evaluation of point-wise geometric differences at these corresponding regions. Experimental results demonstrate the effectiveness of the proposed method.",
+  "landing": "http://arxiv.org/abs/2405.09880",
+  "pdf": "https://arxiv.org/pdf/2405.09880"
+ },
+ "W4417000834": {
+  "id": "W4417000834",
+  "title": "BSP-OT: Sparse transport plans between discrete measures in loglinear time",
+  "year": 2025,
+  "date": "2025-12-01",
+  "doi": "https://doi.org/10.1145/3763281",
+  "cites": 2,
+  "venue": "ACM Transactions on Graphics",
+  "authors": [
+   "Baptiste Genest",
+   "Nicolas Bonneel",
+   "Vincent Nivoliers",
+   "David Cœurjolly"
+  ],
+  "abstract": "To solve the optimal transport problem between two uniform discrete measures of the same size, one seeks a bijective assignment that minimizes some matching cost. For this task, exact algorithms are intractable for large problems, while approximate ones may lose the bijectivity of the assignment. We address this issue and the more general cases of non-uniform discrete measures with different total masses, where partial transport may be desirable. The core of our algorithm is a variant of the Quicksort algorithm that provides an efficient strategy to randomly explore many relevant and easy-to-compute couplings, by matching BSP trees in loglinear time. The couplings we obtain are as sparse as possible, in the sense that they provide bijections, injective partial matchings or sparse couplings depending on the nature of the matched measures. To improve the transport cost, we propose efficient strategies to merge k sparse couplings into a higher quality one. For k = 64, we obtain transport plans with typically less than 1% of relative error in a matter of seconds between hundreds of thousands of points in 3D on the CPU. We demonstrate how these high-quality approximations can drastically speed-up usual pipelines involving optimal transport, such as shape interpolation, intrinsic manifold sampling, color transfer, topological data analysis, rigid partial registration of point clouds and image stippling.",
+  "landing": "https://doi.org/10.1145/3763281",
+  "pdf": null
+ },
+ "W7138255617": {
+  "id": "W7138255617",
+  "title": "DcMatch: Unsupervised Multi-Shape Matching with Dual-Level Consistency",
+  "year": 2026,
+  "date": "2026-03-14",
+  "doi": "https://doi.org/10.1609/aaai.v40i14.38184",
+  "cites": 1,
+  "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "authors": [
+   "Tianwei Ye",
+   "Yong Ma",
+   "Xiaoguang Mei"
+  ],
+  "abstract": "Establishing point-to-point correspondences across multiple 3D shapes is a fundamental problem in computer vision and graphics. In this paper, we introduce DcMatch, a novel unsupervised learning framework for non-rigid multi-shape matching. Unlike existing methods that learn a canonical embedding from a single shape, our approach leverages a shape graph attention network to capture the underlying manifold structure of the entire shape collection. This enables the construction of a more expressive and robust shared latent space, leading to more consistent shape-to-universe correspondences via a universe predictor. Simultaneously, we represent these correspondences in both the spatial and spectral domains and enforce their alignment in the shared universe space through a novel cycle consistency loss. This dual-level consistency fosters more accurate and coherent mappings. Extensive experiments on several challenging benchmarks demonstrate that our method consistently outperforms previous state-of-the-art approaches across diverse multi-shape matching scenarios.",
+  "landing": "https://doi.org/10.1609/aaai.v40i14.38184",
+  "pdf": null
+ },
+ "W7137992698": {
+  "id": "W7137992698",
+  "title": "Unsupervised Contrastive Learning for Efficient and Robust Spectral Shape Matching",
+  "year": 2026,
+  "date": "2026-03-14",
+  "doi": "https://doi.org/10.1609/aaai.v40i9.37708",
+  "cites": 1,
+  "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "authors": [
+   "Feifan Luo",
+   "Hongyang Chen"
+  ],
+  "abstract": "Estimating correspondences between pairs of non-rigid deformable 3D shapes remains a significant challenge in computer vision and graphics. While deep functional map methods have become the go-to solution for addressing this problem, they primarily focus on optimizing pointwise and functional maps either individually or jointly, rather than directly enhancing feature representations in the embedding space, which often results in inadequate feature quality and suboptimal matching performance. Furthermore, these approaches heavily rely on traditional functional map techniques, such as time-consuming functional map solvers, which incur substantial computational costs. In this work, we introduce, for the first time, a novel unsupervised contrastive learning-based approach for efficient and robust 3D shape matching. We begin by presenting an unsupervised contrastive learning framework that promotes feature learning by maximizing consistency within positive similarity pairs and minimizing it within negative similarity pairs, thereby improving both the consistency and discriminability of the learned features. We then design a significantly simplified functional map learning architecture that eliminates the need for computationally expensive functional map solvers and multiple auxiliary functional map losses, greatly enhancing computational efficiency. By integrating these two components into a unified two-branch pipeline, our method achieves state-of-the-art performance in both accuracy and efficiency. Extensive experiments demonstrate that our approach is not only computationally efficient but also outperforms current state-of-the-art methods across various challenging benchmarks, including near-isometric, non-isometric, and topologically inconsistent scenarios—even surpassing supervised techniques.",
+  "landing": "https://doi.org/10.1609/aaai.v40i9.37708",
+  "pdf": "https://ojs.aaai.org/index.php/AAAI/article/download/37708/41670"
+ },
+ "W4402619788": {
+  "id": "W4402619788",
+  "title": "Hierarchical Spherical Cross‐Parameterization for Deforming Characters",
+  "year": 2024,
+  "date": "2024-09-01",
+  "doi": "https://doi.org/10.1111/cgf.15197",
+  "cites": 0,
+  "venue": "Computer Graphics Forum",
+  "authors": [
+   "Lizhou Cao",
+   "Chao Yi Peng"
+  ],
+  "abstract": "Abstract The demand for immersive technology and realistic virtual environments has created a need for automated solutions to generate characters with morphological variations. However, existing approaches either rely on manual labour or oversimplify the problem by limiting it to static meshes or deformation transfers without shape morphing. In this paper, we propose a new cross‐parameterization approach that semi‐automates the generation of morphologically diverse characters with synthesized articulations and animations. The main contribution of this work is that our approach parameterizes deforming characters into a novel hierarchical multi‐sphere domain, while considering the attributes of mesh topology, deformation and animation. With such a multi‐sphere domain, our approach minimizes parametric distortion rates, enhances the bijectivity of parameterization and aligns deforming feature correspondences. The alignment process we propose allows users to focus only on major joint pairs, which is much simpler and more intuitive than the existing alignment solutions that involve a manual process of identifying feature points on mesh surfaces. Compared to recent works, our approach achieves high‐quality results in the applications of 3D morphing, texture transfer, character synthesis and deformation transfer.",
+  "landing": "https://doi.org/10.1111/cgf.15197",
+  "pdf": null
+ },
+ "W4412623916": {
+  "id": "W4412623916",
+  "title": "Topology-Preserving Implicit Template Learning via Bidirectional Deformation for 3D Shape Reconstruction and Registration",
+  "year": 2025,
+  "date": "2025-05-23",
+  "doi": "https://doi.org/10.1109/cvidl65390.2025.11085623",
+  "cites": 0,
+  "venue": "International Conference on Computer Vision, Image and Deep Learning (CVIDL)",
+  "authors": [
+   "Hengxiang Shi",
+   "Shouhui Zhang",
+   "Ping Wang",
+   "Xiuyang Zhao"
+  ],
+  "abstract": "Deep Implicit Functions (DIFs) represent 3D objects continuously using parameterized deep neural networks but struggle with establishing point correspondences across shapes. To address this, recent approaches combine deformation and template fields to learn implicit templates. However, these methods often neglect the adjacency relationships among points, leading to suboptimal results. To overcome this, we propose a novel framework that introduces an inverse deformation step during training to enhance the topology preservation of deformation fields. By establishing dense point correspondences between shape instances and templates through bidirectional deformation, our method ensures that corresponding points maintain proximity on their respective surfaces. Experimental results on multiple datasets demonstrate that our approach outperforms state-of-theart methods in shape representation and registration tasks, with a significant improvement in normal consistency, highlighting the importance of the proposed inverse deformation process for achieving accurate correspondences.",
+  "landing": "https://doi.org/10.1109/cvidl65390.2025.11085623",
+  "pdf": null
+ },
+ "W4403658675": {
+  "id": "W4403658675",
+  "title": "Probabilistic 3D Correspondence Prediction from Sparse Unsegmented Images",
+  "year": 2024,
+  "date": "2024-10-22",
+  "doi": "https://doi.org/10.1007/978-3-031-73290-4_12",
+  "cites": 0,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Krithika Iyer",
+   "Shireen Elhabian"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1007/978-3-031-73290-4_12",
+  "pdf": null
+ },
+ "W4400907102": {
+  "id": "W4400907102",
+  "title": "SCorP: Statistics-Informed Dense Correspondence Prediction Directly from Unsegmented Medical Images",
+  "year": 2024,
+  "date": "2024-01-01",
+  "doi": "https://doi.org/10.1007/978-3-031-66955-2_10",
+  "cites": 3,
+  "venue": "Lecture notes in computer science",
+  "authors": [
+   "Krithika Iyer",
+   "Jadie Adams",
+   "Shireen Elhabian"
+  ],
+  "abstract": "",
+  "landing": "https://doi.org/10.1007/978-3-031-66955-2_10",
+  "pdf": null
+ }
+}

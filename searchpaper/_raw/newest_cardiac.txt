@@ -1,0 +1,45 @@
+2026-10-27 | 2610.37253v1 | physics.med-ph
+    Cerebral Artery Wall Displacement and Strain from 4D MRI
+    Arterial stiffness is an established marker of vascular ageing and cardiovascular risk, yet the local, patient-specific mechanics of the cerebral arteries remain difficult to measure in vivo. Wall deformation over the cardiac cycle is sub-millimetre, rapid and spatially heterogeneous, and is superimposed on larger rigid-body motion. This work adapts a registration-based kinematic framework, origin
+2026-10-20 | 2610.28507v1 | cs.LG,cs.AI
+    ECG for laboratory values:A comprehensive physiological and technical analysis
+    Laboratory measurements are essential for clinical decision making but typically require invasive blood sampling. Recent research suggests that ECG recordings may contain information beyond cardiac rhythm and provide information related to laboratory values. This thesis investigates NT-proBNP prediction from ECG recordings and patient metadata using a multimodal deep learning framework, while cons
+2026-10-20 | 2610.28985v1 | cs.CV
+    MedBOE: Optimization-Based Estimation of Complete Patient Body Models from Whole-Body Medical Imaging
+    True whole-body medical imaging captures a patient from head to toe and provides comprehensive anatomical and/or functional information. This coverage enables reconstruction of the external body surface, yielding patient body models. However, scanner geometry (e.g., bore diameter), patient characteristics, and positioning can leave body regions missing (e.g., lateral arms/torso, hands, forearms, e
+2026-10-15 | 2610.24001v1 | cs.CV
+    Causal Spatio-Temporal Neural Distance Fields for Counterfactual Cardiac Anatomy
+    Counterfactual cardiac anatomy can support risk modelling and intervention planning, by predicting how a patient's heart would change under altered clinical conditions. However, current shape generative models are conditional on clinical variables and disregard causal links between these variables. Thus, they cannot answer counterfactual questions about how a given subject's anatomy would change u
+2026-10-14 | 2610.20074v1 | cs.CV,q-bio.QM
+    Feasibility of a Patient-Specific Digital Twin for Ventriculoperitoneal Shunt Trajectory Planning
+    Catheter obstruction is the commonest cause of shunt failure; freehand insertion at Keen's point leaves the tip free in cerebrospinal fluid in only one case in ten. We built a digital twin that reconstructs skull, scalp, ear and ventricles from preoperative CT by deterministic geometry, searches every entry around Keen's point for the perpendicular trajectory with the longest intraventricular leng
+2026-10-13 | 2610.19050v1 | eess.IV,cs.CV
+    Focus, Align, and Diffuse: Time-Series-Aware Keyframe Diffusion for Cardiac Dynamic Synthesis from Sparse Observations
+    Dense cardiac dynamics are essential for assessing cardiac function, yet in practice clinicians often observe only extremely sparse measurements. However, recovering full dynamics from such sparsity is a highly ill-posed problem due to the lack of temporal cues. While auxiliary time-series signals like ECG provide physiological guidance, effectively exploiting them is challenging due to the cross-
+2026-10-09 | 2610.13599v1 | cs.LG
+    EchoTab: Learning Measurement-Grounded Representations for Echocardiographic Diagnosis through Tabular Reconstruction
+    Diagnostic information in multi-view medical imaging studies, like echocardiography, is distributed across views, each capturing different aspects of cardiac structure and function. In clinical practice, these views are first interpreted through quantitative measurements, which then support specific diagnoses. However, existing echo representation learning methods do not explicitly model measureme
+2026-10-05 | 2610.06052v2 | cs.CV,cs.AI
+    Local2Mesh: Spatially Localized Contour-to-Mesh for Left Ventricular Reconstruction from Sparse 2D Cardiac MRI
+    Three-dimensional (3D) left ventricular (LV) reconstruction from sparse cardiac magnetic resonance (CMR) imaging remains challenging due to inter-slice misalignment and insufficient local spatial information between slices. Global aggregation of contour features may obscure local contour-to-surface relationships. We propose Local2Mesh, a spatially localized contour-to-mesh framework that deforms a
+2026-09-29 | 2609.36449v1 | physics.med-ph
+    Quantifying the Impact of Upright Patient Positioning on Cardiac Substructures Using Deep Learning
+    Upright patient positioners with diagnostic-quality vertical CT at treatment isocenter may improve image-guided radiation therapy (RT). However, cardiac substructure (CS) geometry in upright patients remains insufficiently characterized. This work evaluated if a supine-trained deep-learning (DL) CS segmentation model generalizes to upright CT images and quantified posture-dependent CS changes in t
+2026-09-27 | 2609.33790v1 | physics.optics,cs.CV
+    Multi-Aperture PPG with MAPIS: Spatial Optical and Temporal Coherence Fields
+    Conventional reflectance photoplethysmography (PPG) typically reduces tissue optical responses to one or a few detector channels. Matrix Pinhole Image Sensing (MAPIS) instead simultaneously samples multiple aperture-dependent optical signals. We analyzed 44 recordings of 30 seconds each from a single MAPIS device to characterize the spatial relationships among DC intensity, pulsatile AC, perfusion
+2026-09-27 | 2609.33501v1 | cs.LG
+    Pulseflow: PPG Counterfactual Generation Via Latent Transport
+    Photoplethysmography (PPG) has become an important modality for continuous cardiovascular monitoring, including atrial fibrillation (AF) detection. However, labeled AF recordings remain limited in many clinical settings, making model adaptation difficult when only limited target data are available. Generative modeling offers a natural way to alleviate this scarcity by synthesizing additional AF si
+2026-09-24 | 2609.29825v1 | cs.CV
+    Anatomy-Aligned Surface Field Learning for Myocardial Reconstruction from Sparse Short-Axis Cine MRI
+    Patient-specific 4D myocardial reconstruction from cine MRI supports quantitative functional assessment, regional motion analysis, and simulation-based modeling. However, routinely acquired short-axis (SAX) cine MRI is sparsely sampled along the through-plane direction, making dense and anatomically consistent surface reconstruction challenging. In this study, we propose an anatomy-aligned surface
+2026-09-24 | 2609.31777v2 | eess.IV,cs.CV
+    Beyond MSE: Rician Likelihood Denoising for Self-Supervised Cardiac $T2$ and $T1ρ$ MRI
+    Magnetic resonance imaging involves an inherent trade-off among spatial resolution, acquisition time, and noise. This trade-off contributes to long scan times and high cost. Deep learning has improved image denoising, but cardiac MRI remains difficult because high-resolution, rapid acquisitions generally lack corresponding low-noise ground truth. Self-supervised denoising offers a potential soluti
+2026-09-20 | 2609.23815v1 | cs.CV
+    Confidence-Aware Teacher-Student Distillation for 3D Medical Segmentation
+    Medical image segmentation models typically rely on large amounts of densely annotated volumetric data, limiting their scalability across tasks and imaging modalities. This work addresses the challenge of predicting entire 3D anatomical structures from extreme annotation sparsity. An annotation-efficient student-teacher framework is proposed for automatic 3D medical segmentation that requires only
+2026-09-16 | 2609.18351v1 | math.AP
+    Well-posedness and discrete-to-continuum convergence of the Kirchhoff Network model
+    In this work, we study the connection between the bidomain model of cardiac electrophysiology and the Kirchhoff Network model (KNM), that was recently introduced by Jäger and Tveito. In the KNM, each cell of the cardiac tissue is represented as a node in a discrete network and the dynamics of the electric potentials in the heart are described by a system of ordinary differential equations on the n

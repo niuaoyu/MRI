@@ -1,0 +1,970 @@
+{
+ "abs:\"shape correspondence\" AND abs:bijective": [],
+ "abs:\"shape matching\" AND abs:homeomorphism": [],
+ "abs:\"dense correspondence\" AND abs:\"point identity\"": [],
+ "abs:injective AND abs:deformation AND abs:mesh": [
+  {
+   "arxiv": "2610.30033v1",
+   "title": "RLMuscle: Muscle-Driven Character Animation via Reinforcement Learning",
+   "published": "2026-10-21",
+   "abstract": "Body deformation caused by muscle contraction plays a vital role in the visual realism of character animation, yet in most 3D animation pipelines artists have to manually specify muscle activations, which is time-consuming and gives no guarantee of physical realism. To address this, we propose a new method in which a reinforcement learning (RL) controller discovers per-muscle activations that track reference motions without manual tuning. Existing RL muscle controllers stop at 1D muscles; we go one step further, keeping the 1D model inside the RL control loop as a fast surrogate, and using a 3D volumetric simulation to produce the final deformation. Because both stages share the very same constitutive law, the muscle deformation is produced by the same activations that generated the motion. We further add a measured electromyography (EMG) prior that steers the redundant activation solution toward real human muscle recruitment. To achieve stable, efficient, and realistic simulation, we propose a novel geometric multigrid for Extended Position-Based Dynamics (XPBD) that is built on a coarse tetrahedral cage with barycentric-coordinate prolongation and closes a V-cycle on tetrahedral meshes. Within this GPU-parallelized solver, we inject the same Hill-type force-length law as an energy-based fiber constraint that turns per-fiber activation into realistic muscle contraction and bulging. We demonstrate volumetric muscle simulation on a 194-muscle human body with a diverse set of motions (walk, kick, swim, overhead-squat, etc.), simulating the full-body model at 18 ms per frame on a single RTX 4090. Our work takes a step toward character animation that is not only visually convincing but also biomechanically grounded. The website with code and videos is at https://chunleili.github.io/project-page-rlmuscle/.",
+   "cats": [
+    "cs.GR"
+   ]
+  },
+  {
+   "arxiv": "2610.28985v1",
+   "title": "MedBOE: Optimization-Based Estimation of Complete Patient Body Models from Whole-Body Medical Imaging",
+   "published": "2026-10-20",
+   "abstract": "True whole-body medical imaging captures a patient from head to toe and provides comprehensive anatomical and/or functional information. This coverage enables reconstruction of the external body surface, yielding patient body models. However, scanner geometry (e.g., bore diameter), patient characteristics, and positioning can leave body regions missing (e.g., lateral arms/torso, hands, forearms, elbows), producing incomplete patient body models. Such incompleteness limits downstream medical analyses, including derivation of body-habitus metrics (BHMs), such as body volume and surface area, for injected radiotracer activity regimens, cardiometabolic risk assessment, and computational anatomical modeling for medical imaging simulation and radiation dosimetry. We present the Medical Body model Optimization-based Estimator (MedBOE), an automated, training-free framework for estimating complete patient body models from whole-body images with missing body regions. Our innovation is to leverage the Skinned Multi-Person Linear (SMPL) template, a parametric body mesh representing a broad range of body shapes and poses, in medical imaging. MedBOE aligns the SMPL template to the incomplete patient body models via attribute-guided optimization and estimates missing body regions through geometrically and volumetrically constrained deformation. We evaluated MedBOE using two public datasets: AutoPET (91 whole-body PET-CT images) and Human Implicit Tissues (HIT; 40 whole-body segmentations from MRI images). MedBOE achieved the best overall volumetric and geometric performance among evaluated methods. BHMs derived from MedBOE were within 2% error, suggesting low percentage errors for downstream analyses. MedBOE offers an automated, training-free method for estimating complete patient body models from whole-body images with missing body regions.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2607.27982v1",
+   "title": "ViP-Rig: Visual-Prompted Controllable Rigging",
+   "published": "2026-07-30",
+   "abstract": "Rigging is inherently task-dependent because the same mesh may require different skeletons and deformation behaviors across animation tasks. In practice, artists often inspect an initial rig and repeatedly edit its skeletal structure and deformation behavior to meet specific animation requirements. Existing automatic methods primarily generate a plausible rig from geometry, offering limited explicit control over the resulting skeleton and deformation behavior. In this work, we present ViP-Rig, a visual-prompted framework that supports both prompt-first rigging and result-guided editing by injecting features extracted from user-drawn or edited 2D skeletal and rigidity prompts into frozen pretrained backbones. Specifically, ViP-Rig consists of two stages, Skeleton Generation and Skinning Prediction. In the first stage, the skeletal sketch is processed by the Dense-to-Compact Visual Prompt Encoding to produce compact, fixed-length conditioning tokens. The resulting tokens are injected into a frozen pretrained autoregressive generator through gated adapters to control joint placement and branching structure while preserving the generator's geometric prior. In the second stage, the rigidity map is processed using the same visual encoding design, while the pretrained skinning backbone remains frozen. The resulting tokens are symmetrically injected into the point and joint streams to modulate point-joint compatibility and the resulting skinning weights. Experiments on Articulation-XL2.0 and zero-shot evaluation on ModelsResource show that ViP-Rig more accurately recovers target skeletons and skinning weights than geometry-conditioned baselines under prompt-guided evaluation. Qualitative results further demonstrate explicit and localized control in both prompt-first rigging and result-guided editing.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2603.25580v1",
+   "title": "UNIC: Neural Garment Deformation Field for Real-time Clothed Character Animation",
+   "published": "2026-03-26",
+   "abstract": "Simulating physically realistic garment deformations is an essential task for virtual immersive experience, which is often achieved by physics simulation methods. However, these methods are typically time-consuming, computationally demanding, and require costly hardware, which is not suitable for real-time applications. Recent learning-based methods tried to resolve this problem by training graph neural networks to learn the garment deformation on vertices, which, however, fail to capture the intricate deformation of complex garment meshes with complex topologies. In this paper, we introduce a novel neural deformation field-based method, named UNIC, to animate the garments of an avatar in real time, given the motion sequences. Our key idea is to learn the instance-specific neural deformation field to animate the garment meshes. Such an instance-specific learning scheme does not require UNIC to generalize to new garments but only to new motion sequences, which greatly reduces the difficulty in training and improves the deformation quality. Moreover, neural deformation fields map the 3D points to their deformation offsets, which not only avoids handling topologies of the complex garments but also injects a natural smoothness constraint in the deformation learning. Extensive experiments have been conducted on various kinds of garment meshes to demonstrate the effectiveness and efficiency of UNIC over baseline methods, making it potentially practical and useful in real-world interactive applications like video games.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2601.04494v2",
+   "title": "Differential Locally Injective Grid Deformation and Optimization",
+   "published": "2026-01-08",
+   "abstract": "Grids are a general representation for capturing regularly-spaced information, but since they are uniform in space, they cannot dynamically allocate resolution to regions with varying levels of detail. There has been some exploration of indirect grid adaptivity by replacing uniform grids with tetrahedral meshes or locally subdivided grids, as inversion-free deformation of grids is difficult. This work develops an inversion-free grid deformation method that optimizes differential weight to adaptively compress space. The method is the first to optimize grid vertices as differential elements using vertex-colorings, decomposing a dense input linear system into many independent sets of vertices which can be optimized concurrently. This method is then also extended to optimize UV meshes with convex boundaries. Experimentally, this differential representation leads to a smoother optimization manifold than updating extrinsic vertex coordinates. By optimizing each sets of vertices in a coloring separately, local injectivity checks are straightforward since the valid region for each vertex is fixed. This enables the use of optimizers such as Adam, as each vertex can be optimized independently of other vertices. We demonstrate the generality and efficacy of this approach through applications in isosurface extraction for inverse rendering, image compaction, and mesh parameterization.",
+   "cats": [
+    "cs.GR"
+   ]
+  },
+  {
+   "arxiv": "2510.19371v1",
+   "title": "AegisRF: Adversarial Perturbations Guided with Sensitivity for Protecting Intellectual Property of Neural Radiance Fields",
+   "published": "2025-10-22",
+   "abstract": "As Neural Radiance Fields (NeRFs) have emerged as a powerful tool for 3D scene representation and novel view synthesis, protecting their intellectual property (IP) from unauthorized use is becoming increasingly crucial. In this work, we aim to protect the IP of NeRFs by injecting adversarial perturbations that disrupt their unauthorized applications. However, perturbing the 3D geometry of NeRFs can easily deform the underlying scene structure and thus substantially degrade the rendering quality, which has led existing attempts to avoid geometric perturbations or restrict them to explicit spaces like meshes. To overcome this limitation, we introduce a learnable sensitivity to quantify the spatially varying impact of geometric perturbations on rendering quality. Building upon this, we propose AegisRF, a novel framework that consists of a Perturbation Field, which injects adversarial perturbations into the pre-rendering outputs (color and volume density) of NeRF models to fool an unauthorized downstream target model, and a Sensitivity Field, which learns the sensitivity to adaptively constrain geometric perturbations, preserving rendering quality while disrupting unauthorized use. Our experimental evaluations demonstrate the generalized applicability of AegisRF across diverse downstream tasks and modalities, including multi-view image classification and voxel-based 3D localization, while maintaining high visual fidelity. Codes are available at https://github.com/wkim97/AegisRF.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2509.06573v1",
+   "title": "From Rigging to Waving: 3D-Guided Diffusion for Natural Animation of Hand-Drawn Characters",
+   "published": "2025-09-08",
+   "abstract": "Hand-drawn character animation is a vibrant field in computer graphics, presenting challenges in achieving geometric consistency while conveying expressive motion. Traditional skeletal animation methods maintain geometric consistency but struggle with complex non-rigid elements like flowing hair and skirts, leading to unnatural deformation. Conversely, video diffusion models synthesize realistic dynamics but often create geometric distortions in stylized drawings due to domain gaps. This work proposes a hybrid animation system that combines skeletal animation and video diffusion. Initially, coarse images are generated from characters retargeted with skeletal animations for geometric guidance. These images are then enhanced in texture and secondary dynamics using video diffusion priors, framing this enhancement as an inpainting task. A domain-adapted diffusion model refines user-masked regions needing improvement, especially for secondary dynamics. To enhance motion realism further, we introduce a Secondary Dynamics Injection (SDI) strategy in the denoising process, incorporating features from a pre-trained diffusion model enriched with human motion priors. Additionally, to tackle unnatural deformations from low-poly single-mesh character modeling, we present a Hair Layering Modeling (HLM) technique that uses segmentation maps to separate hair from the body, allowing for more natural animation of long-haired characters. Extensive experiments show that our system outperforms state-of-the-art methods in both quantitative and qualitative evaluations.",
+   "cats": [
+    "cs.GR"
+   ]
+  },
+  {
+   "arxiv": "2408.14899v3",
+   "title": "MeshUp: Multi-Target Mesh Deformation via Blended Score Distillation",
+   "published": "2024-08-27",
+   "abstract": "We propose MeshUp, a technique that deforms a 3D mesh towards multiple target concepts, and intuitively controls the region where each concept is expressed. Conveniently, the concepts can be defined as either text queries, e.g., \"a dog\" and \"a turtle,\" or inspirational images, and the local regions can be selected as any number of vertices on the mesh. We can effectively control the influence of the concepts and mix them together using a novel score distillation approach, referred to as the Blended Score Distillation (BSD). BSD operates on each attention layer of the denoising U-Net of a diffusion model as it extracts and injects the per-objective activations into a unified denoising pipeline from which the deformation gradients are calculated. To localize the expression of these activations, we create a probabilistic Region of Interest (ROI) map on the surface of the mesh, and turn it into 3D-consistent masks that we use to control the expression of these activations. We demonstrate the effectiveness of BSD empirically and show that it can deform various meshes towards multiple objectives. Our project page is at https://threedle.github.io/MeshUp.",
+   "cats": [
+    "cs.CV",
+    "cs.GR"
+   ]
+  },
+  {
+   "arxiv": "2408.08568v2",
+   "title": "DV-Matcher: Deformation-based Non-Rigid Point Cloud Matching Guided by Pre-trained Visual Features",
+   "published": "2024-08-16",
+   "abstract": "In this paper, we present DV-Matcher, a novel learning-based framework for estimating dense correspondences between non-rigidly deformable point clouds. Learning directly from unstructured point clouds without meshing or manual labelling, our framework delivers high-quality dense correspondences, which is of significant practical utility in point cloud processing. Our key contributions are two-fold: First, we propose a scheme to inject prior knowledge from pre-trained vision models into geometric feature learning, which effectively complements the local nature of geometric features with global and semantic information; Second, we propose a novel deformation-based module to promote the extrinsic alignment induced by the learned correspondences, which effectively enhances the feature learning. Experimental results show that our method achieves state-of-the-art results in matching non-rigid point clouds in both near-isometric and heterogeneous shape collection as well as more realistic partial and noisy data.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2406.12121v2",
+   "title": "TutteNet: Injective 3D Deformations by Composition of 2D Mesh Deformations",
+   "published": "2024-06-17",
+   "abstract": "This work proposes a novel representation of injective deformations of 3D space, which overcomes existing limitations of injective methods: inaccuracy, lack of robustness, and incompatibility with general learning and optimization frameworks. The core idea is to reduce the problem to a deep composition of multiple 2D mesh-based piecewise-linear maps. Namely, we build differentiable layers that produce mesh deformations through Tutte's embedding (guaranteed to be injective in 2D), and compose these layers over different planes to create complex 3D injective deformations of the 3D volume. We show our method provides the ability to efficiently and accurately optimize and learn complex deformations, outperforming other injective approaches. As a main application, we produce complex and artifact-free NeRF and SDF deformations.",
+   "cats": [
+    "cs.CV"
+   ]
+  }
+ ],
+ "abs:\"cycle consistency\" AND abs:correspondence": [
+  {
+   "arxiv": "2610.17376v1",
+   "title": "What Makes a Latent Space Shared? Direct and Recoverable Compatibility in Motion VAEs",
+   "published": "2026-10-12",
+   "abstract": "A shared latent space is often assumed to make representations from different schemas directly interchangeable, yet sharing parameters, dimensionality, or a prior does not determine how corresponding instances are expressed in latent coordinates. We show that this assumption conflates recoverable correspondence, direct compatibility, and decoder reuse. In a controlled multi-schema motion VAE on HumanML3D, even identical inputs yield only $5.9$--$17.7\\%$ raw Recall@1 and $0.221$--$0.484$ paired-token cosine, despite correspondence being almost perfectly recoverable after linear calibration. Cycle consistency strengthens recoverability but still leaves direct retrieval and token agreement near zero. In contrast, only $64$ paired clips raise raw Recall@1 to $88.4$--$90.3\\%$ and token cosine to approximately $0.82$, making most post-hoc alignment unnecessary, although crossed decoding remains substantially worse than native reconstruction. We further find that reducing measured marginal discrepancy does not imply schema invariance. These results show that a shared backbone or prior does not ensure directly compatible latent coordinates, while limited paired correspondence can substantially improve direct compatibility in the tested setting.",
+   "cats": [
+    "cs.AI",
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2610.11138v1",
+   "title": "IntrinSync: Joint Intrinsic Decomposition and Reciprocal Rendering",
+   "published": "2026-10-08",
+   "abstract": "Inverse rendering decomposes an image into intrinsic properties such as appearance, illumination, geometry, and material, yet these properties are inherently interdependent. A reliable decomposition should produce intrinsic maps that are not only individually plausible, but also mutually compatible in explaining the image. However, existing methods either model intrinsic channels in isolation or treat inverse and forward rendering as separate processes, leaving the interdependence underexploited. In this paper, we introduce IntrinSync, a unified framework that captures this interdependence through joint-channel modeling and reciprocal inverse-forward rendering. At the channel level, we jointly decompose an input RGB into albedo, shading, surface normal, roughness, and metallic maps through a 1-to-N mapping, enabling information exchange across channels throughout generation. At the process level, we establish inverse-forward reciprocity through a dual cycle-consistent objective that aligns corresponding predictions across a closed loop. Experiments on three datasets demonstrate that our method achieves competitive intrinsic estimation and forward rendering performance, improving coherence and physical consistency. Beyond decomposition, IntrinSync provides a physically grounded interface for image editing, allowing intrinsic properties to be explicitly manipulated and rendered back into RGB images.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2610.08303v1",
+   "title": "Language Unalignability: Why Some Concepts Resist Cross-Cultural Benchmark Evaluation",
+   "published": "2026-10-06",
+   "abstract": "Current evaluation of multilingual Large Language Models (LLMs) rests on an implicit Translation-Isomorphism Assumption (TIA): that semantic structures across languages are congruent and mutually mappable without loss of information. We argue that this assumption is not merely violated in practice, but ill-posed in principle for a typologically identifiable class of concepts, including pragmatic markers, honorifics, and diachronically stratified terms. We formalize this failure using a usage-cloud framework, representing concepts as point sets of contextualized embeddings. We define $α$-unalignability as the impossibility of any mapping that simultaneously preserves lexical faithfulness (centroid correspondence) and structural faithfulness (local neighborhood topology). We provide three layers of evidence. Behaviorally, we show that FLORES-200 translation failures are predicted by language family and resource class but not by script, and that LOBSTER reasoning scores vary by family. Mechanistically, we report a Representation-Intervention Gap (RIG) in a nine-model case study on Yami: the models' activations encode a regularity along which Yami groups with other low-resource and Austronesian languages, yet interventions on language-specific neurons show no demonstrated advantage over random masks: the regularity is visible but not usable by this intervention. Finally, we operationalize these findings into a multidimensional diagnostic profile: Cycle-Consistency, Pragmatic-Load Disagreement, Manifold-Curvature Mismatch, and RIG. We argue that collapsing cultural competence into a single scalar incentivizes \"probabilistic flattening,\" and that recognizing the unalignable class is a precondition for AI that respects, rather than erases, cultural divergence. This suggests that multilingual alignment is not a single well-defined objective, but a set of mutually incompatible projections.",
+   "cats": [
+    "cs.CL"
+   ]
+  },
+  {
+   "arxiv": "2609.13892v1",
+   "title": "CyclOT: Learning Quadratic Optimal Transport Maps via Synchronized Forward-Backward Interpolants",
+   "published": "2026-09-12",
+   "abstract": "We study the recovery of forward and reverse quadratic optimal-transport maps from unpaired samples in high dimensions. We introduce a bidirectional neural framework in which the learned maps induce forward and backward displacement interpolants, while the training objective combines bidirectional quadratic action, discriminator-restricted Jensen-Shannon endpoint objectives, and two-sided cycle consistency. The construction requires neither precomputed sample pairings nor an explicit convex-potential parameterization. For absolutely continuous probability measures supported on a compact convex set, and under the stated generator-approximation, discriminator-richness, and minimizer-attainment conditions, we prove a population recovery theorem: for every prescribed accuracy, the sum of the corresponding \\(L^2\\) errors between any global minimizer and the forward and reverse quadratic Brenier maps is below that accuracy, provided the discriminator level is sufficiently large and the annealing action weight becomes sufficiently small. Moreover, the cycle loss is bounded above by \\(λW_2^2(μ_0,μ_1)\\). Complementary results quantify approximate invertibility and show that exact endpoint Jensen-Shannon divergence and cycle consistency control missing target mass and many-to-one map collapse, respectively. Experiments on Swiss roll, MNIST, CelebA, single-cell perturbation data, and chest X-ray images evaluate endpoint fidelity, transport cost, inverse consistency, and the geometry of the induced interpolations.",
+   "cats": [
+    "math.OC",
+    "cs.LG"
+   ]
+  },
+  {
+   "arxiv": "2609.08949v1",
+   "title": "Prior-free relative 6D pose estimation of multiple object instances",
+   "published": "2026-09-08",
+   "abstract": "Object 6D pose estimation formulations have progressively reduced reliance on object-specific priors, evolving from explicit 3D models to multi-view object captures to single reference images. We take this progression to its extreme by introducing prior-free relative 6D pose estimation, which lifts the assumption of knowing which object is to be posed within the scene. This novel setting aims to estimate the relative poses of multiple instances of an unknown object within the same image, without requiring CAD models, templates, or reference images. We solve this by formulating a novel method (PROSE) that finds coarse correspondences between object instances using multimodal foundation features, thus requiring no training. We refine these correspondences by imposing cycle consistency across tuples of instances, and leverage the resulting globally consistent correspondences to estimate the relative 6D pose between any pair of instances. To enable systematic evaluation, we design a novel benchmark (PRENCH) built from three multi-instance BOP datasets and enriched with task-specific metadata. PROSE consistently outperforms baselines obtained by adapting state-of-the-art single-image methods to the proposed setting, while requiring neither task-specific supervision nor additional learned components. Project website: https://tev-fbk.github.io/PROSE/",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2608.10002v1",
+   "title": "LoRCA: LoRA Cycle Adaptation for Histology to HiP-CT Translation with DINOv3",
+   "published": "2026-08-07",
+   "abstract": "Hierarchical Phase-Contrast Tomography (HiP-CT) is a synchrotron based X-ray imaging technique that enables non-destructive, volumetric imaging of intact organs with multi-resolutions bridging 20 $μm$/voxel for whole organs to near-cellular resolution ($\\sim$0.8 $μm$/voxel) in local regions. This offers the opportunity to bring volumetric whole-organ context to histology. However, nonlinear registration between H\\&E histology and HiP-CT volumes is challenging due to the differences in feature representations of different colour spaces. Synthesis-before-registration methods have shown strong results in histology-to-MRI and histology-to-CT alignment. However, existing approaches either rely on manual anatomical contours or are trained from scratch without semantic constraints, limiting their generalisability to soft tissue organs and novel modalities. We propose LoRCA (LoRA Cycle Adaptation), a cycle consistent style translation framework built on a shared frozen DINOv3 with modality-specific LoRA adapters, learning modality-specific representations that are decoded and adversarially trained. LoRCA enables structure-preserving translation without requiring paired training data. The frozen backbone is intended to be a structural anchor that prevents content drift by preserving pretrained semantic-extraction capability. We evaluate translation quality using Fréchet Inception Distance (FID) and structural fidelity via mutual information and Canny edge preservation. LoRCA outperforms CycleGAN in both translation quality and structural consistency. As a preliminary indicator of downstream registration utility, we find that style-translated images yield increased feature correspondences under MatchAnything on manually aligned HiP-CT and histology test pairs, suggesting that LoRCA-style translation is a promising step towards 2D histological sections to 3D HiP-CT volumes registration.",
+   "cats": [
+    "eess.IV",
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2608.05938v1",
+   "title": "MirrorNet: Can Medical Image Anonymization Really Protect Patient Identity?",
+   "published": "2026-08-06",
+   "abstract": "Medical images are routinely de-identified---names, dates, and other metadata removed---and then shared for research, teaching, and public benchmarks under the assumption that this renders them anonymous. Such de-identification protects the metadata but not the pixels, and---apart from scans that directly contain facial structures---whether the image content itself identifies the patient has received little scrutiny. We investigate this question by learning a cycle-consistent correspondence between a cross-sectional medical image and a non-medical, patient-identifying image, using a pair of coupled, cycle-consistent variational autoencoders. From a held-out scan, the model recovers a recognisable likeness of the patient (identity-region MAE = 0.163); conversely, it synthesises a scan from such an image. These results indicate that a de-identified medical scan remains identifying---it is, in effect, a photograph of the patient---and that imaging data should be governed as biometric data rather than as anonymisable records. To support reproducibility, the code and trained models are shared at https://github.com/attilasimko/public-repository.",
+   "cats": [
+    "cs.CV",
+    "cs.LG"
+   ]
+  },
+  {
+   "arxiv": "2606.27376v1",
+   "title": "Ask, Solve, Generate: Self-Evolving Unified Multimodal Understanding and Generation via Self-Consistency Rewards",
+   "published": "2026-06-25",
+   "abstract": "Most unified large multimodal models (LMMs) that support both visual understanding and image generation still rely on curated post-training supervision, such as human annotations, preference labels, or external reward models. We ask whether a unified LMM can improve both abilities autonomously using only unlabeled images. We propose a self-evolving training framework with three internal roles: a Proposer that generates visual questions, a Solver that answers and evaluates them, and a Generator that synthesizes images. Training uses only self-derived consistency signals, without human annotations, preference labels, or task-trained external reward/judge models. To stabilize learning, we introduce Solver Token Entropy (STE), a continuous difficulty signal based on token-level prediction uncertainty that remains useful even when sample-level consistency becomes unreliable. For image generation, we design a multi-scale internal evaluation scheme that combines question-answer fidelity scoring with cycle-consistent captioning. This creates a solver-mediated coupling, where better visual understanding enables more reliable generation assessment and stronger internal training signals. The framework preserves the same role decomposition, reward logic, and training schedule across diffusion-based BLIP3o, rectified-flow BAGEL, and autoregressive VARGPT-v1.1 architectures, requiring only each backbone's native prompting and generation interface. Across eight understanding metrics, our method consistently improves over the corresponding base models. On BAGEL, it achieves a $+3.5\\%$ absolute gain on MMMU and improves GenEval image generation performance from $82\\%$ to $85\\%$. Code and models are publicly released.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2604.03637v1",
+   "title": "SAGE-GAN: Towards Realistic and Robust Segmentation of Spatially Ordered Nanoparticles via Attention-Guided GANs",
+   "published": "2026-04-04",
+   "abstract": "Precise analysis of nanoparticles for characterization in electron microscopy images is essential for advancing nanomaterial development. Yet it remains challenging due to the time-consuming nature of manual methods and the shortcomings of traditional automated segmentation techniques, especially when dealing with complex shapes and imaging artifacts. While conventional methods yield promising results, they depend on a large volume of labeled training data, which is both difficult to acquire and highly time-consuming to generate. In order to overcome these challenges, we have developed a two-step solution: Firstly, our system learns to segment the key features of nanoparticles from a dataset of real images using a self-attention driven U-Net architecture that focuses on important physical and morphological details while ignoring background features and noise. Secondly, this trained Attention U-Net is embedded in a cycle-consistent generative adversarial network (CycleGAN) framework, inspired by the cGAN-Seg model introduced by Abzargar et al. This integration allows for the creation of highly realistic synthetic electron microscopy image-mask pairs that naturally reflect the structural patterns learned by the Attention U-Net. Consequently, the model can accurately detect features in a diverse array of real-world nanoparticle images and autonomously augment the training dataset without requiring human input. Cycle consistency enforces a direct correspondence between synthetic images and ground-truth masks, ensuring realistic features, which is crucial for accurate segmentation training.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2602.18996v2",
+   "title": "Learning Cross-View Object Correspondence via Cycle-Consistent Mask Prediction",
+   "published": "2026-02-22",
+   "abstract": "We study the task of establishing object-level visual correspondence across different viewpoints in videos, focusing on the challenging egocentric-to-exocentric and exocentric-to-egocentric scenarios. We propose a simple yet effective framework based on conditional binary segmentation, where an object query mask is encoded into a latent representation to guide the localization of the corresponding object in a target video. To encourage robust, view-invariant representations, we introduce a cycle-consistency training objective: the predicted mask in the target view is projected back to the source view to reconstruct the original query mask. This bidirectional constraint provides a strong self-supervisory signal without requiring ground-truth annotations and enables test-time training (TTT) at inference. Experiments on the Ego-Exo4D and HANDAL-X benchmarks demonstrate the effectiveness of our optimization objective and TTT strategy, achieving state-of-the-art performance. The code is available at https://github.com/shannany0606/CCMP.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2602.14464v2",
+   "title": "CoCoDiff: Correspondence-Consistent Diffusion Model for Fine-grained Style Transfer",
+   "published": "2026-02-16",
+   "abstract": "Transferring visual style between images while preserving semantic correspondence between similar objects remains a central challenge in computer vision. While existing methods have made great strides, most of them operate at global level but overlook region-wise and even pixel-wise semantic correspondence. To address this, we propose CoCoDiff, a novel training-free and low-cost style transfer framework that leverages pretrained latent diffusion models to achieve fine-grained, semantically consistent stylization. We identify that correspondence cues within generative diffusion models are under-explored and that content consistency across semantically matched regions is often neglected. CoCoDiff introduces a pixel-wise semantic correspondence module that mines intermediate diffusion features to construct a dense alignment map between content and style images. Furthermore, a cycle-consistency module then enforces structural and perceptual alignment across iterations, yielding object and region level stylization that preserves geometry and detail. Despite requiring no additional training or supervision, CoCoDiff delivers state-of-the-art visual quality and strong quantitative results, outperforming methods that rely on extra training or annotations.",
+   "cats": [
+    "cs.CV",
+    "cs.AI"
+   ]
+  },
+  {
+   "arxiv": "2602.08433v1",
+   "title": "CSPR-Net: Self-supervised Curved Surface Projection Rectification Network for Geometric Distortion Correction in Non-planar Projections",
+   "published": "2026-02-09",
+   "abstract": "Projecting images onto non-planar surfaces inevitably introduces geometric distortions that degrade visual quality. Traditional correction methods often require tedious manual calibration or structured light sequences to establish pixel-wise correspondences. In this paper, we develop the Curved Surface Projection Rectification Network (CSPR-Net), a self-supervised deep learning framework for automated distortion correction. Our approach employs dual coordinate-based neural networks to learn the bi-directional mapping between the projector and camera spaces. By enforcing a robust cycle-consistency constraint, CSPR-Net autonomously resolves complex geometric transformations without requiring ground-truth deformation fields. Furthermore, a gradient-based loss function is introduced to mitigate the impact of complex ambient light interference and accurately capture high-frequency geometric variations. Quantitative evaluations in physical experimental scenarios demonstrate that CSPR-Net achieves a 20.7% improvement in end-to-end fidelity (SSIM) and outperforms the polynomial baseline by 3.8% and 5.4% in forward and inverse mapping in terms of SSIM respectively, effectively generating high-precision pre-warped images for seamless projection.",
+   "cats": [
+    "physics.optics"
+   ]
+  },
+  {
+   "arxiv": "2601.01851v2",
+   "title": "The FRW Universe as a van der Waals-like Thermodynamic Heat Engine",
+   "published": "2026-01-05",
+   "abstract": "It is well known that the Friedmann-Robertson-Walker (FRW) universe is a dynamical spacetime, and it has thermodynamics embodied on the apparent horizon. Notably, it also possesses a van der Waals-like equation of state, enabling us to consider thermodynamic cycles and explore the potential of the FRW universe as a heat engine. In this paper, we investigate two types of cycle--the Carnot cycle and the rectangular cycle--based on the phase diagram derived from the equation of state, to study the heat engine characteristics of the FRW universe. Furthermore, we calculate the work done and assess the corresponding efficiencies, illustrating the efficiency diagram for the FRW universe's heat engine. We observe that the efficiency of the rectangular cycle consistently remains below unity and never exceeds the Carnot efficiency--the thermodynamic upper limit. This finding is in alignment with the traditional thermodynamic principles that govern heat engines.",
+   "cats": [
+    "gr-qc",
+    "hep-th"
+   ]
+  },
+  {
+   "arxiv": "2510.14354v1",
+   "title": "Leveraging Cycle-Consistent Anchor Points for Self-Supervised RGB-D Registration",
+   "published": "2025-10-16",
+   "abstract": "With the rise in consumer depth cameras, a wealth of unlabeled RGB-D data has become available. This prompts the question of how to utilize this data for geometric reasoning of scenes. While many RGB-D registration meth- ods rely on geometric and feature-based similarity, we take a different approach. We use cycle-consistent keypoints as salient points to enforce spatial coherence constraints during matching, improving correspondence accuracy. Additionally, we introduce a novel pose block that combines a GRU recurrent unit with transformation synchronization, blending historical and multi-view data. Our approach surpasses previous self- supervised registration methods on ScanNet and 3DMatch, even outperforming some older supervised methods. We also integrate our components into existing methods, showing their effectiveness.",
+   "cats": [
+    "cs.CV",
+    "cs.RO"
+   ]
+  },
+  {
+   "arxiv": "2509.21263v2",
+   "title": "Towards Geometry-Grounded Dense Semantic Matching with VGGT Priors",
+   "published": "2025-09-25",
+   "abstract": "Semantic matching aims to establish pixel-level correspondences between instances of the same category and represents a fundamental task in computer vision. Existing approaches suffer from two limitations: (i) Geometric Ambiguity: Their reliance on 2D foundation model features (e.g., Stable Diffusion, DINO) often fails to disambiguate symmetric structures, requiring extra fine-tuning yet lacking generalization; (ii) Nearest-Neighbor Rule: Their pixel-wise matching ignores cross-image invisibility and neglects manifold preservation. These challenges call for geometry-aware pixel descriptors and holistic dense correspondence mechanisms. Inspired by recent advances in 3D geometric foundation models, we turn to VGGT, which provides geometry-grounded features and holistic dense matching capabilities well aligned with these needs. However, directly transferring VGGT is challenging, as it was originally designed for geometry matching within cross views of a single instance, misaligned with cross-instance semantic matching, and further hindered by the scarcity of dense semantic annotations. To address this, we propose an approach that (i) retains VGGT's intrinsic strengths by reusing early feature stages, fine-tuning later ones, and adding a semantic head for bidirectional correspondences; and (ii) adapts VGGT to the semantic matching scenario under data scarcity through cycle-consistent training strategy, synthetic data augmentation, and progressive training recipe with aliasing artifact mitigation. Extensive experiments demonstrate that our approach achieves superior geometry awareness, matching reliability, and manifold preservation, outperforming previous baselines.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2509.10035v2",
+   "title": "Linguistic trajectories of bipolar disorder on social media",
+   "published": "2025-09-12",
+   "abstract": "Language use offers valuable insight into affective disorders such as bipolar disorder (BD), yet past research has been cross-sectional and limited in scale. Here, we demonstrate that social media records can be leveraged to study longitudinal language change associated with BD on a large scale. Using a novel method to infer diagnosis timelines from user self-reports, we compared users self-identifying with BD, depression, or no mental health condition. The onset of BD diagnosis corresponded with widespread linguistic shifts reflecting mood disturbance, psychiatric comorbidity, substance abuse, hospitalization, medical comorbidities, interpersonal concerns, unusual thought content, and altered linguistic coherence. In the years following the diagnosis, discussions of mood symptoms were found to fluctuate periodically with a dominant 12-month cycle consistent with seasonal mood variation. These findings suggest that social media language captures linguistic and behavioral changes associated with BD and might serve as a valuable complement to traditional psychiatric cohort research.",
+   "cats": [
+    "cs.CL"
+   ]
+  },
+  {
+   "arxiv": "2509.01204v2",
+   "title": "DcMatch: Unsupervised Multi-Shape Matching with Dual-Level Consistency",
+   "published": "2025-09-01",
+   "abstract": "Establishing point-to-point correspondences across multiple 3D shapes is a fundamental problem in computer vision and graphics. In this paper, we introduce DcMatch, a novel unsupervised learning framework for non-rigid multi-shape matching. Unlike existing methods that learn a canonical embedding from a single shape, our approach leverages a shape graph attention network to capture the underlying manifold structure of the entire shape collection. This enables the construction of a more expressive and robust shared latent space, leading to more consistent shape-to-universe correspondences via a universe predictor. Simultaneously, we represent these correspondences in both the spatial and spectral domains and enforce their alignment in the shared universe space through a novel cycle consistency loss. This dual-level consistency fosters more accurate and coherent mappings. Extensive experiments on several challenging benchmarks demonstrate that our method consistently outperforms previous state-of-the-art approaches across diverse multi-shape matching scenarios.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2507.18616v1",
+   "title": "SynC: Synthetic Image Caption Dataset Refinement with One-to-many Mapping for Zero-shot Image Captioning",
+   "published": "2025-07-24",
+   "abstract": "Zero-shot Image Captioning (ZIC) increasingly utilizes synthetic datasets generated by text-to-image (T2I) models to mitigate the need for costly manual annotation. However, these T2I models often produce images that exhibit semantic misalignments with their corresponding input captions (e.g., missing objects, incorrect attributes), resulting in noisy synthetic image-caption pairs that can hinder model training. Existing dataset pruning techniques are largely designed for removing noisy text in web-crawled data. However, these methods are ill-suited for the distinct challenges of synthetic data, where captions are typically well-formed, but images may be inaccurate representations. To address this gap, we introduce SynC, a novel framework specifically designed to refine synthetic image-caption datasets for ZIC. Instead of conventional filtering or regeneration, SynC focuses on reassigning captions to the most semantically aligned images already present within the synthetic image pool. Our approach employs a one-to-many mapping strategy by initially retrieving multiple relevant candidate images for each caption. We then apply a cycle-consistency-inspired alignment scorer that selects the best image by verifying its ability to retrieve the original caption via image-to-text retrieval. Extensive evaluations demonstrate that SynC consistently and significantly improves performance across various ZIC models on standard benchmarks (MS-COCO, Flickr30k, NoCaps), achieving state-of-the-art results in several scenarios. SynC offers an effective strategy for curating refined synthetic data to enhance ZIC.",
+   "cats": [
+    "cs.CV",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG"
+   ]
+  },
+  {
+   "arxiv": "2507.18677v1",
+   "title": "HeartUnloadNet: A Weakly-Supervised Cycle-Consistent Graph Network for Predicting Unloaded Cardiac Geometry from Diastolic States",
+   "published": "2025-07-24",
+   "abstract": "The unloaded cardiac geometry (i.e., the state of the heart devoid of luminal pressure) serves as a valuable zero-stress and zero-strain reference and is critical for personalized biomechanical modeling of cardiac function, to understand both healthy and diseased physiology and to predict the effects of cardiac interventions. However, estimating the unloaded geometry from clinical images remains a challenging task. Traditional approaches rely on inverse finite element (FE) solvers that require iterative optimization and are computationally expensive. In this work, we introduce HeartUnloadNet, a deep learning framework that predicts the unloaded left ventricular (LV) shape directly from the end diastolic (ED) mesh while explicitly incorporating biophysical priors. The network accepts a mesh of arbitrary size along with physiological parameters such as ED pressure, myocardial stiffness scale, and fiber helix orientation, and outputs the corresponding unloaded mesh. It adopts a graph attention architecture and employs a cycle-consistency strategy to enable bidirectional (loading and unloading) prediction, allowing for partial self-supervision that improves accuracy and reduces the need for large training datasets. Trained and tested on 20,700 FE simulations across diverse LV geometries and physiological conditions, HeartUnloadNet achieves sub-millimeter accuracy, with an average DSC of 0.986 and HD of 0.083 cm, while reducing inference time to just 0.02 seconds per case, over 10^5 times faster and significantly more accurate than traditional inverse FE solvers. Ablation studies confirm the effectiveness of the architecture. Notably, the cycle-consistent design enables the model to maintain a DSC of 97% even with as few as 200 training samples. This work thus presents a scalable and accurate surrogate for inverse FE solvers, supporting real-time clinical applications in the future.",
+   "cats": [
+    "cs.CV",
+    "physics.med-ph"
+   ]
+  },
+  {
+   "arxiv": "2507.07747v1",
+   "title": "X-RAFT: Cross-Modal Non-Rigid Registration of Blue and White Light Neurosurgical Hyperspectral Images",
+   "published": "2025-07-10",
+   "abstract": "Integration of hyperspectral imaging into fluorescence-guided neurosurgery has the potential to improve surgical decision making by providing quantitative fluorescence measurements in real-time. Quantitative fluorescence requires paired spectral data in fluorescence (blue light) and reflectance (white light) mode. Blue and white image acquisition needs to be performed sequentially in a potentially dynamic surgical environment. A key component to the fluorescence quantification process is therefore the ability to find dense cross-modal image correspondences between two hyperspectral images taken under these drastically different lighting conditions. We address this challenge with the introduction of X-RAFT, a Recurrent All-Pairs Field Transforms (RAFT) optical flow model modified for cross-modal inputs. We propose using distinct image encoders for each modality pair, and fine-tune these in a self-supervised manner using flow-cycle-consistency on our neurosurgical hyperspectral data. We show an error reduction of 36.6% across our evaluation metrics when comparing to a naive baseline and 27.83% reduction compared to an existing cross-modal optical flow method (CrossRAFT). Our code and models will be made publicly available after the review process.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2506.20191v1",
+   "title": "Fast entropy-regularized SDP relaxations for permutation synchronization",
+   "published": "2025-06-25",
+   "abstract": "We introduce fast randomized algorithms for solving semidefinite programming (SDP) relaxations of the partial permutation synchronization (PPS) problem, a core task in multi-image matching with significant relevance to 3D reconstruction. Our methods build on recent advances in entropy-regularized semidefinite programming and are tailored to the unique structure of PPS, in which the unknowns are partial permutation matrices aligning sparse and noisy pairwise correspondences across images. We prove that entropy regularization resolves optimizer non-uniqueness in standard relaxations, and we develop a randomized solver with nearly optimal scaling in the number of observed correspondences. We also develop several rounding procedures for recovering combinatorial solutions from the implicitly represented primal solution variable, maintaining cycle consistency if desired without harming computational scaling. We demonstrate that our approach achieves state-of-the-art performance on synthetic and real-world datasets in terms of speed and accuracy. Our results highlight PPS as a paradigmatic setting in which entropy-regularized SDP admits both theoretical and practical advantages over traditional low-rank or spectral techniques.",
+   "cats": [
+    "math.OC",
+    "math.NA"
+   ]
+  },
+  {
+   "arxiv": "2506.03148v1",
+   "title": "Self-Supervised Spatial Correspondence Across Modalities",
+   "published": "2025-06-03",
+   "abstract": "We present a method for finding cross-modal space-time correspondences. Given two images from different visual modalities, such as an RGB image and a depth map, our model identifies which pairs of pixels correspond to the same physical points in the scene. To solve this problem, we extend the contrastive random walk framework to simultaneously learn cycle-consistent feature representations for both cross-modal and intra-modal matching. The resulting model is simple and has no explicit photo-consistency assumptions. It can be trained entirely using unlabeled data, without the need for any spatially aligned multimodal image pairs. We evaluate our method on both geometric and semantic correspondence tasks. For geometric matching, we consider challenging tasks such as RGB-to-depth and RGB-to-thermal matching (and vice versa); for semantic matching, we evaluate on photo-sketch and cross-style image alignment. Our method achieves strong performance across all benchmarks.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2506.00324v1",
+   "title": "Improving Optical Flow and Stereo Depth Estimation by Leveraging Uncertainty-Based Learning Difficulties",
+   "published": "2025-05-31",
+   "abstract": "Conventional training for optical flow and stereo depth models typically employs a uniform loss function across all pixels. However, this one-size-fits-all approach often overlooks the significant variations in learning difficulty among individual pixels and contextual regions. This paper investigates the uncertainty-based confidence maps which capture these spatially varying learning difficulties and introduces tailored solutions to address them. We first present the Difficulty Balancing (DB) loss, which utilizes an error-based confidence measure to encourage the network to focus more on challenging pixels and regions. Moreover, we identify that some difficult pixels and regions are affected by occlusions, resulting from the inherently ill-posed matching problem in the absence of real correspondences. To address this, we propose the Occlusion Avoiding (OA) loss, designed to guide the network into cycle consistency-based confident regions, where feature matching is more reliable. By combining the DB and OA losses, we effectively manage various types of challenging pixels and regions during training. Experiments on both optical flow and stereo depth tasks consistently demonstrate significant performance improvements when applying our proposed combination of the DB and OA losses.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2504.12080v2",
+   "title": "DC-SAM: In-Context Segment Anything in Images and Videos via Dual Consistency",
+   "published": "2025-04-16",
+   "abstract": "Given a single labeled example, in-context segmentation aims to segment corresponding objects. This setting, known as one-shot segmentation in few-shot learning, explores the segmentation model's generalization ability and has been applied to various vision tasks, including scene understanding and image/video editing. While recent Segment Anything Models have achieved state-of-the-art results in interactive segmentation, these approaches are not directly applicable to in-context segmentation. In this work, we propose the Dual Consistency SAM (DC-SAM) method based on prompt-tuning to adapt SAM and SAM2 for in-context segmentation of both images and videos. Our key insights are to enhance the features of the SAM's prompt encoder in segmentation by providing high-quality visual prompts. When generating a mask prior, we fuse the SAM features to better align the prompt encoder. Then, we design a cycle-consistent cross-attention on fused features and initial visual prompts. Next, a dual-branch design is provided by using the discriminative positive and negative prompts in the prompt encoder. Furthermore, we design a simple mask-tube training strategy to adopt our proposed dual consistency method into the mask tube. Although the proposed DC-SAM is primarily designed for images, it can be seamlessly extended to the video domain with the support of SAM2. Given the absence of in-context segmentation in the video domain, we manually curate and construct the first benchmark from existing video segmentation datasets, named In-Context Video Object Segmentation (IC-VOS), to better assess the in-context capability of the model. Extensive experiments demonstrate that our method achieves 55.5 (+1.4) mIoU on COCO-20i, 73.0 (+1.1) mIoU on PASCAL-5i, and a J&F score of 71.52 on the proposed IC-VOS benchmark. Our source code and benchmark are available at https://github.com/zaplm/DC-SAM.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2502.11468v1",
+   "title": "Semantically Robust Unsupervised Image Translation for Paired Remote Sensing Images",
+   "published": "2025-02-17",
+   "abstract": "Image translation for change detection or classification in bi-temporal remote sensing images is unique. Although it can acquire paired images, it is still unsupervised. Moreover, strict semantic preservation in translation is always needed instead of multimodal outputs. In response to these problems, this paper proposes a new method, SRUIT (Semantically Robust Unsupervised Image-to-image Translation), which ensures semantically robust translation and produces deterministic output. Inspired by previous works, the method explores the underlying characteristics of bi-temporal Remote Sensing images and designs the corresponding networks. Firstly, we assume that bi-temporal Remote Sensing images share the same latent space, for they are always acquired from the same land location. So SRUIT makes the generators share their high-level layers, and this constraint will compel two domain mapping to fall into the same latent space. Secondly, considering land covers of bi-temporal images could evolve into each other, SRUIT exploits the cross-cycle-consistent adversarial networks to translate from one to the other and recover them. Experimental results show that constraints of sharing weights and cross-cycle consistency enable translated images with both good perceptual image quality and semantic preservation for significant differences.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2412.19123v1",
+   "title": "CoheDancers: Enhancing Interactive Group Dance Generation through Music-Driven Coherence Decomposition",
+   "published": "2024-12-26",
+   "abstract": "Dance generation is crucial and challenging, particularly in domains like dance performance and virtual gaming. In the current body of literature, most methodologies focus on Solo Music2Dance. While there are efforts directed towards Group Music2Dance, these often suffer from a lack of coherence, resulting in aesthetically poor dance performances. Thus, we introduce CoheDancers, a novel framework for Music-Driven Interactive Group Dance Generation. CoheDancers aims to enhance group dance generation coherence by decomposing it into three key aspects: synchronization, naturalness, and fluidity. Correspondingly, we develop a Cycle Consistency based Dance Synchronization strategy to foster music-dance correspondences, an Auto-Regressive-based Exposure Bias Correction strategy to enhance the fluidity of the generated dances, and an Adversarial Training Strategy to augment the naturalness of the group dance output. Collectively, these strategies enable CohdeDancers to produce highly coherent group dances with superior quality. Furthermore, to establish better benchmarks for Group Music2Dance, we construct the most diverse and comprehensive open-source dataset to date, I-Dancers, featuring rich dancer interactions, and create comprehensive evaluation metrics. Experimental evaluations on I-Dancers and other extant datasets substantiate that CoheDancers achieves unprecedented state-of-the-art performance. Code will be released.",
+   "cats": [
+    "cs.SD",
+    "cs.MM",
+    "eess.AS"
+   ]
+  },
+  {
+   "arxiv": "2411.02172v1",
+   "title": "Facet-Hamiltonicity",
+   "published": "2024-11-04",
+   "abstract": "We consider facet-Hamiltonian cycles of polytopes, defined as cycles in their skeleton such that every facet is visited exactly once. These cycles can be understood as optimal watchman routes that guard the facets of a polytope. We consider the existence of such cycles for a variety of polytopes, the facets of which have a natural combinatorial interpretation. In particular, we prove the following results: - Every permutahedron has a facet-Hamiltonian cycle. These cycles consist of circular sequences of permutations of $n$ elements, where two successive permutations differ by a single adjacent transposition, and such that every subset of $[n]$ appears as a prefix in a contiguous subsequence. With these cycles we associate what we call rhombic strips which encode interleaved Gray codes of the Boolean lattice, one Gray code for each rank. These rhombic strips correspond to simple Venn diagrams. - Every generalized associahedron has a facet-Hamiltonian cycle. This generalizes the so-called rainbow cycles of Felsner, Kleist, Mütze, and Sering (SIDMA 2020) to associahedra of any finite type. We relate the constructions to the Conway-Coxeter friezes and the bipartite belts of finite type cluster algebras. - Graph associahedra of wheels, fans, and complete split graphs have facet-Hamiltonian cycles. For associahedra of complete bipartite graphs and caterpillars, we construct facet-Hamiltonian paths. The construction involves new insights on the combinatorics of graph tubings. We also consider the computational complexity of deciding whether a given polytope has a facet-Hamiltonian cycle and show that the problem is NP-complete, even when restricted to simple 3-dimensional polytopes.",
+   "cats": [
+    "math.CO",
+    "cs.CG",
+    "cs.DM"
+   ]
+  },
+  {
+   "arxiv": "2410.23628v1",
+   "title": "Cycle-Constrained Adversarial Denoising Convolutional Network for PET Image Denoising: Multi-Dimensional Validation on Large Datasets with Reader Study and Real Low-Dose Data",
+   "published": "2024-10-31",
+   "abstract": "Positron emission tomography (PET) is a critical tool for diagnosing tumors and neurological disorders but poses radiation risks to patients, particularly to sensitive populations. While reducing injected radiation dose mitigates this risk, it often compromises image quality. To reconstruct full-dose-quality images from low-dose scans, we propose a Cycle-constrained Adversarial Denoising Convolutional Network (Cycle-DCN). This model integrates a noise predictor, two discriminators, and a consistency network, and is optimized using a combination of supervised loss, adversarial loss, cycle consistency loss, identity loss, and neighboring Structural Similarity Index (SSIM) loss. Experiments were conducted on a large dataset consisting of raw PET brain data from 1,224 patients, acquired using a Siemens Biograph Vision PET/CT scanner. Each patient underwent a 120-seconds brain scan. To simulate low-dose PET conditions, images were reconstructed from shortened scan durations of 30, 12, and 5 seconds, corresponding to 1/4, 1/10, and 1/24 of the full-dose acquisition, respectively, using a custom-developed GPU-based image reconstruction software. The results show that Cycle-DCN significantly improves average Peak Signal-to-Noise Ratio (PSNR), SSIM, and Normalized Root Mean Square Error (NRMSE) across three dose levels, with improvements of up to 56%, 35%, and 71%, respectively. Additionally, it achieves contrast-to-noise ratio (CNR) and Edge Preservation Index (EPI) values that closely align with full-dose images, effectively preserving image details, tumor shape, and contrast, while resolving issues with blurred edges. The results of reader studies indicated that the images restored by Cycle-DCN consistently received the highest ratings from nuclear medicine physicians, highlighting their strong clinical relevance.",
+   "cats": [
+    "eess.IV",
+    "cs.CV",
+    "physics.med-ph"
+   ]
+  },
+  {
+   "arxiv": "2409.01021v3",
+   "title": "CONDA: Condensed Deep Association Learning for Co-Salient Object Detection",
+   "published": "2024-09-02",
+   "abstract": "Inter-image association modeling is crucial for co-salient object detection. Despite satisfactory performance, previous methods still have limitations on sufficient inter-image association modeling. Because most of them focus on image feature optimization under the guidance of heuristically calculated raw inter-image associations. They directly rely on raw associations which are not reliable in complex scenarios, and their image feature optimization approach is not explicit for inter-image association modeling. To alleviate these limitations, this paper proposes a deep association learning strategy that deploys deep networks on raw associations to explicitly transform them into deep association features. Specifically, we first create hyperassociations to collect dense pixel-pair-wise raw associations and then deploys deep aggregation networks on them. We design a progressive association generation module for this purpose with additional enhancement of the hyperassociation calculation. More importantly, we propose a correspondence-induced association condensation module that introduces a pretext task, i.e. semantic correspondence estimation, to condense the hyperassociations for computational burden reduction and noise elimination. We also design an object-aware cycle consistency loss for high-quality correspondence estimations. Experimental results in three benchmark datasets demonstrate the remarkable effectiveness of our proposed method with various training settings.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2406.12441v1",
+   "title": "Cycle-Correspondence Loss: Learning Dense View-Invariant Visual Features from Unlabeled and Unordered RGB Images",
+   "published": "2024-06-18",
+   "abstract": "Robot manipulation relying on learned object-centric descriptors became popular in recent years. Visual descriptors can easily describe manipulation task objectives, they can be learned efficiently using self-supervision, and they can encode actuated and even non-rigid objects. However, learning robust, view-invariant keypoints in a self-supervised approach requires a meticulous data collection approach involving precise calibration and expert supervision. In this paper we introduce Cycle-Correspondence Loss (CCL) for view-invariant dense descriptor learning, which adopts the concept of cycle-consistency, enabling a simple data collection pipeline and training on unpaired RGB camera views. The key idea is to autonomously detect valid pixel correspondences by attempting to use a prediction over a new image to predict the original pixel in the original image, while scaling error terms based on the estimated confidence. Our evaluation shows that we outperform other self-supervised RGB-only methods, and approach performance of supervised methods, both with respect to keypoint tracking as well as for a robot grasping downstream task.",
+   "cats": [
+    "cs.CV",
+    "cs.AI",
+    "cs.RO"
+   ]
+  }
+ ],
+ "abs:\"partial shape matching\"": [
+  {
+   "arxiv": "2610.21802v1",
+   "title": "Teaching DINOv3 About Partial 3D Geometry: A Self-Supervised Geometry-Aware Approach",
+   "published": "2026-10-15",
+   "abstract": "Partial shape matching is a crucial yet underexplored problem in 3D vision, with significant relevance to real-world scenarios where shapes are often only partially observed. Existing feature descriptors face difficulties in this setting, as traditional representations either struggle with the boundaries of partial shapes or heavily depend on the shape's spatial position. While existing approaches have employed DINO features for partial shape matching, these features are not inherently suited for handling partial observations. In this work, we propose a method to refine DINO features using LoRA-based self-supervised learning, enabling the generation of feature descriptors that are robust to partiality. Our features substantially improve performance on partial shape matching compared to traditional or vision foundation features. Additionally, when integrated into existing partial shape matching pipelines, we achieve state-of-the-art results on partial shape matching and left-right prediction benchmarks.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2609.04202v1",
+   "title": "TokenMatch: 3D Mesh Correspondence Transformer with Curvature-Guided Tokenisation",
+   "published": "2026-09-03",
+   "abstract": "While data-driven 3D shape correspondence estimation has recently seen substantial progress, robust matching under partial observations and strong non-isometric deformations remains challenging. Existing learning-based approaches often rely on hand-crafted descriptors or template-based representations, whereas recent generative models over functional maps suffer from high inference cost, limited interpretability, and poor generalisation to partial shapes. In response to these limitations, this paper introduces TokenMatch, a new transformer-based unified model for estimating 3D shape correspondences. Our feed-forward approach trained exclusively on BeCoS, a challenging non-isometric partial-to-partial shape-matching dataset, can generalise to matching full shapes without retraining or fine-tuning. TokenMatch uses self- and cross-attention mechanisms to efficiently learn patch-level and point-level relations as well as dense correspondences between shape pairs. Our core insight is that meshes can be adaptively tokenised into patches using shape curvature guidance, enabling effective learning of shape-specific geometric descriptors for correspondence estimation. We evaluate TokenMatch on standard benchmarks for partial and full shape matching, including CP2P, PSMAL, BeCoS, FAUST, SCAPE, and SHREC'19. Our method achieves consistently high performance, in most cases outperforming existing methods for partial and full shape matching in the mean geodesic error and intersection-over-union metrics, while also running faster at sub-second inference speeds.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2602.06590v1",
+   "title": "An Integer Linear Programming Approach to Geometrically Consistent Partial-Partial Shape Matching",
+   "published": "2026-02-06",
+   "abstract": "The task of establishing correspondences between two 3D shapes is a long-standing challenge in computer vision. While numerous studies address full-full and partial-full 3D shape matching, only a limited number of works have explored the partial-partial setting, very likely due to its unique challenges: we must compute accurate correspondences while at the same time find the unknown overlapping region. Nevertheless, partial-partial 3D shape matching reflects the most realistic setting, as in many real-world cases, such as 3D scanning, shapes are only partially observable. In this work, we introduce the first integer linear programming approach specifically designed to address the distinctive challenges of partial-partial shape matching. Our method leverages geometric consistency as a strong prior, enabling both robust estimation of the overlapping region and computation of neighbourhood-preserving correspondences. We empirically demonstrate that our approach achieves high-quality matching results both in terms of matching error and smoothness. Moreover, we show that our method is more scalable than previous formalisms.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2505.22445v2",
+   "title": "NFR: Neural Feature-Guided Non-Rigid Shape Registration",
+   "published": "2025-05-28",
+   "abstract": "In this paper, we propose a novel learning-based framework for 3D shape registration, which overcomes the challenges of significant non-rigid deformation and partiality undergoing among input shapes, and, remarkably, requires no correspondence annotation during training. Our key insight is to incorporate neural features learned by deep learning-based shape matching networks into an iterative, geometric shape registration pipeline. The advantage of our approach is two-fold -- On one hand, neural features provide more accurate and semantically meaningful correspondence estimation than spatial features (e.g., coordinates), which is critical in the presence of large non-rigid deformations; On the other hand, the correspondences are dynamically updated according to the intermediate registrations and filtered by consistency prior, which prominently robustify the overall pipeline. Empirical results show that, with as few as dozens of training shapes of limited variability, our pipeline achieves state-of-the-art results on several benchmarks of non-rigid point cloud matching and partial shape matching across varying settings, but also delivers high-quality correspondences between unseen challenging shape pairs that undergo both significant extrinsic and intrinsic deformations, in which case neither traditional registration methods nor intrinsic methods work. Our code is available at https://github.com/rqhuang88/NFR.",
+   "cats": [
+    "cs.CV",
+    "cs.AI"
+   ]
+  },
+  {
+   "arxiv": "2411.03511v3",
+   "title": "Beyond Complete Shapes: A Benchmark for Quantitative Evaluation of 3D Shape Surface Matching Algorithms",
+   "published": "2024-11-05",
+   "abstract": "Finding correspondences between 3D deformable shapes is an important and long-standing problem in geometry processing, computer vision, graphics, and beyond. While various shape matching datasets exist, they are mostly static or limited in size, restricting their adaptation to different problem settings, including both full and partial shape matching. In particular the existing partial shape matching datasets are small (fewer than 100 shapes) and thus unsuitable for data-hungry machine learning approaches. Moreover, the type of partiality present in existing datasets is often artificial and far from realistic. To address these limitations, we introduce a generic and flexible framework for the procedural generation of challenging full and partial shape matching datasets. Our framework allows the propagation of custom annotations across shapes, making it useful for various applications. By utilising our framework and manually creating cross-dataset correspondences between seven existing (complete geometry) shape matching datasets, we propose a new large benchmark BeCoS with a total of 2543 shapes. Based on this, we offer several challenging benchmark settings, covering both full and partial matching, for which we evaluate respective state-of-the-art methods as baselines.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2410.22899v1",
+   "title": "Wormhole Loss for Partial Shape Matching",
+   "published": "2024-10-30",
+   "abstract": "When matching parts of a surface to its whole, a fundamental question arises: Which points should be included in the matching process? The issue is intensified when using isometry to measure similarity, as it requires the validation of whether distances measured between pairs of surface points should influence the matching process. The approach we propose treats surfaces as manifolds equipped with geodesic distances, and addresses the partial shape matching challenge by introducing a novel criterion to meticulously search for consistent distances between pairs of points. The new criterion explores the relation between intrinsic geodesic distances between the points, geodesic distances between the points and surface boundaries, and extrinsic distances between boundary points measured in the embedding space. It is shown to be less restrictive compared to previous measures and achieves state-of-the-art results when used as a loss function in training networks for partial shape matching.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2404.12209v2",
+   "title": "Partial-to-Partial Shape Matching with Geometric Consistency",
+   "published": "2024-04-18",
+   "abstract": "Finding correspondences between 3D shapes is an important and long-standing problem in computer vision, graphics and beyond. A prominent challenge are partial-to-partial shape matching settings, which occur when the shapes to match are only observed incompletely (e.g. from 3D scanning). Although partial-to-partial matching is a highly relevant setting in practice, it is rarely explored. Our work bridges the gap between existing (rather artificial) 3D full shape matching and partial-to-partial real-world settings by exploiting geometric consistency as a strong constraint. We demonstrate that it is indeed possible to solve this challenging problem in a variety of settings. For the first time, we achieve geometric consistency for partial-to-partial matching, which is realized by a novel integer non-linear program formalism building on triangle product spaces, along with a new pruning algorithm based on linear integer programming. Further, we generate a new inter-class dataset for partial-to-partial shape-matching. We show that our method outperforms current SOTA methods on both an established intra-class dataset and our novel inter-class dataset.",
+   "cats": [
+    "cs.CV"
+   ]
+  }
+ ],
+ "abs:\"shape matching\" AND abs:topology": [
+  {
+   "arxiv": "2606.30131v1",
+   "title": "Hyper-Network Neural Functional Maps for Unsupervised Robust 3D Shape Matching",
+   "published": "2026-06-29",
+   "abstract": "Functional maps are the cornerstone of recent non-rigid 3D shape matching methods due to their efficiency and performance. However, existing methods struggle with challenging scenarios, such as partiality, topological noise, and raw point clouds. A primary bottleneck is that significant intrinsic distortion prevents truncated spectral bases from being accurately aligned via linear transformations (i.e., functional maps). To address this, we introduce a hyper-network that predicts non-linear neural functional maps (NFM), learned in an unsupervised manner, to better align spectral bases. Specifically, we model the NFM as an MLP with skip-connection to refine standard FM and employ a hyper-network to predict its weights, conditioned on standard FM. Our framework is trained using a novel unsupervised spectral alignment loss. Experiments demonstrate that our approach can be seamlessly integrated into state-of-the-art unsupervised deep functional map pipelines, substantially improving matching accuracy in demanding scenarios.",
+   "cats": [
+    "cs.CV",
+    "cs.AI"
+   ]
+  },
+  {
+   "arxiv": "2606.29167v2",
+   "title": "Geometry-Grounded Articulation and Test-Time Adaptation for Zero-Shot, Scalable Shape Matching in the Wild",
+   "published": "2026-06-28",
+   "abstract": "Dense correspondence on in-the-wild 3D scans must handle severe non-isometric deformation, partial observations, topology artifacts, irregular discretization, and extreme resolution. Together, these conditions make shape matching both a robustness and scalability problem. Existing methods typically handle only part of this regime and often require expensive spectral or dense feature processing, repeated pairwise optimization, or dataset-specific training. To address the above issues, we present GAMMA, a zero-shot framework based on Geometry-Grounded Articulation. For each scan, GAMMA renders multiple views and uses a pretrained estimator with a category-specific parametric model to produce one template estimate per view. Because these estimates share a fixed vertex ordering, confidence-weighted consensus fuses them into one canonical template and establishes sparse matches across scans. We refine these matches on the input geometry to recover accurate dense correspondences. All core matching steps run at inference time and require neither target-dataset correspondence training nor costly Laplace--Beltrami operator (LBO) computation on the input scans. Each fused template is cached, so additional pair queries reuse the canonicalization. GAMMA obtains average geodesic errors of 2.9 on TOPKIDS and 2.4 on remeshed SMAL, reducing error relative to URSSM by 67% and 60%, respectively. Complementary evaluations report lower aggregate errors than the evaluated baselines on BeCoS-processed partial subsets and demonstrate stable matching accuracy from decimated FAUST meshes to raw scans with 160k--200k vertices. These results demonstrate accurate correspondence across complementary settings and collection-level scalability after per-shape caching.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2606.26557v2",
+   "title": "Coarse-to-Fine: A Hybrid Self-Supervised Method for Non-rigid 3D Shape Matching",
+   "published": "2026-06-25",
+   "abstract": "Non-rigid 3D shape matching is a fundamental task in computer vision and graphics. In this paper, we propose a hybrid self-supervised method based on a coarse-to-fine strategy, which ensures consistency between the coarse mapping and the refined correspondence produced by our refinement module. The architecture features a dual-branch design, consisting of two symmetric functional map learning streams: one based on the Laplacian basis and the other utilizing the elastic basis. Extensive experiments show that our approach not only maintains computational efficiency, but also achieves state-of-the-art performance across a variety of challenging scenarios, including non-isometric deformations and topological noise. Finally, we rigorously demonstrate that contrastive energies promote feature discrimination. Furthermore, integrating these energies with existing methods yields consistent improvements, validating the overall efficacy of our approach. Our code is available at https://github.com/LuoFeifan77/Coarse-to-Fine-Hybrid-Self-Supervised-Matching.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2604.10571v1",
+   "title": "Universal statistical signatures of evolution in artificial intelligence architectures",
+   "published": "2026-04-12",
+   "abstract": "We test whether artificial intelligence architectural evolution obeys the same statistical laws as biological evolution. Compiling 935 ablation experiments from 161 publications, we show that the distribution of fitness effects (DFE) of architectural modifications follows a heavy-tailed Student's t-distribution with proportions (68% deleterious, 19% neutral, 13% beneficial for major ablations, n=568) that place AI between compact viral genomes and simple eukaryotes. The DFE shape matches D. melanogaster (normalized KS=0.07) and S. cerevisiae (KS=0.09); the elevated beneficial fraction (13% vs. 1-6% in biology) quantifies the advantage of directed over blind search while preserving the distributional form. Architectural origination follows logistic dynamics (R^2=0.994) with punctuated equilibria and adaptive radiation into domain niches. Fourteen architectural traits were independently invented 3-5 times, paralleling biological convergences. These results demonstrate that the statistical structure of evolution is substrate-independent, determined by fitness landscape topology rather than the mechanism of selection.",
+   "cats": [
+    "q-bio.PE",
+    "cs.AI",
+    "cs.CY",
+    "cs.NE"
+   ]
+  },
+  {
+   "arxiv": "2603.23383v2",
+   "title": "From Feature Learning to Spectral Basis Learning: A Unifying and Flexible Framework for Efficient and Robust Shape Matching",
+   "published": "2026-03-24",
+   "abstract": "Shape matching is a fundamental task in computer graphics and vision, with deep functional maps becoming a prominent paradigm. However, existing methods primarily focus on learning informative feature representations by constraining pointwise and functional maps, while neglecting the optimization of the spectral basis-a critical component of the functional map pipeline. This oversight often leads to suboptimal matching results. Furthermore, many current approaches rely on conventional, time-consuming functional map solvers, incurring significant computational overhead. To bridge these gaps, we introduce Advanced Functional Maps, a framework that generalizes standard functional maps by replacing fixed basis functions with learnable ones, supported by rigorous theoretical guarantees. Specifically, the spectral basis is optimized through a set of learned inhibition functions. Building on this, we propose the first unsupervised spectral basis learning method for robust non-rigid 3D shape matching, enabling the joint, end-to-end optimization of feature extraction and basis functions. Our approach incorporates a novel heat diffusion module and an unsupervised loss function, alongside a streamlined architecture that bypasses expensive solvers and auxiliary losses. Extensive experiments demonstrate that our method significantly outperforms state-of-the-art feature-learning approaches, particularly in challenging non-isometric and topological noise scenarios, while maintaining high efficiency. Finally, we reveal that optimizing basis functions is equivalent to spectral convolution, where inhibition functions act as filters. This insight enables enhanced representations inspired by spectral graph networks, opening new avenues for future research. Our code is available at https://github.com/LuoFeifan77/Unsupervised-Spectral-Basis-Learning.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2603.18924v1",
+   "title": "Unsupervised Contrastive Learning for Efficient and Robust Spectral Shape Matching",
+   "published": "2026-03-19",
+   "abstract": "Estimating correspondences between pairs of non-rigid deformable 3D shapes remains a significant challenge in computer vision and graphics. While deep functional map methods have become the go-to solution for addressing this problem, they primarily focus on optimizing pointwise and functional maps either individually or jointly, rather than directly enhancing feature representations in the embedding space, which often results in inadequate feature quality and suboptimal matching performance. Furthermore, these approaches heavily rely on traditional functional map techniques, such as time-consuming functional map solvers, which incur substantial computational costs. In this work, we introduce, for the first time, a novel unsupervised contrastive learning-based approach for efficient and robust 3D shape matching. We begin by presenting an unsupervised contrastive learning framework that promotes feature learning by maximizing consistency within positive similarity pairs and minimizing it within negative similarity pairs, thereby improving both the consistency and discriminability of the learned features.We then design a significantly simplified functional map learning architecture that eliminates the need for computationally expensive functional map solvers and multiple auxiliary functional map losses, greatly enhancing computational efficiency. By integrating these two components into a unified two-branch pipeline, our method achieves state-of-the-art performance in both accuracy and efficiency. Extensive experiments demonstrate that our approach is not only computationally efficient but also outperforms current state-of-the-art methods across various challenging benchmarks, including near-isometric, non-isometric, and topologically inconsistent scenarios, even surpassing supervised techniques.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2502.15037v6",
+   "title": "DEFT: Differentiable Branched Discrete Elastic Rods for Modeling Furcated DLOs in Real-Time",
+   "published": "2025-02-20",
+   "abstract": "Autonomous wire-harness assembly requires precise, reliable manipulation of branched cables, whose deformation is difficult to predict. Models for single Deformable Linear Objects (DLOs) do not extend directly to Branched DLOs (BDLOs), whose junctions couple bending, twisting, and stretching across branches. We introduce Differentiable discrete branched Elastic rods for modeling Furcated DLOs in real-Time (DEFT), a framework combining differentiable physics and learning for accurate BDLO dynamics, real-time inference, and dexterous manipulation planning. DEFT introduces momentum-conserving junction constraints to capture cross-branch coupling, supports mid-structure grasping, uses analytical gradients and branch-parallel computation for efficient parameter learning and inference, and incorporates a residual Graph Neural Network (GNN) to reduce long-horizon prediction errors. Experiments on six physical BDLOs with different topologies and materials demonstrate formulation-level generalization: the same formulation and residual-GNN architecture apply without redesign, with physical and learned parameters fitted separately for each BDLO. DEFT outperforms state-of-the-art physics-based and learning-based methods, achieving RMSEs of 0.93-2.14 cm over five-second recursive open-loop predictions and inference above 100 Hz. In real-world planning, DEFT achieves success rates of 36/40 for shape matching, 40/40 for parent-branch insertion, and 16/20 for child-branch insertion. These results demonstrate accurate, efficient, planning-compatible BDLO prediction for autonomous wire-harness manipulation. Project website: https://roahmlab.github.io/DEFT/.",
+   "cats": [
+    "cs.RO",
+    "cs.AI",
+    "cs.GR"
+   ]
+  },
+  {
+   "arxiv": "2501.14641v2",
+   "title": "Towards Scalable Topological Regularizers",
+   "published": "2025-01-24",
+   "abstract": "Latent space matching, which consists of matching distributions of features in latent space, is a crucial component for tasks such as adversarial attacks and defenses, domain adaptation, and generative modelling. Metrics for probability measures, such as Wasserstein and maximum mean discrepancy, are commonly used to quantify the differences between such distributions. However, these are often costly to compute, or do not appropriately take the geometric and topological features of the distributions into consideration. Persistent homology is a tool from topological data analysis which quantifies the multi-scale topological structure of point clouds, and has recently been used as a topological regularizer in learning tasks. However, computation costs preclude larger scale computations, and discontinuities in the gradient lead to unstable training behavior such as in adversarial tasks. We propose the use of principal persistence measures, based on computing the persistent homology of a large number of small subsamples, as a topological regularizer. We provide a parallelized GPU implementation of this regularizer, and prove that gradients are continuous for smooth densities. Furthermore, we demonstrate the efficacy of this regularizer on shape matching, image generation, and semi-supervised learning tasks, opening the door towards a scalable regularizer for topological features.",
+   "cats": [
+    "cs.LG",
+    "math.AT"
+   ]
+  },
+  {
+   "arxiv": "2409.08519v1",
+   "title": "Fast Comparative Analysis of Merge Trees Using Locality Sensitive Hashing",
+   "published": "2024-09-13",
+   "abstract": "Scalar field comparison is a fundamental task in scientific visualization. In topological data analysis, we compare topological descriptors of scalar fields -- such as persistence diagrams and merge trees -- because they provide succinct and robust abstract representations. Several similarity measures for topological descriptors seem to be both asymptotically and practically efficient with polynomial time algorithms, but they do not scale well when handling large-scale, time-varying scientific data and ensembles. In this paper, we propose a new framework to facilitate the comparative analysis of merge trees, inspired by tools from locality sensitive hashing (LSH). LSH hashes similar objects into the same hash buckets with high probability. We propose two new similarity measures for merge trees that can be computed via LSH, using new extensions to Recursive MinHash and subpath signature, respectively. Our similarity measures are extremely efficient to compute and closely resemble the results of existing measures such as merge tree edit distance or geometric interleaving distance. Our experiments demonstrate the utility of our LSH framework in applications such as shape matching, clustering, key event detection, and ensemble summarization.",
+   "cats": [
+    "cs.CG"
+   ]
+  },
+  {
+   "arxiv": "2407.08244v1",
+   "title": "Synchronous Diffusion for Unsupervised Smooth Non-Rigid 3D Shape Matching",
+   "published": "2024-07-11",
+   "abstract": "Most recent unsupervised non-rigid 3D shape matching methods are based on the functional map framework due to its efficiency and superior performance. Nevertheless, respective methods struggle to obtain spatially smooth pointwise correspondences due to the lack of proper regularisation. In this work, inspired by the success of message passing on graphs, we propose a synchronous diffusion process which we use as regularisation to achieve smoothness in non-rigid 3D shape matching problems. The intuition of synchronous diffusion is that diffusing the same input function on two different shapes results in consistent outputs. Using different challenging datasets, we demonstrate that our novel regularisation can substantially improve the state-of-the-art in shape matching, especially in the presence of topological noise.",
+   "cats": [
+    "cs.CV",
+    "cs.CG"
+   ]
+  },
+  {
+   "arxiv": "2402.03904v3",
+   "title": "Deep Frequency-Aware Functional Maps for Robust Shape Matching",
+   "published": "2024-02-06",
+   "abstract": "Deep functional map frameworks are widely employed for 3D shape matching. However, most existing deep functional map methods cannot adaptively capture important frequency information for functional map estimation in specific matching scenarios, i.e., lacking \\textit{frequency awareness}, resulting in poor performance when dealing with large deformable shape matching. To this end, we propose a novel unsupervised learning-based framework called Deep Frequency-Aware Functional Maps, which can gracefully cope with various shape matching scenarios. We first introduce a general constraint called Spectral Filter Operator Preservation to compute desirable functional maps, where the spectral filter operator encodes informative frequency information and can promote frequency awareness for deep functional map frameworks by learning a set of filter functions. Then, we directly utilize the proposed constraint as a loss function to supervise functional maps, pointwise maps, and filter functions simultaneously, where the filter functions are derived from the orthonormal Jacobi basis, and the coefficients of the basis are learnable parameters. Finally, we develop an effective refinement strategy to improve the final pointwise map, which incorporates our constraint and learned filter functions, leading to more robust and accurate correspondences during the inference process. Extensive experimental results on various datasets demonstrate that our approach outperforms the existing state-of-the-art methods, especially in challenging settings like datasets with non-isometric deformation and inconsistent topology.",
+   "cats": [
+    "cs.CV"
+   ]
+  }
+ ],
+ "abs:\"neural deformation field\" AND abs:correspondence": [
+  {
+   "arxiv": "2607.03330v2",
+   "title": "GrowFields: Compositional 4D Neural Fields for Topology-Changing Plant Growth",
+   "published": "2026-07-03",
+   "abstract": "Quantifying plant growth dynamics from sparse longitudinal 3D observations is fundamental for agriculture and plant sciences. Yet, plants pose unique challenges: they undergo intricate non-rigid deformations, exhibit changing topology as new organs emerge, and often lack explicit temporal correspondences between consecutive data acquisitions due to newly formed tissue. Methods designed for general scenes struggle to model topology changes and asynchronous organ growth characteristic of plants. To address these challenges, we introduce GrowFields, a compositional dynamic neural field representation for organ-aware 4D plant growth modelling from point cloud time series. Our approach decomposes a plant into its constituent organs and aligns each organ into its own canonical coordinate frame, isolating intrinsic growth patterns from global plant motion. We then learn a shared continuous neural deformation field that models temporal dynamics across all organs, conditioned on learnable per-organ latent codes capturing organ identity and growth characteristics. The resulting modular yet unified representation naturally accommodates the asynchronous development of plant organs while remaining grounded in the practical setting of organ-level plant tracking. We evaluate GrowFields on growth sequences from four plant species, assessing geometric fitting and organ tracking accuracy using manually annotated leaf-tip trajectories. Results demonstrate consistent improvements in spatial precision, temporal coherence, and morphological fidelity over a range of existing representations.",
+   "cats": [
+    "cs.CV"
+   ]
+  }
+ ],
+ "abs:\"template\" AND abs:\"dense correspondence\" AND abs:3D": [
+  {
+   "arxiv": "2610.22325v1",
+   "title": "Dense4D: Pixel-Level 4D Human Correspondence",
+   "published": "2026-10-15",
+   "abstract": "Reconstructing human motion in 4D requires identifying the same surface points through articulation, deformation and changes in visibility. We introduce Dense4D, to our knowledge the first feed-forward model dedicated to dense 4D correspondence across the body, clothing and hair from a set of monocular RGB images, without a body template. Trained specifically for human geometry, Dense4D jointly processes person-centred crops with known image-to-crop transforms to predict Human Point Maps (HPMs) and depth for each image. An HPM assigns each person pixel the 3D position of its observed surface point at a common reference time. These maps support amodal correspondence: points hidden in the reference image can be localised from observations in other frames. Matching HPM coordinates across crops establishes correspondence without predicting camera poses or large scene displacements; per-image depth then lifts the matches into 3D tracks. Experiments on real people demonstrate substantially higher tracking accuracy and closer agreement with scanned surfaces than the evaluated baselines. Points from different frames assemble into coherent human geometry in the reference pose, providing visible evidence of consistent dense correspondence through articulation and clothing deformation. Additional qualitative results, videos, and an interactive viewer are available at https://alpguler.com/dense4d.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2609.04202v1",
+   "title": "TokenMatch: 3D Mesh Correspondence Transformer with Curvature-Guided Tokenisation",
+   "published": "2026-09-03",
+   "abstract": "While data-driven 3D shape correspondence estimation has recently seen substantial progress, robust matching under partial observations and strong non-isometric deformations remains challenging. Existing learning-based approaches often rely on hand-crafted descriptors or template-based representations, whereas recent generative models over functional maps suffer from high inference cost, limited interpretability, and poor generalisation to partial shapes. In response to these limitations, this paper introduces TokenMatch, a new transformer-based unified model for estimating 3D shape correspondences. Our feed-forward approach trained exclusively on BeCoS, a challenging non-isometric partial-to-partial shape-matching dataset, can generalise to matching full shapes without retraining or fine-tuning. TokenMatch uses self- and cross-attention mechanisms to efficiently learn patch-level and point-level relations as well as dense correspondences between shape pairs. Our core insight is that meshes can be adaptively tokenised into patches using shape curvature guidance, enabling effective learning of shape-specific geometric descriptors for correspondence estimation. We evaluate TokenMatch on standard benchmarks for partial and full shape matching, including CP2P, PSMAL, BeCoS, FAUST, SCAPE, and SHREC'19. Our method achieves consistently high performance, in most cases outperforming existing methods for partial and full shape matching in the mean geodesic error and intersection-over-union metrics, while also running faster at sub-second inference speeds.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2608.22131v1",
+   "title": "TRACE: Artifact-Robust Statistical Shape Modeling from Imperfect Surface Scans - A Case Study in Craniosynostosis 3D Photography",
+   "published": "2026-08-22",
+   "abstract": "Craniosynostosis severity analysis increasingly relies on statistical shape models (SSMs) to quantify cranial morphology, but most existing workflows depend on computed tomography or heavily curated three-dimensional (3D) photographs. Raw clinical 3D photographs provide a radiation-free and repeatable alternative, yet often contain shoulders, hands, hair, clothing, scanner noise, and incomplete boundaries that corrupt correspondences. We introduce the Template-constrained Robust Artifact-aware Correspondence Estimation (TRACE) framework, an unsupervised method for constructing SSMs directly from artifact-contaminated clinical 3D head photographs. TRACE predicts sparse anatomically corresponding head-surface control points from the raw point cloud, refines them through a coarse-to-fine Surface-Aware Deformation cascade, and uses thin-plate spline warping to deform a clean template mesh into a subject-specific head reconstruction. This template-constrained formulation keeps dense correspondences on clinically relevant head anatomy while suppressing non-head artifacts. The correspondence module is decoupled from the point-cloud encoder, enabling the same deformation pipeline to be paired with different backbones, including PointNet, DGCNN, and Point Transformer V3. Across all backbones, TRACE substantially improves surface sampling, topology preservation, and shape-model quality over prior SSM methods, providing a scalable foundation for photograph-based craniosynostosis shape analysis and a framework that may extend to other artifact-contaminated surface scans when an appropriate clean template is available.",
+   "cats": [
+    "cs.CV",
+    "cs.AI"
+   ]
+  },
+  {
+   "arxiv": "2608.07256v1",
+   "title": "CANIS: Generation-Assisted 3D Canonicalization via an Image-Semantic Bridge",
+   "published": "2026-08-07",
+   "abstract": "Canonicalizing 3D object orientation is fundamental to 3D understanding and analysis. Existing approaches often rely on geometric cues, although 3D canonicalization ultimately requires a semantically meaningful orientation. To address this gap, we propose CANIS, a category-agnostic, generation-assisted framework that introduces the semantic orientation prior of a frozen image-to-3D generative model into 3D canonicalization, without canonicalization-specific training or category-specific templates. Specifically, CANIS first renders the input object from candidate viewpoints, selects an informative view, and generates a proxy in a canonical orientation. During generation, a sparse structural latent encoded from the input guides the proxy to preserve the geometry of an object. CANIS then uses the selected image as a semantic bridge between the input and the proxy. Image patches identify semantic regions on the proxy, and depth back-projection locates the corresponding regions on the input. The resulting semantic anchors constrain geometric matching, from which we estimate the rigid transformation that canonicalizes the input. Experiments on synthetic benchmarks validate CANIS and its key components, while qualitative results on partial observations and OmniObject3D suggest its applicability to incomplete and real-world scans. CANIS also improves downstream 3D classification, part segmentation, and dense correspondence under arbitrary rotations. Project page: https://kenkenzaii.github.io/Canis.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2606.29167v2",
+   "title": "Geometry-Grounded Articulation and Test-Time Adaptation for Zero-Shot, Scalable Shape Matching in the Wild",
+   "published": "2026-06-28",
+   "abstract": "Dense correspondence on in-the-wild 3D scans must handle severe non-isometric deformation, partial observations, topology artifacts, irregular discretization, and extreme resolution. Together, these conditions make shape matching both a robustness and scalability problem. Existing methods typically handle only part of this regime and often require expensive spectral or dense feature processing, repeated pairwise optimization, or dataset-specific training. To address the above issues, we present GAMMA, a zero-shot framework based on Geometry-Grounded Articulation. For each scan, GAMMA renders multiple views and uses a pretrained estimator with a category-specific parametric model to produce one template estimate per view. Because these estimates share a fixed vertex ordering, confidence-weighted consensus fuses them into one canonical template and establishes sparse matches across scans. We refine these matches on the input geometry to recover accurate dense correspondences. All core matching steps run at inference time and require neither target-dataset correspondence training nor costly Laplace--Beltrami operator (LBO) computation on the input scans. Each fused template is cached, so additional pair queries reuse the canonicalization. GAMMA obtains average geodesic errors of 2.9 on TOPKIDS and 2.4 on remeshed SMAL, reducing error relative to URSSM by 67% and 60%, respectively. Complementary evaluations report lower aggregate errors than the evaluated baselines on BeCoS-processed partial subsets and demonstrate stable matching accuracy from decimated FAUST meshes to raw scans with 160k--200k vertices. These results demonstrate accurate correspondence across complementary settings and collection-level scalability after per-shape caching.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2605.18039v1",
+   "title": "SGSoft: Learning Fused Semantic-Geometric Features for 3D Shape Correspondence via Template-Guided Soft Signals",
+   "published": "2026-05-18",
+   "abstract": "Learning dense correspondences across deformable 3D shapes remains a long-standing challenge due to structural variability, non-isometric deformation, and inconsistent topology. Existing methods typically trade off generalization, geometric fidelity, and efficiency. We address this by proposing SGSoft, a unified intrinsic pipeline that (i) constructs a geodesic correspondence field on a canonical template, (ii) learns multimodal dense descriptors guided by pretrained semantic priors with this geodesic correspondence field supervision, (iii) retrieves dense correspondences in a single feed-forward pass via nearest-neighbor search in descriptor space. This formulation enables stable and topology-invariant supervision under large pose variation, structural differences, and remeshing. SGSoft achieves state-of-the-art inter-category generalization while offering the best accuracy-efficiency trade-off among prior methods. It also achieves near real-time inference without pre-alignment, pairwise optimization, or post-refinement. Learned descriptors can be transferred effectively to downstream tasks such as semantic segmentation and deformation transfer, establishing a scalable and deployment-ready paradigm for dense 3D correspondence.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2509.05030v2",
+   "title": "LUIVITON: Learned Universal Interoperable VIrtual Try-ON",
+   "published": "2025-09-05",
+   "abstract": "To enable large-scale reuse of real-world 3D assets, where garments and characters rarely share skeletons, templates, or dense correspondences, we present a fully automated virtual try-on system that dresses complex, multi-layer garments onto diverse, arbitrarily posed humanoids. Our key idea is to use SMPL as an intermediate proxy and decompose clothing-to-body transfer into two correspondence tasks with distinct challenges: (1) clothing-to-SMPL (partial-to-complete alignment) and (2) body-to-SMPL (large pose/shape variation and stylization). We address clothing-to-SMPL using a geometry-driven correspondence model, and introduce a diffusion-based body-to-SMPL correspondence approach that leverages multi-view consistent appearance features together with a pretrained 2D foundation model. Using these correspondences, we register SMPL/SMPL+D (Displacement) to the garment and target body and then perform simulator-driven fitting by transferring the garment along a smooth SMPL-to-SMPL+D transition, producing physically plausible draping on the target. Our system handles complex garment topology (including non-manifold meshes) and generalizes to a wide range of humanoid characters (e.g., humans, robots, cartoons, and creatures) while remaining computationally practical. Upon draping, our system also supports fast customization of clothing size. We show that our system can produce high-quality 3D clothing fittings without any human labor, even when 2D clothing sewing patterns are not available. Our project page is: https://cao-cong0.github.io/LUIVITON-Learned-Universal-Interoperable-VIrtual-Try-ON/.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2501.17895v2",
+   "title": "ProcTex: Consistent and Interactive Text-to-texture Synthesis for Part-based Procedural Models",
+   "published": "2025-01-28",
+   "abstract": "Recent advances in generative modeling have driven significant progress in text-guided texture synthesis. However, current methods focus on synthesizing texture for single static 3D object, and struggle to handle entire families of shapes, such as those produced by procedural programs. Applying existing methods naively to each procedural shape is too slow to support exploring different parameter configurations at interactive rates, and also results in inconsistent textures across the procedural shapes. To this end, we introduce ProcTex, the first text-to-texture system designed for part-based procedural models. ProcTex enables consistent and real-time text-guided texture synthesis for families of shapes, which integrates seamlessly with the interactive design flow of procedural modeling. To ensure consistency, our core approach is to synthesize texture for a template shape from the procedural model, followed by a texture transfer stage to apply the texture to other procedural shapes via solving dense correspondence. To ensure interactiveness, we propose a novel correspondence network and show that dense correspondence can be effectively learned by a neural network for procedural models. We also develop several techniques, including a retexturing pipeline to support structural variation from procedural parameters, and part-level UV texture map generation for local appearance editing. Extensive experiments on a diverse set of procedural models validate ProcTex's ability to produce high-quality, visually consistent textures while supporting interactive applications.",
+   "cats": [
+    "cs.GR",
+    "eess.IV"
+   ]
+  },
+  {
+   "arxiv": "2501.05379v2",
+   "title": "Arc2Avatar: Generating Expressive 3D Avatars from a Single Image via ID Guidance",
+   "published": "2025-01-09",
+   "abstract": "Inspired by the effectiveness of 3D Gaussian Splatting (3DGS) in reconstructing detailed 3D scenes within multi-view setups and the emergence of large 2D human foundation models, we introduce Arc2Avatar, the first SDS-based method utilizing a human face foundation model as guidance with just a single image as input. To achieve that, we extend such a model for diverse-view human head generation by fine-tuning on synthetic data and modifying its conditioning. Our avatars maintain a dense correspondence with a human face mesh template, allowing blendshape-based expression generation. This is achieved through a modified 3DGS approach, connectivity regularizers, and a strategic initialization tailored for our task. Additionally, we propose an optional efficient SDS-based correction step to refine the blendshape expressions, enhancing realism and diversity. Experiments demonstrate that Arc2Avatar achieves state-of-the-art realism and identity preservation, effectively addressing color issues by allowing the use of very low guidance, enabled by our strong identity prior and initialization strategy, without compromising detail. Please visit https://arc2avatar.github.io for more resources.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2407.04384v1",
+   "title": "Unsupervised Learning of Category-Level 3D Pose from Object-Centric Videos",
+   "published": "2024-07-05",
+   "abstract": "Category-level 3D pose estimation is a fundamentally important problem in computer vision and robotics, e.g. for embodied agents or to train 3D generative models. However, so far methods that estimate the category-level object pose require either large amounts of human annotations, CAD models or input from RGB-D sensors. In contrast, we tackle the problem of learning to estimate the category-level 3D pose only from casually taken object-centric videos without human supervision. We propose a two-step pipeline: First, we introduce a multi-view alignment procedure that determines canonical camera poses across videos with a novel and robust cyclic distance formulation for geometric and appearance matching using reconstructed coarse meshes and DINOv2 features. In a second step, the canonical poses and reconstructed meshes enable us to train a model for 3D pose estimation from a single image. In particular, our model learns to estimate dense correspondences between images and a prototypical 3D template by predicting, for each pixel in a 2D image, a feature vector of the corresponding vertex in the template mesh. We demonstrate that our method outperforms all baselines at the unsupervised alignment of object-centric videos by a large margin and provides faithful and robust predictions in-the-wild. Our code and data is available at https://github.com/GenIntel/uns-obj-pose3d.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2405.09880v1",
+   "title": "Deep Learning-Based Quasi-Conformal Surface Registration for Partial 3D Faces Applied to Facial Recognition",
+   "published": "2024-05-16",
+   "abstract": "3D face registration is an important process in which a 3D face model is aligned and mapped to a template face. However, the task of 3D face registration becomes particularly challenging when dealing with partial face data, where only limited facial information is available. To address this challenge, this paper presents a novel deep learning-based approach that combines quasi-conformal geometry with deep neural networks for partial face registration. The proposed framework begins with a Landmark Detection Network that utilizes curvature information to detect the presence of facial features and estimate their corresponding coordinates. These facial landmark features serve as essential guidance for the registration process. To establish a dense correspondence between the partial face and the template surface, a registration network based on quasiconformal theories is employed. The registration network establishes a bijective quasiconformal surface mapping aligning corresponding partial faces based on detected landmarks and curvature values. It consists of the Coefficients Prediction Network, which outputs the optimal Beltrami coefficient representing the surface mapping. The Beltrami coefficient quantifies the local geometric distortion of the mapping. By controlling the magnitude of the Beltrami coefficient through a suitable activation function, the bijectivity and geometric distortion of the mapping can be controlled. The Beltrami coefficient is then fed into the Beltrami solver network to reconstruct the corresponding mapping. The surface registration enables the acquisition of corresponding regions and the establishment of point-wise correspondence between different partial faces, facilitating precise shape comparison through the evaluation of point-wise geometric differences at these corresponding regions. Experimental results demonstrate the effectiveness of the proposed method.",
+   "cats": [
+    "cs.CV"
+   ]
+  }
+ ],
+ "abs:\"correspondence\" AND abs:\"evaluation\" AND abs:shape": [
+  {
+   "arxiv": "2610.35619v1",
+   "title": "Indication of Electron Antineutrinos from the Diffuse Supernova Neutrino Background",
+   "published": "2026-10-26",
+   "abstract": "We report an indication of $\\barν_e$ from the diffuse supernova neutrino background (DSNB) based on a spectral fit analysis of a 5003.0-day dataset in Super-Kamiokande. Key improvements over previous searches include enhanced rejection of atmospheric $ν$ backgrounds, updated evaluations of systematic uncertainties, and a refined spectral fitting method. Using a representative DSNB model, the best-fit flux was determined to be $3.6^{+1.6}_{-1.5}~\\mathrm{cm^{-2}\\,s^{-1}}$ for $E_ν>13.3$~MeV, corresponding to a $2.6σ$ tension with a null hypothesis ($99.5\\%$ C.L., one-sided). Similar significances were obtained with signal models of varying spectral shapes.",
+   "cats": [
+    "astro-ph.HE",
+    "hep-ex"
+   ]
+  },
+  {
+   "arxiv": "2610.31892v1",
+   "title": "VisFlow: Interpretable Flow Matching for Visibility Reconstruction, Characterization, and Recognition",
+   "published": "2026-10-22",
+   "abstract": "Methods for learning continuous representations, such as latent manifolds, are fundamental and ubiquitous in modern machine learning. Yet many geometric objects combine continuous shape information with discrete combinatorial structure. This combination presents a fundamental challenge for representation learning because small geometric perturbations can induce abrupt changes in the underlying discrete representation. As a result, the smoothness assumptions that make continuous representations effective no longer hold. Polygons provide a canonical example. Their vertex locations vary continuously, but infinitesimal changes in geometry can dramatically alter the associated visibility graph. Existing methods address the inverse mapping from visibility graphs to polygon geometry using vertex-, triangulation-, or signed-distance-function (SDF)-based representations. Vertex- and triangulation-based approaches construct polygons through explicit geometric operations. However, they are less effective at modeling the relationship between geometry and visibility. SDF-based approaches capture this relationship more naturally. Their intermediate states, however, do not correspond to explicit stages of polygon construction. We present VisFlow, a novel, interpretable flow formulation that combines continuous SDF representations with explicit polygon evolution. We evaluate VisFlow on Visibility Reconstruction and Visibility Characterization. Visibility Reconstruction generates one polygon consistent with a visibility graph (G), while Visibility Characterization characterizes all such polygons. VisFlow maintains 20% more visibility relations on Visibility Reconstruction and improves coverage by 30% on Visibility Characterization compared to state-of-the-art methods.",
+   "cats": [
+    "cs.CG",
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2610.31805v1",
+   "title": "Low-energy collective electronic excitations in a gold monolayer",
+   "published": "2026-10-22",
+   "abstract": "The low-energy plasmonic properties of a free-standing Au(111) monolayer, frequently referred to as goldene, are investigated by time-dependent density functional theory in the random phase approximation. In the evaluation of dielectric and loss functions the first-principle band structure characterized by a single $s-p$ energy band at the Fermi level is taken into account. In this system with apparently simple band structure around the Fermi surface the calculations show the presence, besides the standard two-dimensional (2D) plasmon mode, at even lower energies of three anomalous branches in the momentum-energy region usually assigned to incoherent electron-hole pairs. This is an unexpected result since the electronic system of the gold monolayer is characterized by a single energy band crossing the Fermi level. The dispersion of these anomalous plasmonic branches is strongly anisotropic in-plane and gapless. A general feature is that at small in-plane momentum transfers the modes have a sound-like dispersion in certain momentum directions. We rely the appearance of these anomalous modes to a notable deviation of the Fermi surface of a gold monolayer from a circular shape. As a result of its almost perfect hexagon shape, there is possibility to realize in a {\\it single} electronic energy band a scenario of a multi-component electron system with the carrier groups moving with different Fermi velocities in certain momentum directions. The found modes correspond to the out-of-phase charge oscillations of the carriers at different sides of the hexagonal Fermi surface. Hence our work presents evidence how in a metal system with apparently simple band structure around the Fermi level its shape can result in conversion of single-particle charge excitations into collective charge excitations.",
+   "cats": [
+    "cond-mat.other",
+    "cond-mat.mtrl-sci"
+   ]
+  },
+  {
+   "arxiv": "2610.30568v1",
+   "title": "Beyond Better Ideas: How Human-AI Collaboration Shapes Scientific Ideas and Human Perceptions",
+   "published": "2026-10-22",
+   "abstract": "As AI increasingly becomes a collaborator in scientific research, its impact may extend beyond improving ideas to reshaping how they are evaluated, attributed, and perceived by humans. Yet existing research has largely examined these dimensions in isolation. We present a unified empirical study of Human-AI scientific ideation, investigating two complementary perspectives: i) how AI collaboration shapes scientific ideas and their evaluation, and ii) how firsthand collaboration reshapes human perceptions of AI. Through a shared experimental setting involving Human-AI and Human-Human research teams, human and LLM evaluators, collaboration-provenance analysis, and participant surveys, we uncover several counterintuitive findings. First, AI collaboration shows no significant advantage in human-evaluated idea quality, while iterative revision consistently improves quality. Second, AI judges can approximate human scores yet disagree on idea rankings; notably, an AI judge favors AI-assisted proposals without a corresponding advantage in human evaluations. Third, collaboration provenance remains only partially detectable, revealing substantial overlap between Human-AI and Human-Human scientific outputs. Finally, firsthand AI collaboration is associated with greater perceived usefulness but smaller efficiency gains than expected, suggesting a nuanced recalibration of human expectations. Overall, our findings challenge the notion that AI's value in scientific ideation lies primarily in producing better ideas, revealing instead its broader influence on scientific creation, evaluation, attribution, and human perceptions.",
+   "cats": [
+    "cs.HC"
+   ]
+  },
+  {
+   "arxiv": "2610.27375v1",
+   "title": "Shaped SAEs: Expanding the Toolkit for Mechanistic Interpretability",
+   "published": "2026-10-19",
+   "abstract": "Sparse autoencoders (SAEs) seek to decompose the dense activations of large language models (LLMs) into sparse, potentially interpretable features using a learned overcomplete dictionary. In this work, we ask whether it is possible to enhance the semantic selectivity of the learned dictionary atoms by linearly \\emph{shaping} the dense activations prior to learning an SAE. We explore rank-reducing transformations based on the recently introduced J-space corresponding to the averaged Jacobian from the current layer to the LLM output, projecting activations onto the ``live'' subspace spanned by eigenmodes of the Jacobian with larger singular values (which we expect to be more semantically relevant). We also introduce a new approach for training SAEs in which (a)~an affine shaping transformation is learned along with the dictionary atoms, (b)~the atom selection mechanism is based on the TopK projections along the one-dimensional subspace spanned by the atoms, and (c)~reconstruction is carried out using the same atoms. We call this approach a Matched Filter SAE (MF-SAE) based on analogies with communication theory. The promise of shaping is demonstrated via evaluations against dense activations and state-of-the-art SAEs on benchmarks including SAEBench and SAE Probes.",
+   "cats": [
+    "cs.LG"
+   ]
+  },
+  {
+   "arxiv": "2610.25879v1",
+   "title": "Cling: Supporting Cross-Page Coordination with Human-Directed, In-Situ, and Small-Step Automation",
+   "published": "2026-10-19",
+   "abstract": "Web-based information work spans independently developed pages, with goals and coordination needs often emerging through browsing. Manual coordination requires repeated low-level actions, yet explicitly specifying operations for automation can interrupt engagement with information that shapes users' next steps. Our approach constructs reusable, schema-based page representations and identifies coordination actions through correspondences across schemas. We instantiate this approach in Cling, which surfaces coordination opportunities in situ for users to select, configure, and execute incrementally while directing the broader task. A technical evaluation demonstrates accurate identification of useful opportunities across diverse domains. A 12-participant study found that Cling reduced task durations by more than half compared with both manual interaction and an end-to-end AI agent, while requiring 61% fewer clicks and 80% fewer tab switches than manual interaction. Its small-step automation supported control and verification as actions unfolded, while accommodating intent as it emerged and evolved through information encountered on the page.",
+   "cats": [
+    "cs.HC"
+   ]
+  },
+  {
+   "arxiv": "2610.25126v1",
+   "title": "Trackable Skill Library Lifecycle Management for Agentic Reinforcement Learning",
+   "published": "2026-10-18",
+   "abstract": "Skill-augmented agentic RL has emerged as an effective approach to improving LLM agents on long-horizon tasks. Despite this progress, individual skills may follow distinct trajectories as the policy evolves, with some becoming redundant after the model internalizes their capabilities, others remaining valuable as external scaffolding, and still others turning harmful. However, existing skill library systems fail to identify each skill's true contribution due to free-riding among co-retrieved skills, difficulty confounding across tasks, and the absence of skill-specific counterfactual evidence, which prevents reliable skill lifecycle management. We propose TrackRL, an agentic RL framework where skill tracking drives skill library full lifecycle management. Specifically, within each GRPO group, we turn grouped sampling into online randomized controlled experiments. Independent random injection and within-group contrasts on the same task isolate each skill's true contribution, and reliability-weighted aggregation accumulates evidence across groups. As evidence accumulates, we continuously track skill utility, which measures the skill's causal contribution as external scaffolding, and model mastery, which reflects how far the corresponding capability has been internalized. Along this line, we formulate skill lifecycle management as an evidence-gated state-transition process that governs each skill from generation and admission through protected incubation to retention, retirement, or removal, while a soft capacity bound controls library growth. Experiments show that TrackRL outperforms recent skill-augmented RL baselines in both library-assisted and skill-free evaluation, with further analyses revealing how skill value shifts during policy learning and how evidence-driven state transitions shape skill library evolution. Our code is available at https://github.com/xizhu1022/TrackRL.",
+   "cats": [
+    "cs.LG",
+    "cs.CL"
+   ]
+  },
+  {
+   "arxiv": "2610.23659v1",
+   "title": "FlexPart: Text-Controlled Semantics-Aware 3D Part Segmentation at Flexible Granularity",
+   "published": "2026-10-16",
+   "abstract": "A 3D asset admits multiple valid part decompositions, while semantics-aware segmentation should reflect both the desired granularity and the parts a user wants to extract. Ideally, a practical segmentation model should strive for a simple principle: what you ask for is what you get. However, realizing this goal is hindered by two core obstacles: the lack of multi-granularity training data and the absence of a holistic control mechanism. We propose FLEXPART, a unified framework for text-controlled 3D mesh segmentation. To establish flexible control, we introduce a holistic control prompt comprising semantic part names with location and shape clauses. To support this mechanism, we utilize an automated Vision-Language Model (VLM) pipeline to construct a large-scale dataset of multi-granularity partitions and their corresponding prompts. Driven by this data, FLEXPART generates a view-independent part-identity field in native 3D space, directly assigning discrete part IDs to mesh faces. To compel the model to respect semantic conditions rather than rely on geometric priors, we train the model using randomized background dropping. Furthermore, an inference-time VLM planner can automatically complete descriptive clauses from 2D renderings, allowing users to simply name the desired parts in ordinary words. FLEXPART with planner-completed prompts outperforms the strongest evaluated baseline by 15% in mIoU, even when that baseline receives ground-truth guidance. On our held-out FLEXPARTBENCH, FLEXPART leads at each granularity and improves average mIoU by 22% over the strongest baseline. With only the requested part names supplied by the user, it also improves IoU by 35% over the strongest click-driven baseline on selective segmentation.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2610.23508v1",
+   "title": "Adaptive conformal prediction on the Grassmannian",
+   "published": "2026-10-16",
+   "abstract": "We introduce a conformal prediction framework for regression with Grassmann-valued responses. The proposed method constructs prediction regions in the form of metric balls directly on the Grassmann manifold, using basis-invariant geometric distances as non-conformity measures and scaling the corresponding non-conformity scores through a learned prediction difficulty estimator. This yields locally adaptive, input-dependent prediction regions that respect the underlying manifold geometry, while retaining the finite-sample marginal coverage guarantee of split conformal prediction under exchangeability. We evaluate several Grassmannian distance metrics and compare their prediction-region efficiency on synthetic benchmarks and an airfoil inverse shape-design problem. The results highlight the advantages of geometry-aware non-conformity scores, while local adaptation improves empirical coverage uniformity across prediction difficulty levels and, in strongly heteroscedastic settings, can substantially reduce prediction-region size while maintaining the target coverage.",
+   "cats": [
+    "stat.ML",
+    "cs.LG"
+   ]
+  },
+  {
+   "arxiv": "2610.20928v1",
+   "title": "Range Ambiguity Identification and Elimination by Leveraging Temporal Broadening Effect for THz Sensing",
+   "published": "2026-10-14",
+   "abstract": "High pulse repetition frequency (PRF) operation improves Doppler unambiguous sensing but reduces the maximum unambiguous range of a terahertz (THz) pulsed radar. Echoes from targets beyond this range can be incorrectly associated with subsequent transmitted pulses, causing the targets to appear at shorter ranges. This paper proposes a receiver-side framework that exploits the THz-specific temporal broadening effect as a distance-dependent signature to resolve range ambiguity. For each detected echo, the receiver applies broadening-matched filtering with references corresponding to candidate target ranges. The filter outputs are combined across pulses with Doppler compensation, and the largest normalised combined response identifies the ambiguity order needed to recover the true target range. The selected reference is then reused to reduce mismatch loss in subsequent range and velocity estimation. Simulations under known atmospheric conditions, with targets occupying distinct apparent-delay bins, demonstrate reliable range recovery beyond the conventional unambiguous interval. Range estimation errors conditioned on correct ambiguity-order identification, together with the reported velocity estimation errors, approach their corresponding derived Cramér--Rao bounds. The method preserves a fixed transmitted pulse shape, PRF, and sampling rate, at the expense of a higher signal-to-clutter-plus-noise ratio requirement for ambiguity identification relative to the evaluated diversity-based techniques.",
+   "cats": [
+    "eess.SP"
+   ]
+  },
+  {
+   "arxiv": "2610.20158v1",
+   "title": "Dataset-Level Regularization for Joint-Embedding Self-Supervised Learning",
+   "published": "2026-10-14",
+   "abstract": "Self-supervised joint embedding learning aligns representations of augmented views while regularizing their distribution to prevent collapse. Regularization aims to shape the overall representation distribution, but most joint embedding methods restrict its computation to the active minibatch. We propose out-of-batch regularization, which maintains a dataset-level state in CPU memory and uses globally constructed per-instance targets during minibatch training. Evaluated on natural images and biomedical datasets, these anchors approximate the full-dataset regularization gradient more faithfully than conventional minibatch estimation at small batch sizes. Applications to contrastive (SimCLR) and non-contrastive (SIGReg) approaches show consistent improvement over the corresponding in-batch objectives for image classification, minority-class performance under controlled imbalance, instance retrieval, and continued self-supervised pretraining, with the largest gains at small batch sizes. These results suggest that dataset-level regularization can be decoupled from minibatch optimization, making batch size an optimization choice that does not affect the geometry of the regularizer.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2610.18658v1",
+   "title": "BridgeTwist: Twisting Schrödinger Bridges for Training-Free Conditional Sampling",
+   "published": "2026-10-13",
+   "abstract": "Generative models are often required to serve many downstream conditional tasks. In the training-free setting, a pretrained unconditional model is reused as a prior and combined with a task-specific likelihood to sample from the corresponding posterior. While such training-free samplers have been developed for diffusion and flow models, their counterpart for Schrödinger bridge (SB) models remains unexplored, despite the growing appeal of SBs as flexible stochastic transport models between general source and target distributions. We propose BridgeTwist, a training-free conditional sampler for pretrained SB generative models, formulated as a tempered twisted sequential Monte Carlo scheme. Its twist is a closed-form plug-in surrogate, obtained by combining the velocity and score fields exposed by SB pretraining into an endpoint predictor and evaluating the likelihood there. Since this surrogate is less reliable near the source, we temper the twist with a time-varying exponent, downweighting its influence at early steps. We further introduce a bridge-shaped inference-time diffusion schedule that concentrates the proposal noise in the interior of the path. Telescoping importance weights then cancel all intermediate twist factors, yielding an asymptotically exact sampler for the posterior. Empirically, BridgeTwist outperforms training-free baselines on class-conditional and text-prompted image generation, and is competitive with specialized inverse problem solvers on inpainting, deblurring, and super-resolution.",
+   "cats": [
+    "cs.LG",
+    "stat.ML"
+   ]
+  },
+  {
+   "arxiv": "2610.18305v1",
+   "title": "AffectWorld: Benchmarking Emotion-Driven Future World Prediction",
+   "published": "2026-10-13",
+   "abstract": "The world encompasses both physical environments and human actors. Predicting its evolution requires understanding both physical laws and how emotions shape human actions. However, existing world model benchmarks primarily assess physical plausibility and perceptual quality, leaving emotion-driven world evolution largely untested.We introduce AffectWorld, a benchmark that evaluates the chain Emotion-Action-World State through three tasks: World-State Consistency, Emotion-Action Consistency, and Causal Consistency. It comprises 1,498 everyday video samples annotated with plausible emotions, action tendencies, and atomic world-state constraints. A counterfactual subset of 233 samples tests whether changing an agent's emotion under fixed scene and event conditions yields corresponding changes in actions and consequences. We define eight metrics across the three tasks and an additional counterfactual metric, combining automatic visual assessment with human-calibrated VLM/LLM judgments. Evaluations of five SoTA world models (e.g., Cosmos3) required world-state change scores of 0.100-0.280 and counterfactual emotion sensitivity scores of 0.027-0.070 on a [0, 1] scale. These results reveal substantial gaps in generating the consequences of emotion-driven actions and adapting future predictions to emotional interventions. AffectWorld provides a testbed for advancing world models that capture how emotions shape future physical and social states.",
+   "cats": [
+    "cs.CV",
+    "cs.AI"
+   ]
+  },
+  {
+   "arxiv": "2610.15287v1",
+   "title": "ASM-6D: Fast Certified Pose-Shape Inference with Complete Correspondence Flow Maps",
+   "published": "2026-10-11",
+   "abstract": "Category-level 6D pose and shape estimation requires recovering an object's pose and geometry from partial observations without an exact instance model. We present ASM-6D, which couples generative complete-geometry prediction with explicit category-level pose-shape inference through shared correspondences. Given an RGB-D image, ASM-6D generates alternative complete 3D correspondence hypotheses whose point identities are shared with a category-level Active Shape Model (ASM), including occluded points. Each hypothesis is fitted directly for rotation, translation, metric scale, and instance shape without a separate correspondence-assignment stage. We analytically eliminate translation and shape coefficients, reducing fitting to a nine-variable scaled-rotation optimization problem that enables efficient batched evaluation of multiple hypotheses in real time. ASM-6D achieves state-of-the-art performance on ROPE and HouseCat6D benchmarks. Ablations demonstrate the importance of generative correspondence prediction and active shape variation. The representation also supports shape completion, shape-dependent pose ambiguity, tracking, and robotic grasping at 6-38 Hz, depending on the inference budget.",
+   "cats": [
+    "cs.CV",
+    "cs.RO"
+   ]
+  },
+  {
+   "arxiv": "2610.12403v1",
+   "title": "ViSkill: Reinforcing VLM Agents with Evolving Visual-Native Skills",
+   "published": "2026-10-08",
+   "abstract": "Skill-augmented agents improve sample efficiency by distilling successful trajectories into reusable strategies. Yet most existing approaches remain text-centric, linearizing spatial layouts and action-state correspondences into language that loses critical geometric structure. Recent efforts have begun incorporating visual evidence, but construct and update skills separately from policy optimization, leaving their mutual improvement underexplored. We propose ViSkill, a visual-native skill learning framework that encodes successful interactions as composite visual skill cards directly accessible to VLM agents. Retrieved skills guide both inference and reward shaping, while successful trajectories are distilled back into the library, forming a closed feedback loop in which skill accumulation and policy improvement reinforce each other. An optional cold-start mechanism further accelerates early-stage learning. Evaluated on Sokoban, FrozenLake, and PrimitiveSkill, ViSkill achieves an overall success rate of 0.89, rising to 0.91 with cold-start initialization, outperforming all evaluated proprietary and open-source baselines while converging faster than standard PPO. Our code is available at https://github.com/ZJU-REAL/ViSkill.",
+   "cats": [
+    "cs.CV",
+    "cs.CL"
+   ]
+  },
+  {
+   "arxiv": "2610.12069v2",
+   "title": "LIVIN: Benchmarking Spatial and Embodied Intelligence in Digital Twins of Lived-In Homes",
+   "published": "2026-10-08",
+   "abstract": "Realistic household simulation must capture not only diverse environments but also the lived-in object arrangements and spatial constraints that shape robot motion and interaction. Existing resources often trade off scale, real-world correspondence, and interaction readiness, leaving a gap in faithful, interactive replicas of how real homes are actually arranged. To this end, we introduce LIVIN, a benchmark for spatial and embodied intelligence built on digital twins of 30 diverse lived-in homes. These replicas preserve observed room layouts, furniture configurations, and everyday belongings. To construct them, we design a human-in-the-loop workflow comprising instance recognition, architectural reconstruction, and object generation and placement, with intermediate results reviewed and corrected by humans against the source observations at each stage. We evaluate four tasks in LIVIN: 3D detection, 3D reconstruction, navigation, and loco-manipulation. Our evaluations show that current methods remain challenged by the dense object arrangements, occlusions, limited free space, and constrained interaction regions found in realistic lived-in homes. We hope LIVIN will help advance embodied AI in real-world homes, from spatial understanding to robotic interaction, and ultimately bring embodied intelligence into everyday home environments.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2610.11685v2",
+   "title": "HI3D 3.0 (Twinkle3D): Object-specific 3D Asset Generation with High Resolution",
+   "published": "2026-10-08",
+   "abstract": "Image-to-3D generation has become increasingly capable of producing objects that closely resemble the input image, and an outstanding challenge is to reproduce the depicted object itself, including the specific geometry that defines it. Inscriptions, brand marks, and repeated structures are frequently distorted or lost, despite being critical to object identity. We present Hi3D 3.0, an image-to-3D generation system targeting object-specific fidelity, with Twinkle3D as its geometry model for generating watertight triangle meshes at $2048^{3}$ resolution. Twinkle3D advances high-fidelity geometry generation along four dimensions. First, while O-Voxel/FaithC offers high representational precision, it often suffers from poor surface quality and non-watertight geometry. We address both issues while retaining its $2048^{3}$-level precision. Second, we scale diffusion generation to sequences of up to 300K geometric tokens through a redesigned DiT architecture and large-scale distributed training optimizations, reducing training time per step from approximately ten minutes to ten seconds. Third, subsequent refinement cannot fully compensate for errors introduced during initial generation; we therefore strengthen both global shape and local detail in the initial generation stage, and the resulting single-stage model surpasses prior two-stage pipelines with $512^{3}$ refinement. Finally, we introduce a fine-grained image-3D cross-modal interaction mechanism that strengthens correspondence between visual evidence and geometric tokens, improving the recovery of object-specific structures. We evaluate geometric fidelity using alignment metrics derived from silhouettes and normal fields. Hi3D 3.0 outperforms four commercial systems across all reported metrics, recovering 82.1% of inscribed characters at 98.2% precision, compared with 21.7% recall for the strongest competitor.",
+   "cats": [
+    "cs.CV",
+    "cs.AI"
+   ]
+  },
+  {
+   "arxiv": "2610.06510v1",
+   "title": "MarvisNav: Making Memory Visible on Route Choices for Zero-Shot Object Navigation",
+   "published": "2026-10-05",
+   "abstract": "When searching for an object, people choose their next move by considering both likely target locations and places already explored. The current view can cue place-associated memories, bringing target relevance and prior exploration into the same spatial context. In many zero-shot object navigation (ZSON) methods, however, vision-language models (VLMs) infer promising search areas from egocentric images, while exploration history is represented separately, e.g., as text or maps. This separation either requires an additional fusion step or leaves the correspondence between memory and route choices implicit for the VLM to recover. We instead make exploration memory directly visible on visual route choices. We propose MarvisNav, a ZSON framework that maintains a topological graph and projects candidate nodes together with their exploration states onto egocentric views as memory-bearing visual route choices. These states capture local exploration progress beyond binary visitation. By binding exploration state directly to each visual candidate, MarvisNav enables the VLM to jointly evaluate target relevance and exploration state without a separate post-hoc fusion or reranking stage. Without policy training, MarvisNav achieves state-of-the-art performance on HM3D (81.2% SR and 42.5% SPL), while remaining competitive on MP3D. It also outperforms representative VLM-based methods with far fewer VLM calls (e.g., 7.5% of WMNav). Real-robot experiments across diverse scenes further validate its practical deployability. Beyond MarvisNav, our study shows that memory representation shapes VLM decisions and ZSON performance, highlighting that effective memory use depends not only on its availability, but also on how it is represented. Code and project page will be available at \\url{https://wangjincheng1998.github.io/MarvisNav/}.",
+   "cats": [
+    "cs.RO"
+   ]
+  },
+  {
+   "arxiv": "2610.05301v1",
+   "title": "From Access to Realized Affordances: University Students' Generative AI Engagement across Linguistic and Sociotechnical Contexts",
+   "published": "2026-10-04",
+   "abstract": "Generative artificial intelligence (GenAI) is increasingly embedded in university students' academic work, yet student engagement is often examined through adoption, frequency of use, or general perceptions, with less attention to how it is shaped by linguistic and sociotechnical conditions. This comparative qualitative study examines how university students access, incorporate, and evaluate GenAI across three contrasting higher education settings in China, Japan, and Mongolia. Semi-structured interviews were conducted with 42 undergraduates from one university in each setting, and the data were analyzed through qualitative interpretation supported by co-occurrence network and correspondence analyses using KH Coder. Across the three samples, GenAI was incorporated into academic practices spanning exploration, production, and refinement. However, access pathways differed across the three contexts. Participants in China navigated between domestic and global GenAIs, those in Japan predominantly used global GenAIs through Japanese, and those in Mongolia more frequently shifted to English when Mongolian outputs were perceived as less satisfactory. During their use of GenAI, students evaluated its accuracy, privacy implications, potential for dependence, and effects on critical thinking. The findings suggest that technological access alone does not ensure equivalent educational usability across linguistic and sociotechnical contexts. Building on the empirical findings and the analytical perspectives, an empirically informed integrative framework is developed in which student GenAI engagement is understood as situated, mediated, enacted, and evaluated. The framework conceptualizes realized affordances as educational possibilities that become practically usable through the interplay of sociotechnical conditions, linguistic resources, academic practices, and evaluative judgments.",
+   "cats": [
+    "cs.CY"
+   ]
+  },
+  {
+   "arxiv": "2610.04119v1",
+   "title": "Copying Before Suppression: What Drives a Below-Chance Dip During Language Model Training?",
+   "published": "2026-10-02",
+   "abstract": "Mechanistic interpretability usually studies fully trained models, yet the computations that drive a behaviour can change while the model is still learning the task. On the Indirect Object Identification task, a model should continue with the name mentioned once rather than the name mentioned twice. Pythia models pass through an early training window in which they prefer the repeated name, so accuracy in a choice between the two names falls below one half while language-model loss on a fixed text sample keeps decreasing across the same window. The window reflects a temporary imbalance between two computations. We identify one cause of the wrong preference by selecting a set of attention heads that write the repeated name, on prompts separate from those used for causal evaluation, keeping that selection fixed, and then replacing each head's final-token output with its average output on a separate set of non-repeated-name prompts. This improves the correct-minus-repeated logit difference in a separately trained 160M model and in the official 160M, 410M, and 1B models. At 160M, the head that lowers the repeated name in the mature model shows little of its mature behaviour at this point. It directs less than one percent of its attention to the repeated mention, and its output makes almost no direct contribution to lowering that name's logit. Both properties grow over the interval in which behaviour recovers. Across the 160M, 410M, and 1B models, transplanting the corresponding head's mature parameters into the early checkpoint recovers 35 to 68 percent of the total improvement in the correct-minus-repeated logit difference seen by the end of training. Related early-to-late reversals appear at further Pythia scales, in two independently trained GPT-2 models, and in OLMo. A mature circuit can therefore conceal a transient causal configuration that shaped behaviour earlier in training.",
+   "cats": [
+    "cs.CL"
+   ]
+  },
+  {
+   "arxiv": "2610.02755v1",
+   "title": "FiberGeoText: A Vision-Language Model for Population- Level Organization of Superficial White Matter",
+   "published": "2026-10-02",
+   "abstract": "The superficial white matter (SWM), a critical brain region for cognition across the lifespan and brain disease, contains abundant short-range association fibers whose organization remains incompletely characterized, in part because the short trajectories and highly variable cortical folding make correspondence across individuals challenging. Anatomically corresponding connections may vary in spatial location across individuals and therefore may not be adequately defined by geometric proximity alone. We introduce FiberGeoText (FGT), a vision-language model (VLM) for organizing short-range superficial white matter (SWM) streamlines reconstructed from ultra-high-resolution diffusion MRI into population-level clusters. FGT jointly represents three complementary properties of each streamline: its three-dimensional trajectory, its cortical anatomical context, and its shape. Cortical endpoint information from multiple parcellation schemes is expressed as text and encoded using a pretrained large language model (LLM), enabling heterogeneous anatomical descriptions to contribute to a common continuous representation. We evaluated FGT on acquired submillimeter 0.76 mm diffusion MRI data. Compared with state-of-the-art (SOTA) methods, FGT produced substantially greater cortical parcel coherence, within-cluster shape consistency, cluster-size consistency, and cross-subject correspondence. The trained model also generalizes well to unseen subjects with an average of 96.7% of the 5,000 learned clusters recovered, and high consistency of cluster structure between training and testing data. Together, these findings demonstrate that integrating geometric, anatomical, and shape information by learning multimodal deep embeddings with a VLM model enables robust learning of population-consistent SWM organization despite interindividual anatomical variability.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2609.38030v1",
+   "title": "Diagrammatic construction of GKZ systems for polygonal functions",
+   "published": "2026-09-29",
+   "abstract": "We investigate the recently introduced polygonal hypergeometric functions [arXiv:2502.12127, arXiv:2507.01904], which are conjectured to evaluate multipoint parametric one-loop conformal integrals in arbitrary dimensions. These functions can be systematically constructed using a diagrammatic algorithm that operates in terms of simple planar shapes. Given an $n$-point polygonal power series, we formulate the corresponding GKZ hypergeometric system, which admits an explicit diagrammatic interpretation. In particular, the transianic matrix, which encodes all the relevant diagrammatic data, determines the corresponding toric matrix along with a basis of the lattice of relations, thereby singling out a finite subsystem of $n(n-3)/2$ toric equations. This finite subsystem consists of second- and third-order equations, whereas the full toric family also includes higher-order ones. We illustrate the general procedure with several prominent examples of polygonal functions, including the fourth Appell and the Srivastava--Daoust functions.",
+   "cats": [
+    "hep-th",
+    "math-ph",
+    "math.AG",
+    "math.AP",
+    "nlin.SI"
+   ]
+  },
+  {
+   "arxiv": "2609.37986v1",
+   "title": "ORMA: Optimization-based Monocular 4D Reconstruction of Articulated Animals",
+   "published": "2026-09-29",
+   "abstract": "Recovering articulated 4D representations of animals from monocular videos remains challenging due to the large diversity of quadruped morphologies and lack of animal 4D supervision data. Existing learning-based reconstruction methods operate on individual images and rely on synthetic or model-fitted 3D supervision, which inherits the constraints of strong parametric priors and limits generalization to out-of-distribution species. When applied to out-of-distribution animals, they often recover a plausible pose while producing inaccurate geometry because the underlying shape model cannot faithfully represent the observed instance. We present ORMA, a training-free reconstruction framework that decouples articulation from shape, using the predicted pose as reference for optimization while leveraging generative 3D priors for accurate shape reconstruction. Given a reference image, we reconstruct the animal geometry and register it to the parametric model SMAL+, yielding an articulated shape adapted to the observed instance. We then combine per-frame articulated pose estimates with globally consistent camera poses to recover animal motion in a shared world coordinate frame, and further refine the reconstruction using self-supervised DINO correspondences and temporal consistency. To enable quantitative evaluation, we introduce PAW4D, a synthetic multi-species benchmark with ground-truth 3D geometry and camera motion. Experiments on PAW4D, PFERD, and challenging in-the-wild videos demonstrate that ORMA improves reconstruction accuracy while recovering globally consistend animal motion across diverse quadruped species.",
+   "cats": [
+    "cs.CV"
+   ]
+  },
+  {
+   "arxiv": "2609.31302v2",
+   "title": "KCensus: Synthesizing Latency-Optimal Consensus Fast Paths (Extended Version)",
+   "published": "2026-09-25",
+   "abstract": "Strongly consistent geo-replication often relies on fast paths to reduce latency in the common case of no failures or contention. Existing fast-path schemes, however, are ad hoc and restrictive: each corresponds to a point in a broad design space shaped by network topology, workload, and latency objective, so no single scheme works best across settings. This paper looks at fast-path schemes from a new perspective, as mechanisms that spread knowledge about proposals. With this view, we identify a fundamental condition on the spread of knowledge for a fast-path scheme to work. We then introduce KCensus, a framework that turns this condition into an optimization problem, synthesizing new fast-path schemes that are optimal for a given setting. We use KCensus to build a geo-replicated key-value store and evaluate it across AWS regions. Our system outperforms competing protocols, with up to 16% lower average latency.",
+   "cats": [
+    "cs.DC"
+   ]
+  },
+  {
+   "arxiv": "2609.31112v2",
+   "title": "DualManip: Agentic Dynamic Manipulation via Dual-Path Semantic Reasoning and Geometric Adaptation",
+   "published": "2026-09-25",
+   "abstract": "Vision-language models (VLMs) enable open-vocabulary reasoning for robot manipulation, but their high inference latency limits responsiveness in dynamic scenes. Many scene changes, however, alter object geometry without invalidating task intent. We present DualManip, a dual-path framework that decouples infrequent semantic reasoning from responsive geometric adaptation. The semantic path decomposes the task and grounds task-relevant interactions, followed by a constraint-solving module for pose optimization. During execution, the geometric path continuously updates template-to-observation correspondences from live RGB-D observations via a shape-adaptive network. These correspondences transfer task-relevant grasp contacts across observations, enabling online grasp reconstruction under object motion and non-rigid deformation. The Information Interaction Module bridges the two paths by initializing task-relevant grasps from semantic grounding, validating geometric updates, and triggering semantic replanning upon update failures. Real-world evaluation spans six manipulation tasks covering non-rigid deformation, articulated reconfiguration, rigid motion, and high-precision assembly across three settings: static, single-change, and continuous dynamic. DualManip demonstrates superior manipulation robustness, particularly under continuous scene changes, while achieving geometric adaptation approximately 46$\\times$ faster than agentic verification and semantic replanning. Our project page: https://lichengxi1.github.io/Dualmanip.",
+   "cats": [
+    "cs.RO"
+   ]
+  },
+  {
+   "arxiv": "2609.31024v1",
+   "title": "Synth-JEPA: Joint Embedding Prediction for Renderer-Free Synthesizer Parameter Search",
+   "published": "2026-09-25",
+   "abstract": "Sound matching can be formulated as optimizing synthesizer parameters against an audio-domain objective. However, objectives derived from generic audio representations are often difficult to optimize, while direct search requires rendering every candidate. We introduce Synth-JEPA, which learns mutually predictive audio and parameter representations from paired synthesizer data. At inference, candidate parameters are scored directly in this learned space, yielding a renderer-free objective whose audio geometry is shaped by parameter correspondences rather than generic audio similarity. We evaluate Synth-JEPA on Surge XT using held-out synthesizer sounds and out-of-domain NSynth and FSD50K targets, against inverse models, direct search, and learned proxy objectives. Synth-JEPA outperforms all baselines in-domain and remains competitive out-of-domain. Its matching quality continues to improve with additional test-time search, allowing compute to be traded for match quality. In pairwise listening tests, listeners preferred Synth-JEPA in 85% of trials overall. Together, these results show that an audio representation with a parameter-induced geometry allows synthesizer sound matching to be approached as an effective renderer-free search problem.",
+   "cats": [
+    "cs.SD",
+    "cs.LG",
+    "eess.AS"
+   ]
+  },
+  {
+   "arxiv": "2609.28818v1",
+   "title": "KeyGen: Unsupervised Keypoint based Object-Centric Representations for Category-Level Policy Generalization",
+   "published": "2026-09-23",
+   "abstract": "Generalization in robotic manipulation requires policies to perform tasks across diverse unseen object instances that vary in shape, size, and pose. However, conventional behavior cloning (BC) methods often overfit to instance-specific geometry and appearance, limiting transfer to novel objects. We introduce KeyGen, a framework that learns canonicalized semantic 3D keypoints from point clouds and uses them as structured object-centric representations for policy learning. A visuomotor diffusion policy conditions on these keypoints together with object-centric geometry to predict full manipulation trajectories, enabling consistent geometric correspondence across object instances. To evaluate category-level generalization, we construct a photorealistic simulation benchmark with three manipulation tasks and a planning-driven data generation pipeline that produces expert trajectories across diverse object instances. Experiments show that KeyGen significantly outperforms prior methods on both seen and unseen objects under pose variation, scales effectively with additional demonstrations per object, maintains robustness to object rescaling, and achieves strong performance in both simulation and real-world manipulation.",
+   "cats": [
+    "cs.RO",
+    "cs.AI"
+   ]
+  },
+  {
+   "arxiv": "2609.24955v1",
+   "title": "Generative Tutorial: Towards Live Contextualized Visual Instructions for Physical Tasks",
+   "published": "2026-09-21",
+   "abstract": "Visual instructions for physical tasks are typically authored in one context and followed in another, requiring users to translate demonstrated tools, materials, and spatial relationships into their own environment. We introduce Generative Tutorial, a conceptual framework for live visual instruction that depicts intended outcomes and actions within the user's environment and task flow. A formative evaluation of state-of-the-art image and video generation identifies failures and potential benefits across 15 physical tasks. Drawing on these findings, we build an augmented-reality prototype system that proactively generates goal images and demonstration videos using observed workspace context and predicted visual outcomes of preceding actions. A 24-participant lab study found higher task performance quality, greater perceived workspace correspondence, and shorter step-confirmation intervals with the system than with pre-authored guidance. Qualitative findings highlighted how contextual resemblance shapes trust, how generation errors affect interpretation, and how guidance delivery should adapt to users' needs, informing future designs.",
+   "cats": [
+    "cs.HC",
+    "cs.AI"
+   ]
+  },
+  {
+   "arxiv": "2609.24487v1",
+   "title": "AgentSTAR: Agentic Shape Tracking and Reconstruction from Monocular Videos",
+   "published": "2026-09-21",
+   "abstract": "In this work, we present a method for shape reconstruction and tracking from video via agentic analysis-by-synthesis. Unlike prior methods which first estimate dense pixel correspondences and then recover object motion from them, our method infers a structured 3D object model, including its geometry and kinematic structure, and uses this model to optimise object track estimates over time. In our optimisation loop, a Vision-Language Model (VLM) agent iteratively refines shape or generalised pose through a render-and-compare loop, combining coarse visual reasoning with numerical pose optimisation for precise state estimation. This structured formulation enables our method to track through large motion, articulation, and severe occlusion without relying on pixel-matching objectives. Quantitatively, on ARCTIC, our method substantially outperforms state-of-the-art 3D point-tracking baselines for articulated objects, and on HOT3D it outperforms all evaluated rigid-object tracking baselines.",
+   "cats": [
+    "cs.CV",
+    "cs.AI"
+   ]
+  },
+  {
+   "arxiv": "2610.23874v1",
+   "title": "Adaptive Question Generation for Ambiguous Robot Instructions Based on Information Gain and Human Cognitive Characteristics",
+   "published": "2026-09-19",
+   "abstract": "In this study, we propose an adaptive question generation mechanism that addresses uncertainty arising from ambiguous instructions. Natural-language instructions for service robots often contain ambiguities. In scenes with multiple similar objects, the robot must identify the target object by asking questions. However, existing question generation methods focus on probabilistic discrimination efficiency and do not sufficiently account for user ease of response. Asking questions without considering the user's ease of response may cause incorrect or uncertain answers. Such incorrect or uncertain answers lead to additional clarification turns and degraded dialogue efficiency. The proposed mechanism integrates probabilistic discrimination efficiency and human cognitive characteristics to generate questions that users can intuitively and easily answer. First, the proposed mechanism extracts visual attributes of candidate objects using a vision-language model (VLM). Next, the proposed mechanism computes the information gain (IG) of each attribute and selects the visual attribute (e.g., color, shape) that most reduces uncertainty in the candidate set. When multiple attributes have the same IG, the proposed mechanism applies a visual attribute filter based on cognitive characteristics to select the visual attribute that users can most intuitively perceive. The proposed mechanism then prompts the VLM with the selected attribute and the corresponding attribute values of each candidate object to generate a concise natural-language question. This process is repeated until the target object is uniquely identified. The proposed mechanism achieved a target identification success rate of 88.5% in the evaluation using a dataset of 120 scenes. Furthermore, the proposed mechanism received high ratings in subjective evaluations of response ease.",
+   "cats": [
+    "cs.RO"
+   ]
+  }
+ ]
+}

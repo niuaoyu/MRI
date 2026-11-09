@@ -1,0 +1,561 @@
+[
+ {
+  "id": "2610.37253v1",
+  "date": "2026-10-27",
+  "title": "Cerebral Artery Wall Displacement and Strain from 4D MRI",
+  "abs": "Arterial stiffness is an established marker of vascular ageing and cardiovascular risk, yet the local, patient-specific mechanics of the cerebral arteries remain difficult to measure in vivo. Wall deformation over the cardiac cycle is sub-millimetre, rapid and spatially heterogeneous, and is superimposed on larger rigid-body motion. This work adapts a registration-based kinematic framework, originally developed for abdominal aortic aneurysms, to cerebral arteries imaged with 7 T 4D phase-contrast MRI. Deformable image registration between diastole and systole was used to measure wall-normal displacement over the cerebral artery network, primarily the Circle of Willis and connected communicating arteries. Following this, transverse centreline motion was removed to separate local wall deformation from rigid-body vessel motion before estimating circumferential strain. Across 17 datasets, the 99th percentile wall-normal displacement was 0.256 +/- 0.037 mm, 35 % of the acquired voxel dimension, and the 99th percentile circumferential strain was 8.67 +/- 2.40 %. Correction of circumferential strain to exclude rigid translation motion reduced the 99th percentile strain estimation in the example case from 28.1 % to 10.6 %, as a significant portion of the apparent wall displacement corresponds to bulk motion of the vessel. The pipeline produces continuous displacement and strain maps of the intracranial arterial network, although the values are sensitive to segmentation accuracy, resampling and registration parameterisation and require future ground-truth verification.",
+  "cats": [
+   "physics.med-ph"
+  ],
+  "q": [
+   "abs:\"cardiac\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2610.37218v1",
+  "date": "2026-10-27",
+  "title": "TopoField: Technical Report for ECCV 2026 SceneFun3D Challenge",
+  "abs": "Functional segmentation requires locating small interactive parts, such as knobs, buttons, and sockets, in indoor point clouds and returning confidence-ranked instance masks. A point-wise semantic predictor produces a continuous probability field, whereas the benchmark evaluates a discrete set of scored instances. This creates a substantial field-to-instance gap. We present TopoField, a deterministic decoder built on top of VOLT. TopoField first converts 13 test-time forward passes into a semantic consensus field, then decodes instance candidates from the consensus geometry, and finally ranks the candidates in a class-aware manner. The augmentation stage retains the processed-point identity of every fragment prediction, accumulates probabilities in a common point array, normalizes by coverage count, and fuses the resulting caches. The decoding stage separates high-confidence cores from broader support regions, constructs a symmetric radius-pruned point graph, and uses a multi-source graph-geodesic partition to split support regions that contain multiple seeds. On 561 ground-truth instances across 30 validation scenes, an IoU-0.5-valid candidate exists for 67.2% of instances, and top-1 coverage is 20.0%. These complementary measurements motivate joint attention to candidate construction and ranking. TopoField achieves 28.286% AP, 41.383% AP50, and 47.558% AP25. TopoField achieved second place on the ECCV 2026 SceneFun3D Challenge.",
+  "cats": [
+   "cs.CV"
+  ],
+  "q": [
+   "abs:\"point identity\""
+  ]
+ },
+ {
+  "id": "2610.37302v1",
+  "date": "2026-10-27",
+  "title": "On the geometric origin of central charges in gravity",
+  "abs": "Central extensions of asymptotic symmetry algebras are traditionally determined through an explicit computation of the algebra of conserved charges. We show that, within an ambiguity-free covariant phase space formalism based on the Noetherian split, they instead arise as intrinsic quantities completely determined by the Lagrangian through the geometry of the associated covariant phase space. We prove two general Charge Representation Theorems describing the canonical realization of diffeomorphism symmetries in the presence of field-dependent vector fields and Lagrangian anomalies, corresponding respectively to vanishing and integrable Noetherian flux. In both cases, we derive explicit expressions for the associated central extensions and establish the corresponding cocycle identities. This provides a constructive algorithm for determining central charges directly from the Lagrangian formulation of the theory, without requiring an explicit computation of the charge algebra. As a non-trivial application, we consider asymptotically locally AdS$_3$ spacetimes with Penrose--Brown--Henneaux boundary conditions. We recover the corresponding centrally extended asymptotic symmetry algebra, providing an explicit realization of the Charge Representation Theorems.",
+  "cats": [
+   "hep-th",
+   "gr-qc"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2610.32800v1",
+  "date": "2026-10-23",
+  "title": "CompMVR: Compression-Aware Multi-View Restoration Using Diffusion Models for Geometrically Consistent 3D Reconstruction",
+  "abs": "Real-world 3D reconstruction pipelines often rely on multi-view images degraded by lossy compression. While compression artifacts have been extensively studied in single-image or video restoration, their impact on multi-view geometry remains largely overlooked. In this work, we identify compression-induced cross-view geometric inconsistency as a critical failure mode, where view-dependent artifacts disrupt feature matching, dense correspondence, camera parameter estimation, and downstream 3D reconstruction tasks such as novel view synthesis. To address this problem, we propose CompMVR, a compression-aware multi-view diffusion restoration framework that jointly refines compressed views while preserving cross-view consistency, and construct compressed datasets for systematic evaluation. Unlike conventional restoration methods that optimize each image independently for 2D perceptual quality, CompMVR leverages learned compression priors and cross-view correspondence to recover visual details while improving geometric reliability across views. Experiments across diverse datasets, codecs, and compression levels demonstrate gains in restoration quality and downstream 3D tasks, including novel-view synthesis, camera pose estimation, and view matching. These results establish compressed multi-view restoration as a distinct problem and highlight its importance for 3D reconstruction under lossy compression. Code and data for this paper are available at https://mchaewon.github.io/CompMVR-project-page/.",
+  "cats": [
+   "cs.CV"
+  ],
+  "q": [
+   "abs:\"dense correspondence\" AND cat:cs.CV"
+  ]
+ },
+ {
+  "id": "2610.31528v1",
+  "date": "2026-10-22",
+  "title": "Positive sectional curvature on exotic spheres in infinitely many dimensions",
+  "abs": "We show that there exist exotic spheres with metrics of strictly positive sectional curvature in infinitely many dimensions: in every dimension $n\\equiv3\\pmod4$ with $n\\geq11$ and $n\\not\\equiv255\\pmod{256}$. Previously, every known closed simply connected manifold of positive sectional curvature in a dimension above $24$ was diffeomorphic to a compact rank-one symmetric space. The spheres we consider are certain homotopy spheres arising as quotients of special $S^3$-$S^3$ bundles introduced by Sperança. These homotopy spheres are determined by an orthogonal representation $ρ$ of $S^3$ and an $S^3$-conjugation-equivariant map $β$, and are denoted $Σ_{ρ,β}$. By recent constructions, such spheres admit Riemannian metrics of strictly positive sectional curvature. In this paper we consider the spheres $Σ_{ρ_b,β}$ of dimension $4b+3$, $b\\geq2$, where $ρ_b$ is the representation of $S^3$ on $\\mathbb{R}^3\\oplus\\mathbb{H}^b$ by left multiplication on the second summand. For these spheres, we show that the Eells-Kuiper invariant is the product of an integer $k(β)$ depending only on $β$ and a rational number $r_b$ given by one coefficient of a power series built from the $\\hat A$- and $L$-genera. We then show that, for every $b\\geq2$ with $b\\not\\equiv63\\pmod{64}$, there is a map $β$ for which the Eells-Kuiper invariant does not vanish, and thus the corresponding sphere is exotic. A computer calculation also gives the dimensions $n\\equiv255\\pmod{256}$ below $2^{16}$.",
+  "cats": [
+   "math.DG"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2610.28507v1",
+  "date": "2026-10-20",
+  "title": "ECG for laboratory values:A comprehensive physiological and technical analysis",
+  "abs": "Laboratory measurements are essential for clinical decision making but typically require invasive blood sampling. Recent research suggests that ECG recordings may contain information beyond cardiac rhythm and provide information related to laboratory values. This thesis investigates NT-proBNP prediction from ECG recordings and patient metadata using a multimodal deep learning framework, while considering the physiological plausibility of ECG-based prediction. It also compares a 1-lead configuration using lead II with the corresponding 12-lead configuration. Additional experiments on glucose, hemoglobin, and potassium are presented in the appendix. Regression, binary classification, and three-class classification experiments were conducted using MIMIC-IV, with the three-class task based on clinically established thresholds. The 12-lead configuration consistently achieved better performance. Regression reached a mean absolute error of 534.98 pg/mL for 1-lead and 514.27 pg/mL for 12-lead. Binary classification achieved AUROCs of 0.849 and 0.876, respectively, while three-class classification achieved macro-averaged AUROCs of 0.738 and 0.752. The results indicate that precise NT-proBNP regression remains challenging, whereas broader concentration ranges can be classified more effectively. The findings are consistent with the physiological hypothesis that ECG characteristics and NT-proBNP concentrations reflect shared cardiovascular processes. ECG-based NT-proBNP prediction may therefore provide complementary information, particularly for classifying broader concentration ranges. However, laboratory measurements remain necessary, and validation on independent datasets is required.",
+  "cats": [
+   "cs.LG",
+   "cs.AI"
+  ],
+  "q": [
+   "abs:\"cardiac\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2610.28985v1",
+  "date": "2026-10-20",
+  "title": "MedBOE: Optimization-Based Estimation of Complete Patient Body Models from Whole-Body Medical Imaging",
+  "abs": "True whole-body medical imaging captures a patient from head to toe and provides comprehensive anatomical and/or functional information. This coverage enables reconstruction of the external body surface, yielding patient body models. However, scanner geometry (e.g., bore diameter), patient characteristics, and positioning can leave body regions missing (e.g., lateral arms/torso, hands, forearms, elbows), producing incomplete patient body models. Such incompleteness limits downstream medical analyses, including derivation of body-habitus metrics (BHMs), such as body volume and surface area, for injected radiotracer activity regimens, cardiometabolic risk assessment, and computational anatomical modeling for medical imaging simulation and radiation dosimetry. We present the Medical Body model Optimization-based Estimator (MedBOE), an automated, training-free framework for estimating complete patient body models from whole-body images with missing body regions. Our innovation is to leverage the Skinned Multi-Person Linear (SMPL) template, a parametric body mesh representing a broad range of body shapes and poses, in medical imaging. MedBOE aligns the SMPL template to the incomplete patient body models via attribute-guided optimization and estimates missing body regions through geometrically and volumetrically constrained deformation. We evaluated MedBOE using two public datasets: AutoPET (91 whole-body PET-CT images) and Human Implicit Tissues (HIT; 40 whole-body segmentations from MRI images). MedBOE achieved the best overall volumetric and geometric performance among evaluated methods. BHMs derived from MedBOE were within 2% error, suggesting low percentage errors for downstream analyses. MedBOE offers an automated, training-free method for estimating complete patient body models from whole-body images with missing body regions.",
+  "cats": [
+   "cs.CV"
+  ],
+  "q": [
+   "abs:\"template\" AND abs:\"deform\" AND abs:\"implicit\""
+  ]
+ },
+ {
+  "id": "2610.23482v1",
+  "date": "2026-10-16",
+  "title": "On the relation between transformations of SDEs and of associated Kolmogorov equations",
+  "abs": "The relationship between transformations of one-dimensional stochastic differential equations and those of the associated Kolmogorov backward equations is investigated. Stochastic transformations combining deterministic time changes, space-time diffeomorphisms, and Girsanov-type changes of probability measure are shown to be in correspondence with admissible transformations of the associated linear parabolic equations, namely the transformations preserving the parabolic structure up to the possible introduction of a zero-order potential term. A distinguished subclass of transformations, characterized by the absence of any potential term in the transformed Kolmogorov equation, is shown to coincide exactly with Doob transformations of the underlying probability measure of the SDE. This characterization further establishes a correspondence between Doob symmetries of an SDE and Lie point symmetries of the associated Kolmogorov backward equation. This correspondence, in turn, yields a constructive (probabilistic) Lie symmetry classification of autonomous Kolmogorov backward equations.",
+  "cats": [
+   "math.PR"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2610.22325v1",
+  "date": "2026-10-15",
+  "title": "Dense4D: Pixel-Level 4D Human Correspondence",
+  "abs": "Reconstructing human motion in 4D requires identifying the same surface points through articulation, deformation and changes in visibility. We introduce Dense4D, to our knowledge the first feed-forward model dedicated to dense 4D correspondence across the body, clothing and hair from a set of monocular RGB images, without a body template. Trained specifically for human geometry, Dense4D jointly processes person-centred crops with known image-to-crop transforms to predict Human Point Maps (HPMs) and depth for each image. An HPM assigns each person pixel the 3D position of its observed surface point at a common reference time. These maps support amodal correspondence: points hidden in the reference image can be localised from observations in other frames. Matching HPM coordinates across crops establishes correspondence without predicting camera poses or large scene displacements; per-image depth then lifts the matches into 3D tracks. Experiments on real people demonstrate substantially higher tracking accuracy and closer agreement with scanned surfaces than the evaluated baselines. Points from different frames assemble into coherent human geometry in the reference pose, providing visible evidence of consistent dense correspondence through articulation and clothing deformation. Additional qualitative results, videos, and an interactive viewer are available at https://alpguler.com/dense4d.",
+  "cats": [
+   "cs.CV"
+  ],
+  "q": [
+   "abs:\"dense correspondence\" AND cat:cs.CV"
+  ]
+ },
+ {
+  "id": "2610.24001v1",
+  "date": "2026-10-15",
+  "title": "Causal Spatio-Temporal Neural Distance Fields for Counterfactual Cardiac Anatomy",
+  "abs": "Counterfactual cardiac anatomy can support risk modelling and intervention planning, by predicting how a patient's heart would change under altered clinical conditions. However, current shape generative models are conditional on clinical variables and disregard causal links between these variables. Thus, they cannot answer counterfactual questions about how a given subject's anatomy would change under a different clinical profile. Modelling the heart's continuous movement over the cardiac cycle requires a representation that is itself continuous in space and time. Spatio-temporal neural distance fields provide this while separating clinical conditioning from subject-specific shape. We place a structural causal model (SCM) over the set of clinical variables (age, sex, smoking, BMI, heart rate, systolic blood pressure), before the condition encoding of the spatio-temporal neural distance field which represents the left atrial complex over a cardiac cycle by signed distance fields. An intervention of the clinical variables, propagated through a SCM before the 4D counterfactual, is constructed from the neural distance field. The generated counterfactuals follow dose-response under age interventions and transforms the male distribution to closely match the female distribution under the intervention $\\mathrm{do(\\mathrm{female}{=}1)}$. By doing inverse interventions the model also approximates the original anatomy with sub millimeter precision. To our knowledge, this is the first counterfactual generation of 4D cardiac anatomy and the first integration of an SCM with an implicit neural representation as its imaging mechanism.",
+  "cats": [
+   "cs.CV"
+  ],
+  "q": [
+   "abs:\"4D\" AND abs:\"heart\"",
+   "abs:\"cardiac\" AND abs:\"implicit neural\""
+  ]
+ },
+ {
+  "id": "2610.20074v1",
+  "date": "2026-10-14",
+  "title": "Feasibility of a Patient-Specific Digital Twin for Ventriculoperitoneal Shunt Trajectory Planning",
+  "abs": "Catheter obstruction is the commonest cause of shunt failure; freehand insertion at Keen's point leaves the tip free in cerebrospinal fluid in only one case in ten. We built a digital twin that reconstructs skull, scalp, ear and ventricles from preoperative CT by deterministic geometry, searches every entry around Keen's point for the perpendicular trajectory with the longest intraventricular length under safety constraints, and returns the plan as two ruler measurements from the ear and two depths. Executed freehand in 11 consecutive adults (IDEAL Stage 2a), it achieved Hayhurst Grade 1 placement in 10 of 11 against 22 of 213 historically (p = 9 x 10^-9), median entry and angular deviations 2.5 mm and 5.9 degrees, 1.4 cm more intraventricular catheter than Keen's point, and no intraoperative complication. The technique was unchanged; the gain came from choosing entry and depth per patient. Whether it lowers revision is the next stage's hypothesis.",
+  "cats": [
+   "cs.CV",
+   "q-bio.QM"
+  ],
+  "q": [
+   "abs:\"ventricle\" AND abs:\"reconstruction\""
+  ]
+ },
+ {
+  "id": "2610.19050v1",
+  "date": "2026-10-13",
+  "title": "Focus, Align, and Diffuse: Time-Series-Aware Keyframe Diffusion for Cardiac Dynamic Synthesis from Sparse Observations",
+  "abs": "Dense cardiac dynamics are essential for assessing cardiac function, yet in practice clinicians often observe only extremely sparse measurements. However, recovering full dynamics from such sparsity is a highly ill-posed problem due to the lack of temporal cues. While auxiliary time-series signals like ECG provide physiological guidance, effectively exploiting them is challenging due to the cross-modal representation gap and phase misalignment. In this work, we present CardioFAD, a Focus--Align--Diffuse paradigm that reformulates sparse cardiac dynamic synthesis as a recoverability--alignability anchor discovery problem. Our core insight is that resolving extreme temporal ambiguity requires a compact set of anchor states that are both sufficient to recover the visual trajectory and reliable for ECG--visual alignment. We therefore learn motion-salient keyframes under two complementary principles: trajectory sufficiency, which preserves trajectory-critical intra-modal motion content, and anchor alignment, which promotes consistent inter-modal correspondence at these anchors. We implement the Focus and Align modules optimized by the two aspects. Diffuse then performs two-stage generation by first synthesizing keyframes and subsequently interpolating the remaining frames. Extensive experiments on cardiac MRI and echocardiography videos demonstrate superior visual quality, temporal coherence, and improved functional consistency under the extreme one-shot regime.",
+  "cats": [
+   "eess.IV",
+   "cs.CV"
+  ],
+  "q": [
+   "abs:\"cardiac\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2610.16115v1",
+  "date": "2026-10-12",
+  "title": "Constraint-Lifted Sector-Constrained Guidance for Rear-Approach Interception",
+  "abs": "This paper develops a sector-constrained guidance (SCG) law for interception of a maneuvering target while maintaining a prescribed approach geometry. The line of sight is required to remain within a specified angular sector behind the target throughout the engagement, resulting in a state-constrained guidance problem. To enforce this constraint, the directional angle between the target heading and the line of sight is mapped from the prescribed sector to an unconstrained coordinate using a sigmoid diffeomorphism. A guidance law is then designed in the lifted coordinate to generate a desired transverse velocity and corresponding pursuer lead angle. The desired lead angle is tracked through an inner-loop turn-rate controller, which is implemented through the normal-acceleration command of a nonlinear point-mass model. This construction embeds the sector constraint directly into the guidance law and does not require online constrained optimization. Numerical simulations against a maneuvering target show that SCG achieves interception while maintaining the prescribed rear-sector constraint, including when the pursuer normal-acceleration command is subject to actuator saturation. Comparisons with proportional guidance under the same engagement conditions demonstrate that proportional guidance may achieve interception but does not maintain the prescribed directional constraint.",
+  "cats": [
+   "math.OC"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2610.15287v1",
+  "date": "2026-10-11",
+  "title": "ASM-6D: Fast Certified Pose-Shape Inference with Complete Correspondence Flow Maps",
+  "abs": "Category-level 6D pose and shape estimation requires recovering an object's pose and geometry from partial observations without an exact instance model. We present ASM-6D, which couples generative complete-geometry prediction with explicit category-level pose-shape inference through shared correspondences. Given an RGB-D image, ASM-6D generates alternative complete 3D correspondence hypotheses whose point identities are shared with a category-level Active Shape Model (ASM), including occluded points. Each hypothesis is fitted directly for rotation, translation, metric scale, and instance shape without a separate correspondence-assignment stage. We analytically eliminate translation and shape coefficients, reducing fitting to a nine-variable scaled-rotation optimization problem that enables efficient batched evaluation of multiple hypotheses in real time. ASM-6D achieves state-of-the-art performance on ROPE and HouseCat6D benchmarks. Ablations demonstrate the importance of generative correspondence prediction and active shape variation. The representation also supports shape completion, shape-dependent pose ambiguity, tracking, and robotic grasping at 6-38 Hz, depending on the inference budget.",
+  "cats": [
+   "cs.CV",
+   "cs.RO"
+  ],
+  "q": [
+   "abs:\"point identity\""
+  ]
+ },
+ {
+  "id": "2610.14513v1",
+  "date": "2026-10-10",
+  "title": "TartanMatch: Towards Universal Dense Correspondence Across Modalities",
+  "abs": "Robotic platforms combine multi-modal sensors to operate across diverse conditions, but most dense correspondence methods are limited to RGB-RGB or a small set of modality pairs. Training a model for each modality pair scales poorly with the number of sensors and forgoes potential positive transfer across modality pairs. We introduce TartanMatch, a unified model for dense correspondence across all 25 ordered pairs among RGB, event, thermal, depth, and projected LiDAR. TartanMatch adapts an RGB-pretrained correspondence model to all modality pairs within one shared network using lightweight modality adaptation and a mixture of real and synthetic data. On zero-shot real-world benchmarks, TartanMatch reduces Endpoint Error (EPE) over the strongest baselines by 61.9% for cross-modal matching and 49.6% for same-modal matching. We further show that joint training across all modality pairs improves average matching accuracy over pair-specific training, especially on challenging cross-modal pairs. These results demonstrate that a single model achieves broad multi-modal coverage and state-of-the-art matching accuracy.",
+  "cats": [
+   "cs.CV",
+   "cs.LG",
+   "cs.RO"
+  ],
+  "q": [
+   "abs:\"dense correspondence\" AND cat:cs.CV"
+  ]
+ },
+ {
+  "id": "2610.14755v1",
+  "date": "2026-10-10",
+  "title": "Generic nondegeneracy of constant mean curvature radial graphs",
+  "abs": "Given a smooth domain $D\\subset\\mathbb S^{N-1}$, $N\\geq 3$, and a positive constant $H$, we study radial graphs over $D$ with constant mean curvature $H$ which meet orthogonally the boundary of the cone spanned by $D$. The corresponding problem is given by a quasilinear elliptic equation on $D$ with homogeneous Neumann boundary condition. We investigate the structure of the solution set under smooth perturbations of the domain which are parametrized by an open set of $C^{3,α}$-diffeomorphisms of the sphere. After pulling the equation back to a fixed reference domain, we apply a classical transversality theorem and prove that, in the class of domains for which $N-1$ does not belong to the Neumann spectrum of the Laplace-Beltrami operator, there is a residual set for which every solution is nondegenerate. A consequence of our result is that, for every such domain and every $R>0$, the set of solutions whose $C^{2,α}$-norm is bounded by $R$ is finite.",
+  "cats": [
+   "math.AP"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2610.13599v1",
+  "date": "2026-10-09",
+  "title": "EchoTab: Learning Measurement-Grounded Representations for Echocardiographic Diagnosis through Tabular Reconstruction",
+  "abs": "Diagnostic information in multi-view medical imaging studies, like echocardiography, is distributed across views, each capturing different aspects of cardiac structure and function. In clinical practice, these views are first interpreted through quantitative measurements, which then support specific diagnoses. However, existing echo representation learning methods do not explicitly model measurements as an intermediate representation between views and diagnosis. As a result, individual measurements are not explicitly represented in a form that downstream diagnostic tasks can selectively use, hindering accurate diagnosis. Inspired by this hierarchical clinical workflow, we introduce EchoTab, a measurement-grounded representation learning framework that represents multi-view echocardiography studies using measurement-specific tokens as an intermediate representation between echo views and diagnosis. Each measurement token selectively attends to the views relevant to its estimation and is trained through tabular reconstruction to predict the corresponding measurement value. The resulting tokens form a factorized echo representation, which encode clinically meaningful structural and functional properties and can be selectively used for downstream diagnosis. Unlike the commonly used contrastive approaches, EchoTab does not require negative samples or large batch sizes. Experiments on two datasets demonstrate that EchoTab learns effective measurement-grounded representations that improve diagnosis classification in multi-view echocardiography and its learned attention aligns with established measurement-view relationships used by cardiologists. Our code is accessible at https://github.com/michelleespranita/EchoTab.",
+  "cats": [
+   "cs.LG"
+  ],
+  "q": [
+   "abs:\"cardiac\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2610.12421v1",
+  "date": "2026-10-08",
+  "title": "Beyond Spatio-Temporal Priors: A Generalizable Approach for Dense Correspondence Matching",
+  "abs": "Dense correspondence matching has historically been bounded by simplifying spatio-temporal priors, such as smooth motion and rigid geometry. While effective for classical tasks, these assumptions break down in image editing and reference-guided generation (IEG), where transformations can preserve visual identity while breaking physical continuity. To establish identity-preserving correspondence across such transformations, we introduce FreeMatching, a generalizable framework combining generative and semantic foundation representations with heterogeneous supervision from classical datasets, tracked videos, and synthetic scenes. Teacher-guided iterative refinement further improves correspondence in IEG without dense correspondence annotations. Experimentally, a single FreeMatching model substantially improves correspondence quality on challenging IEG image pairs while retaining competitive performance on classical benchmarks. Furthermore, we demonstrate its utility as a quantitative metric for evaluating identity preservation, with scores that correlate with human judgment. The code is available at https://github.com/luping-liu/FreeMatching.",
+  "cats": [
+   "cs.CV",
+   "cs.LG"
+  ],
+  "q": [
+   "abs:\"dense correspondence\" AND cat:cs.CV"
+  ]
+ },
+ {
+  "id": "2610.12262v1",
+  "date": "2026-10-08",
+  "title": "Horizon symmetries of exact hydrodynamic actions",
+  "abs": "We demonstrate how horizon symmetries of AdS black holes are realised in the hydrodynamic actions for the dynamics of the dual stress tensor. A recent approach for obtaining such actions involves a choice of horizon boundary conditions, and we show that diffeomorphisms that preserve these give rise to symmetries of the corresponding hydrodynamic action. We obtain explicit hydrodynamic actions for small amplitude perturbations of black holes in JT and AdS$_3$ gravity using this approach and demonstrate explicitly the existence of these symmetries. For a natural choice of boundary conditions, the resulting actions manifestly realise gauge symmetries previously proposed for effective theories of maximal chaos.",
+  "cats": [
+   "hep-th",
+   "gr-qc"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2610.06052v2",
+  "date": "2026-10-05",
+  "title": "Local2Mesh: Spatially Localized Contour-to-Mesh for Left Ventricular Reconstruction from Sparse 2D Cardiac MRI",
+  "abs": "Three-dimensional (3D) left ventricular (LV) reconstruction from sparse cardiac magnetic resonance (CMR) imaging remains challenging due to inter-slice misalignment and insufficient local spatial information between slices. Global aggregation of contour features may obscure local contour-to-surface relationships. We propose Local2Mesh, a spatially localized contour-to-mesh framework that deforms a template mesh to reconstruct 3D LV geometry from sparse 2D contours without 3D mesh annotations. The framework introduces geometry-aware alignment to correct inter-slice misalignment and a plane-aware Local Router that routes contour features to template vertices using vertex-to-plane distances. Local and global contour features then jointly guide graph-based template deformation for 3D LV reconstruction. Experiments on two public datasets, M\\&Ms-2 and ACDC, demonstrate superior geometric reconstruction and functional estimation over existing methods. Zero-shot transfer from M\\&Ms-2 to ACDC demonstrates strong cross-dataset generalization. Reconstructed meshes also improve disease classification over sparse contours, supporting their utility for downstream cardiac analysis. These results demonstrate that combining geometry-aware alignment with local contour-to-vertex modeling improves LV reconstruction from sparse 2D contours and supports downstream cardiac analysis. The code is available at https://github.com/hwu918945-alt/loca2mesh.",
+  "cats": [
+   "cs.CV",
+   "cs.AI"
+  ],
+  "q": [
+   "abs:\"cardiac\" AND abs:\"mesh\""
+  ]
+ },
+ {
+  "id": "2610.02716v1",
+  "date": "2026-10-02",
+  "title": "Differential Privacy of Gradient Descent on Perturbed Objectives",
+  "abs": "Objective perturbation adds a random linear term to a regularized empirical risk and releases the exact perturbed minimizer. We study the finite computation obtained by releasing the $N$-th iterate of deterministic gradient descent on $w\\mapsto F(w;S)+\\langle z,w\\rangle$, where $z\\sim\\mathcal N(0,σ^2I_d)$ is drawn once before optimization. For strongly convex and smooth objectives with Lipschitz Hessian, we prove an explicit condition under which the map $z\\mapsto w_N$ is a $C^1$-diffeomorphism on the bounded domains used in the privacy argument, with a quantitative lower bound on the smallest singular value of its Jacobian. This permits a direct change-of-variables analysis of the finite iterate. For generalized linear models, the resulting privacy-profile bound has no explicit ambient-dimension factor once the iteration condition holds, and its finite-iteration correction decreases geometrically. By letting the free truncation parameter grow slowly with $N$, we recover the corresponding exact-minimizer certificate in the limit. We also bound the expected excess empirical risk by $dσ^2/(2μ)$ plus a geometrically decreasing optimization term, and transfer the result to population risk without an additional multiplicative condition-number factor in the leading statistical terms.",
+  "cats": [
+   "cs.LG",
+   "cs.CR",
+   "stat.ML"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2610.02087v1",
+  "date": "2026-10-01",
+  "title": "The Nash manifold of four-point configurations modulo similarity subgroups",
+  "abs": "We construct and study the Nash manifold of four-point configurations in the real plane modulo the action of a Nash subgroup of the group of similarity transformations. We do so by using the finer notion of a quadrangle in place of that of a four-point configuration, since this retains limiting line data in degenerations. We prove that the space ${\\mathcal Q}$ of quadrangles is an 8-dimensional Nash manifold and that, for every Nash subgroup $G$ of the similarity group, the orbit space ${\\mathcal Q}/G$ is a Nash manifold. We define a geometric invariant, called aspect, with values in $[-1,1]$, and prove that, over each of the intervals $(-1,0)$ and $(0,1)$, the corresponding part of ${\\mathcal Q}/G$ is Nash diffeomorphic to the product of the interval with a fixed fiber. Thus the nonexceptional part of the moduli problem reduces to the analysis of two model fibers, each having a natural geometric interpretation in terms of the quadrangles themselves.",
+  "cats": [
+   "math.AG",
+   "math.DG"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.40261v1",
+  "date": "2026-09-30",
+  "title": "Linear-fractional rotational interval exchange transformations",
+  "abs": "Linear-fractional rotational interval exchange transformations appear naturally when investigating circle diffeomorphisms with breaks using the renormalization group approach. Earlier, we achieved an important rigidity result on circle diffeomorphisms with a single break by means of establishing a time-reversing duality for the corresponding commuting pairs of linear-fractional maps. In this paper, we extend the established duality to the case of multiple breaks, where a commuting pair from the previous case is replaced by a `commuting collection' of an even number of linear-fractional maps, which act according to a rotational interval exchange scheme of special type, while satisfying certain commutation relations.",
+  "cats": [
+   "math.DS"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.39845v1",
+  "date": "2026-09-30",
+  "title": "Stochastic Completeness for Landmark Shape Spaces with Induced Metrics",
+  "abs": "Landmark shape spaces arise from configurations of $n$ distinct landmarks with rigid motions factored out and scale normalized. When equipped with sufficiently regular metrics inherited from right-invariant metrics on diffeomorphism groups, the shape spaces inherit geodesic completeness from geodesics of diffeomorphisms. We now answer the corresponding stochastic question if the Riemannian Brownian motion on landmark shape spaces exists for all time and hence rule out initially distinct landmarks colliding when following a Brownian flow. We show that with general classes of metrics, including degenerate metrics with infinitesimal rigid motions in their null space, landmark shape spaces are stochastically complete, thus making the use of Riemannian Brownian motion for modelling shape stochasticity in applied fields well-founded.",
+  "cats": [
+   "math.PR",
+   "math.DG"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2610.00409v1",
+  "date": "2026-09-30",
+  "title": "Braided Surfaces and Small Exotic 4-Manifolds",
+  "abs": "Let $K$ be the trefoil or figure-eight knot and let $M_K$ denote zero surgery on $K$. We prove that the fiberwise elliptic involution gives a two-fold branched cover \\[ M_K\\times S^1\\longrightarrow T^2\\times S^2 \\] whose branch locus is a section together with a connected braided three-section. The corresponding braid words are computed explicitly for both knots and make visible the relation with Luttinger surgery along product Lagrangian tori. More generally, for a genus-$g$ fibered knot with hyperelliptic monodromy, the same construction gives a braided $(2g+2)$-section; this includes every genus-two fibered knot. We also state the corresponding surface-bundle version over $T^2$. We then track the induced peripheral data and gluing diffeomorphisms in the constructions of $Y_K$ and its twisted double $X_K$, as studied by the author in \\cite[Section~4]{Akh07}, and through the constructions of the small exotic manifolds homeomorphic to $\\CP^2\\#k\\CPb^2$, $k=3,5$ \\cite{AkhmedovSmall,ABP,AP2008}. In the symmetric construction of a $k=5$ example \\cite[Section~3.3]{ABP}, each summand admits a double cover branched along a surface, although the marked complements used in the twisted double need not be invariant. Finally, we prove boundary-action, relative-homology, and local-smoothing obstructions to extending these local involutions across the gluing regions to a branched cover of the closed manifold.",
+  "cats": [
+   "math.GT",
+   "math.SG"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.36449v1",
+  "date": "2026-09-29",
+  "title": "Quantifying the Impact of Upright Patient Positioning on Cardiac Substructures Using Deep Learning",
+  "abs": "Upright patient positioners with diagnostic-quality vertical CT at treatment isocenter may improve image-guided radiation therapy (RT). However, cardiac substructure (CS) geometry in upright patients remains insufficiently characterized. This work evaluated if a supine-trained deep-learning (DL) CS segmentation model generalizes to upright CT images and quantified posture-dependent CS changes in thoracic patients, to assess potential CS-sparing benefits. 8 thoracic proton therapy patients underwent paired supine/upright 4DCT imaging. 20 CS and lungs were manually labeled on both datasets for positional comparisons. A previously developed supine-trained, DL pipeline generated the same CS, and performance was evaluated using Dice similarity coefficient (DSC) and 95% Hausdorff distance (HD95). Upright CTs were rigidly registered to corresponding supine CTs by aligning the thoracic vertebrae, and CS centroid shifts were measured in the registered coordinate frame and relative to the carina. Paired differences were assessed using Wilcoxon signed-rank tests (p<0.05). The DL model successfully predicted all 20 CS on both upright (DSC, 0.65(0.24); HD95, 7.6(5.6)mm) and supine (DSC, 0.72(0.19); HD95, 5.8(2.6)mm) images yet with lower (p<0.05) performance upright. Upright positioning significantly increased median lung volume by 20.6% (range, -8.9%-42.8%). After vertebral alignment, most CS centroids shifted significantly inferior (median heart shift, 23mm; range, 18-37mm) and anterior (median heart shift, 5.0mm; range, 1.0-13.0mm) when upright. Relative to the carina, most CS shifted significantly inferior and closer anterior-posterior. A supine-trained DL model generalized to upright CT images for CS segmentation. Upright positioning produced increased lung volumes and significant inferior CS displacement, suggesting favorable geometry changes that may support cardiac-sparing workflows.",
+  "cats": [
+   "physics.med-ph"
+  ],
+  "q": [
+   "abs:\"cardiac\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.37048v2",
+  "date": "2026-09-29",
+  "title": "NHO: A Neural Hamiltonian Operator for Anchor-based Region Localization and Dense Correspondence",
+  "abs": "Non-rigid partial-to-full shape correspondence from sparse anchors requires identifying the corresponding region on the full surface and recovering dense correspondences between the partial shape and that region. We present NHO, which combines sparse anchors with the intrinsic geometry of the partial shape to learn a neural Hamiltonian operator whose localized eigenspace encodes both the region support and intrinsic coordinates for dense correspondence. NHO parameterizes the Hamiltonian potential as an intrinsic neural field and optimizes it using anchor evidence together with spectral and geometric constraints. To resolve the spatial ambiguity left by sparse anchors, we introduce reciprocal refinement between operator estimation and correspondence recovery. At each round, the current eigenspace provides spectral coordinates and restricts matching to its induced support, while geometrically reliable correspondences provide additional evidence for updating the potential. After refinement, aggregated eigenfunction energy yields the final localization, and the recovered map initializes dense correspondence refinement. Experiments demonstrate competitive accuracy on both tasks and robustness to uniform scaling and rotation.",
+  "cats": [
+   "cs.CV"
+  ],
+  "q": [
+   "abs:\"dense correspondence\" AND cat:cs.CV",
+   "abs:\"shape correspondence\" AND cat:cs.CV"
+  ]
+ },
+ {
+  "id": "2609.37037v1",
+  "date": "2026-09-29",
+  "title": "High-Resolution Dynamic Functional Connectivity Generation with Graph-Variate Flow Matching",
+  "abs": "High-resolution dynamic functional connectivity (DFC) can reveal rapidly evolving brain-network interactions, but short temporal windows yield noisy, often low-rank covariance estimates. Graph-Variate Dynamic (GVD) connectivity addresses this by modulating fast instantaneous interactions with stable trial-level support. This suppresses spurious fluctuations and emphasizes persistent, informative connections. We show that the Hadamard construction lifts low-rank instantaneous connectivity from the positive-semidefinite to the positive-definite cone, keeping high-resolution trajectories on the SPD manifold without ridge regularisation or post-hoc projection. We introduce GVD-CFM, a class-conditional generative model for high-resolution dynamic connectivity. Each trial is represented as SPD GVD matrices on a product Riemannian manifold, then mapped through a global log-Euclidean diffeomorphism and an invertible temporal DCT basis. A Transformer-based conditional flow models all spectral modes jointly and generates the full trajectory non-autoregressively in Euclidean coordinates while preserving exact correspondence with valid SPD sequences. Retaining the full DCT basis also enables decoding on denser temporal grids without retraining. Across multiple EEG motor-imagery datasets, GVD-CFM delivers the strongest overall results for held-out distributional fidelity, temporal-dynamics preservation, and synthetic-to-real classification. It also remains computationally efficient relative to strong raw-signal and direct GVD-space generative baselines. GVD-CFM therefore provides a practical framework for realistic, temporally coherent, high-resolution brain-network generation with preserved manifold structure and resolution-flexible decoding from a single trained model.",
+  "cats": [
+   "cs.LG"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.35960v1",
+  "date": "2026-09-28",
+  "title": "Advancing Fuzzy-Sphere CFTs: $\\mathrm{SO}(3)$-Rotation-Resolving Exact Diagonalization, 3D Ising Heavy Primaries, and Quasi-Hole-Space Projection",
+  "abs": "Fuzzy-sphere regularization has recently emerged as a powerful framework for studying three-dimensional conformal field theories (CFTs). In this work, we exploit symmetry and Hilbert-space structures to substantially advance this framework. We develop an exact-diagonalization algorithm that resolves the full $\\mathrm{SO}(3)$ rotational symmetry, reducing computational costs by factors of several hundred. For the three-dimensional Ising CFT, we identify around 100 primary operators, including a large number of previously unknown heavy scalar primaries up to scaling dimension $Δ\\approx16.5$. We also resolve the tension between previous fuzzy-sphere and bootstrap results regarding the parity-odd scalar primary. Furthermore, we identify a branch of scalar primaries associated with $φ^n$ operators in the $φ^4$ Lagrangian description, beginning with the identity, $σ$, $ε$, $ε'$, and $σ'$. Their wave functions exhibit a semi-classical structure closely related to states invariant under area-preserving diffeomorphisms of the sphere. Finally, we show that critical points involving fractional quantum Hall states can be studied within a substantially reduced Hilbert space spanned by quasi-hole states of the corresponding model quantum Hall wave functions like the Laughlin state. This suggests a general strategy for exploring CFTs intertwined with topologically ordered phases.",
+  "cats": [
+   "cond-mat.str-el",
+   "cond-mat.mes-hall",
+   "cond-mat.stat-mech",
+   "hep-th"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.33790v1",
+  "date": "2026-09-27",
+  "title": "Multi-Aperture PPG with MAPIS: Spatial Optical and Temporal Coherence Fields",
+  "abs": "Conventional reflectance photoplethysmography (PPG) typically reduces tissue optical responses to one or a few detector channels. Matrix Pinhole Image Sensing (MAPIS) instead simultaneously samples multiple aperture-dependent optical signals. We analyzed 44 recordings of 30 seconds each from a single MAPIS device to characterize the spatial relationships among DC intensity, pulsatile AC, perfusion index (PI), and temporal coherence across Red and infrared channels. AC increased sublinearly with DC at both wavelengths, resulting in higher PI toward lower-DC apertures, consistent with a first-order relative path-sensitivity interpretation. A second counterintuitive spatial trend was observed in temporal coherence: lower-DC and lower-AC apertures exhibited higher autocorrelation and greater cardiac-periodic spectral concentration. IR signals also showed consistently higher temporal coherence than corresponding Red signals. These observations demonstrate that multi-aperture PPG resolves reproducible spatial relationships among optical intensity, fractional pulsatile sensitivity, and waveform coherence that are largely averaged together in conventional single-channel PPG. The present study establishes within-device relationships and motivates controlled studies of the underlying photon-path mechanisms.",
+  "cats": [
+   "physics.optics",
+   "cs.CV"
+  ],
+  "q": [
+   "abs:\"cardiac\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.33501v1",
+  "date": "2026-09-27",
+  "title": "Pulseflow: PPG Counterfactual Generation Via Latent Transport",
+  "abs": "Photoplethysmography (PPG) has become an important modality for continuous cardiovascular monitoring, including atrial fibrillation (AF) detection. However, labeled AF recordings remain limited in many clinical settings, making model adaptation difficult when only limited target data are available. Generative modeling offers a natural way to alleviate this scarcity by synthesizing additional AF signals. Existing approaches, however, mainly generate samples that match the target condition without explicitly modeling how an observed source recording should be transformed, making it difficult to leverage abundant source recordings from a specific population or cohort for targeted augmentation. We introduce PulseFlow, a source-conditioned counterfactual generation framework that combines conditional representation learning with invertible latent transport to edit cardiac rhythm while retaining information from the source. Experiments across two clinical cohorts demonstrate effective rhythm transformation, measurable source correspondence, and improved AF classification under limited labels.",
+  "cats": [
+   "cs.LG"
+  ],
+  "q": [
+   "abs:\"cardiac\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.30898v2",
+  "date": "2026-09-25",
+  "title": "A Bregman inertial iteratively regularized extragradient method for bilevel variational inequality problems",
+  "abs": "In this paper, we consider bilevel variational inequality problems, where the feasible set is the solution set of another variational inequality. We propose a Bregman inertial regularized extragradient method for solving these problems. By performing the inertial extrapolation in the dual space, the proposed method aligns the inertial step with the structure of the Bregman three-point identity. We also derive explicit non-asymptotic bounds for the generalized gap function. More precisely, using diminishing regularization, we establish convergence rates of $\\mathcal{O}(1/k^{1-b})$ for the optimality gap and $\\mathcal{O}(1/k^b)$ for the feasibility gap with $ 0 < b< 1$. For constant regularization parameter $η>0$, we establish an $\\mathcal{O}(1/k)$ rate for the optimality gap and an $\\mathcal{O}(1/k)+\\mathcal{O}(η)$ bound for the feasibility gap. Furthermore, numerical experiments on traffic networks and multi-portfolio Nash equilibrium problems demonstrate the practical effectiveness of the proposed framework.",
+  "cats": [
+   "math.OC"
+  ],
+  "q": [
+   "abs:\"point identity\""
+  ]
+ },
+ {
+  "id": "2609.29825v1",
+  "date": "2026-09-24",
+  "title": "Anatomy-Aligned Surface Field Learning for Myocardial Reconstruction from Sparse Short-Axis Cine MRI",
+  "abs": "Patient-specific 4D myocardial reconstruction from cine MRI supports quantitative functional assessment, regional motion analysis, and simulation-based modeling. However, routinely acquired short-axis (SAX) cine MRI is sparsely sampled along the through-plane direction, making dense and anatomically consistent surface reconstruction challenging. In this study, we propose an anatomy-aligned surface learning framework that parameterizes the epicardial and endocardial surfaces on a shared circumferential-longitudinal UV domain. This formulation converts irregular 3D reconstruction into structured coordinate-field completion with explicit correspondence across subjects and cardiac phases. Sparse SAX contours are encoded as UV observation fields, coverage-aware sampling improves robustness to incomplete slice coverage, and topology- and distortion-aware learning preserves circumferential continuity and local surface quality. Experiments on three public cine MRI datasets showed that the proposed method consistently outperformed representative mesh-based and implicit reconstruction approaches, achieving overall Chamfer distances of $2.887$~mm on ACDC, $2.641$~mm on M\\&Ms, and $2.810$~mm on M\\&Ms-2. The reconstructed sequences also preserved ventricular function, with end-diastolic volume and ejection fraction errors of $3.3$~mL and $1.1 \\%$, respectively. These results demonstrate that anatomy-aligned UV learning provides an accurate, efficient, and correspondence-aware representation for sparse cine MRI reconstruction and myocardial modeling. The source code will be available at https://github.com/yuan-xiaohan/SAX2MyoSurf.",
+  "cats": [
+   "cs.CV"
+  ],
+  "q": [
+   "abs:\"cardiac\" AND abs:\"mesh\"",
+   "abs:\"cardiac\" AND abs:\"correspondence\"",
+   "abs:\"cine\" AND abs:\"MRI\""
+  ]
+ },
+ {
+  "id": "2609.31777v2",
+  "date": "2026-09-24",
+  "title": "Beyond MSE: Rician Likelihood Denoising for Self-Supervised Cardiac $T2$ and $T1ρ$ MRI",
+  "abs": "Magnetic resonance imaging involves an inherent trade-off among spatial resolution, acquisition time, and noise. This trade-off contributes to long scan times and high cost. Deep learning has improved image denoising, but cardiac MRI remains difficult because high-resolution, rapid acquisitions generally lack corresponding low-noise ground truth. Self-supervised denoising offers a potential solution by learning from noisy image pairs or even single noisy acquisitions. However, we show that Noise2Void-style blind-spot denoising, which uses a mean squared error (MSE) loss and assumes zero-mean, independent and identically distributed (i.i.d.) noise, is poorly suited to MR magnitude images. When applied to short-axis $T2$-weighted and $T1ρ$-weighted cardiac MRI with synthetic Rician noise, it produces biased denoised images and biased parametric maps of $T2$ and $T1ρ$. To address this limitation, we formulate self-supervised denoising as maximum likelihood estimation under a known Rician noise model. This yields unbiased denoisers that are competitive with supervised baselines.",
+  "cats": [
+   "eess.IV",
+   "cs.CV"
+  ],
+  "q": [
+   "abs:\"cardiac\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.25966v1",
+  "date": "2026-09-22",
+  "title": "GRIP: Gaussian Rendering as a Cross-Modal Bridge for Image-to-Point Cloud Registration",
+  "abs": "This paper introduces GRIP, a pose-conditioned refinement framework for pixel-to-point matching and 2D to 3D registration. Given an initial coarse pose estimate, GRIP addresses the structural mismatch between grid based image descriptors and unordered point cloud descriptors by softly rendering learned 3D point features onto the image grid through Gaussian feature splatting. The rendered point derived feature map is then fused with image features by a pixel aligned transformer, enabling visual semantic and geometric cues to interact in a shared 2D representation. The refined features are decoded and propagated to finer resolutions for dense correspondence estimation and final pose refinement. Experiments on RGB D Scenes V2 and 7 Scenes demonstrate state of the art inlier ratio and competitive registration recall, with stronger performance under stricter evaluation thresholds.",
+  "cats": [
+   "cs.CV"
+  ],
+  "q": [
+   "abs:\"dense correspondence\" AND cat:cs.CV"
+  ]
+ },
+ {
+  "id": "2609.26450v1",
+  "date": "2026-09-22",
+  "title": "Irreducible exotic ${\\mathbb {CP}}^2\\# 7{\\overline {\\mathbb {C}} {\\mathbb {P}} } ^2$'s with free involutions",
+  "abs": "We construct infinitely many pairwise non-diffeomorphic irreducible smooth four-manifolds homeomorphic to ${\\mathbb {CP}}^2\\# 7{\\overline {\\mathbb {C}} {\\mathbb {P}} } ^2$, each admitting a free, orientation-preserving involution. Their quotients give infinitely many irreducible definite four-manifolds with fundamental group ${\\mathbb {Z}}/2 {\\mathbb {Z}}$ and $b_2=3$, filling the corresponding gap in the geography of such examples. The construction of infinitely many distinct examples relies on a novel equivariant torus surgery.",
+  "cats": [
+   "math.GT"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.23815v1",
+  "date": "2026-09-20",
+  "title": "Confidence-Aware Teacher-Student Distillation for 3D Medical Segmentation",
+  "abs": "Medical image segmentation models typically rely on large amounts of densely annotated volumetric data, limiting their scalability across tasks and imaging modalities. This work addresses the challenge of predicting entire 3D anatomical structures from extreme annotation sparsity. An annotation-efficient student-teacher framework is proposed for automatic 3D medical segmentation that requires only a set of point prompts on a single 2D slice per volume, as input. A foundation model serves as an offline teacher, utilizing the provided point prompts from the selected slice to full-volume pseudo-annotations alongside their corresponding spatial confidence scores prior to student training. To mitigate the error propagation of noisy pseudo-annotations, a task-specific 3D student network is trained using a confidence-aware optimization strategy. By leveraging the teacher's pre-computed confidence scores, this strategy explicitly excludes statically uncertain regions of the pseudo-annotations from the loss calculation, while simultaneously emphasizing regions with higher confidence. Evaluated on 3D cardiac MRI datasets, our framework outperforms state-of-the-art semi-supervised methods, improving segmentation performance by up to 43.6%. Furthermore, it drastically reduces the manual annotation burden to just a few positive point prompts per volume, while improving surface boundary precision by up to 14.7% over the teacher and successfully recovering up to 34.1% of the performance gap toward the fully supervised upper bound.",
+  "cats": [
+   "cs.CV"
+  ],
+  "q": [
+   "abs:\"cardiac\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.21783v1",
+  "date": "2026-09-18",
+  "title": "A Split-Signature Type IIB Background on $\\mathrm{AdS}_{5,\\mathbb C}$",
+  "abs": "We construct a maximally supersymmetric Type IIB background in signature $(5,5)$ on the real ten-manifold underlying complex $\\mathrm{AdS}_5$. The spacetime is diffeomorphic to $T^*S^5$ and carries the invariant metric $G=\\mathrm i(\\bar q-q)$, where $q$ is the holomorphic constant-curvature metric. The real five-form $F_5=(4\\mathrm i/L)(Ω-\\barΩ)$, built from its normalized volume form, is self-dual, and its stress tensor supports this scalar-flat, non-Einstein metric. We derive these fields from the most general $\\mathrm{SL}(4,\\mathbb C)$-invariant metric and five-form ansatz: self-duality and the Einstein equation fix their phases up to the overall scale, orientation, and flux sign. The fields obey the reality conditions of the untwisted $\\mathrm{IIB}_5$ theory. The holomorphic coframe makes the supercovariant curvature cancellation explicit, and flat transport gives thirty-two global real Killing spinors. Their Killing superalgebra is the factor-exchanging real form of $\\mathfrak{psl}(4|4,\\mathbb C)$, and we identify the corresponding supercoset.",
+  "cats": [
+   "hep-th"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.21233v1",
+  "date": "2026-09-18",
+  "title": "Complete characterization of planar $C^1$ linearizability and optimal conjugacy regularity",
+  "abs": "We establish a complete characterization of local $C^1$ linearizability for planar diffeomorphisms. For every prescribed hyperbolic real Jordan form, we obtain necessary and sufficient integrability conditions on the modulus of continuity of the derivative for local $C^1$ linearizability. These criteria reduce to three canonical thresholds: the classical, polynomially weighted, and squared-logarithmically weighted Dini conditions. Each threshold is optimal: whenever the corresponding condition fails, we construct a diffeomorphism with the identical linear part that is not locally $C^1$ linearizable. For every non-hyperbolic linear part, explicit polynomial counterexamples show that smoothness alone cannot guarantee even local topological linearization. Beyond $C^1$ existence, we determine the optimal regularity for the derivative of the linearizing conjugacy in every hyperbolic case, with the optimality established by counterexamples.",
+  "cats": [
+   "math.DS",
+   "math.CA",
+   "math.SP"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.20619v1",
+  "date": "2026-09-17",
+  "title": "Gravity from Invariant Weyl-Integrable space-time (IWIST)",
+  "abs": "In this paper we propose a geometrically motivated formulation of gravity in an invariant Weyl--Integrable space-time (IWIST), in which the background geometry is not imposed a priori but is dynamically determined through the Palatini variational principle. For a scalar field non-minimally coupled to gravity action, the resulting compatibility condition defines a Weyl--Integrable geometry which is preserved by a local Weyl transformation of the metric and the geo\\-me\\-tri\\-cal scalar field. We construct an action invariant under both diffeomorphisms and Weyl transformations and introduce a Weyl-covariant variational procedure based on an invariant extension of the divergence theorem. The corresponding field equations are obtained for the metric, the Weyl scalar, and the Weyl gauge field. We further formulate the theory in the Einstein--Riemann frame, where the effective metric is Riemannian and the scalar field is re\\-inter\\-pre\\-ted as a phy\\-si\\-cal degree of freedom of geometric origin. Finally, we propose a geometrical mechanism for the explicit breaking of Weyl symmetry by introducing a coupling between the Weyl gauge field and a current constructed from the scalar sector. The resulting theory remains diffeomorphism covariant while departing from local Weyl invariance. The Einstein--Riemann representation of the broken theory contains an additional generally covariant interaction, making the Weyl-invariant model a particular limit of a more general gravitational theory.",
+  "cats": [
+   "gr-qc",
+   "hep-th",
+   "math-ph",
+   "physics.space-ph"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.19945v1",
+  "date": "2026-09-17",
+  "title": "New families of moment-angle manifolds diffeomorphic to connected sums of products of spheres",
+  "abs": "We prove that the moment-angle manifold $\\mathcal Z_{\\mathcal K}$ is diffeomorphic to a connected sum of products of spheres when $\\mathcal K$ is a starshaped (in particular, polytopal) 3-dimensional simplicial sphere with exactly two missing edges that are not adjacent to each other. One of the summands of the connected sum is a product of three spheres. For neighbourly starshaped simplicial spheres $\\mathcal K$ of odd dimension, we prove the diffeomorphism $\\mathcal Z_{\\mathcal K} \\cong M_1\\#\\cdots\\# M_k$, where each $M_i$ is a product of two spheres. We give an explicit description of the moment-angle manifolds corresponding to non-polytopal Barnette and Brückner spheres.",
+  "cats": [
+   "math.AT"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.18351v1",
+  "date": "2026-09-16",
+  "title": "Well-posedness and discrete-to-continuum convergence of the Kirchhoff Network model",
+  "abs": "In this work, we study the connection between the bidomain model of cardiac electrophysiology and the Kirchhoff Network model (KNM), that was recently introduced by Jäger and Tveito. In the KNM, each cell of the cardiac tissue is represented as a node in a discrete network and the dynamics of the electric potentials in the heart are described by a system of ordinary differential equations on the nodes. We first study the well-posedness of the KNM and then prove that, when the nodes are situated on the vertices of a regular lattice and the mesh size $\\varepsilon$ tends to zero, the solutions of the KNM system at cell-size $\\varepsilon$ converge to the solution of the bidomain model, along appropriate subsequences. Regarding the convergence, we adopt the framework presented by Pennacchio, Savaré, and Colli Franzone in \"Multiscale modeling for the electrical activity of the heart\", 2005, which is based on (a) the time-discretization of the evolution equations of the bidomain and $\\varepsilon$-KNM systems via a semi-implicit Euler scheme, (b) the identification of the time-discrete solutions as extremal points of a Minimizing Movement scheme, and (c) the $Γ$-convergence of the Minimizing Movements functionals.",
+  "cats": [
+   "math.AP"
+  ],
+  "q": [
+   "abs:\"cardiac\" AND abs:\"mesh\""
+  ]
+ },
+ {
+  "id": "2609.19079v2",
+  "date": "2026-09-16",
+  "title": "Trajectory Manifolds for Nonlinear Data-Enabled Predictive Control",
+  "abs": "This note establishes a geometric foundation for trajectory-manifold representations of deterministic nonlinear systems in a behavioral setting motivated by data-enabled predictive control. For a discrete-time system $x_{k+1}=f(x_k,u_k)$ with measured state and a $C^r$ transition map, $r\\geq 1$, we consider the terminal-state-augmented finite-horizon behavior consisting of all admissible state-input trajectories over a prediction horizon $N$. We prove that this behavior is a $C^r$ embedded submanifold of the ambient trajectory space with intrinsic dimension $n+Nm$, where $n$ and $m$ are the state and input dimensions. Moreover, the rollout map from the admissible initial-state and input coordinates $(x_0,\\mathbf u)$ is a $C^r$ diffeomorphism onto the behavior manifold, providing explicit global smooth coordinates. This yields a canonical exact encoder--decoder representation and implies that any exact differentiable latent representation of the full behavior must have latent dimension at least $n+Nm$. The geometric result does not require controllability, stabilizability, or invertibility of the dynamics. Corresponding results are given for zero-order-hold sampled continuous-time systems and fixed-step numerical transition maps. These results provide the deterministic geometric foundation for subsequent data-driven approximation and predictive-control development.",
+  "cats": [
+   "math.OC",
+   "eess.SY"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ },
+ {
+  "id": "2609.18028v2",
+  "date": "2026-09-16",
+  "title": "Central charge and black hole entropy for regular extremal black-bounce spacetimes",
+  "abs": "The Bekenstein-Hawking entropy, proportional to one quarter of the horizon area, is fundamental in black hole thermodynamics and can also be understood via the AdS/CFT correspondence, such as the 3D BTZ black hole and 2D CFT. In this work, we adopt the Kerr/CFT approach to analyze the central charge and black hole entropy for regular extremal black-bounce spacetimes, including the counterparts of the Kerr, Kerr-Newman, and Reissner-Nordström black holes. These spacetimes are free of curvature singularities at $r=0$. We derive the near horizon geometries of these spacetimes and find that they exhibit enhanced symmetry, namely SL$(2,\\mathbb{R})\\times \\mathrm{U}(1)$ or SL$(2,\\mathbb{R}) \\times \\mathrm{SO}(3)$. By imposing appropriate boundary conditions, we analyze their asymptotic symmetry groups, which contain diffeomorphisms as well as the $\\mathrm{U}(1)_{\\rm gauge}$ symmetry arising from the electromagnetic field. We then extract the central charge from the charge algebra and evaluate the left-moving temperature of the Frolov-Thorne vacuum. It is worth emphasizing that in the black-bounce Kerr-Newman case, the central charge from the electromagnetic contribution vanishes. Furthermore, in the black-bounce Reissner-Nordström case, we uplift the 4D geometry to a 5D configuration by incorporating a $\\mathrm{U}(1)$ gauge fiber. Our results show that the microscopic entropy calculated from the Cardy formula is consistent with the Bekenstein-Hawking entropy. This agreement suggests that the Kerr/CFT approach remains valid for certain regular spacetimes without curvature singularities, thereby providing a microscopic statistical understanding of black hole entropy.",
+  "cats": [
+   "hep-th",
+   "gr-qc"
+  ],
+  "q": [
+   "abs:\"diffeomorphic\" AND abs:\"correspondence\""
+  ]
+ }
+]

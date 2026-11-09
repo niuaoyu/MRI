@@ -1,0 +1,249 @@
+## W4401437780 | 2311.00332v2 | SDF4CHD: Generative Modeling of Cardiac Anatomies with Congenital Heart Defects
+   - However, CHDs are often rare, making it challenging to acquire sufficiently large patient cohorts for training such DL models.
+   - This rarity makes it extremely challenging to acquire sufficiently large patient cohorts [ 9 , 10 ] for validation of new surgical procedures in clinical trials and the development of data-driven approaches for automated image-based computational modeling.
+   - Furthermore, prior generative models of cardiac shapes often assumed that the cardiac anatomy distribution had been sufficiently covered in the training dataset.
+   - To address this challenge, it is essential to incorporate prior human knowledge of CHD anatomical abnormalities associated with each type and the relationships between different types into the modeling process.
+   - However, prior methods did not differentiate between type (topology) and shape changes, which can pose challenges when attempting to generate anatomies specific to particular CHDs.
+   - If we assume that the deformation needed to model patient-specific geometries and the need for additional corrections are independent events, the posterior probability of shape and correction codes given the training data pairs can be expressed as:
+   - Since the “imageCHD” dataset was initially designed for classification, the provided ground truth segmentations were extremely noisy, posing a significant challenge in accurately differentiating the true defects from noise.
+## W4403071569 | 2407.10663v1 | Spatio-temporal neural distance fields for conditional generative modeling of the heart
+   - In the derivation of the auto-decoder formulation of neural distance fields (see [ 18 ] ) the prior distribution over the latent variables z r \textbf{z}_{r} is assumed to come from a zero-mean multivariate Gaussian distribution.
+   - Since multiple plausible sequences can be generated based on the same clinical demography, we do not compare the generated surfaces directly to those from the test set.
+## W4403071497 | NOT FOUND | Generating Anatomically Accurate Heart Structures via Neural Implicit Fields
+## W4391452647 | NOT FOUND | Type and Shape Disentangled Generative Modeling for Congenital Heart Defects
+## W4405468760 | 2412.10985v2 | MorphiNet: A Graph Subdivision Network for Adaptive Bi-ventricle Surface Reconstruction
+   - These limitations result in data loss and measurement inaccuracies, hindering the capture of detailed anatomical structures.
+   - Cross-dataset validation on the Automated Cardiac Diagnosis Challenge confirmed robust generalization, achieving a 0.7 Dice score with 30% improvement over previous template-based approaches.
+   - However, accurate model reconstruction from CMR data is challenging because of its anisotropic nature.
+   - Although fully volumetric (3D) CMR acquisitions can mitigate slice misalignment issues, it is not an imaging format that is routinely used in clinical practice, and these challenges persist.
+   - In this work, we address these challenges by proposing MorphiNet , an efficient method to restore missing structural information about the heart, and create high quality morphologies, as shown in Fig 1 .
+   - We focus on the reconstruction of the Left Ventricular (LV) and Right Ventricular (RV) myocardium, which represents the most challenging aspect of cardiac reconstruction and is particularly valuable for biomechanical and electrophysiological simulation applications.
+   - We introduce MorphiNet, the first approach to address anisotropic CMR challenges by learning cardiac anatomy from unpaired CT data, enabling bi-ventricular myocardium reconstruction without requiring CMR ground-truth 3D meshes for training.
+## W4409865654 | 2408.07532v1 | Improved 3D Whole Heart Geometry from Sparse CMR Slices
+   - Limitations of our work include reliance on segmentations, which poses challenges if the segmentation process yields inaccurate results.
+## W4414602808 | 2507.15203v1 | Personalized 4D Whole Heart Geometry Reconstruction from Cine MRI for Cardiac Digital Twins
+   - This is mainly because direct volumetric reconstruction from cine MRIs is challenging due to the inherent sparsity and anisotropy of the data.
+   - Despite its effectiveness, this work has three main limitations.
+## W7155184131 | 2604.19403v2 | VecHeart: Holistic Four-Chamber Cardiac Anatomy Modeling via Hybrid VecSets
+   - To overcome the limitations of current feed-forward implicit methods, specifically their restriction to single-object modeling and their neglect of inter-part correlations, we introduce Hybrid Part Transformer, which leverages part-specific learnable queries and interleaved attention to capture complex inter-chamber dependencies.
+   - Experiments show that our method achieves state-of-the-art performance, maintaining high-fidelity reconstruction across diverse challenging scenarios.
+   - However, faithfully representing multi-part heart geometry from diverse input configurations remains a significant challenge.
+   - To address these limitations, we propose VecHeart, a versatile framework for high-quality four-chamber cardiac structure reconstruction and generation given potentially incomplete data.
+   - For modalities such as MRI, data is often only available for a few planar slices and reconstruction from such sparse data is a challenge.
+   - Compared to Ours-Sep, which fail to model inter-part relationships and cannot extend to missing-input scenarios, our full model shows the necessity of modeling inter-part correlation and structural priors.
+## W7161324349 | 2605.13994v1 | CineMesh4D: Personalized 4D Whole Heart Reconstruction from Sparse Cine MRI
+   - Cardiovascular diseases remain a leading cause of global mortality, underscoring the need for accurate assessment of cardiac structure and function to guide clinical decisions [ 18 ] .
+   - In future work, we will incorporate pathological metadata and clinical signals to enable comprehensive cardiac disease prediction.
+## W7167226951 | 2607.01952v1 | Personalized 4D Whole-Heart Mesh Reconstruction from Cine MRI via Multi-Scale Temporal Modeling and Differentiable Contour Rendering
+   - However, cine MRI typically acquires sparse and intersecting 2D image planes, i.e., short-axis (SAX) and long-axis (LAX) slices, leaving substantial spatial gaps that make accurate 4D cardiac geometry reconstruction highly challenging.
+   - This is mainly because direct volumetric reconstruction from cine MRIs is challenging due to the inherent sparsity and anisotropy of the data.
+   - They failed to model the continuous temporal dynamics and the intrinsic coupling of cardiac shape and motion throughout the cycle.
+   - Despite differences in imaging physics, these tasks share the challenge of reconstructing complete 3D anatomy from partial, view-dependent observations.
+   - Echo provides high temporal resolution and broad clinical accessibility, with motion estimation typically performed by tracking speckle or intensity patterns, though challenges remain in out-of-plane motion handling and signal dropout ( Evain et al., 2022 ; Ouyang et al., 2020 ) .
+   - This compartmentalized approach fails to capture physiologically important atrioventricular interactions ( Fedele et al., 2023 ) .
+   - Most existing methods rely on high-resolution volumetric imaging to construct detailed patient-specific meshes, and they typically assume the availability of dense 3D geometry at a single representative time point, with motion either prescribed or simulated from first principles rather than directly inferred from routine clinical acquisitions.
+## W7214391406 | 2609.29825v1 | Anatomy-Aligned Surface Field Learning for Myocardial Reconstruction from Sparse Short-Axis Cine MRI
+   - However, routinely acquired short-axis (SAX) cine MRI is sparsely sampled along the through-plane direction, making dense and anatomically consistent surface reconstruction challenging.
+   - Recovering a geometrically smooth and anatomically plausible myocardial surface from such sparse SAX observations remains challenging because geometric evidence is limited to sparse SAX planes.
+   - Implicit reconstruction methods alleviate some of these limitations by predicting continuous occupancy, signed distance, or coordinate fields in 3D space, thereby improving smoothness and topology preservation ( Chen et al., 2024 ; Fu et al., 2025 ; Sun et al., 2022 ; Yuan et al., 2023 ; Ye et al., 2023 ) .
+   - However, using such a surface domain to jointly organize sparse SAX observations and dense reconstruction targets remains underexplored.
+   - For downstream cine MRI-based scar localization (Sec. 4.6.2 ), we additionally used the CineMyoPS dataset from the CARE challenge ( Ding et al., 2025 ) , comprising 64 cases from two centers with cine MRI and manual annotations of the LV, myocardium, and myocardial scar at end diastole.
+   - Future work should employ larger external cohorts and include quantitative scar assessment, uncertainty estimation, and evaluation in downstream simulation and prognostic tasks.
+   - Despite these limitations, anatomy-aligned UV surface-field learning provided an accurate, efficient, and extensible framework for correspondence-aware 4D myocardial reconstruction from sparse cine MRI.
+## W7131086421 | 2409.02070v2 | Explicit Differentiable Slicing and Global Deformation for Cardiac Mesh Reconstruction
+   - However, 3D medical images are often acquired as 2D slices that are sparsely sampled (e.g., large slice spacing) and noisy, and 3D mesh reconstruction on such data is a challenging task.
+   - However, reconstructing patient-specific cardiac mesh is challenging because of imaging imperfection (insufficient resolution or excessive noise) and the variability of cardiac shape across individuals.
+   - Several works resorted to using marching cubes to obtain such training datasets, thus retaining limitations of marching cubes.
+   - Representing the deformation as a global function on the mesh, rather than a local function on each vertex, can preserve mesh smoothness and quality during the optimization process, thereby overcoming the limitations of current vertex-wise deformation techniques and providing a more robust framework for cardiac mesh reconstruction.
+   - In the following, we review the existing methods for cardiac mesh reconstruction and discuss their limitations.
+   - However, the marching cubes algorithm has several limitations.
+   - Firstly, it relies on the assumption of a uniform voxel grid, which can lead to inaccuracies in representing the complex geometries of cardiac structures, smoothing post-processing, and deteriorating its fidelity to images.
+## W7220676654 | 2610.06052v2 | Local2Mesh: Spatially Localized Contour-to-Mesh for Left Ventricular Reconstruction from Sparse 2D Cardiac MRI
+   - Under a local smoothness assumption, this boundary can also guide surface reconstruction in nearby unobserved regions.
+   - Future work will extend Local2Mesh to temporally consistent 4D reconstruction.
+   - We acknowledge the M&Ms-2 and ACDC challenge organizers for providing the datasets.
+## W7167829670 | 2607.06923v2 | Bi-PT: Bidirectional Cross-Attention Point Transformers for Four-Chamber Heart Reconstruction from Sparse Cardiac MRI Data
+   - Across these families, diverse architectures including CNN [ 3 ] , GCN [ 11 ] and point transformer [ 22 ] have been adopted, but limitations remain.
+## W7160327394 | 2605.01884v1 | Cardiac Mesh Flow: One-Step Generation of 3D+t Cardiac Four-Chamber Meshes via Flow Matching
+   - As shown in Table 2 , the uniform sampling leads to the lowest generation fidelity, while the highest periodic consistency is achieved as it generates static hearts and fails to capture the motion patterns.
+   - We then observe that Cardiac Mesh Flow fails to produce high fidelity cardiac mesh sequences within one step, as it is challenging to learn straight flow trajectories from Gaussian noise to multi-scale FFD fields.
+## W7162287616 | NOT FOUND | RVDeformer: Sparse Point Cloud-Guided Right Ventricle 3-D Reconstruction in Echocardiograms
+## W7196949058 | NOT FOUND | biv-me: Open-source software for generating time-varying biventricular meshes from cine cardiovascular magnetic resonance imaging with multi-cohort validation
+## W4405303959 | NOT FOUND | Slice2Mesh: 3D Surface Reconstruction From Sparse Slices of Images for the Left Ventricle
+## W4411996531 | NOT FOUND | Joint Shape Reconstruction and Registration via a Shared Hybrid Diffeomorphic Flow
+## W7138869125 | 2603.16078 | Volumetrically Consistent Implicit Atlas Learning via Neural Diffeomorphic Flow for Placenta MRI
+   - Ellen Grant Affiliation: Boston Children’s Hospital, Harvard Medical School Polina Golland Affiliation: MIT Computer Science and Artificial Intelligence Laboratory Abstract Establishing dense volumetric correspondences across anatomical shapes is essential for group-level analysis but remains challenging for implicit neural representations.
+   - The placenta, a vital lifeline organ whose normal functioning is essential for fetal growth [ 2 ] , presents particular challenges: its in-vivo shape conforms to the curved uterine wall at arbitrary locations and orientation, varies widely across subjects, and changes dynamically due to fetal motion, maternal breathing, and contractions during imaging [ 2 ] .
+   - This limitation precludes population-level shape analysis and downstream applications such as label transfer, which depend on consistent coordinate mappings between instances.
+   - These methods enable efficient atlas estimation without repeated optimization, but typically operate on voxel intensities and therefore implicitly assume limited shape variability across subjects.
+   - For anatomies with substantial geometric variability, such as the placenta, intensity-only registration often fails to establish stable correspondences [ 2 , 37 ] , motivating approaches that model shape geometry.
+   - Nevertheless, scalability and geometric fidelity remain open challenges.
+   - While our model achieves high geometric fidelity and volumetric consistency, several limitations remain.
+## W4403649766 | 2405.10879 | One Registration is Worth Two Segmentations
+   - In this work, we propose a practical and general-purpose registration algorithm to overcome the limitation due to training data.
+   - Assume an alternative "unsupervised" segmentation can be used to obtain two sets of candidate ROIs, { R ^ k x } k = 1 K x \{\hat{R}^{x}_{k}\}_{k=1}^{K^{x}} and { R ^ k y } k = 1 K y \{\hat{R}^{y}_{k}\}_{k=1}^{K^{y}} , from the fixed and moving- images, respectively.
+   - This is an interestingly small number, suggesting future work for even furthering registration performance, by more effectively utilizing smaller paired ROIs.
+## W7134047657 | NOT FOUND | 3D Spatiotemporal cardiac reconstruction for predicting MACE in acute myocardial infarction
+## W7214158550 | NOT FOUND | Uncovering Interpretable Point-Wise Image Correspondences from Deep Segmentation Features
+## W7147237246 | 2603.27003 | AI-enabled cardiac shape reconstruction from routine magnetic resonance imaging
+   - Compared with traditional local interpolation methods, the proposed framework exhibited improved geometric fidelity in anatomically challenging regions, including the left ventricular apex and basal segments, particularly under sparse sampling conditions.
+   - However, generating three-dimensional (3D) cardiac shapes posed practical limitations for serial acquisitions and time-resolved imaging.
+   - Consequently, AI-enabled reconstruction methods have emerged to address key limitations in (i) time consumption, (ii) reconstruction quality, and (iii) generalizability [ 16 , 17 ] .
+   - In cardiac shape reconstruction, the complex motion of the heart challenges imaging accuracy and limits the availability of high-quality datasets for training learning-based AI models.
+   - In this work, we introduce NeuralMRI to address critical limitations in existing cardiac reconstruction methods through two key contributions.
+   - This enables robust interpolation in anatomically challenging regions without requiring predefined shape spaces.
+   - Accurate 3D reconstruction of cardiac geometry from sparse imaging data remains a fundamental challenge in cardiovascular imaging.
+## W4415089519 | 2509.12090v3 | End-to-End 4D Heart Mesh Recovery Across Full-Stack and Sparse Cardiac MRI
+   - (2023) , which is a limitation we observed in practice at our collaborating university hospital even though state-of-the-art MRI equipment is available, as shown in Fig. 1 (c).
+   - This limitation makes current 4D modeling pipelines unusable during interventions .
+   - However, CMR images often exhibit low through-plane resolution, making accurate reconstruction challenging.
+   - Reconstructing meshes solely from extracted contours or points fails to exploit the rich appearance information contained in cine images Xiao et al.
+   - However, this would fail to exploit temporal consistency and would make it difficult to establish inter-frame correspondences.
+   - Unfortunately, they also suffer from several limitations.
+   - While our AFA module effectively encodes features from varying 2D slice configurations, a persistent challenge remains in the online scenario, where the limited number of slices can hinder accurate 3D motion reconstruction.
+## W4417137794 | NOT FOUND | cMeta-INR: cohort-informed meta-learning-based implicit neural representation for deformable registration-driven real-time volumetric MRI estimation
+## W4414687007 | 2509.06862 | Matching Shapes Under Different Topologies: A Topology-Adaptive Deformation Guided Approach
+   - We tackle matching meshes that contain topological artefacts which can break the assumption made by current approaches.
+   - While Functional Maps assume the deformation induced by the ground truth correspondences to be near-isometric, ARAP-like deformation-guided approaches assume the latter to be ARAP.
+   - Neither assumption holds in certain topological configurations of the input shapes.
+   - While FMs assume a near-isometric deformation due to the reliance on the eigenfunctions of the Laplace Bletrami Operator which are only stable under near-isometries, ARAP like deformation models assume ARAP deformations leveraging the mesh connectivity to define rigidity constraints.
+   - Non-learning based ARC-Flow [ 37 ] proposes to align shapes using a topology preserving diffeomorphic vector field; this assumption fails when meshes differ in topology.
+   - Although on par with our approach on ExtFAUST, Hybrid ULRSSM’s performances plummet on the most challenging shapes from 4DHumanOutfit.
+   - Thanks to our topology adaptive deformation model, our strategy discards the topology of the source mesh when it impedes the matching objective (ankle detaches in first example, both hands detach in second one), while the alignments found by Merrouche et al. suffer from the ARAP assumption when combined with topological artefacts (see red boxes).
+## W4394929009 | 2309.04836 | Neural Semantic Surface Maps
+   - Computing semantic homeomorphism faces two main challenges.
+   - However, it has two limitations: it expects the individual surfaces to be cut into disc topologies with the two respective boundaries already in correspondence and requires a set of exact landmark correspondences.
+   - Directly optimizing for distance preservation is computationally challenging for surfaces [ BBK06 , HAWG08 ] discretized as dense triangulations.
+   - Restricting optimizations directly to surfaces poses a challenge since the most common surface representation, a triangle mesh, does not easily lend itself to continuous optimization.
+   - Instead of functional maps, which assume that a linear spectral map exists and is less suitable for optimizing bijectivity, we build on NSM [ MAKM21 ] that maps shapes through common 2D domains.
+   - However, the original technique implicitly assumes shapes to have corresponding boundaries, making it unsuitable for fully automatic mapping.
+   - We assume both shapes to have zero genus, although the method can be extended to higher genus surfaces.
+## W7151509712 | NOT FOUND | TransLAP: Non‐Isometric Shape Matching Using Transformer Based Linear Assignment Problem
+## W4417358728 | NOT FOUND | SRE-FMaps: A Sinkhorn-Regularized Elastic Functional Map Framework for Non-Isometric 3D Shape Matching
+## W7148874316 | 2604.01274 | Non-Rigid 3D Shape Correspondences: From Foundations to Open Challenges and Opportunities
+   - Deformation-based methods. 2.4 Challenges across matching scenarios 2.5 Correspondence evaluation Accuracy.
+   - Use of learned priors. 5.3 Template fitting Fitting. 5.4 Learning-based methods 6 Challenges and emerging trends 6.1 Feature aggregation from foundation models 6.2 Neighbourhood-preservation 6.2.1 Local optimisation 6.2.2 Global approaches 6.3 Neural correspondence optimization 6.4 Partial shape matching 6.4.1 Partial-to-full shape matching Partial functional maps.
+   - Measures and shape analysis. 9 Open challenges Connecting quantitative metrics to downstream applications.
+   - Potential future directions. 10 Conclusions 11 Acknowledgements References License: arXiv.org perpetual non-exclusive license arXiv:2604.01274v1 [cs.GR] 01 Apr 2026 \STAR \CGFccby Non-Rigid 3D Shape Correspondences: From Foundations to Open Challenges and Opportunities Volume: 45 Issue: 2 A.
+   - Many methods have thus been proposed to tackle this challenging problem from varying perspectives, depending on the downstream application.
+   - Finally, we provide an overview of emerging challenges and opportunities in this growing field, including the recent use of vision foundation models for zero-shot correspondence and the particularly challenging task of matching partial shapes.
+   - But such an important task does not come without challenges.
+## W4402727307 | 2403.01781 | Integrating Efficient Optimal Transport and Functional Maps for Unsupervised Shape Correspondence Learning
+   - Traditional OT-based approaches, often reliant on entropy regularization OT in learning-based framework, face computational challenges due to their quadratic cost.
+   - Establishing precise correspondences between geometric 3D shapes is a core challenge in various domains of computer vision and graphics, including but not limited to, object tracking, registration, reconstruction, deformation, texture transfer, and statistical shape analysis [ 63 , 14 , 7 , 53 , 56 , 22 ] .
+   - Additionally, the entropic regularization fails to produce a valid metric between probability measures as it does not satisfy the triangle inequality.
+   - Despite being easy to sample, the uniform distribution is not able to differentiate between informative and non-informative projecting features.
+   - We employ a more challenging remeshed version of FAUST [ 7 ] and SCAPE [ 3 ] , as proposed in [ 15 , 43 ] .
+   - Additionally, the SHREC’ 19 19 dataset presents a more complex challenge due to its significant variations in mesh connectivity, encompassing 44 44 shapes and 430 430 pairs for evaluation.
+   - Regarding the DT4D-H dataset, we only perform comparisons on the challenging intra-class scenario.
+## W4399563522 | 2310.11420 | Revisiting Map Relations for Unsupervised Non-Rigid Shape Matching
+   - Our approach improves upon recent state-of-the art deep functional map methods and can be applied to a broad range of different challenging scenarios.
+   - Using different challenging datasets (including non-isometry, topological noise and partiality), we demonstrate that our method substantially outperforms previous state-of-the-art methods.
+   - Even though 3D shape matching is a long-standing problem and has been studied for decades [ 67 , 65 ] , finding correspondences between two non-rigidly deformed 3D shapes is still a challenging problem, especially for shapes with large non-isometric deformation, topological noise, or partiality.
+   - In contrast, the recent work by Cao et al. [12] explicitly models the relationship between functional maps and pointwise maps and thus leads to more robust matching in a broad range of challenging scenarios.
+   - For the first time we propose a functional map solver that is self-adaptive for different challenging matching scenarios.
+   - We set the new state-of-the-art performance on numerous challenging benchmarks in diverse settings, including non-isometric, topologically noisy and partial shape matching, even compared to recent supervised methods.
+   - Due to its simple yet efficient formulation, the functional map framework has been extended by many follow-up works, e.g. in terms of improving the matching accuracy and robustness [ 25 , 54 ] , extending it to more challenging scenarios (e.g. non-isometry [ 37 , 53 , 22 , 56 , 45 ] , partiality [ 57 , 43 ] ), considering multi-shape matching [ 32 , 13 , 34 , 28 ] , and matching with non-unique solutions [ 55 ] .
+## W4403878288 | NOT FOUND | Synchronous Diffusion for Unsupervised Smooth Non-rigid 3D Shape Matching
+## W4408519784 | NOT FOUND | Equivariant Local Reference Frames With Optimization for Robust Non-Rigid Point Cloud Correspondence
+## W4402716356 | 2404.12209 | Partial-to-Partial Shape Matching with Geometric Consistency
+   - A prominent challenge are partial-to-partial shape matching settings, which occur when the shapes to match are only observed incompletely (e.g. from 3D scanning).
+   - We demonstrate that it is indeed possible to solve this challenging problem in a variety of settings.
+   - Unlike matching full shapes, partial shapes often exhibit substantial non-isometric and irregular characteristics, making them a challenging problem to address.
+   - An inherent limitation shared by many methods based on functional maps is to get desired structural properties, like bijectivity and smoothness, as observed in previous studies [ 43 , 35 ] .
+   - To better account for the partial-to-partial matching paradigm, we set all vertices on the shape that remain unmatched to an infinite geodesic error, and compute the geodesic error for the remaining vertices, such that we obtain a metric, that includes the overall performance of the matching.
+   - While our method outperforms current SOTA methods, there are some limitations.
+   - Transferring analogous concepts to implicit representations [ 47 ] is an interesting direction for future work.
+## W4402716382 | 2404.11156 | Learning SO(3)-Invariant Semantic Correspondence via Local Shape Transform
+   - However, existing self-supervised methods for this problem assume perfect input shape alignment, restricting their real-world applicability.
+   - In this work, we introduce a novel self-supervised R otation- I nvariant 3D correspondence learner with local S hape T ransform, dubbed RIST, that learns to establish dense correspondences between shapes even under challenging intra-class variations and arbitrary orientations.
+   - One of the primary challenges hindering advancements in this domain is the difficulty of annotating dense inter-shape correspondences, which limits the leverage of strongly-supervised learning paradigms.
+   - Nonetheless, a significant limitation in existing approaches is their stringent assumption about the alignment of input shape pairs; these methods strongly assume that the input point cloud pair to establish correspondences between is precisely aligned.
+   - This assumption is rarely met in practice, where object scans and shape instances can be arbitrarily oriented.
+   - To address this challenge, we introduce a novel self-supervised learning approach, dubbed RIST, designed to reliably determine dense SO(3)-invariant correspondences between shapes via local shape transform.
+   - These results highlight the efficacy of RIST in addressing the challenges posed by real-world scenarios where existing methods fail to perform effectively.
+## W4402753754 | 2406.12121 | TutteNet: Injective 3D Deformations by Composition of 2D Mesh Deformations
+   - Second, deforming one part of the space may have an effect on another part, and it is non-trivial to completely localize deformations to one part of a shape - however, note that this limitation also holds for all the other injective deformation techniques.
+## W4402951670 | NOT FOUND | 3D Congealing: 3D-Aware Image Alignment in the Wild
+## W7160140527 | 2406.18582 | CanFields: Consolidating Diffeomorphic Flows for Non-Rigid 4D Interpolation From Arbitrary-Length Sequences
+   - Qualitative Ablations. 8 Conclusion Limitations Acknowledgements References A Organization B Diffeomorphic Flow Temporal Coherence via Diffeomorphic Flows.
+   - Accurately reproducing the continuous deformation or motion of scanned physical objects is a fundamental challenge in computer graphics and geometry processing.
+   - These keyframes frequently exhibit missing regions from occlusions, measurement noise from imperfect depth estimation or varying acquisition conditions, and complex non-rigid deformation that makes frame-to-frame matching and tracking challenging.
+   - However, simultaneously optimizing the canonical shape and motion flow is challenging.
+   - The implicit representation often prematurely converges to incorrect geometry, particularly when capturing intricate details ( Sec. 3 ), and motion estimation may fail to aggregate temporal information consistently.
+   - Our overall framework ( Fig. 3 ) consistently outperforms state-of-the-art (SOTA) methods on the task of 4D interpolation from keyframes, particularly in challenging scenarios with missing regions, noisy raw scans, etc.
+   - methods [ 64 , 29 , 13 , 52 , 84 ] assume well-reconstructed source and target meshes and learn continuous deformations between them.
+## W4394625900 | 2307.01957 | Hybrid Neural Diffeomorphic Flow for Shape Representation and Generation via Triplane
+   - However, addressing dense correspondences and semantic relationships across DIF-encoded shapes remains a critical challenge, limiting their applications in texture transfer and shape analysis.
+   - Conventional DIFs face challenges in establishing correspondences between different shapes, limiting their applicability in domains like medical image segmentation [ 26 , 13 , 19 ] and texture transfer [ 31 , 8 ] .
+   - Previous methods [ 52 , 6 , 46 ] have proposed shape modeling as conditional deformations of a template DIF to address this limitation.
+   - However, these methods still have limitations, such as being topology-agnostic or lacking the capability to capture correspondences for local details.
+   - To overcome these challenges, we introduce H ybrid N eural D iffeomorphic F low (HNDF) for shape representation and generation.
+   - Point Correspondence and Topology preservation Capturing dense correspondences between shapes remains a significant challenge and a critical area of interest in the 3D vision community.
+   - Among them, mesh-based methods [ 21 , 20 ] face difficulties in handling topological changes, sensitivity to mesh connectivity, and challenges in capturing fine-grained details.
+## W4404965629 | 2409.11682 | SRIF: Semantic Shape Registration Empowered by Diffusion-based Image Morphing and Flow Estimation
+   - As consequence, SRIF achieves high-quality dense correspondences on challenging shape pairs, but also delivers smooth, semantically meaningful interpolation in between.
+   - In essence, one can learn canonical structural information from a collection of 3D shapes, which can help to match challenging non-rigid shapes ( Sun et al., 2021 ; Eisenberger et al., 2021 ) , or heterogeneous man-made objects ( Deng et al., 2021 ; Zheng et al., 2021 ) .
+   - Our point cloud extraction (Sec. 3.2 ) is similar to mesh extraction from 3D-GS ( Guédon and Lepetit, 2023 ) , which remains a challenging open problem.
+   - As shown in the bottom row of Fig. 4 , we achieve high-quality semantic correspondences in this challenging case, while being robust regarding imperfect intermediate guidance.
+   - In our context, we do not assume prior distributions for x x and y y but rather treat it as a registration problem.
+   - Though both methods produce distorted maps in the two challenging pairs, our method better captures the structural correspondences between shapes (see the red boxes).
+   - This can pose significant challenges on registration methods based on triangulation and point-wise correspondence update.
+## W4400817548 | 2405.03221 | Spatial and Surface Correspondence Field for Interaction Transfer
+   - Qualitative comparison. 4.4 Ablation Studies 5 Conclusion Limitations and future work.
+   - However, enabling machines or agents to automatically infer their interactions with 3D objects and execute corresponding actions remains a challenging task.
+   - This process is non-trivial and particularly challenging when dealing with deformable agents, such as parametric models of human bodies or hands, and transferring their interactions from a source object to a target object with a different shape but a similar pose.
+   - To overcome all these challenges, we utilize both spatial and surface interaction representations to encode global and local features of interactions.
+   - In contrast, the interaction transfer discussed in our work assumes that the agent remains the same, but the interacting object changes.
+   - While spatial points provide accurate localization, complex pre-processing is required to convert the source and target objects to genus-zero watertight meshes, which poses challenges for large-scale interaction transfer and cannot handle target objects with partial observations.
+   - We assume all objects are centered at the origin, so the spatial representation can be simply denoted as A s A^{s} .
+## W4417125790 | 2509.17431 | Hierarchical Neural Semantic Representation for 3D Semantic Correspondence
+   - However, accurate semantic-aware 3D correspondences are very challenging to achieve, as we need to build precise mappings between 3D shapes, while attentively considering the topological difference, object categories, and parts semantics, as well as the geometric details.
+   - The task becomes even more challenging when handling shapes with missing parts and cross-category differences.
+   - However, how to effectively exploit 3D generative models for shape analysis remains underexplored.
+   - Notably, when combined with the 3D foundation model ( Xiang et al., 2025 ) , our method exhibits strong generalization to challenging cross-category scenarios.
+   - However, a key limitation persists: the reliance on spectral embeddings makes the correspondence quality highly dependent on the stability of the LBO eigenbasis.
+   - To overcome the limitations of existing approaches, we propose the first framework that harnesses the power of pre-trained 3D generative models to establish high-quality 3D semantic correspondence, enabling us to handle shapes with diverse topologies, fine-grained geometric details, and even cross-category variations.
+   - The above limitations underscore the need for dedicated 3D descriptors that capture both fine-grained geometry and high-level semantics for accurate 3D semantic correspondence.
+## W4400582074 | 2311.13125 | DAE-Net: Deforming Auto-Encoder for fine-grained shape co-segmentation
+   - The most difficult challenge to shape co-segmentation arises when there are significant structural and geometric variations across the shape collection; see last row of Figure 1 .
+   - In contrast, prior works either had no explicit guidance for defining a part (e.g., BAE-Net, RIM-Net), merely relying on MLPs to perform segmentation, or make much stronger assumptions about the part templates, e.g., as cuboids, convexes, or other basic primitives.
+   - Going beyond zero-shot learning, the more general open-vocabulary setting ( Ding et al., 2023 ) assumes a large vocabulary corpus is accessible during training.
+   - This is based on the assumption that a better segmentation should always lower the reconstruction error.
+   - DAE-Net has been designed to provide fine-grained segmentation, as shown in Figure 3 , while other methods either fail to segment finer parts or have messy segmentations.
+   - Combining our method with open-vocabulary semantic segmentation methods is also an interesting future direction, which may help produce consistent and meaningful cross-category co-segmentation.
+## W4397049055 | 2405.09880 | Deep Learning-Based Quasi-Conformal Surface Registration for Partial 3D Faces Applied to Facial Recognition
+   - However, the task of 3D face registration becomes particularly challenging when dealing with partial face data, where only limited facial information is available.
+   - To address this challenge, this paper presents a novel deep learning-based approach that combines quasi-conformal geometry with deep neural networks for partial face registration.
+   - This surpasses the limitations of 2D images by providing a wealth of geometric information.
+   - While 3D surface registration of complete faces has been extensively studied, real-world scenarios often present challenges such as occlusions, partial view angles, or self-occlusions caused by hands or accessories.
+   - The challenge lies in accurately determining the corresponding regions between two partially observed faces and establishing point-wise correspondence between these regions [ 50 , 8 , 18 ] .
+   - In this paper, we introduce a novel deep learning-based method that addresses the challenge of partial face registration.
+   - Quasi-conformal deep neural network for 3D partial face registration: We propose a novel approach that combines quasi-conformal (QC) geometry with convolutional neural networks (CNNs) to address the challenge of registering partial face surfaces.
+## W4417000834 | NOT FOUND | BSP-OT: Sparse transport plans between discrete measures in loglinear time
+## W7138255617 | NOT FOUND | DcMatch: Unsupervised Multi-Shape Matching with Dual-Level Consistency
+## W7137992698 | 2603.18924 | Unsupervised Contrastive Learning for Efficient and Robust Spectral Shape Matching
+   - Abstract Estimating correspondences between pairs of non-rigid deformable 3D shapes remains a significant challenge in computer vision and graphics.
+   - Extensive experiments demonstrate that our approach is not only computationally efficient but also outperforms current state-of-the-art methods across various challenging benchmarks, including near-isometric, non-isometric, and topologically inconsistent scenarios—even surpassing supervised techniques.
+   - To overcome the limitations, we introduce the first unsupervised contrastive learning-based method, offering a novel principle for resolving non-rigid 3D shape matching challenges.
+   - Then, we build the streamlined functional map learning architecture without the computationally intensive functional maps solver or auxiliary functional map losses, significantly reducing reliance on structural assumptions of functional maps (e.g., orthogonality) and minimizing the computational cost.
+   - Extensive experiments demonstrate that our approach achieves state-of-the-art performance across challenging benchmarks.
+   - In contrast, our approach directly learns distinguishing features from training data, offering improved accuracy and robustness, especially in challenging matching scenarios.
+   - Our approach outperforms state-of-the-art methods ( Cao et al. 2023 ; Magnet and Ovsjanikov 2024 ) across challenging shape-matching scenarios, including those using supervised techniques ( Litany et al. 2017 ; Donati et al. 2020 ) , while maintaining high computational efficiency.
+## W4402619788 | NOT FOUND | Hierarchical Spherical Cross‐Parameterization for Deforming Characters
+## W4403658675 | 2407.01931 | Probabilistic 3D Correspondence Prediction from Sparse Unsegmented Images
+   - Additionally, reliance on linearity assumptions further limits the model from capturing clinically relevant variations.
+   - Moreover, quantifying aleatoric uncertainty, which represents inherent data variability, is crucial in deploying deep learning for clinical tasks to ensure reliable model predictions and robust decision-making, especially in challenging imaging conditions.
+   - High-quality medical images are crucial for accurate shape models, but capturing dense, high-resolution images is challenging and costly.
+   - Sparse imaging, with limited data points or slices, arises from acquisition time constraints, patient comfort, radiation dose considerations [ 25 ] , or technical limitations [ 15 ] .
+   - Quantifying uncertainty informs clinicians about the potential risks and limitations of the model’s outcomes.
+   - To address these challenges, we propose the Sp arse I mage-base probabilistic Corr espondence Net work (SPI-CorrNet) for inferring 3D correspondences from sparse, unsegmented medical images with incorporated aleatoric uncertainty estimates.
+   - VIB-DeepSSM [ 2 ] relaxes the PCA assumption using a variational information bottleneck (VIB) [ 5 ] for latent encoding learning, improving aleatoric uncertainty estimation and generalization, but cannot measure epistemic uncertainty fully.
+## W4400907102 | 2404.17967 | SCorP: Statistics-Informed Dense Correspondence Prediction Directly from Unsegmented Medical Images
+   - Moreover, the predominant linearity assumption of traditional approaches restricts their efficacy, a limitation also inherited by deep learning models trained using optimized/established correspondences.
+   - Consequently, representing complex anatomies becomes challenging.
+   - To address these limitations, we introduce SCorP, a novel framework capable of predicting surface-based correspondences directly from unsegmented images.
+   - The proposed model streamlines the training and inference phases by removing the supervision for the correspondence prediction task while alleviating the linearity assumption.
+   - This dependence on established PDMs introduces linearity assumptions, affecting the ability of the models to represent complex anatomical structures adequately.
+   - The newest breed of SSM deep learning models remove linearity assumptions and drop the requirement for the ground truth PDMs for training [ 3 , 17 ] .
+   - Despite these efforts to improve SSM methodologies, using images directly to predict the correspondences remains challenging.

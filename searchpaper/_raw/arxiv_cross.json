@@ -1,0 +1,246 @@
+{
+ "2601.04494": {
+  "title": "Differential Locally Injective Grid Deformation and Optimization",
+  "found": true,
+  "sections": [
+   {
+    "heading": "6. Conclusion",
+    "text": "This work describes a straightforward way to make grid optimization fully-adaptive and more efficient using a differential representation, as opposed to prior work which was only semi-adaptive. The techniques used in this work can also be applied to efficient mesh optimization, and we hope they can be adopted into traditional optimization pipelines."
+   }
+  ],
+  "limitation_sentences": [
+   "To address this limitation, recent works have explored grid deformation [ Gao et al., 2020b ; Shen et al., 2021 ; Shen et al., 2023 ; Wei et al., 2025 ] , enabling grids to adaptively capture regions with higher-frequency details.",
+   "A major challenge in grid deformation, however, is inversion, which occurs when neighboring grid cells overlap during deformation.",
+   "This work addresses these challenges by introducing an efficient, inversion-free grid deformation method built upon two key ideas, first by using a differential representation [ Tutte, 1963 ; Sorkine, 2006 ] , where each vertex is constrained to a convex combination of its neighbor, and second is the use of graph colorings allowing sets of vertices to be optimized independently.",
+   "We also take “fully-adaptive” to mean that the topology of the grid remains unchanged, but its embedding changes.",
+   "Thus, two components of this formulation make direct optimization difficult: it is not possible to optimize the Laplacian matrix directly, since the memory scales quadratically with the number of vertices, O ⁡ ( | V | 2 ) O(|V|^{2}) .",
+   "Second, when optimizing one vertex as a convex combination of its neighbors, it is assumed that a vertex’s neighbors are fixed, which is not true for global optimization approaches which updates all vertices concurrently.",
+   "These steps can be orthogonal to compaction, and its possible they can be used concurrently, but we do not explore that in this work.",
+   "For this work, we do not look into compressing this tensor like JPEG, which may be done using Fourier coefficients, and note that quantizing deformation may require a different approach than quantizing colors, since incorrect deformation values may introduce more visible error.",
+   "We leave it to future work to explore real-time implementations of image compaction.",
+   "Most recently, [ Binninger et al., 2025 ] use a Delauney tetrahedralization of sampled points near a surface to effectively capture high-frequency detail, which is not possible with uniform grids.",
+   "While we do not observe such a pattern, making the grid fully-adaptive improves the usage of parameters, flattening the influence of grid-resolution on output quality.",
+   "We leave it to future work to find such approaches.",
+   "Another limitation of our approach is that it still requires a barrier energy to prevent inversions.",
+   "We leave exploration of these to future work."
+  ]
+ },
+ "2605.18039": {
+  "title": "SGSoft: Template-Guided Soft Signals for 3D Shape Correspondence",
+  "found": true,
+  "sections": [
+   {
+    "heading": "5 Conclusion",
+    "text": "We introduced SGSoft, a unified framework for generalizable and efficient dense 3D correspondence. By integrating a geodesic correspondence field with a multimodal fusion descriptor, SGSoft achieves geometric-fidelity, semantic precision, and real-time inference without pre-alignment or post-processing. Leveraging semantic priors from Uni3D enables robust cross-domain generalization, while the geodesic formulation ensures surface-consistent and deformation-robust mapping. This study highlights the potential of combining intrinsic geometry with pre-trained semantic knowledge to build a scalable, interpretable, and foundation-ready paradigm for 3D correspondence learning. This finding also illuminates a critical trade-off between semantic generalization and geometric specificity in current 3D foundation models, highlighting a key challenge for the next generation of 3D representations. Supplementary Material"
+   },
+   {
+    "heading": "Appendix J Limitations and Future Work",
+    "text": "Figure 15 : Success and failure cases of SGSoft across increasing domain shift. Top: Successful correspondences from seen to unseen domains with progressively increasing difficulty. Bottom: Representative failure modes. (1) Semantic conflict under extreme proportions or additional structures, (2) spatial ambiguity when parts are in close proximity (zoomed), (3) geometric degradation on severely partial shapes due to unreliable geodesic distances. We identify three representative failure modes, as illustrated in Fig. 15 . First, semantic conflicts arise in shapes with extreme proportions or additional structures (e.g., accessories), where semantic priors become ambiguous. Second, spatial ambiguity occurs when multiple parts are in close proximity, leading to confusion despite correct global context. Third, in severely partial shapes, missing connectivity degrades the reliability of geodesic distances, reducing global alignment accuracy. Overall, SGSoft remains robust under moderate deformation and partiality, with failures primarily occurring when both semantic and geometric cues are unreliable. While SGSoft demonstrates strong cross-domain generalization, it is still influenced by the choice of canonical template used during training. In particular, when input shapes exhibit significantly different proportions or structural characteristics from the training domain, the shared reference space induced by the template becomes less optimal. Extending the framework to support multiple or more diverse templates, or learning a template-agnostic correspondence space, would further improve robustness to large structural variations. We leave this as an important direction for future work. Figure 16 : Topology robustness. Colors are transferred from a source to targets with different mesh resolutions. Numbers denote vertex counts. SGSoft preserves smooth and semantically consistent correspondences across topologies. Figure 17 : Symmetry disambiguation. We visualize correspondence transfer from a source mesh to target meshes on FAUST, SCAPE, and SHREC’19. SGSoft consistently aligns left/right limbs and resolves front-back ambiguity under large articulations, avoiding symmetric flips. The uncolored source and target meshes are shown in their original poses, while the colorized meshes are rotated to a front view for clearer visualization of correspondence quality. Figure 18 : Zero-shot cross-domain generalization. We train SGSoft only on SMPL-like human bodies and evaluate on stylized rigs from the Mannequin, Drake, Ninja, Prisoner, Skeleton, Zombie, and Crypto Zlorp families. Intra (left) shows correspondences within each character family, while Inter (right) transfers correspondences across different families. Despite substantial differences in shape and articulation, SGSoft preserves consistent part-wise color patterns without any finetuning."
+   }
+  ],
+  "limitation_sentences": [
+   "J Limitations and Future Work References License: CC BY 4.0 arXiv:2605.18039v1 [cs.CV] 18 May 2026 SGSoft: Learning Fused Semantic-Geometric Features for 3D Shape Correspondence via Template-Guided Soft Signals Soyeon Yoon Affiliation: KAIST AI Chang Wook Seo Affiliation: Anigma Technologies thoyeony@kaist.ac.kr lgtwins@anigma-ai.com kateshim@kaist.ac.kr Hyunjung Shim Affiliation: KAIST AI Abstract Learning dense correspondences across deformable 3D shapes remains a long-standing challenge due to structural variability, non-isometric deformation, and inconsistent topology.",
+   "Achieving such a system requires resolving two core challenges: generalization and efficiency.",
+   "To address these limitations, we propose a novel unified framework that addresses both the generalization and efficiency challenges of dense shape correspondence.",
+   "This lightweight pipeline achieves near real-time performance while preserving strong inter-category generalization, resolving both efficiency and generalization challenges without relying on compensatory alignment or optimization steps.",
+   "Establishing dense 3D correspondence has long been a fundamental yet challenging problem, with research evolving across several major paradigms.",
+   "This finding also illuminates a critical trade-off between semantic generalization and geometric specificity in current 3D foundation models, highlighting a key challenge for the next generation of 3D representations.",
+   "Figure 8 shows an additional qualitative comparison under a challenging scenario with dynamic pose deformations between the source and target shapes.",
+   "ULRSSM is an unsupervised spectral matching method, while NICP is designed under relatively strong assumptions on shape similarity and initialization.",
+   "In contrast, ULRSSM shows limited generalization across domains, and NICP often struggles when the input shapes deviate from its underlying assumptions.",
+   "Nevertheless, we include these comparisons to provide a broader perspective on the behavior of existing approaches under such challenging conditions.",
+   "We leave this as an important direction for future work."
+  ]
+ },
+ "2609.04202": {
+  "title": "TokenMatch: 3D Mesh Correspondence Transformer",
+  "found": true,
+  "sections": [
+   {
+    "heading": "6 Conclusion",
+    "text": "We demonstrate a generalisable and unified model, serving as a foundation for partial and full shape-matching tasks. Our extensive experiments show consistent improvements over prior methods across standard benchmarks, along with strong robustness of our TokenMatch approach to partiality, non-rigid (non-isometric) deformations, and varying geometric complexity. Global reasoning enabled by transformer attention, when coupled with functional map supervision, consistently outperforms local descriptor-based approaches, particularly in challenging partial correspondence scenarios. This paper also demonstrates that geometry-native representations exhibit stronger transferability than fixed or generic pre-trained features such as raw XYZ embeddings or DINOv2 features, emphasising the importance of task-aligned geometric encoding. We experimentally validate our main technical contribution, i.e., curvature-guided mesh tokenisation with patch overlapping, which is necessary to achieve the reported accuracy of TokenMatch. Notably, training exclusively on partial correspondences is sufficient to achieve strong full-shape matching performance at inference time, without architectural modification or retraining. This effectively unifies full-to-full matching as a special case of partial-to-partial correspondence estimation, thereby reducing reliance on complete shape datasets. Along with its generalisability, TokenMatch is computationally efficient, requiring a fraction of a second per shape pair while maintaining high matching accuracy. Future Work. The proposed TokenMatch approach relies on geodesic computations, which can become expensive at high mesh resolutions (e.g., higher than what is common in the current datasets). We include qualitative examples of observed inaccuracies: Attentive readers can recognise them with the help of the transferred colours in Figs. 5 and 6 , as well as Figs. 11 and 13 in the Appendix. Future work will explore scalable alternatives to geodesic processing, improve robustness to noisy, unstructured geometry and extend the framework to large-scale real-world scan collections. We hope this work will open up new perspectives towards (i) a fully-fledged foundation model for shape correspondence estimation and towards (ii) addressing long-standing challenges of this research field."
+   }
+  ],
+  "limitation_sentences": [
+   "In response to these limitations, this paper introduces TokenMatch, a new transformer-based unified model for estimating 3D shape correspondences.",
+   "Our feed-forward approach trained exclusively on BeCoS, a challenging non-isometric partial-to-partial shape-matching dataset, can generalise to matching full shapes without retraining or fine-tuning.",
+   "Establishing accurate correspondences between 3D shapes is a fundamental and open problem in geometry processing Bronstein and Kokkinos (2010) ; Cao et al.",
+   "(2019) , partial-shape matching remains a major open challenge: shapes may only partially overlap, increasing the solution space, making the problem particularly ill-posed, and often also requiring identification of the shared region.",
+   "In addition, existing learning-based approaches often rely on assumptions of complete shapes or near-isometric deformations Attaiki et al.",
+   "We address several open challenges in the field by introducing a new unified model that serves as a foundation for shape correspondence estimation across different settings; see Fig. 1 .",
+   "Importantly, TokenMatch is template-free and does not rely on category-specific assumptions, making it applicable across diverse shape categories.",
+   "Notably, BeCoS provides diverse full and partial shape categories (humanoids and animals) with challenging, highly non-isometric deformations at realistic scales, encouraging robustness to deformation patterns that go beyond standard nearly isometric settings.",
+   "Last but not least, TokenMatch is a feed-forward approach that achieves sub-second inference time, which is unprecedented in partial-shape matching, especially for combinatorial techniques and when no additional assumptions (e.g., on mesh discretisation) are made.",
+   "Our template-free formulation does not rely on shared templates or category-specific assumptions, enabling broader applicability across shape domains.",
+   "Partial-shape matching represents one of the central challenges in the field.",
+   "By relying on token interactions through self-attention, they naturally model long-range dependencies and global structure without imposing strong assumptions about the underlying signal.",
+   "( 6 ), each x x contributes to all tokens with w i ​ ( x ) w_{i}(x) dependent on d geo d_{\\mathrm{geo}} , and we do not impose any truncation distance threshold 1 1 1 for σ = 0 \\sigma=0 , we use hard assignment, i.e., each mesh element is assigned to its nearest token centre in geodesic distance .",
+   "We then provide implementation details (Sec. 5.2 ) and report quantitative and qualitative results on challenging partial-to-partial matching benchmarks, followed by standard full shape correspondence benchmarks to assess performance under complete geometry (Sec. 5.3 )."
+  ]
+ },
+ "2411.03511": {
+  "title": "Beyond Complete Shapes: benchmark for 3D shape surface matching",
+  "found": true,
+  "sections": [
+   {
+    "heading": "6 Discussion and Future Work",
+    "text": "The cross-category and cross-dataset correspondences of BeCoS are generated pairwise for the selected template shapes. Although they are of good quality, for cross-category shapes they may give rise to correspondence ambiguity (e.g. hooves to paws). Ambiguities may potentially accumulate if many pairwise ground truth correspondences are chained (i.e. for shapes that are distant in our shape network of shapes), which deteriorates the composed ground truth quality (see left example in Figure 8 in the supplementary material). This could potentially be improved by incorporating cycle-consistency or synchronisation techniques [ HG13 , PKS13 , BCT21 ] in the process of generating ground truth correspondences."
+   },
+   {
+    "heading": "7 Conclusion",
+    "text": "While several shape matching datasets exist, they are typically static and limited in size, which constrains their adaptability to diverse problem settings and custom use cases. To address this we connect multiple existing mesh-based datasets through manual cross-category annotations, enabling dense correspondence and annotation propagation across a diverse set of shapes. Building on this foundation, we introduced a scalable framework for generating unlimited training instances for partial shape correspondence, simulating realistic occlusions and semantic variability. As a concrete instantiation, we release a challenging non-rigid shape surface matching benchmark and provided a comprehensive evaluation of current state-of-the-art methods. Our findings highlight persistent challenges, particularly in partial shape matching, and underscore the need for more robust and generalizable solutions. We hope our benchmark and framework will foster future advancements in shape matching research."
+   }
+  ],
+  "limitation_sentences": [
+   "To address these limitations, we introduce a generic and flexible framework for the procedural generation of challenging full and partial shape matching datasets.",
+   "Based on this, we offer several challenging benchmark settings, covering both full and partial matching, for which we evaluate respective state-of-the-art methods as baselines.",
+   "This limited data availability hampers the progress of data-driven methods for partial shape matching; recent approaches have thus required pre-training with large full-geometry datasets [ CRB23 ] , or rely on ground-truth correspondences [ APO21 ] which are challenging to obtain in practice.",
+   "Through extensive experiments of current state-of-the-art partial and full shape matching methods, we demonstrate the limitations of partial methods and highlight the need for further research in this area.",
+   "Benchmark and Performance Analysis: As a concrete realization of our framework, we present a challenging non-rigid shape dataset, serving as a standardised benchmark for shape matching methods.",
+   "We further conduct an extensive evaluation of state-of-the-art techniques on this benchmark, offering insights into their strengths, limitations, and key challenges.",
+   "Our results indicate that partial shape matching remains an open problem, motivating future research in the field.",
+   "Partial-to-partial shape matching involves matching two partial shapes with unknown overlap, making it considerably more challenging than partial-to-full matching.",
+   "However, the performance of the latter class typically degrades as assumptions of isometry are violated, such as in partial correspondence settings.",
+   "Rodola et al. [ RCB*17 ] demonstrate that for partial-to-full matching, the functional map has a slanted diagonal structure, which has, for example, been used in [ LRB*16 ] to solve multi-part partial-to-partial correspondence; however, under the assumption that a full template is given.",
+   "Few works thus far explicitly address the partial-to-partial matching setting, which is particularly challenging as the overlapping region between shapes is unknown.",
+   "The common intrinsic heat kernel (HKS) [ SOG09 ] and wave kernel signatures (WKS) [ ASC11 ] are invariant under isometric deformations; however, they are not effective under partiality as the isometry assumption can be heavily violated.",
+   "Moreover, learned features require large training datasets and a high-quality (self-)supervision signals which is challenging to achieve under severe partiality.",
+   "Since obtaining per-vertex feature descriptors directly on 3D shapes is challenging, [ WHC*16 ] addresses this by establishing correspondences between 3D shapes through correspondences between their 2D rendered images."
+  ]
+ },
+ "2610.22325": {
+  "title": "Dense4D: Pixel-Level 4D Human Correspondence",
+  "found": true,
+  "sections": [
+   {
+    "heading": "5 Discussion and conclusion",
+    "text": "Dense4D recovers dense 4D correspondence across the body, clothing and hair without a body template. Its Human Point Maps assemble observations from different frames into coherent human geometry in the reference pose, with aligned body parts and fine surface detail. Dense4D separates correspondence from camera-pose and scene-motion estimation while keeping tracks consistent with its predicted human geometry by construction. Compared with the baselines, Dense4D produces more precise trajectories and a better fit to measured human geometry, with videos showing robust tracking through articulation and clothing deformation. Dense4D can also be integrated with scene point clouds simply through shared image pixels."
+   },
+   {
+    "heading": "Limitations.",
+    "text": "Self-contact can make reference-space correspondence ambiguous when distinct surface points coincide. Selecting a reference frame without self-contact, when available, is a relatively straightforward mitigation that we do not pursue here. A broader challenge is evaluating correspondence on real people: 4D-DRESS measures proximity to scans rather than point identity, while Panoptic Studio Humans relies on reconstruction-derived trajectory labels that may inherit reconstruction errors. Synthetic data provides exact correspondence, but domain differences limit its relevance to real images. Evaluation of scene integration remains open as well: our visualisations demonstrate effective integration with scene point clouds, but its accuracy has not yet been measured quantitatively."
+   },
+   {
+    "heading": "Future work.",
+    "text": "Temporal and multi-view consistency losses on large corpora of real video could improve correspondence and reduce reliance on synthetic supervision. Developing real-data benchmarks with independently measured surface-point identities would strengthen evaluation beyond surface proximity and reconstruction-derived tracks. The alignment provided by Dense4D could support learning appearance models based on Gaussian splatting ( Kerbl et al., 2023 ) from humans in motion, while its accurate tracks could control human motion in generated video ( Geng et al., 2025 ) . Dense4D provides a foundation for augmenting scene understanding systems with more faithful human geometry, dense correspondence and robust tracking. Building on this foundation, future work could develop richer models of people and their surroundings that remain coherent through prolonged motion and interaction."
+   }
+  ],
+  "limitation_sentences": [
+   "Results. 4.3 Amodal 3D localisation on 4D-DRESS Results. 4.4 Human surface consistency in the wild 5 Discussion and conclusion Limitations.",
+   "Yet people remain challenging for general dynamic scene reconstruction systems because their motion combines body articulation with the independent deformation of clothing and hair.",
+   "Selecting a reference frame without self-contact, when available, is a relatively straightforward mitigation that we do not pursue here.",
+   "A broader challenge is evaluating correspondence on real people: 4D-DRESS measures proximity to scans rather than point identity, while Panoptic Studio Humans relies on reconstruction-derived trajectory labels that may inherit reconstruction errors.",
+   "Building on this foundation, future work could develop richer models of people and their surroundings that remain coherent through prolonged motion and interaction."
+  ]
+ },
+ "2606.29167": {
+  "title": "Geometry-Grounded Articulation and Test-Time Adaptation",
+  "found": true,
+  "sections": [
+   {
+    "heading": "5 Conclusion",
+    "text": "We presented GAMMA, a zero-shot framework for accurate and scalable dense correspondence on in-the-wild raw meshes. Geometry-Grounded Articulation uses each scan’s geometry to refine and fuse multi-view template predictions into a proxy with consistent vertex indices across shapes. We cache the proxy and its sparse assignments for reuse across shape pairs. Sparse composition then produces correspondences without repeating per-shape inference or optimization. The matching pipeline requires neither target-dataset correspondence training nor LBO computation on the input meshes. On raw FAUST and its decimated versions, the template-domain mean geodesic error ( × 100 \\times 100 ) stays below 2.5 across resolutions from 5k to 160k–200k vertices, demonstrating stable matching accuracy as mesh resolution increases. Experiments on non-isometric and partial shapes also show low correspondence errors. Together, these results demonstrate the value of grounding articulation once per scan and reusing it for scalable matching of raw shape collections."
+   },
+   {
+    "heading": "Appendix G Limitation",
+    "text": "While GAMMA demonstrates strong performance across varied triangle-mesh matching conditions, it has several limitations. First, the current formulation assumes input geometry is rendering compatible. Second, our method relies on a category-specific parametric model ( e.g. , MHR for humans or SMAL for animals) and a compatible single-view estimator, so extension to a new category requires both priors. Third, the proxy is bounded by the parametric model’s expressiveness and may not preserve fine clothing, hair, or unusual proportions. Fourth, test-time optimization has higher cold-start latency than feed-forward inference; caching amortizes this cost only across repeated pair queries. Experimental support, please view the build logs for errors. Generated by L A T E xml ."
+   }
+  ],
+  "limitation_sentences": [
+   "Matching in the wild is thus not only a robustness problem, but also a fundamental challenge of scalability and computational efficiency.",
+   "Existing methods provide strong solutions to individual parts of this problem, yet their cost and assumption profiles leave the full conjunction largely unresolved.",
+   "Partial mode accepts a real target only if its mass exceeds null; ties remain unmatched.",
+   "For full matching, every site is assumed to have associated target vertices.",
+   "We cannot apply the same engineering tweak to URSSM because its loss computation relies on a full dense correspondence matrix.",
+   "This metric measures error on the template domain and is therefore used only for within-table comparisons in Table 3 ; we do not compare its absolute values with target-domain scores elsewhere.",
+   "While GAMMA demonstrates strong performance across varied triangle-mesh matching conditions, it has several limitations.",
+   "First, the current formulation assumes input geometry is rendering compatible."
+  ]
+ },
+ "2602.06590": {
+  "title": "ILP Geometrically Consistent Partial-Partial Shape Matching",
+  "found": true,
+  "sections": [
+   {
+    "heading": "6 Discussion & Limitations",
+    "text": "Our approach is the first integer linear programming formalism for partial-partial shape matching, which only allows for geometrically consistent solutions. Nevertheless, since we build our formalism on GeCo [ 32 ] , the solution space contains undesirable solutions, such as e.g. orientation flips. Furthermore, resulting matching results might contain multiple, disconnected overlapping regions. Yet, our method empirically shows good performance in terms of matching errors, smoothness and overlap scores. Apart from that, even though our approach is an integer linear programming formalism (and not a non-linear integer programming formalism compared to previous work [ 14 ] ), it remains computationally demanding in practice. Consequently, worst-case runtimes remain exponential and limit the scalability of our method. Nevertheless, our approach shows better scalability compared to previous works and we consider our formalism an important step towards making partial-partial shape matching more accessible."
+   },
+   {
+    "heading": "7 Conclusion",
+    "text": "We have presented the first integer linear programming formalism explicitly tailored to the challenging task of partial-partial 3D shape matching, i.e. our formalism yields neighbourhood preserving matchings of an unknown overlapping region between two partial shapes. Furthermore, by using geometric consistency as a strong prior, our approach allows to curate overlap predictions from other, data-driven approaches as e.g. learning-based methods. In addition, our formalism is more scalable than previous, non-linear integer programming approaches and shows favourable results in terms of matching quality, smoothness, and overlap scores. Overall, there exists only few methods tackling partial-partial 3D shape matching and there are still several unsolved challenges. In that sense, we consider our work to be an important contribution for the shape matching community and we hope to inspire follow-up works dealing with partial 3D shapes and partial data in general."
+   }
+  ],
+  "limitation_sentences": [
+   "While numerous studies address full-full and partial-full 3D shape matching, only a limited number of works have explored the partial-partial setting, very likely due to its unique challenges: we must compute accurate correspondences while at the same time find the unknown overlapping region.",
+   "In this work, we introduce the first integer linear programming approach specifically designed to address the distinctive challenges of partial-partial shape matching.",
+   "Despite its relevance, this scenario remains underexplored, with only a small number of works explicitly addressing it.",
+   "The main difficulty lies in its combined challenges: we must not only establish reliable correspondences between the observed regions, but also infer the a priori unknown spatial overlap between the shapes.",
+   "To address these challenges effectively, powerful regularisation strategies are necessary.",
+   "In contrast, partial shape matching, i.e. shape matching where at least one shape is incomplete, is less explored (partial-full shape matching) or is even underexplored (partial-partial shape matching) due to yet-to-overcome challenges [ 16 ] .",
+   "Partial-partial shape matching remains underexplored and usually geometric consistency is neglected due to hard-to-solve formalisms, even though it can act as a strong regulariser to matching problems.",
+   "Hence, we cannot use vanilla shortest path algorithms but rather have to consider the integer linear programming formalism of the above explained shortest path problem.",
+   "Yet, we do not know the overlapping region a priori.",
+   "We have presented the first integer linear programming formalism explicitly tailored to the challenging task of partial-partial 3D shape matching, i.e. our formalism yields neighbourhood preserving matchings of an unknown overlapping region between two partial shapes.",
+   "Overall, there exists only few methods tackling partial-partial 3D shape matching and there are still several unsolved challenges."
+  ]
+ },
+ "2607.03330": {
+  "title": "GrowFields: Topology-Changing Plant Growth",
+  "found": true,
+  "sections": [
+   {
+    "heading": "5 Conclusion",
+    "text": "We introduced GrowFields, a compositional neural field framework for modelling 4D plant growth from sparse longitudinal point clouds. By canonicalising plant organs and learning a shared latent-conditioned deformation field, the model captures asynchronous organ development and topology changes within a unified representation. Experiments across multiple plant species show that this formulation improves both geometric reconstruction and organ-level tracking compared to existing dynamic reconstruction methods. Our evaluation protocol based on annotated leaf-tip trajectories further provides a practical benchmark for studying plant growth dynamics. While we focus on plants, the formulation is general and could apply to other dynamic point clouds composed of independently evolving parts, such as 4D cell or vessel growth in the medical domain [ 70 ] . We hope this work contributes a useful representation for learning structure-aware models of plant development and enables future research on data-driven plant phenotyping and analysis."
+   },
+   {
+    "heading": "5.1 Limitations and outlook",
+    "text": "Our approach has three main limitations. First, because we warp the initial organ point cloud forward without adding points, regions undergoing rapid growth become spatially sparse relative to the ground-truth scans ( e.g . the leaf at day 7 in Figure 2 ); a promising direction is adaptive densification analogous to 3DGS [ 26 ] and 4DGS [ 71 ] . Second, very short organ sequences ( ≤ \\leq 5 training timesteps) leave the velocity field underconstrained, as reflected in the extrapolation experiment and the SoH2 sequence. Third, as noted in section 3 , GrowFields does not predict organ emergence; newly observed organs are only incorporated upon first observation. Incorporating priors from L-systems or generative models to anticipate morphogenesis is an interesting avenue for future work [ 21 ] . Beyond these limitations, given the increasing availability of 4D plant point-cloud datasets, a further promising direction is to harmonise and combine multiple datasets to learn generative geometric models of 4D plant growth that generalise across species and environmental conditions [ 2 , 16 ] ."
+   }
+  ],
+  "limitation_sentences": [
+   "Yet, plants pose unique challenges: they undergo intricate non-rigid deformations, exhibit changing topology as new organs emerge, and often lack explicit temporal correspondences between consecutive data acquisitions due to newly formed tissue.",
+   "To address these challenges, we introduce GrowFields, a compositional dynamic neural field representation for organ-aware 4D plant growth modelling from point cloud time series.",
+   "While 3D sensing technologies and plant modelling methods have advanced significantly, enabling detailed reconstructions of plant geometry [ 47 , 10 , 76 ] , the temporal dimension of plant growth remains underexplored.",
+   "Faithfully capturing these dynamics at the organ level remains challenging.",
+   "Furthermore, newly formed tissue has no direct temporal correspondence, breaking assumptions typically made in non-rigid registration and dynamic scene reconstruction.",
+   "General-purpose 4D reconstruction techniques, based on temporal Signed Distance Functions (SDFs) [ 69 , 57 ] , or flow- [ 45 ] and point-based dynamic models [ 54 ] , usually assume globally consistent topology or smoothly varying deformation fields.",
+   "This application-grounded evaluation design, combined with physiologically relevant metrics, provides a thorough empirical validation of the proposed framework and establishes a challenging benchmark for future research.",
+   "However, the fine and slender structures common in plants pose challenges for state-of-the-art SDF-based formulations [ 38 ] .",
+   "Because most sequences are short, typically providing only four to five training timesteps, interpolation is challenging.",
+   "Under these conditions, DPF (per-organ) remains a strong baseline and achieves the best overall interpolation performance (mean CD 10.24, EPE 4.00).",
+   "As shown in Table 4 , GrowFields outperforms COAP across all sequences; the large absolute errors on some sequences are partly explained by new organs emerging within the held-out frames, a limitation we discuss in subsection 5.1 .",
+   "Our method assumes organ-segmented inputs, a reasonable requirement given the rapidly maturing literature on automated 3D plant organ segmentation, which is already of sufficient quality for organ tracking [ 20 , 32 , 37 , 58 ] .",
+   "Incorporating priors from L-systems or generative models to anticipate morphogenesis is an interesting avenue for future work [ 21 ] .",
+   "Beyond these limitations, given the increasing availability of 4D plant point-cloud datasets, a further promising direction is to harmonise and combine multiple datasets to learn generative geometric models of 4D plant growth that generalise across species and environmental conditions [ 2 , 16 ] ."
+  ]
+ },
+ "2507.18677": {
+  "title": "HeartUnloadNet: Cycle-Consistent Graph Network",
+  "found": true,
+  "sections": [
+   {
+    "heading": "5.3 Architectural Strengths and Outlook",
+    "text": "A key advantage of our proposed framework lay in its mesh-agnostic design, which eliminated the need for a fixed nodal configuration or template mesh. Unlike many prior approaches that required point correspondences or mesh registration to enable learning, our method directly operated on arbitrary tetrahedral meshes, leveraging the inherent topology through GAT-based message passing. This flexibility allowed the model to accommodate diverse cardiac geometries, making it readily applicable to patient-specific data without labor-intensive preprocessing. In addition, our architectural choices, including the use of graph attention, co-attentive global fusion, and cycle-consistent supervision, collectively contributed to the model’s superior prediction accuracy across all baselines. Beyond demonstrating performance, our study offered a comprehensive architectural evaluation, ablation and component-replacement experiments. Our results can provide insight into which architectural strategies were most effective for future for future model design in data-driven biomechanics. We believe that HeartUnloadNet offers a promising foundation for future development of end-to-end cardiac mechanics predictors. Although the current work focused on diastolic unloading, our GAT-based architecture can easily be extended to model dynamics during systole or across the cardiac cycles. Such future work might benefit further from incorporating physics-informed constraints, or residual formulations to jointly learn loading and unloading trajectories in a physiologically accurate, interpretable manner."
+   },
+   {
+    "heading": "5.4 Limitations",
+    "text": "HeartUnloadNet demonstrated strong performance on data representing healthy anatomical variations. However, its generalizability to pathological cases remained to be further evaluated, and future work will investigate its robustness across a broader range of disease conditions."
+   },
+   {
+    "heading": "6 Conclusion",
+    "text": "In this paper, we introduced a data-driven framework for estimating unloaded LV geometry without relying on traditional physics-based optimization. By leveraging graph attention mechanisms and incorporating biophysical priors (pressure, stiffness, and fiber orientation), our model directly predicted deformation from ED meshes with high geometric fidelity. It eliminated the need for iterative FE solvers or reduced-order assumptions. On a held-out test set of 6,810 synthetic LV shapes, the network achieved a DSC of 0.986 ± 0.023 0.986\\pm 0.023 and a HD of 0.083 ± 0.028 0.083\\pm 0.028 cm, with an inference time of just 0.023 seconds per case, surpassing inverse FE in both accuracy and efficiency. HeartUnloadNet also maintained strong performance under weak supervision, achieving over 97% DSC with only 200 labeled samples. Its topology-agnostic design supported generalization across varying anatomical and material conditions, highlighting its potential for scalable application in both research and clinical settings. As the first learning-based method to infer unloaded cardiac geometry using explicit physiological priors, this work established a foundation for real-time, data-driven cardiac mechanics. Future extensions will integrate active contraction and systolic loading to enable full-cycle modeling."
+   }
+  ],
+  "limitation_sentences": [
+   "However, estimating the unloaded geometry from clinical images remains a challenging task.",
+   "To address these limitations, the development of supervised deep learning (DL) models for estimating the unloaded cardiac state could offer significant advantages by drastically reducing computational time.",
+   "While direct GNN‐based approaches for unloading remain unexplored, significant progress has been made in simulating loading scenarios.",
+   "We assume the helix angle varies linearly across the wall: θ h = θ endo + ξ ⁡ ( θ epi − θ endo ) \\theta_{h}=\\theta_{\\mathrm{endo}}+\\xi(\\theta_{\\mathrm{epi}}-\\theta_{\\mathrm{endo}}) , where θ endo \\theta_{\\mathrm{endo}} and θ epi \\theta_{\\mathrm{epi}} are the helix angles at the endocardium and epicardium, respectively, and ξ ∈ [ 0 , 1 ] \\xi\\in[0,1] is the transmural coordinate (0 at endocardium, 1 at epicardium).",
+   "In contrast, PCA predictions exhibited clear discrepancies, highlighting its limitations in capturing subtle, spatially distributed deformations using a low-dimensional linear basis.",
+   "These observations highlighted the inherent limitations of PCA in modeling nonlinear tissue mechanics, where complex deformations could not be adequately represented by a small number of dominant modes.",
+   "Such future work might benefit further from incorporating physics-informed constraints, or residual formulations to jointly learn loading and unloading trajectories in a physiologically accurate, interpretable manner.",
+   "However, its generalizability to pathological cases remained to be further evaluated, and future work will investigate its robustness across a broader range of disease conditions.",
+   "It eliminated the need for iterative FE solvers or reduced-order assumptions."
+  ]
+ }
+}
